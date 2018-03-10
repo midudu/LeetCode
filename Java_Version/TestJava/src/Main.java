@@ -1,9 +1,16 @@
-/*Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.
+/*Given a positive integer, output its complement number. The complement strategy is to flip the bits of its binary representation.
 
-        Example:
-
-        Input: 1->2->4, 1->3->4
-        Output: 1->1->2->3->4->4*/
+        Note:
+        The given integer is guaranteed to fit within the range of a 32-bit signed integer.
+        You could assume no leading zero bit in the integer’s binary representation.
+        Example 1:
+        Input: 5
+        Output: 2
+        Explanation: The binary representation of 5 is 101 (no leading zero bits), and its complement is 010. So you need to output 2.
+        Example 2:
+        Input: 1
+        Output: 0
+        Explanation: The binary representation of 1 is 1 (no leading zero bits), and its complement is 0. So you need to output 0.*/
 
 import java.util.*;
 import java.lang.Math;
@@ -17,7 +24,7 @@ public class Main {
         int[] nums = {5, 5, 3, 5, 1, -5, 1, -2};
 
         Solution solution = new Solution();
-        List<List<Integer>> receive = solution.fourSum(nums, 4);
+        int receive = solution.findComplement(5);
 
 
         System.out.println("haha");
@@ -35,30 +42,23 @@ class ListNode {
     }
 }
 
+
+class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
+
+    TreeNode(int x) {
+        val = x;
+    }
+}
+
 class Solution {
-    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+    public int findComplement(int num) {
 
-        ListNode psudoHead = new ListNode(0);
-        ListNode tempNode = psudoHead;
+        int exclusiveOR = Integer.highestOneBit(num);
+        exclusiveOR = (exclusiveOR << 1) - 1;
 
-        while (l1 != null && l2 != null) {
-            if (l1.val <= l2.val) {
-                tempNode.next = l1;
-                tempNode = tempNode.next;
-                l1 = l1.next;
-            } else {
-                tempNode.next = l2;
-                tempNode = tempNode.next;
-                l2 = l2.next;
-            }
-        }
-
-        if (l1 != null) {
-            tempNode.next = l1;
-        } else if (l2 != null) {
-            tempNode.next = l2;
-        }
-
-        return psudoHead.next;
+        return (num^exclusiveOR);
     }
 }
