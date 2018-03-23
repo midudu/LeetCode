@@ -1,11 +1,20 @@
-/*Count the number of segments in a string, where a segment is defined to be a contiguous sequence of non-space characters.
+/*Given a non-empty string check if it can be constructed by taking a substring of it and appending multiple copies of the substring together. You may assume the given string consists of lowercase English letters only and its length will not exceed 10000.
+        Example 1:
+        Input: "abab"
 
-        Please note that the string does not contain any non-printable characters.
+        Output: True
 
-        Example:
+        Explanation: It's the substring "ab" twice.
+        Example 2:
+        Input: "aba"
 
-        Input: "Hello, my name is John"
-        Output: 5*/
+        Output: False
+        Example 3:
+        Input: "abcabcabcabc"
+
+        Output: True
+
+        Explanation: It's the substring "abc" four times. (And the substring "abcabc" twice.)*/
 
 
 import java.util.*;
@@ -54,27 +63,7 @@ class TreeNode {
 
 
 class Solution {
-    public int countSegments(String s) {
+    public boolean repeatedSubstringPattern(String s) {
 
-        //method 1(slow method)
-        /*String[] result = s.split("\\s+");
-        if (result.length == 0) {
-            return 0;
-        } else {
-            if (result[0].equals("")) {
-                return result.length - 1;
-            } else {
-                return result.length;
-            }
-        }*/
-
-        int result = 0;
-        int sLength = s.length();
-
-        int i = 0;
-        while (i < sLength && s.charAt(i) == ' ') {
-            i++;
-        }
-        
     }
 }
