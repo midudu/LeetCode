@@ -22,34 +22,16 @@ Given a binary tree, return the tilt of the whole tree.
         All the tilt values won't exceed the range of 32-bit integer.
 */
 
-
-import java.util.*;
-
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(int x) {
-        val = x;
-    }
-}
-
 public class Test {
     public static void main(String[] args) {
 
-
-        System.out.print("hah");
-        //new Solution().findRelativeRanks(new int[]{2, 4, 5, 1, 0});
+        System.out.println(5 % -2);
+        System.out.println(5 % -8);
+        System.out.println(-5 % 2);
+        System.out.println(-5 % 8);
+        System.out.println(-5 % -2);
+        System.out.println(-5 % -8);
     }
 }
 
 
-
-class Solution {
-    public int findTilt(TreeNode root) {
-
-        return 0;
-
-    }
-}

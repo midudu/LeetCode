@@ -2,143 +2,57 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ffbcff5e-ced2-4ebe-a713-4c74a7d3e487" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../101Symmetric_Tree.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../108Convert_Sorted_Array_to_Binary_Search_Tree.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../111Minimum_Depth_of_Binary_Tree.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../118Pascal's_Triangle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../11Container_With_Most_Water.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../11Container_With_Most_Water.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../121Best_Time_to_Buy_and_Sell_Stock.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../122Best_Time_to_Buy_and_Sell_Stock_II.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../125Valid_Palindrome.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../125Valid_Palindrome.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../12Integer_to_Roman.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../12Integer_to_Roman.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../136Single_Number.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../136Single_Number.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../13Roman_to_Integer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../13Roman_to_Integer.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../141Linked_List_Cycle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../14Longest_Common_Prefix.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../14Longest_Common_Prefix.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../155Min_Stack.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../15three_Sum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../15three_Sum.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../160Intersection_of_Two_Linked_Lists.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../167Two_Sum_II_-_Input_array_is_sorted.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../169Majority_Element.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../169Majority_Element.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../16three_Sum_Closest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../16three_Sum_Closest.java.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../189Rotate_Array.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../18four_Sum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../18four_Sum.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../19Remove_Nth_Node_From_End_of_List.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../19Remove_Nth_Node_From_End_of_List.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1Two_Sum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1Two_Sum.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../203Remove_Linked_List_Elements.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../206Reverse_Linked_List.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../20Valid_Parentheses.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../20Valid_Parentheses.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../217Contains_Duplicate.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../219Contains_Duplicate_II.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../21Merge_Two_Sorted_Lists.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../21Merge_Two_Sorted_Lists.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../225Implement_Stack_using_Queues.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../226Invert_Binary_Tree.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../232Implement_Queue_using_Stacks.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../234Palindrome_Linked_List.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../235Lowest_Common_Ancestor_of_a_Binary_Search_Tree.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../237Delete_Node_in_a_Linked_List.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../257Binary_Tree_Paths.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../268Missing_Number.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../26Remove_Duplicates_from_Sorted_Array.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../27Remove_Element.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../27Remove_Element.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../283Move_Zeroes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../28Implement_strStr().java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../290Word_Pattern.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../292Nim_Game.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../292Nim_Game.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2Add_Two_Numbers.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../2Add_Two_Numbers.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../344Reverse_String.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../344Reverse_String.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../345Reverse_Vowels_of_a_String.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../345Reverse_Vowels_of_a_String.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../35Search_Insert_Position.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../383Ransom_Note.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../3Longest_Substring_Without_Repeating_Characters.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../3Longest_Substring_Without_Repeating_Characters.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../404Sum_of_Left_Leaves.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../412Fizz_Buzz.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../412Fizz_Buzz.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../414Third_Maximum_Number.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../434Number_of_Segments_in_a_String.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../443String_Compression.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../447Number_of_Boomerangs.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../461Hamming_Distance.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../461Hamming_Distance.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../463Island_Perimeter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../463Island_Perimeter.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../476Number_Complement.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../476Number_Complement.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../485Max_Consecutive_Ones.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../496Next_Greater_Element_I.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../500Keyboard_Row.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../500Keyboard_Row.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../501Find_Mode_in_Binary_Search_Tree.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../520Detect_Capital.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../521Longest_Uncommon_Subsequence_I.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../521Longest_Uncommon_Subsequence_I.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../532K-diff_Pairs_in_an_Array.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../538Convert_BST_to_Greater_Tree.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../53Maximum_Subarray.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../557Reverse_Words_in_a_String_III.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../557Reverse_Words_in_a_String_III.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../561Array_Partition_I.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../561Array_Partition_I.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../575Distribute_Candies.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../575Distribute_Candies.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../58Length_of_Last_Word.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../617Merge_Two_Binary_Trees.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../617Merge_Two_Binary_Trees.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../637Average_of_Levels_in_Binary_Tree.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../657Judge_Route_Circle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../657Judge_Route_Circle.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../669Trim_a_Binary_Search_Tree.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../669Trim_a_Binary_Search_Tree.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../66Plus_One.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../66Plus_One.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../67Add_Binary.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../682Baseball_Game.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../693Binary_Number_with_Alternating_Bits.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../696Count_Binary_Substrings.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../696Count_Binary_Substrings.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../697Degree_of_an_Array.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../7171-bit_and_2-bit_Characters.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../728Self_Dividing_Numbers.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../762Prime_Number_of_Set_Bits_in_Binary_Representation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../766Toeplitz_Matrix.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../771Jewels_and_Stones.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../796Rotate_String.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../7Reverse_Integer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../7Reverse_Integer.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../83Remove_Duplicates_from_Sorted_List.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../88Merge_Sorted_Array.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../88Merge_Sorted_Array.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../8String_to_Integer_(atoi).java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../8String_to_Integer_(atoi).md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../9Palindrome_Number.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../9Palindrome_Number.java.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestJava/ListNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestJava/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestJava/Solution.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestJava/Solution.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestJava/TreeNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestJava/TreeNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TestJava/Solution.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TestJava/TreeNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../pdf/100Same_Tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../pdf/100Same_Tree.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../pdf/101Symmetric_Tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../pdf/101Symmetric_Tree.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../pdf/104Maximum_Depth_of_Binary_Tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../pdf/104Maximum_Depth_of_Binary_Tree.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../pdf/107Binary_Tree_Level_Order_Traversal_II.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../pdf/107Binary_Tree_Level_Order_Traversal_II.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../pdf/108Convert_Sorted_Array_to_Binary_Search_Tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../pdf/108Convert_Sorted_Array_to_Binary_Search_Tree.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../pdf/110Balanced_Binary_Tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../pdf/110Balanced_Binary_Tree.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../pdf/111Minimum_Depth_of_Binary_Tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../pdf/111Minimum_Depth_of_Binary_Tree.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../pdf/112Path_Sum.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../pdf/112Path_Sum.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../pdf/118Pascal's_Triangle.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../pdf/118Pascal's_Triangle.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../pdf/121Best_Time_to_Buy_and_Sell_Stock.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../pdf/121Best_Time_to_Buy_and_Sell_Stock.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../pdf/122Best_Time_to_Buy_and_Sell_Stock_II.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../pdf/122Best_Time_to_Buy_and_Sell_Stock_II.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../pdf/141Linked_List_Cycle.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../pdf/141Linked_List_Cycle.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../pdf/160_Intersection_of_Two_Linked_Lists.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../pdf/160_Intersection_of_Two_Linked_Lists.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../pdf/167_Two_Sum_II_-_Input_array_is_sorted.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../pdf/167_Two_Sum_II_-_Input_array_is_sorted.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../pdf/168_Excel_Sheet_Column_Title.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../pdf/168_Excel_Sheet_Column_Title.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../pdf/171_Excel_Sheet_Column_Number.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../pdf/171_Excel_Sheet_Column_Number.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../pdf/189_Rotate_Array.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../pdf/189_Rotate_Array.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../pdf/26Remove_Duplicates_from_Sorted_Array.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../pdf/27Remove_Element.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../pdf/28Implement_strStr().pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../pdf/35Search_Insert_Position.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../pdf/53Maximum_Subarray.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../pdf/53Maximum_Subarray.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../pdf/58Length_of_Last_Word.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../pdf/58Length_of_Last_Word.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../pdf/67Add_Binary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../pdf/67Add_Binary.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../pdf/69Sqrt(x).html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../pdf/69Sqrt(x).pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../pdf/70Climbing_Stairs.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../pdf/70Climbing_Stairs.pdf" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -153,11 +67,8 @@
       <file leaf-file-name="Test.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="988">
-              <caret line="54" column="1" lean-forward="true" selection-start-line="54" selection-start-column="1" selection-end-line="54" selection-end-column="1" />
-              <folding>
-                <element signature="e#0#1098#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="190">
+              <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -205,9 +116,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -229,7 +140,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="C:/Program Files/Git/bin/git.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -348,11 +259,12 @@
       <workItem from="1524641315654" duration="1289000" />
       <workItem from="1524729229128" duration="349000" />
       <workItem from="1524729723100" duration="62000" />
+      <workItem from="1528855261161" duration="522000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73184000" />
+    <option name="totallyTimeSpent" value="73706000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -363,28 +275,28 @@
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5027322" side_tool="true" visible="true" weight="0.24020442" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50363785" side_tool="true" weight="0.23888889" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49636218" weight="0.23888889" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49726775" weight="0.24020442" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20921156" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21261115" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4964871" weight="0.28620103" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -538,11 +450,8 @@
     <entry file="jar://D:/Java/jdk/lib/src.zip!/java.base/java/util/Arrays.java" />
     <entry file="file://$PROJECT_DIR$/src/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="988">
-          <caret line="54" column="1" lean-forward="true" selection-start-line="54" selection-start-column="1" selection-end-line="54" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#1098#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="190">
+          <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
         </state>
       </provider>
     </entry>
