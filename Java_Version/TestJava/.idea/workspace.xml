@@ -1,59 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ffbcff5e-ced2-4ebe-a713-4c74a7d3e487" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/out/production/TestJava/Solution.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestJava/TreeNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pdf/100Same_Tree.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pdf/100Same_Tree.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pdf/101Symmetric_Tree.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pdf/101Symmetric_Tree.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pdf/104Maximum_Depth_of_Binary_Tree.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pdf/104Maximum_Depth_of_Binary_Tree.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pdf/107Binary_Tree_Level_Order_Traversal_II.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pdf/107Binary_Tree_Level_Order_Traversal_II.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pdf/108Convert_Sorted_Array_to_Binary_Search_Tree.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pdf/108Convert_Sorted_Array_to_Binary_Search_Tree.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pdf/110Balanced_Binary_Tree.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pdf/110Balanced_Binary_Tree.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pdf/111Minimum_Depth_of_Binary_Tree.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pdf/111Minimum_Depth_of_Binary_Tree.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pdf/112Path_Sum.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pdf/112Path_Sum.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pdf/118Pascal's_Triangle.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pdf/118Pascal's_Triangle.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pdf/121Best_Time_to_Buy_and_Sell_Stock.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pdf/121Best_Time_to_Buy_and_Sell_Stock.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pdf/122Best_Time_to_Buy_and_Sell_Stock_II.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pdf/122Best_Time_to_Buy_and_Sell_Stock_II.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pdf/141Linked_List_Cycle.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pdf/141Linked_List_Cycle.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pdf/160_Intersection_of_Two_Linked_Lists.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pdf/160_Intersection_of_Two_Linked_Lists.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pdf/167_Two_Sum_II_-_Input_array_is_sorted.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pdf/167_Two_Sum_II_-_Input_array_is_sorted.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pdf/168_Excel_Sheet_Column_Title.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pdf/168_Excel_Sheet_Column_Title.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pdf/171_Excel_Sheet_Column_Number.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pdf/171_Excel_Sheet_Column_Number.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pdf/189_Rotate_Array.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pdf/189_Rotate_Array.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pdf/26Remove_Duplicates_from_Sorted_Array.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pdf/27Remove_Element.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pdf/28Implement_strStr().pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pdf/35Search_Insert_Position.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pdf/53Maximum_Subarray.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pdf/53Maximum_Subarray.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pdf/58Length_of_Last_Word.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pdf/58Length_of_Last_Word.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pdf/67Add_Binary.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pdf/67Add_Binary.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pdf/69Sqrt(x).html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pdf/69Sqrt(x).pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pdf/70Climbing_Stairs.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pdf/70Climbing_Stairs.pdf" beforeDir="false" />
-    </list>
+    <list default="true" id="ffbcff5e-ced2-4ebe-a713-4c74a7d3e487" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -106,8 +54,8 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="210" />
-    <option name="y" value="9" />
-    <option name="width" value="1176" />
+    <option name="y" value="8" />
+    <option name="width" value="1177" />
     <option name="height" value="840" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -116,9 +64,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -260,43 +208,45 @@
       <workItem from="1524729229128" duration="349000" />
       <workItem from="1524729723100" duration="62000" />
       <workItem from="1528855261161" duration="522000" />
+      <workItem from="1528891749596" duration="5000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73706000" />
+    <option name="totallyTimeSpent" value="73711000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49960968" weight="0.32879046" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50363785" side_tool="true" weight="0.23888889" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49636218" weight="0.23888889" />
       <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49636218" weight="0.23888889" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21261115" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21514745" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4964871" weight="0.28620103" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4964871" weight="0.28620103" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49960968" weight="0.32879046" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
