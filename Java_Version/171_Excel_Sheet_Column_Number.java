@@ -1,6 +1,3 @@
-/*Author: Bochen (mddboc@foxmail.com)
-Last Modified: Tue Apr 10 22:28:44 CST 2018*/
-
 /*Given a column title as appear in an Excel sheet, return its corresponding column number.
 
         For example:
