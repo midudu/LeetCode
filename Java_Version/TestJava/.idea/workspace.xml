@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ffbcff5e-ced2-4ebe-a713-4c74a7d3e487" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../171_Excel_Sheet_Column_Number.java" beforeDir="false" afterPath="$PROJECT_DIR$/../171_Excel_Sheet_Column_Number.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pdf/Math/171_Excel_Sheet_Column_Number.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../pdf/Math/171_Excel_Sheet_Column_Number.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../pdf/Math/189_Rotate_Array.pdf" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,22 +15,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Test.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Test.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" column="14" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+            <state relative-caret-position="127">
+              <caret line="45" column="41" lean-forward="true" selection-start-line="45" selection-start-column="41" selection-end-line="45" selection-end-column="41" />
               <folding>
-                <element signature="e#0#625#0" expanded="true" />
+                <element signature="e#0#1947#0" expanded="true" />
+                <element signature="e#382#383#0" expanded="true" />
+                <element signature="e#405#406#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StringBuffer.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="StringBuffer.java" pinned="false" current-in-tab="false">
         <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/StringBuffer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
+            <state relative-caret-position="9504">
               <caret line="476" column="48" selection-start-line="476" selection-start-column="37" selection-end-line="476" selection-end-column="48" />
               <folding>
                 <element signature="e#13985#13986#0" expanded="true" />
@@ -46,7 +45,7 @@
       <file leaf-file-name="AbstractStringBuilder.java" pinned="false" current-in-tab="false">
         <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/AbstractStringBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
+            <state relative-caret-position="20768">
               <caret line="989" column="18" selection-start-line="989" selection-start-column="18" selection-end-line="989" selection-end-column="18" />
             </state>
           </provider>
@@ -55,7 +54,7 @@
       <file leaf-file-name="List.java" pinned="false" current-in-tab="false">
         <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/List.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="11476">
+            <state relative-caret-position="13288">
               <caret line="627" column="6" selection-start-line="627" selection-start-column="6" selection-end-line="627" selection-end-column="6" />
             </state>
           </provider>
@@ -64,7 +63,7 @@
       <file leaf-file-name="String.java" pinned="false" current-in-tab="false">
         <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/String.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30210">
+            <state relative-caret-position="34980">
               <caret line="1663" column="48" selection-start-line="1663" selection-start-column="48" selection-end-line="1663" selection-end-column="48" />
             </state>
           </provider>
@@ -73,7 +72,7 @@
       <file leaf-file-name="StringLatin1.java" pinned="false" current-in-tab="false">
         <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/StringLatin1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3819">
+            <state relative-caret-position="3476">
               <caret line="201" selection-start-line="201" selection-end-line="201" />
             </state>
           </provider>
@@ -82,7 +81,7 @@
       <file leaf-file-name="StringUTF16.java" pinned="false" current-in-tab="false">
         <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/StringUTF16.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5852">
+            <state relative-caret-position="6776">
               <caret line="344" column="22" selection-start-line="344" selection-start-column="22" selection-end-line="344" selection-end-column="22" />
             </state>
           </provider>
@@ -131,7 +130,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -149,18 +150,10 @@
               <item name="TestJava" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="TestJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TestJava" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Test.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -312,12 +305,13 @@
       <workItem from="1529719459401" duration="223000" />
       <workItem from="1529720332942" duration="777000" />
       <workItem from="1529733229282" duration="4000" />
-      <workItem from="1530004758550" duration="1724000" />
+      <workItem from="1530004758550" duration="2082000" />
+      <workItem from="1530096542613" duration="867000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81849000" />
+    <option name="totallyTimeSpent" value="83074000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -325,25 +319,25 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49865952" weight="0.32796487" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49798927" weight="0.32796487" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50603217" side_tool="true" visible="true" weight="0.28550512" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5080429" side_tool="true" visible="true" weight="0.28550512" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49597856" weight="0.238653" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4953083" weight="0.238653" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1461126" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.06568365" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49396783" visible="true" weight="0.28550512" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.4919571" visible="true" weight="0.28550512" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -363,28 +357,22 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/StringUTF16.java</url>
+          <url />
           <line>417</line>
           <properties />
           <option name="timeStamp" value="40" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Test.java</url>
-          <line>2</line>
+          <line>50</line>
           <properties />
-          <option name="timeStamp" value="60" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Test.java</url>
-          <line>8</line>
-          <properties />
-          <option name="timeStamp" value="61" />
+          <option name="timeStamp" value="65" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="62" />
+      <option name="time" value="66" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -506,56 +494,58 @@
     <entry file="jar://D:/Java/jdk/lib/src.zip!/java.base/java/util/Arrays.java" />
     <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30210">
+        <state relative-caret-position="34980">
           <caret line="1663" column="48" selection-start-line="1663" selection-start-column="48" selection-end-line="1663" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/StringUTF16.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5852">
+        <state relative-caret-position="6776">
           <caret line="344" column="22" selection-start-line="344" selection-start-column="22" selection-end-line="344" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/StringLatin1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3819">
+        <state relative-caret-position="3476">
           <caret line="201" selection-start-line="201" selection-end-line="201" />
         </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/List.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11476">
+        <state relative-caret-position="13288">
           <caret line="627" column="6" selection-start-line="627" selection-start-column="6" selection-end-line="627" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="14" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#625#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/AbstractStringBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
+        <state relative-caret-position="20768">
           <caret line="989" column="18" selection-start-line="989" selection-start-column="18" selection-end-line="989" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/StringBuffer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
+        <state relative-caret-position="9504">
           <caret line="476" column="48" selection-start-line="476" selection-start-column="37" selection-end-line="476" selection-end-column="48" />
           <folding>
             <element signature="e#13985#13986#0" expanded="true" />
             <element signature="e#14035#14036#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="45" column="41" lean-forward="true" selection-start-line="45" selection-start-column="41" selection-end-line="45" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#1947#0" expanded="true" />
+            <element signature="e#382#383#0" expanded="true" />
+            <element signature="e#405#406#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -1,33 +1,16 @@
-/* Given preorder and inorder traversal of a tree, construct the binary tree.
+/* 输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。
+例如输入前序遍历序列{1,2,4,7,3,5,6,8}和中序遍历序列{4,7,2,1,5,3,8,6}，则重建二叉树并返回。 */
 
-Note:
-You may assume that duplicates do not exist in the tree.
-
-For example, given
-
-preorder = [3,9,20,15,7]
-inorder = [9,3,15,20,7]
-Return the following binary tree:
-
-    3
-   / \
-  9  20
-    /  \
-   15   7 */
-
-
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(int x) {
-        val = x;
-    }
-}
-
-
-class Solution {
+/**
+ * Definition for binary tree
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
     public TreeNode reConstructBinaryTree(int[] pre, int[] in) {
 
         return reConstructBinaryTreeHelper(
@@ -65,14 +48,5 @@ class Solution {
         }
 
         return -1;
-    }
-
-
-    public static void main(String[] args) {
-
-        int[] pre = {1, 2, 4, 7, 3, 5, 6, 8};
-        int[] in = {4, 7, 2, 1, 5, 3, 8, 6};
-
-        TreeNode root = new Solution().reConstructBinaryTree(pre, in);
     }
 }
