@@ -14,8 +14,45 @@ public class TreeNode {
 
 }
 */
+
 public class Solution {
+    
+    private ArrayList<ArrayList<Integer>> result = new ArrayList<>();
+    
     public ArrayList<ArrayList<Integer>> FindPath(TreeNode root,int target) {
         
+        if (root == null) {
+            return result;
+        }
+        
+        ArrayList<Integer> currentResult = new ArrayList<Integer>();
+        FindPathHelper(root, target, currentResult);
+        
+        return result;
+    }
+    
+    private void FindPathHelper(TreeNode root,int target,ArrayList<Integer> currentResult) {
+        
+        currentResult.add(root.val);
+        
+        if (root.left == null  && root.right == null) {
+            
+            if ( root.val == target ) {
+                ArrayList<Integer> currentResultCopy = new ArrayList<>(currentResult);
+                result.add(currentResultCopy);
+            }
+        } else if (root.left == null && root.right != null) {
+            
+            FindPathHelper(root.right, target - root.val, currentResult);
+            
+        } else if (root.left != null && root.right == null) {
+            
+            FindPathHelper(root.left, target - root.val, currentResult);
+        } else {
+            FindPathHelper(root.left, target - root.val, currentResult);
+            FindPathHelper(root.right, target - root.val, currentResult);
+        }
+        
+        currentResult.remove(currentResult.size() - 1);
     }
 }
