@@ -17,9 +17,7 @@ public class Solution {
             result[1] = 2;
             
             for (int i = 2; i < target; i++) {
-                result[i] = result[i - 1] + result[i - 2];         //类似于Fibonacci数列，因为f(n)要么最后一列竖着放，此时等效于f(n-1);
-                                                                // 要么最后两列横着放，此时等效于f(n-2)。最后两列都竖着放的情况已经包括
-                                                                // 在f(n-1)内了
+                result[i] = result[i - 1] + result[i - 2];
             }
             
             return result[target-1];

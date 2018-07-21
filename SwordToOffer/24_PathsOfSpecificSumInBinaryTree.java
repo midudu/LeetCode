@@ -14,7 +14,6 @@ public class TreeNode {
 
 }
 */
-
 public class Solution {
     
     private ArrayList<ArrayList<Integer>> result = new ArrayList<>();
