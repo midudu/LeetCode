@@ -1,63 +1,33 @@
-public class Solution {
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Stream;
 
-    private long inversePairsNumber = 0;
-
-    public int InversePairs(int[] array) {
-
-        if (array == null || array.length == 0) {
-            return 0;
-        }
-
-        mergeSortHelper(array, 0, array.length - 1);
-
-        return (int)(inversePairsNumber%1000000007);
-    }
-
-    private void mergeSortHelper(int[] nums, int startIndex, int endIndex) {
-
-        if (startIndex < endIndex) {
-
-            int middleIndex = startIndex + (endIndex - startIndex) / 2;
-            mergeSortHelper(nums, startIndex, middleIndex);
-            mergeSortHelper(nums, middleIndex + 1, endIndex);
-            mergeProcess(nums, startIndex, middleIndex, endIndex);
-        }
-    }
-
-    private void mergeProcess(int[] nums, int startIndex,
-                                     int middleIndex, int endIndex) {
-
-        int leftIndex = startIndex, rightIndex = middleIndex + 1;
-        int newNumsIndex = 0;
-        int[] newNums = new int[endIndex - startIndex + 1];
-
-        while (leftIndex <= middleIndex && rightIndex <= endIndex) {
-
-            if (nums[leftIndex] <= nums[rightIndex]) {
-                newNums[newNumsIndex] = nums[leftIndex];
-                leftIndex++;
-            } else {
-                newNums[newNumsIndex] = nums[rightIndex];
-                rightIndex++;
-                inversePairsNumber += (middleIndex - leftIndex + 1);
-            }
-            newNumsIndex++;
-        }
-
-
-        if (leftIndex <= middleIndex) {
-            System.arraycopy(nums, leftIndex,
-                    nums, startIndex + newNumsIndex,
-                    middleIndex - leftIndex + 1);
-        }
-        System.arraycopy(newNums, 0, nums, startIndex, newNumsIndex);
-    }
+class Main {
 
     public static void main(String[] args) {
 
-        Solution solution = new Solution();
-        int result = solution.InversePairs(new int[]{1,5,3,2,6});
+        learnStream();
+    }
 
-        System.out.print(result);
+    public static void learnStream() {
+
+        List<Integer> lists = new ArrayList<>();
+        lists.add(4);
+        lists.add(3);
+        lists.add(6);
+        lists.add(1);
+        lists.add(5);
+        lists.add(2);
+
+        System.out.println("elements in lists:");
+        for (Integer integer : lists) {
+            System.out.print(integer);
+            System.out.print("  ");
+        }
+        System.out.println();
+
+        Stream<Integer> stream = lists.stream();
+        Optional<Integer> min = stream.min(Integer::compareTo);
     }
 }
