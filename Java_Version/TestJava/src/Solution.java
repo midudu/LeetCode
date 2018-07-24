@@ -1,42 +1,63 @@
-import java.util.Stack;
-
 public class Solution {
 
-    Stack<Integer> mainStack = new Stack<Integer>();
-    Stack<Integer> minStack = new Stack<Integer>();
+    private long inversePairsNumber = 0;
 
-    public void push(int node) {
+    public int InversePairs(int[] array) {
 
-        mainStack.push(node);
+        if (array == null || array.length == 0) {
+            return 0;
+        }
 
-        if (minStack.isEmpty()) {
-            minStack.push(node);
-        } else {
-            if ( node <= minStack.peek() ) {
-                minStack.push(node);
+        mergeSortHelper(array, 0, array.length - 1);
+
+        return (int)(inversePairsNumber%1000000007);
+    }
+
+    private void mergeSortHelper(int[] nums, int startIndex, int endIndex) {
+
+        if (startIndex < endIndex) {
+
+            int middleIndex = startIndex + (endIndex - startIndex) / 2;
+            mergeSortHelper(nums, startIndex, middleIndex);
+            mergeSortHelper(nums, middleIndex + 1, endIndex);
+            mergeProcess(nums, startIndex, middleIndex, endIndex);
+        }
+    }
+
+    private void mergeProcess(int[] nums, int startIndex,
+                                     int middleIndex, int endIndex) {
+
+        int leftIndex = startIndex, rightIndex = middleIndex + 1;
+        int newNumsIndex = 0;
+        int[] newNums = new int[endIndex - startIndex + 1];
+
+        while (leftIndex <= middleIndex && rightIndex <= endIndex) {
+
+            if (nums[leftIndex] <= nums[rightIndex]) {
+                newNums[newNumsIndex] = nums[leftIndex];
+                leftIndex++;
+            } else {
+                newNums[newNumsIndex] = nums[rightIndex];
+                rightIndex++;
+                inversePairsNumber += (middleIndex - leftIndex + 1);
             }
-        }
-    }
-
-    public void pop() {
-
-        if (mainStack.isEmpty()) {
-            return;
+            newNumsIndex++;
         }
 
-        Integer topValue = mainStack.pop();
-        if ( topValue.intValue() == minStack.peek() ) {
-            minStack.pop();
+
+        if (leftIndex <= middleIndex) {
+            System.arraycopy(nums, leftIndex,
+                    nums, startIndex + newNumsIndex,
+                    middleIndex - leftIndex + 1);
         }
+        System.arraycopy(newNums, 0, nums, startIndex, newNumsIndex);
     }
 
-    public int top() {
+    public static void main(String[] args) {
 
-        return mainStack.pop();
-    }
+        Solution solution = new Solution();
+        int result = solution.InversePairs(new int[]{1,5,3,2,6});
 
-    public int min() {
-
-        return minStack.peek();
+        System.out.print(result);
     }
 }
