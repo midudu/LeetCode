@@ -3,10 +3,24 @@ package unionFindSet;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+/**
+ * This class is to build a union-find-set object. There are two basic
+ * functions for a union-find-set object: union and find.
+ *
+ * "find" operation is to find the index of the root node of the current node.
+ * To make the union-find-set "short and fat", every node in the find path are
+ * merged to the root node during the "find" operation.
+ *
+ * "union" operation is to make the two nodes have the same root. A smaller
+ * tree will be merged to a larger tree when unioned.
+ *
+ *
+ */
 public class UnionFindSet {
 
     /**
-     * An array to store the root index of the current node
+     * An array to store the root index of the current node. For the root node,
+     * the value is { 0 - the size of tree}
      */
     private int[] rootIndexTable;
 
@@ -39,6 +53,10 @@ public class UnionFindSet {
 
         int rootIndex1 = find(index1);
         int rootIndex2 = find(index2);
+
+        if (rootIndex1 == rootIndex2) {
+            return;
+        }
 
         int size1 = -this.rootIndexTable[rootIndex1];
         int size2 = -this.rootIndexTable[rootIndex2];

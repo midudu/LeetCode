@@ -8,8 +8,31 @@ import graph.EdgeComparator;
 import java.util.ArrayList;
 import java.util.PriorityQueue;
 
+/**
+ * This class implements the classical algorithm in finding Minimum-Spanning-Tree
+ * (MST): the Kruskal algorithm.
+ *
+ * The basic theory is of the Kruskal algorithm is to add edges into the final
+ * result set in order by the weight of the edges. An edge with smaller weight
+ * has higher priority. But if the new added edge can form a loop with the
+ * existing edge, abandon the new edge.
+ *
+ * How to judge a loop is formed with the new edge added? In this algorithm, a
+ * union-find-set is built to store several sets. At first, every vertex in
+ * the graph has a root node of itself. If an edge is added to the MST result,
+ * the two endpoints of the edge are unioned into one set. So we can judge if a
+ * loop will be formed by judging if the two endpoints of the new edge belong
+ * to the same set.
+ */
+
 public class Kruskal {
 
+    /**
+     * To implement the Kruskal algorithm.
+     *
+     * @param graph  a graph stored in adjacent matrix form
+     * @param edges  a container to store the MST result
+     */
     public static void Kruskal(GraphInAdjacentMatrix graph, ArrayList<Edge> edges) {
 
         if (!edges.isEmpty()) {
@@ -50,15 +73,6 @@ public class Kruskal {
 
             unionFindSet.union(root1, root2);
             edges.add(currentEdge);
-        }
-    }
-
-    private static int rootIndex(int[] unionFindSet, int index) {
-
-        if (unionFindSet[index] == index) {
-            return index;
-        } else {
-          return rootIndex(unionFindSet, unionFindSet[index]);
         }
     }
 }

@@ -7,6 +7,26 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
+/**
+ * This class implements the classical algorithm in finding Minimum-Spanning-Tree
+ * (MST): the Prim algorithm.
+ *
+ * The basic theory is of the Prim algorithm is to add vertices in order. There
+ * are two containers in the algorithm: one is to store the exisiting vertices
+ * in the final result and another is to store the left vertices in the graph.
+ *
+ * At first, a vertex is added to the existing nodes list randomly. Then, follow
+ * the operations as below until all the vertices in the graph are added to the
+ * final result:
+ *
+ * 1. Find a vertex U from the existing nodes list and find a vertex V from the
+ * left nodes list so that the weight between them is the smallest among all
+ * the pairs;
+ * 2. Add U to the existing nodes list;
+ * 3. Remove V from the left nodes list.
+ *
+ */
+
 public class Prim {
 
     public static void Prim(GraphInAdjacentMatrix graph, ArrayList<Edge> edges) {
