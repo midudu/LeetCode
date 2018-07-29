@@ -1,7 +1,7 @@
 package kruskal;
 
 import graph.Edge;
-import graph.GraphInAdjacentMatrix;
+import graph.adjacentMatrix.UndigraphInAdjacentMatrix;
 import unionFindSet.UnionFindSet;
 import graph.EdgeComparator;
 
@@ -33,7 +33,7 @@ public class Kruskal {
      * @param graph  a graph stored in adjacent matrix form
      * @param edges  a container to store the MST result
      */
-    public static void Kruskal(GraphInAdjacentMatrix graph, ArrayList<Edge> edges) {
+    public static void Kruskal(UndigraphInAdjacentMatrix graph, ArrayList<Edge> edges) {
 
         if (!edges.isEmpty()) {
             edges.clear();
@@ -81,7 +81,7 @@ class TestKruskal {
 
     public static void main(String[] args) {
 
-        GraphInAdjacentMatrix graph = new GraphInAdjacentMatrix();
+        UndigraphInAdjacentMatrix graph = new UndigraphInAdjacentMatrix();
 
         graph.addVertex();
         graph.addVertex();

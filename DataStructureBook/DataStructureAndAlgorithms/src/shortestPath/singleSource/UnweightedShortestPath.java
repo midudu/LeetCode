@@ -1,6 +1,6 @@
 package shortestPath.singleSource;
 
-import graph.GraphInAdjacentMatrix;
+import graph.adjacentMatrix.UndigraphInAdjacentMatrix;
 
 import java.util.*;
 
@@ -22,7 +22,7 @@ public class UnweightedShortestPath {
      * @param paths      the paths from the start node to other nodes in the
      *                   graph
      */
-    public static void findShortestPath(GraphInAdjacentMatrix graph,
+    public static void findShortestPath(UndigraphInAdjacentMatrix graph,
                                         int startIndex,
                                         HashMap<Integer, String> paths) {
 
@@ -63,7 +63,7 @@ class TestUnweightedShortestPath {
 
     public static void main(String[] args) {
 
-        GraphInAdjacentMatrix graph = new GraphInAdjacentMatrix();
+        UndigraphInAdjacentMatrix graph = new UndigraphInAdjacentMatrix();
 
         graph.addVertex();
         graph.addVertex();

@@ -1,11 +1,10 @@
 package prim;
 
 import graph.Edge;
-import graph.GraphInAdjacentMatrix;
+import graph.adjacentMatrix.UndigraphInAdjacentMatrix;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.Queue;
 
 /**
  * This class implements the classical algorithm in finding Minimum-Spanning-Tree
@@ -29,7 +28,7 @@ import java.util.Queue;
 
 public class Prim {
 
-    public static void Prim(GraphInAdjacentMatrix graph, ArrayList<Edge> edges) {
+    public static void Prim(UndigraphInAdjacentMatrix graph, ArrayList<Edge> edges) {
 
         if (!edges.isEmpty()) {
             edges.clear();
@@ -80,7 +79,7 @@ class TestPrim {
 
     public static void main(String[] args) {
 
-        GraphInAdjacentMatrix graph = new GraphInAdjacentMatrix();
+        UndigraphInAdjacentMatrix graph = new UndigraphInAdjacentMatrix();
 
         graph.addVertex();
         graph.addVertex();
