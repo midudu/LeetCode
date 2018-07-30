@@ -23,7 +23,7 @@ abstract public class GraphInAdjacentMatrix {
 
         if (adjacentMatrix.isEmpty()) {
             ArrayList<Integer> newRow = new ArrayList<>();
-            newRow.add(-1);
+            newRow.add(0);
             adjacentMatrix.add(newRow);
 
             return;
@@ -40,6 +40,7 @@ abstract public class GraphInAdjacentMatrix {
         for (int i = 0; i < adjacentMatrix.size() + 1; i++) {
             newRow.add(-1);
         }
+        newRow.set(adjacentMatrix.size(), 0);
         adjacentMatrix.add(newRow);
     }
 
