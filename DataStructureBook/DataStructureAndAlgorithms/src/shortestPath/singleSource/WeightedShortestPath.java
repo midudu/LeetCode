@@ -5,6 +5,7 @@ import graph.adjacentMatrix.DigraphInAdjacentMatrix;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 
 /**
  * This class implements the algorithm of finding the shortest path from a
@@ -154,11 +155,15 @@ public class WeightedShortestPath {
         HashSet<Integer> S = new HashSet<>();
         S.add(startIndex);
 
+        HashSet<Integer> V = new HashSet<>();
+        for (int i = 0; i < edgeTable.size(); i++) {
+            V.add(i);
+        }
+        V.remove(startIndex);
+
         int[] lastNode = new int[edgeTable.size()];
         initLength(lastNode);
         lastNode[startIndex] = startIndex;
-
-        int currentIndex = startIndex;
 
         int[] length = new int[edgeTable.size()];
         initLength(length);
@@ -166,34 +171,39 @@ public class WeightedShortestPath {
 
         while (S.size() != edgeTable.size()) {
 
-            for (int i = 0; i < edgeTable.size(); i++) {
+            int minWeight = Integer.MAX_VALUE;
+            int nextIndex = 0;
 
-                if (S.contains(i)) {
-                    continue;
+            Iterator<Integer> iteratorV = V.iterator();
+            while (iteratorV.hasNext()) {
+
+                int indexV = iteratorV.next();
+
+                Iterator<Integer> iteratorS = S.iterator();
+                while (iteratorS.hasNext()) {
+
+                    int indexS = iteratorS.next();
+
+                    int currentWeight = edgeTable.get(indexS).get(indexV);
+                    if (currentWeight == -1) {
+                        continue;
+                    }
+
+                    currentWeight += length[indexS];
+                    if (currentWeight < length[indexV]) {
+                        lastNode[indexV] = indexS;
+                        length[indexV] = currentWeight;
+                    }
+
+                    if (currentWeight < minWeight) {
+                        minWeight = currentWeight;
+                        nextIndex = indexV;
+                    }
                 }
-
-                int currentWeight = edgeTable.get(currentIndex).get(i);
-                if (currentWeight == -1) {
-                    continue;
-                }
-
-                length[i] = Math.min(length[i], currentWeight + length[currentIndex]);
             }
 
-            int currentIndexCopy = currentIndex;
-            int minLength = Integer.MAX_VALUE;
-            for (int i = 0; i < length.length; i++) {
-                if (S.contains(i)) {
-                    continue;
-                }
-                if (length[i] < minLength) {
-                    currentIndex = i;
-                    minLength = length[i];
-                }
-            }
-
-            S.add(currentIndex);
-            lastNode[currentIndex] = currentIndexCopy;
+            S.add(nextIndex);
+            V.remove(nextIndex);
         }
 
         paths.put(startIndex, String.valueOf(startIndex));
@@ -218,7 +228,6 @@ class TestWeightedShortestPath {
         graph.addEdge(3, 2, 2);
         graph.addEdge(3, 5, 8);
         graph.addEdge(1, 3, 3);
-        graph.addEdge(3, 4, 10);
         graph.addEdge(3, 4, 2);
         graph.addEdge(3, 6, 4);
         graph.addEdge(4, 6, 6);
