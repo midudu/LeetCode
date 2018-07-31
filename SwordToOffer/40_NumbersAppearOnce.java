@@ -1,3 +1,6 @@
+/* 一个整型数组里除了两个数字之外，其他的数字都出现了偶数次。
+请写程序找出这两个只出现一次的数字。 */
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -10,7 +13,7 @@ public class Solution {
 
         for (int i = 0; i < array.length; i++) {
 
-            table.put(i, table.getOrDefault(i, 0) + 1);
+            table.put(array[i], table.getOrDefault(array[i], 0) + 1);
         }
 
         boolean findFirstNumberFlag = false;
