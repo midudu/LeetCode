@@ -15,12 +15,4 @@ public class Solution {
 
         return num1;
     }
-
-    public static void main(String[] args) {
-
-        int result = new Solution().Add(-1, 2);
-
-        System.out.println(Integer.toBinaryString(-1));
-
-    }
 }
