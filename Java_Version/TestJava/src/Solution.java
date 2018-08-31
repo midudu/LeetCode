@@ -1,126 +1,77 @@
-/* 题目描述
-写一个函数，求两个整数之和，要求在函数体内不得使用+、-、*、/四则运算符号。 */
+/*
+请实现一个函数用来匹配包括'.'和'*'的正则表达式。
+
+模式中的字符'.'表示任意一个字符，
+而'*'表示它前面的字符可以出现任意次（包含0次）。
+
+在本题中，匹配是指字符串的所有字符匹配整个模式。
+例如，字符串"aaa"与模式"a.a"和"ab*ac*a"匹配，
+但是与"aa.a"和"ab*a"均不匹配 */
 
 public class Solution {
-    public boolean isNumeric(char[] str) {
+    public boolean match(char[] str, char[] pattern) {
 
-        if (str == null || str.length == 0) {
-            return false;
-        }
+        if (pattern == null || pattern.length == 0) {
 
-        int startIndex = calculateStartIndex(str);
-        if (startIndex == -1) {
-            return false;
-        }
-
-        boolean eAllowableFlag = true;
-        boolean minusAllowableFlag = true;
-        boolean dotAllowableFlag = true;
-        boolean addAllowableFlag = true;
-
-        for (int i = startIndex; i < str.length; i++) {
-
-            char currentChar = str[i];
-
-            if (currentChar >= '0' && currentChar <= '9') {
-                continue;
-            } else if (currentChar == 'e' || currentChar == 'E') {
-                if (eAllowableFlag) {
-                    eAllowableFlag = false;
-                    if (i == str.length - 1) {
-                        return false;
-                    }
-                } else {
-                    return false;
-                }
-            } else if (currentChar == '-') {
-                if (i == str.length - 1) {
-                    return false;
-                }
-
-                if (eAllowableFlag) {
-                    return false;
-                } else {
-                    if (!addAllowableFlag) {
-                        return false;
-                    } else {
-                        if (minusAllowableFlag) {
-                            minusAllowableFlag = false;
-                        } else {
-                            return false;
-                        }
-                    }
-                }
-            } else if (currentChar == '.') {
-                if (!dotAllowableFlag) {
-                    return false;
-                } else {
-                    dotAllowableFlag = false;
-
-                    if (eAllowableFlag) {
-                        if (i == str.length - 1 || (!(str[i + 1] >= '0' && str[i + 1] <= '9'))) {
-                            return false;
-                        }
-                    } else {
-                        return false;
-                    }
-                }
-
-            } else if (currentChar == '+') {
-                if (i == str.length - 1) {
-                    return false;
-                }
-                if (!addAllowableFlag) {
-                    return false;
-                } else {
-                    addAllowableFlag = false;
-                    if (eAllowableFlag) {
-                        return false;
-                    }
-                    if (!minusAllowableFlag) {
-                        return false;
-                    }
-                }
-
+            if (str == null || str.length == 0) {
+                return true;
             } else {
                 return false;
             }
         }
 
-        return true;
+        return matchHelper(str, 0, str.length, pattern, 0, pattern.length);
     }
 
-    private int calculateStartIndex(char[] str) {
+    private boolean matchHelper(char[] str, int i, int length1,
+                                char[] pattern, int j, int length2) {
 
-        if (str[0] == '+') {
-            if (str.length == 1) {
-                return -1;
-            } else {
-                return 1;
-            }
-        } else if (str[0] == '-') {
-            if (str.length == 1) {
-                return -1;
-            } else {
-                return 1;
-            }
-        } else if (str[0] >= '1' && str[0] <= '9') {
-            return 0;
-        } else if (str[0] == '0') {
-            if (str.length == 1) {
-                return 0;
-            } else {
-                return -1;
-            }
-        } else {
-            return -1;
+        if (i == length1 && j == length2) {
+            return true;
         }
-    }
 
-    public static void main(String[] args) {
+        if (i == length1 && j != length2) {
 
-        boolean result = new Solution().isNumeric("123.45e+6".toCharArray());
+            while (j != length2) {
 
-        System.out.println("");
+                if (pattern[j] != '*' && (j + 1 >= length2 || pattern[j + 1] != '*')) {
+                    return false;
+                }
+                j++;
+            }
+            return true;
+        }
+
+        if (i != length1 && j == length2) {
+            return false;
+        }
+
+        if (j + 1 == length2) {
+
+            if (str[i] == pattern[j] || pattern[j] == '.') {
+                return matchHelper(str, i + 1, length1, pattern, j + 1, length2);
+            } else {
+                return false;
+            }
+        }
+
+        if ((str[i] == pattern[j] || pattern[j] == '.')
+                && pattern[j + 1] != '*') {
+
+            return matchHelper(str, i + 1, length1, pattern, j + 1, length2);
+        }
+
+        if ((str[i] == pattern[j] || pattern[j] == '.')
+                && pattern[j + 1] == '*') {
+
+            return matchHelper(str, i, length1, pattern, j + 2, length2)
+                    || matchHelper(str, i + 1, length1, pattern, j, length2);
+        }
+
+        if (pattern[j + 1] == '*') {
+            return matchHelper(str, i, length1, pattern, j + 2, length2);
+        }
+
+        return false;
     }
 }
