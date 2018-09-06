@@ -76,10 +76,10 @@ class MinStack {
 
 
     public MinStack() {
-
     }
 
     public void push(int x) {
+		
         if ( stackIndex == -1 ) {
             minValue.add(x);
             minIndex++;

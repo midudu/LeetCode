@@ -1,93 +1,128 @@
-class TreeNode {
-    int val = 0;
-    TreeNode left = null;
-    TreeNode right = null;
-
-    public TreeNode(int val) {
-        this.val = val;
-
-    }
-
-}
-
 public class Solution {
 
-    String Serialize(TreeNode root) {
+    public boolean hasPath(char[] matrix, int rows, int cols, char[] str) {
 
-        if (root == null) {
-            return "";
+        if (rows <= 0 || cols <= 0 || matrix == null || matrix.length == 0
+                || str == null || str.length == 0 || rows * cols != matrix.length) {
+            return false;
         }
 
-        StringBuilder sb = new StringBuilder();
-        Serialize2(root, sb);
+        char[][] newMatrix = new char[rows][cols];
+        convertOneDimensionMatrixToTwoDimensions(matrix, newMatrix);
 
-        return sb.toString();
-    }
+        int strIndex = 0;
 
-    private void Serialize2(TreeNode root, StringBuilder sb) {
+        int[][] hasVisited = new int[rows][cols];
 
-        if (root == null) {
-            sb.append("#,");
-            return;
+        for (int row = 0; row < newMatrix.length; row++) {
+            for (int col = 0; col < newMatrix[row].length; col++) {
+
+                if (newMatrix[row][col] == str[0]) {
+
+                    if (hasPathHelper(newMatrix, row, col, str,
+                            1, hasVisited)) {
+                        return true;
+                    }
+                }
+            }
         }
-        sb.append(root.val);
-        sb.append(',');
-        Serialize2(root.left, sb);
-        Serialize2(root.right, sb);
+
+        return false;
     }
 
-    private int index = -1;
+    private void convertOneDimensionMatrixToTwoDimensions(
+            char[] oneDimensionMatrix, char[][] twoDimensionMatrix) {
 
-    TreeNode Deserialize(String str) {
+        int rowIndex = 0;
+        int colIndex = 0;
 
-        if (str.length() == 0)
-            return null;
-        String[] strs = str.split(",");
-        return Deserialize2(strs);
-    }
+        for (int i = 0; i < oneDimensionMatrix.length; i++) {
 
-    private TreeNode Deserialize2(String[] strs) {
+            twoDimensionMatrix[rowIndex][colIndex] = oneDimensionMatrix[i];
 
-        index++;
-        if (!strs[index].equals("#")) {
-            TreeNode root = new TreeNode(0);
-            root.val = Integer.parseInt(strs[index]);
-            root.left = Deserialize2(strs);
-            root.right = Deserialize2(strs);
-            return root;
+            colIndex++;
+            if (colIndex == twoDimensionMatrix[0].length) {
+                colIndex = 0;
+                rowIndex++;
+            }
         }
-        return null;
+    }
+
+    private boolean hasPathHelper(char[][] matrix, int startRow, int startCol,
+                                  char[] str, int currentIndex,
+                                  int[][] hasVisited) {
+
+        if (currentIndex >= str.length) {
+            return true;
+        }
+
+        hasVisited[startRow][startCol] = 1;
+
+        if (startRow - 1 >= 0
+                && hasVisited[startRow - 1][startCol] == 0
+                && matrix[startRow - 1][startCol] == str[currentIndex]) {
+
+            if (hasPathHelper(matrix, startRow - 1, startCol, str,
+                    currentIndex + 1, hasVisited)) {
+
+                hasVisited[startRow][startCol] = 0;
+                return true;
+            }
+        }
+
+        if (startRow + 1 <= matrix.length - 1
+                && hasVisited[startRow + 1][startCol] == 0
+                && matrix[startRow + 1][startCol] == str[currentIndex]) {
+
+            if (hasPathHelper(matrix, startRow + 1, startCol, str,
+                    currentIndex + 1, hasVisited)) {
+
+                hasVisited[startRow][startCol] = 0;
+                return true;
+            }
+        }
+
+
+        if (startCol - 1 >= 0
+                && hasVisited[startRow][startCol - 1] == 0
+                && matrix[startRow][startCol - 1] == str[currentIndex]) {
+
+            if (hasPathHelper(matrix, startRow, startCol - 1, str,
+                    currentIndex + 1, hasVisited)) {
+
+                hasVisited[startRow][startCol] = 0;
+                return true;
+            }
+        }
+
+
+        if (startCol + 1 <= matrix[0].length - 1
+                && hasVisited[startRow][startCol + 1] == 0
+                && matrix[startRow][startCol + 1] == str[currentIndex]) {
+
+            if (hasPathHelper(matrix, startRow, startCol + 1, str,
+                    currentIndex + 1, hasVisited)) {
+
+                hasVisited[startRow][startCol] = 0;
+                return true;
+            }
+        }
+
+        hasVisited[startRow][startCol] = 0;
+        return false;
     }
 
     public static void main(String[] args) {
 
-        TreeNode r1 = new TreeNode(1);
-        TreeNode r2 = new TreeNode(2);
-        TreeNode r3 = new TreeNode(3);
-        TreeNode r4 = new TreeNode(4);
-        TreeNode r5 = new TreeNode(5);
-        TreeNode r6 = new TreeNode(6);
-        TreeNode r7 = new TreeNode(7);
+        char[] matrix = {'a', 'b', 'c', 'e', 's', 'f', 'c', 's', 'a', 'd', 'e', 'e'};
+        int row = 3;
+        int col = 4;
 
-        r1.left = r2;
+        char[] str = {'a', 'b', 'c', 'b'};
 
-        r2.left = r4;
-        r2.right = r5;
-        r4.left = r6;
+        boolean result = new Solution().hasPath(matrix,
+                row, col, str);
 
-
-        String result = new Solution().Serialize(r1);
-
-        System.out.println(result);
-
-        char[] resultChar = result.toCharArray();
-        String[] resultString = new String[resultChar.length];
-        for (int i = 0; i < resultChar.length; i++) {
-            resultString[i] = Character.toString(resultChar[i]);
-        }
-
-        TreeNode root = new Solution().Deserialize(result);
-
-        int a = 1;
+        System.out.println();
     }
 }
