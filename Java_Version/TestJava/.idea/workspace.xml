@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ffbcff5e-ced2-4ebe-a713-4c74a7d3e487" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestJava/Solution.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestJava/Solution.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DataStructureBook/testJava/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../DataStructureBook/testJava/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Solution.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SwordToOffer/28_ElementsMoreThanHalfInArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../SwordToOffer/28_ElementsMoreThanHalfInArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SwordToOffer/29_TheMinimumKNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../SwordToOffer/29_TheMinimumKNumbers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SwordToOffer/30_MaxConsecutiveSubSequenceSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../SwordToOffer/30_MaxConsecutiveSubSequenceSum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SwordToOffer/32_MinimumNumberStitchedByElementsInArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../SwordToOffer/32_MinimumNumberStitchedByElementsInArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SwordToOffer/33_UglyNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../SwordToOffer/33_UglyNumbers.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,38 +23,38 @@
       <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="26" column="68" lean-forward="true" selection-start-line="26" selection-start-column="68" selection-end-line="26" selection-end-column="68" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Map.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Map.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8880">
-              <caret line="396" column="64" selection-start-line="396" selection-start-column="59" selection-end-line="396" selection-end-column="64" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Stream.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/stream/Stream.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22368">
-              <caret line="976" column="16" selection-start-line="976" selection-start-column="16" selection-end-line="976" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Collection.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Collection.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15120">
-              <caret line="657" column="22" selection-start-line="657" selection-start-column="22" selection-end-line="657" selection-end-column="22" />
+            <state relative-caret-position="312">
+              <caret line="64" column="9" lean-forward="true" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="9" />
               <folding>
-                <element signature="e#32100#32101#0" expanded="true" />
-                <element signature="e#32165#32166#0" expanded="true" />
+                <element signature="e#0#741#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Math.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Math.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="387">
+              <caret line="1275" column="22" selection-start-line="1275" selection-start-column="22" selection-end-line="1275" selection-end-column="22" />
+              <folding>
+                <element signature="e#17080#17081#0" expanded="true" />
+                <element signature="e#17162#17163#0" expanded="true" />
+                <element signature="e#49482#49483#0" expanded="true" />
+                <element signature="e#49527#49528#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Character.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Character.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="179">
+              <caret line="10059" column="22" selection-start-line="10059" selection-start-column="22" selection-end-line="10059" selection-end-column="22" />
+              <folding>
+                <element signature="e#402117#402118#0" expanded="true" />
+                <element signature="e#402145#402146#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -101,6 +106,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -112,9 +120,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -298,14 +303,16 @@
       <workItem from="1535504745350" duration="2128000" />
       <workItem from="1535615394208" duration="2033000" />
       <workItem from="1535694569024" duration="683000" />
+      <workItem from="1540360340333" duration="6439000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97425000" />
+    <option name="totallyTimeSpent" value="103864000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -320,7 +327,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19839142" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20107238" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -330,11 +337,11 @@
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4886059" weight="0.28550512" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49798927" weight="0.32796487" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49798927" weight="0.32796487" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -347,58 +354,10 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/StringUTF16.java</url>
+          <url />
           <line>417</line>
           <properties />
           <option name="timeStamp" value="40" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Solution.java</url>
-          <line>62</line>
-          <properties />
-          <option name="timeStamp" value="75" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Solution.java</url>
-          <line>2</line>
-          <properties />
-          <option name="timeStamp" value="76" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Solution.java</url>
-          <line>9</line>
-          <properties />
-          <option name="timeStamp" value="77" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Solution.java</url>
-          <line>11</line>
-          <properties />
-          <option name="timeStamp" value="78" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Solution.java</url>
-          <line>37</line>
-          <properties />
-          <option name="timeStamp" value="80" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Solution.java</url>
-          <line>38</line>
-          <properties />
-          <option name="timeStamp" value="81" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Solution.java</url>
-          <line>40</line>
-          <properties />
-          <option name="timeStamp" value="83" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Solution.java</url>
-          <line>44</line>
-          <properties />
-          <option name="timeStamp" value="84" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -408,7 +367,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://D:/Java/jdk/lib/src.zip!/java.base/java/lang/Math.java" />
     <entry file="jar://D:/Java/jdk/lib/src.zip!/java.base/java/lang/Integer.java" />
     <entry file="file://$PROJECT_DIR$/src/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -573,13 +531,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Math.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="666" column="27" selection-start-line="666" selection-start-column="27" selection-end-line="666" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Collection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15120">
@@ -612,10 +563,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Character.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="10059" column="22" selection-start-line="10059" selection-start-column="22" selection-end-line="10059" selection-end-column="22" />
+          <folding>
+            <element signature="e#402117#402118#0" expanded="true" />
+            <element signature="e#402145#402146#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Math.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="1275" column="22" selection-start-line="1275" selection-start-column="22" selection-end-line="1275" selection-end-column="22" />
+          <folding>
+            <element signature="e#17080#17081#0" expanded="true" />
+            <element signature="e#17162#17163#0" expanded="true" />
+            <element signature="e#49482#49483#0" expanded="true" />
+            <element signature="e#49527#49528#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="26" column="68" lean-forward="true" selection-start-line="26" selection-start-column="68" selection-end-line="26" selection-end-column="68" />
+        <state relative-caret-position="312">
+          <caret line="64" column="9" lean-forward="true" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#741#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
