@@ -1,76 +1,37 @@
-/*
-The string "PAYPALISHIRING" is written in a zigzag pattern on a given number of rows like this:
-(you may want to display this pattern in a fixed font for better legibility)
-
-        P   A   H   N
-        A P L S I I G
-        Y   I   R
-        And then read line by line: "PAHNAPLSIIGYIR"
-
-        Write the code that will take a string and make this conversion given a number of rows:
-
-        string convert(string s, int numRows);
-        Example 1:
-
-        Input: s = "PAYPALISHIRING", numRows = 3
-        Output: "PAHNAPLSIIGYIR"
-        Example 2:
-
-        Input: s = "PAYPALISHIRING", numRows = 4
-        Output: "PINALSIGYAHRPI"
-        Explanation:
-
-        P     I    N
-        A   L S  I G
-        Y A   H R
-        P     I*/
+import java.util.ArrayList;
+import java.util.List;
 
 class Solution {
 
-    public String convert(String s, int numRows) {
+    public List<String> letterCombinations(String digits) {
 
-        if (s == null || s.isEmpty() || numRows <= 1) {
-            return s;
+        List<String> res = new ArrayList<>();
+        if (digits == null || digits.length() == 0) {
+            return res;
         }
 
-        int groupColumns = numRows - 1;
+        String[] key = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
 
-        StringBuilder[] rowResult = new StringBuilder[numRows];
+        helper(res, "", 0, digits, key);
 
-        int currentRowPosition = 0;
-        int groupIndex = 0;
+        return res;
 
-        for (int i = 0; i < s.length(); i++) {
+    }
 
-            if (rowResult[currentRowPosition] == null) {
-                rowResult[currentRowPosition] = new StringBuilder();
-            }
+    public void helper(
+            List<String> res, String curr, int currIdx, String digits, String[] key) {
 
-            rowResult[currentRowPosition].append(s.charAt(i));
-
-            if (groupIndex == 0) {
-                if (currentRowPosition != numRows - 1) {
-                    currentRowPosition++;
-                    continue;
-                }
-            }
-
-            groupIndex = (groupIndex + 1 == groupColumns ? 0 : groupIndex + 1);
-
-            if (groupIndex == 0) {
-                currentRowPosition = 0;
-            } else {
-                currentRowPosition--;
-            }
+        if (currIdx > digits.length() - 1) {
+            res.add(curr);
+            return;
         }
 
-        StringBuilder result = new StringBuilder();
-        for (int row = 0; row < numRows; row++) {
-            if (rowResult[row] != null) {
-                result.append(rowResult[row]);
-            }
-        }
+        String digit = key[(digits.charAt(currIdx) - '0')];
 
-        return result.toString();
+        for (int i = 0; i < digit.length(); i++) {
+
+            helper(res, curr + digit.charAt(i),
+                    currIdx + 1, digits, key);
+        }
     }
 }
