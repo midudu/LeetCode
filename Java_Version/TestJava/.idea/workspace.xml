@@ -18,12 +18,11 @@
       <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="56" column="1" lean-forward="true" selection-start-line="24" selection-end-line="56" selection-end-column="1" />
+            <state relative-caret-position="254">
+              <caret line="92" column="1" selection-start-line="92" selection-start-column="1" selection-end-line="92" selection-end-column="1" />
               <folding>
-                <element signature="e#0#333#0" expanded="true" />
-                <element signature="e#367#368#0" expanded="true" />
-                <element signature="e#390#391#0" expanded="true" />
+                <element signature="e#0#588#0" expanded="true" />
+                <element signature="method#searchHelper#0;class#Solution#0" />
               </folding>
             </state>
           </provider>
@@ -120,6 +119,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -132,7 +132,6 @@
         </subPane>
       </pane>
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -319,11 +318,12 @@
       <workItem from="1540360340333" duration="9274000" />
       <workItem from="1540427617523" duration="6581000" />
       <workItem from="1540462726726" duration="3132000" />
+      <workItem from="1540517590149" duration="8492000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116412000" />
+    <option name="totallyTimeSpent" value="124904000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -344,22 +344,22 @@
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.51340485" side_tool="true" visible="true" weight="0.13469985" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.51876676" side_tool="true" visible="true" weight="0.3191801" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49932975" weight="0.329429" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49262735" weight="0.238653" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4872654" weight="0.238653" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49932975" weight="0.329429" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20643431" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16756032" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.48659518" weight="0.39531478" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.48123324" weight="0.3191801" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -387,7 +387,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="94" />
+      <option name="time" value="112" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -633,12 +633,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="56" column="1" lean-forward="true" selection-start-line="24" selection-end-line="56" selection-end-column="1" />
+        <state relative-caret-position="254">
+          <caret line="92" column="1" selection-start-line="92" selection-start-column="1" selection-end-line="92" selection-end-column="1" />
           <folding>
-            <element signature="e#0#333#0" expanded="true" />
-            <element signature="e#367#368#0" expanded="true" />
-            <element signature="e#390#391#0" expanded="true" />
+            <element signature="e#0#588#0" expanded="true" />
+            <element signature="method#searchHelper#0;class#Solution#0" />
           </folding>
         </state>
       </provider>
