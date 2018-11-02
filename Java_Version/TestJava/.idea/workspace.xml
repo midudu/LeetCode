@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ffbcff5e-ced2-4ebe-a713-4c74a7d3e487" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Solution.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -18,8 +17,11 @@
       <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="23" selection-end-line="90" />
+            <state relative-caret-position="364">
+              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+              <folding>
+                <element signature="e#0#447#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -27,8 +29,8 @@
       <file leaf-file-name="String.java" pinned="false" current-in-tab="false">
         <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/String.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="580">
-              <caret line="2637" column="7" lean-forward="true" selection-start-line="2637" selection-start-column="7" selection-end-line="2637" selection-end-column="7" />
+            <state relative-caret-position="61104">
+              <caret line="2637" column="7" selection-start-line="2637" selection-start-column="7" selection-end-line="2637" selection-end-column="7" />
               <folding>
                 <element signature="e#76548#76549#0" expanded="true" />
                 <element signature="e#76607#76608#0" expanded="true" />
@@ -112,7 +114,6 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -142,6 +143,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -336,11 +338,12 @@
       <workItem from="1540686966940" duration="2478000" />
       <workItem from="1540730440770" duration="4226000" />
       <workItem from="1540794905093" duration="940000" />
+      <workItem from="1541119671497" duration="743000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="140882000" />
+    <option name="totallyTimeSpent" value="141625000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -368,7 +371,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49932975" weight="0.329429" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17962466" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1816354" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -647,8 +650,8 @@
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="2637" column="7" lean-forward="true" selection-start-line="2637" selection-start-column="7" selection-end-line="2637" selection-end-column="7" />
+        <state relative-caret-position="61104">
+          <caret line="2637" column="7" selection-start-line="2637" selection-start-column="7" selection-end-line="2637" selection-end-column="7" />
           <folding>
             <element signature="e#76548#76549#0" expanded="true" />
             <element signature="e#76607#76608#0" expanded="true" />
@@ -658,8 +661,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="23" selection-end-line="90" />
+        <state relative-caret-position="364">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+          <folding>
+            <element signature="e#0#447#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
