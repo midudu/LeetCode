@@ -1,79 +1,51 @@
 /*
-Given a collection of intervals, merge all overlapping intervals.
+The set [1,2,3,...,n] contains a total of n! unique permutations.
 
+        By listing and labeling all of the permutations in order, we get the following sequence for n = 3:
+
+        "123"
+        "132"
+        "213"
+        "231"
+        "312"
+        "321"
+        Given n and k, return the kth permutation sequence.
+
+        Note:
+
+        Given n will be between 1 and 9 inclusive.
+        Given k will be between 1 and n! inclusive.
         Example 1:
 
-        Input: [[1,3],[2,6],[8,10],[15,18]]
-        Output: [[1,6],[8,10],[15,18]]
-        Explanation: Since intervals [1,3] and [2,6] overlaps, merge them into [1,6].
+        Input: n = 3, k = 3
+        Output: "213"
         Example 2:
 
-        Input: [[1,4],[4,5]]
-        Output: [[1,5]]
-        Explanation: Intervals [1,4] and [4,5] are considerred overlapping.*/
-
-
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-
-class Interval {
-
-    int start;
-    int end;
-
-    Interval() {
-        start = 0;
-        end = 0;
-    }
-
-    Interval(int s, int e) {
-        start = s;
-        end = e;
-    }
-}
+        Input: n = 4, k = 9
+        Output: "2314"*/
 
 class Solution {
 
-    class IntervalComparator implements Comparator<Interval> {
+    public String getPermutation(int n, int k) {
 
-        public int compare(Interval o1, Interval o2) {
-
-            if (o1.start != o2.start) {
-                return Integer.compare(o1.start, o2.start);
-            } else {
-                return Integer.compare(o1.end, o2.end);
-            }
+        if (n < 1 || n > 9) {
+            return null;
         }
+
+        int[] factorialNumbers = new int[n];
+        factorialNumbers[0] = 1;
+        for (int i = 2; i <= n; i++) {
+            factorialNumbers[i - 1] = factorialNumbers[i - 2] * i;
+        }
+
+        String[] numbersString = {"1", "2", "3", "4", "5", "6", "7", "8", "9"};
+
+        return getPermutationHelper(n, k, factorialNumbers, numbersString);
     }
 
-    public List<Interval> merge(List<Interval> intervals) {
+    private String getPermutationHelper(
+            int n, int k, int[] factorialNumbers, String[] numbersString) {
 
-        if (intervals == null || intervals.isEmpty()) {
-            return intervals;
-        }
-
-        IntervalComparator intervalComparator = new IntervalComparator();
-
-        intervals.sort(intervalComparator);
-
-        List<Interval> result = new ArrayList<>(intervals.size());
-
-        for (int i = 0; i < intervals.size(); i++) {
-
-            if (result.isEmpty()) {
-                result.add(intervals.get(i));
-            }
-
-            Interval currentInterval = intervals.get(i);
-            Interval lastInterval = result.get(result.size() - 1);
-            if (currentInterval.start <= lastInterval.end) {
-                lastInterval.end = Math.max(currentInterval.end, lastInterval.end);
-            } else {
-                result.add(currentInterval);
-            }
-        }
-
-        return result;
+        
     }
 }

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ffbcff5e-ced2-4ebe-a713-4c74a7d3e487" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Solution.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -17,11 +18,10 @@
       <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="78" column="1" selection-start-line="78" selection-start-column="1" selection-end-line="78" selection-end-column="1" />
+            <state relative-caret-position="463">
+              <caret line="46" column="26" selection-end-line="50" selection-end-column="1" />
               <folding>
-                <element signature="e#0#410#0" expanded="true" />
-                <element signature="imports" expanded="true" />
+                <element signature="e#0#584#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -103,8 +103,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -302,12 +302,15 @@
       <workItem from="1540794905093" duration="940000" />
       <workItem from="1541119671497" duration="743000" />
       <workItem from="1541294704454" duration="813000" />
-      <workItem from="1541379777324" duration="3512000" />
+      <workItem from="1541379777324" duration="3660000" />
+      <workItem from="1541465099001" duration="596000" />
+      <workItem from="1541466038338" duration="134000" />
+      <workItem from="1541473585638" duration="1106000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="145950000" />
+    <option name="totallyTimeSpent" value="147934000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -335,7 +338,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49932975" weight="0.329429" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18632708" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19436997" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -593,10 +596,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="61104">
           <caret line="2637" column="7" selection-start-line="2637" selection-start-column="7" selection-end-line="2637" selection-end-column="7" />
-          <folding>
-            <element signature="e#76548#76549#0" expanded="true" />
-            <element signature="e#76607#76608#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -611,10 +610,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="178">
           <caret line="174" column="27" selection-start-line="174" selection-start-column="27" selection-end-line="174" selection-end-column="27" />
-          <folding>
-            <element signature="e#7288#7289#0" expanded="true" />
-            <element signature="e#7316#7317#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -641,11 +636,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="78" column="1" selection-start-line="78" selection-start-column="1" selection-end-line="78" selection-end-column="1" />
+        <state relative-caret-position="463">
+          <caret line="46" column="26" selection-end-line="50" selection-end-column="1" />
           <folding>
-            <element signature="e#0#410#0" expanded="true" />
-            <element signature="imports" expanded="true" />
+            <element signature="e#0#584#0" expanded="true" />
           </folding>
         </state>
       </provider>
