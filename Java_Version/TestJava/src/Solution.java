@@ -1,78 +1,23 @@
-/*
-Given a linked list, rotate the list to the right by k places, where k is non-negative.
+package package1;
 
-        Example 1:
+public class Solution {
 
-        Input: 1->2->3->4->5->NULL, k = 2
-        Output: 4->5->1->2->3->NULL
-        Explanation:
-        rotate 1 steps to the right: 5->1->2->3->4->NULL
-        rotate 2 steps to the right: 4->5->1->2->3->NULL
-        Example 2:
+    public A a = new A();
+    public B b = new B();
+}
 
-        Input: 0->1->2->NULL, k = 4
-        Output: 2->0->1->NULL
-        Explanation:
-        rotate 1 steps to the right: 2->0->1->NULL
-        rotate 2 steps to the right: 1->2->0->NULL
-        rotate 3 steps to the right: 0->1->2->NULL
-        rotate 4 steps to the right: 2->0->1->NULL
-*/
+class A {
 
+    public void temp() {
 
-class ListNode {
-
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
+        System.out.println("package1.A");
     }
 }
 
-class Solution {
+class B {
 
-    public ListNode rotateRight(ListNode head, int k) {
+    public void temp() {
 
-        if (head == null || k < 0) {
-            return null;
-        }
-
-        ListNode slowPointer = head, fastPointer = head;
-        for (int i = 0; i < k; i++) {
-            fastPointer = fastPointer.next;
-            if (fastPointer == null) {
-                fastPointer = head;
-            }
-        }
-
-        while (fastPointer != null) {
-            fastPointer = fastPointer.next;
-            slowPointer = slowPointer.next;
-        }
-
-        ListNode endPointer = slowPointer;
-
-        ListNode resultHead = new ListNode(0);
-        ListNode sewPointer = resultHead;
-
-        while (slowPointer != null) {
-
-            sewPointer.next = slowPointer;
-            sewPointer = sewPointer.next;
-
-            slowPointer = slowPointer.next;
-        }
-
-        slowPointer = head;
-        while (slowPointer != endPointer) {
-            sewPointer.next = slowPointer;
-            sewPointer = sewPointer.next;
-            slowPointer = slowPointer.next;
-        }
-
-        sewPointer.next = null;
-
-        return resultHead.next;
+        System.out.println("package1.B");
     }
 }
