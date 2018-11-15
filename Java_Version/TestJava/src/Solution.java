@@ -1,92 +1,45 @@
 /*
-Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:
+Given two integers n and k, return all possible combinations of k numbers out of 1 ... n.
 
-        Integers in each row are sorted from left to right.
-        The first integer of each row is greater than the last integer of the previous row.
-        Example 1:
+        Example:
 
-        Input:
-        matrix = [
-        [1,   3,  5,  7],
-        [10, 11, 16, 20],
-        [23, 30, 34, 50]
-        ]
-        target = 3
-        Output: true
-        Example 2:
+        Input: n = 4, k = 2
+        Output:
+        [
+        [2,4],
+        [3,4],
+        [2,3],
+        [1,2],
+        [1,3],
+        [1,4],
+        ]*/
 
-        Input:
-        matrix = [
-        [1,   3,  5,  7],
-        [10, 11, 16, 20],
-        [23, 30, 34, 50]
-        ]
-        target = 13
-        Output: false*/
+import java.util.ArrayList;
+import java.util.List;
 
 class Solution {
 
-    public boolean searchMatrix(int[][] matrix, int target) {
+    public List<List<Integer>> combine(int n, int k) {
 
-        if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {
-            return false;
+        if (n <= 0 || k <= 0) {
+            return new ArrayList<>();
         }
 
-        int row = searchRow(matrix, target);
-        if (row == -1) {
-            return false;
+        k = (k > n ? n : k);
+
+        int[] nums = new int[n];
+        for (int i = 0; i < n; i++) {
+            nums[i] = i + 1;
         }
 
-        return searchCol(matrix, row, target);
+        List<List<Integer>> result = new ArrayList<>();
+        combineHelper();
     }
 
-    private int searchRow(int[][] matrix, int target) {
+    private void combineHelper(
+            int[] nums, int startIndex, int k,
+            ArrayList<Integer> currentList, List<List<Integer>> result) {
 
-        int startRow = 0, endRow = matrix.length - 1;
-        while (startRow <= endRow) {
 
-            if (startRow == endRow) {
-                return (matrix[startRow][0] <= target ? startRow : -1);
-            } else if (startRow + 1 == endRow) {
-                return (matrix[endRow][0] <= target ? endRow :
-                        (matrix[startRow][0] <= target ? startRow : -1));
-            }
-
-            int middleRow = startRow + (endRow - startRow) / 2;
-            if (matrix[middleRow][0] == target) {
-                return middleRow;
-            } else if (matrix[middleRow][0] < target) {
-                startRow = middleRow;
-            } else {
-                endRow = middleRow - 1;
-            }
-        }
-
-        return -1;
-    }
-
-    private boolean searchCol(int[][] matrix, int row, int target) {
-
-        int startCol = 0, endCol = matrix[0].length - 1;
-
-        while (startCol <= endCol) {
-
-            if (startCol == endCol) {
-                return matrix[row][startCol] == target;
-            } else if (startCol + 1 == endCol) {
-                return matrix[row][startCol] == target || matrix[row][endCol] == target;
-            }
-
-            int middleCol = startCol + (endCol - startCol) / 2;
-            if (matrix[row][middleCol] == target) {
-                return true;
-            } else if (matrix[row][middleCol] < target) {
-                startCol = middleCol + 1;
-            } else {
-                endCol = middleCol - 1;
-            }
-        }
-
-        return false;
     }
 }
