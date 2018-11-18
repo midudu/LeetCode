@@ -2,42 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ffbcff5e-ced2-4ebe-a713-4c74a7d3e487" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../../DataStructureBook/Codes/Chapter 12/adjListGraph.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DataStructureBook/Codes/Chapter 2/Number 4.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DataStructureBook/Codes/Chapter 3/Number 6.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DataStructureBook/Codes/Chapter 4/Number 1.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DataStructureBook/Codes/Chapter 5/BinaryTree.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DataStructureBook/Codes/Chapter 5/BinaryTreeMain.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DataStructureBook/Codes/Chapter 5/ReadMe.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DataStructureBook/Codes/Chapter 6/KnapSack.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DataStructureBook/Codes/Chapter 6/ReadMe.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DataStructureBook/Codes/Chapter 6/ServiceDesks.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DataStructureBook/Codes/Chapter 6/ServiceDesks.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DataStructureBook/Codes/Chapter 6/ServiceDesksMain.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DataStructureBook/Codes/Chapter 8/AvlTree.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DataStructureBook/Codes/Chapter 8/BinarySearchTree.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DataStructureBook/Codes/Chapter 8/BinarySearchTreeMain.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DataStructureBook/DataStructureAndAlgorithms/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DataStructureBook/DataStructureAndAlgorithms/src/graph/Edge.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DataStructureBook/DataStructureAndAlgorithms/src/graph/EdgeComparator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DataStructureBook/DataStructureAndAlgorithms/src/graph/adjacentMatrix/DigraphInAdjacentMatrix.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DataStructureBook/DataStructureAndAlgorithms/src/graph/adjacentMatrix/GraphInAdjacentMatrix.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DataStructureBook/DataStructureAndAlgorithms/src/graph/adjacentMatrix/UndigraphInAdjacentMatrix.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DataStructureBook/DataStructureAndAlgorithms/src/kruskal/Kruskal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DataStructureBook/DataStructureAndAlgorithms/src/prim/Prim.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DataStructureBook/DataStructureAndAlgorithms/src/shortestPath/multiSources/Floyd.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DataStructureBook/DataStructureAndAlgorithms/src/shortestPath/singleSource/UnweightedShortestPath.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DataStructureBook/DataStructureAndAlgorithms/src/shortestPath/singleSource/WeightedShortestPath.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DataStructureBook/DataStructureAndAlgorithms/src/unionFindSet/UnionFindSet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DataStructureBook/testJava/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DataStructureBook/testJava/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DataStructureBook/testJava/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DataStructureBook/testJava/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DataStructureBook/testJava/out/production/testJava/Solution.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DataStructureBook/testJava/out/production/testJava/TreeNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DataStructureBook/testJava/src/Solution.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../DataStructureBook/testJava/testJava.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Solution.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,10 +17,9 @@
       <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+            <state relative-caret-position="336">
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
               <folding>
-                <element signature="e#0#867#0" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
@@ -120,8 +84,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -378,12 +342,14 @@
       <workItem from="1542110840875" duration="531000" />
       <workItem from="1542155845135" duration="1469000" />
       <workItem from="1542189020101" duration="2923000" />
-      <workItem from="1542332488668" duration="1127000" />
+      <workItem from="1542332488668" duration="1449000" />
+      <workItem from="1542418048521" duration="13000" />
+      <workItem from="1542507097596" duration="596000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="176723000" />
+    <option name="totallyTimeSpent" value="177654000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -400,11 +366,10 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49932975" weight="0.329429" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49731904" weight="0.32796487" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="7" sideWeight="0.5241287" side_tool="true" visible="true" weight="0.22693998" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="7" sideWeight="0.5241287" side_tool="true" visible="true" weight="0.3045388" />
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.3297587" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4953083" weight="0.25036603" />
@@ -412,16 +377,17 @@
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49865952" weight="0.329429" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23592493" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24262735" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.47587132" visible="true" weight="0.22693998" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.47587132" weight="0.22693998" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49731904" weight="0.32796487" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -759,10 +725,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+        <state relative-caret-position="336">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
           <folding>
-            <element signature="e#0#867#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
