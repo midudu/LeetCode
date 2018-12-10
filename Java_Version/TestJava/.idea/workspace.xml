@@ -2,56 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ffbcff5e-ced2-4ebe-a713-4c74a7d3e487" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../../JavaProgrammersInterviewBook/pdf/LinkedList/8_1_1_BasicOperations.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JavaProgrammersInterviewBook/pdf/LinkedList/8_1_1_BasicOperations.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JavaProgrammersInterviewBook/pdf/LinkedList/8_1_2_DeleteDuplicateValue.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JavaProgrammersInterviewBook/pdf/LinkedList/8_1_2_DeleteDuplicateValue.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JavaProgrammersInterviewBook/pdf/LinkedList/8_1_3_FindLastKIndex.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JavaProgrammersInterviewBook/pdf/LinkedList/8_1_3_FindLastKIndex.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JavaProgrammersInterviewBook/pdf/LinkedList/8_1_4_ReverseLinkedList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JavaProgrammersInterviewBook/pdf/LinkedList/8_1_4_ReverseLinkedList.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JavaProgrammersInterviewBook/pdf/LinkedList/8_1_5_OutputLinkedListReversely.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JavaProgrammersInterviewBook/pdf/LinkedList/8_1_5_OutputLinkedListReversely.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JavaProgrammersInterviewBook/pdf/LinkedList/8_1_6_FindMiddleNode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JavaProgrammersInterviewBook/pdf/LinkedList/8_1_6_FindMiddleNode.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JavaProgrammersInterviewBook/pdf/LinkedList/8_1_7_JudgeCircleInLinkedList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JavaProgrammersInterviewBook/pdf/LinkedList/8_1_7_JudgeCircleInLinkedList.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JavaProgrammersInterviewBook/pdf/LinkedList/8_1_8_DeleteNodeWithoutHead.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JavaProgrammersInterviewBook/pdf/LinkedList/8_1_8_DeleteNodeWithoutHead.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JavaProgrammersInterviewBook/pdf/LinkedList/8_1_9_JudgeTwoLinkedListIntersection.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JavaProgrammersInterviewBook/pdf/LinkedList/8_1_9_JudgeTwoLinkedListIntersection.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JavaProgrammersInterviewBook/pdf/StackAndQueue/8_2_2a_ImplementStackWithArray.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JavaProgrammersInterviewBook/pdf/StackAndQueue/8_2_2b_ImplementStackWithLinkedList.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JavaProgrammersInterviewBook/pdf/StackAndQueue/8_2_3_FindMinimumElementInO(1)Complexity.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JavaProgrammersInterviewBook/pdf/StackAndQueue/8_2_4_ImplementQueueWithLinkedList.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JavaProgrammersInterviewBook/pdf/array/8_5_11_FindMaxDifferenceInArray.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JavaProgrammersInterviewBook/pdf/array/8_5_12_FindMinAbsoluteValueNumber.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JavaProgrammersInterviewBook/pdf/array/8_5_15_MergeTwoSortedPartsInArray.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JavaProgrammersInterviewBook/pdf/array/8_5_18_CountInversePairsInArray.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JavaProgrammersInterviewBook/pdf/array/8_5_19_FindMinDistanceOfThreeArrays.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JavaProgrammersInterviewBook/pdf/array/8_5_6_RotateArray.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JavaProgrammersInterviewBook/pdf/array/8_5_7FindKMinimumNumbersInUnsortedArray.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JavaProgrammersInterviewBook/pdf/binaryTree/ImplementBinarySearchTree.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JavaProgrammersInterviewBook/pdf/bitManipulation/8_4_3_CalculateNumberOfOnes.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JavaProgrammersInterviewBook/pdf/graph/AdjacencyMatrix.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JavaProgrammersInterviewBook/pdf/graph/AdjacencyTable.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JavaProgrammersInterviewBook/pdf/graph/BFS.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JavaProgrammersInterviewBook/pdf/graph/DFS.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JavaProgrammersInterviewBook/pdf/sortAlgorithm/冒泡排序.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JavaProgrammersInterviewBook/pdf/sortAlgorithm/堆排序.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JavaProgrammersInterviewBook/pdf/sortAlgorithm/希尔排序.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JavaProgrammersInterviewBook/pdf/sortAlgorithm/归并排序.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JavaProgrammersInterviewBook/pdf/sortAlgorithm/快速排序.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JavaProgrammersInterviewBook/pdf/sortAlgorithm/桶排序.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JavaProgrammersInterviewBook/pdf/sortAlgorithm/直接插入排序.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JavaProgrammersInterviewBook/pdf/sortAlgorithm/直接选择排序.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JavaProgrammersInterviewBook/pdf/string/8_6_1_ReverseStrings.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JavaProgrammersInterviewBook/pdf/string/8_6_5_PrintAllCombinationsOfArray.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JavaProgrammersInterviewBook/pdf/string/8_6_6_PrintAllCombinationsOfAString.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JavaProgrammersInterviewBook/pdf/trieTree/TrieTree.pdf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestJava/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TestJava/ConsumerThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TestJava/ProducerThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TestJava/TestProducerAndConsumer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TestJava/TimeThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TestJava/diningPhilosophers/Clock.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TestJava/diningPhilosophers/Philosopher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TestJava/diningPhilosophers/TestDiningPhilosophers.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Solution.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/diningPhilosophers/ChangeDirectionOfOnePhilosopherMethod.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -63,53 +23,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ChangeDirectionOfOnePhilosopherMethod.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/diningPhilosophers/ChangeDirectionOfOnePhilosopherMethod.java">
+      <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="39" column="9" lean-forward="true" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
+            <state relative-caret-position="342">
+              <caret line="94" column="13" selection-start-line="94" selection-start-column="13" selection-end-line="94" selection-end-column="13" />
               <folding>
-                <element signature="method#ForkManager#0;class#ForkManager#0" />
+                <element signature="e#0#1080#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#1221#1241#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="System.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/System.java">
+      <file leaf-file-name="HashMap.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/HashMap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="606">
-              <caret line="433" column="30" selection-start-line="433" selection-start-column="30" selection-end-line="433" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Thread.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Thread.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="514">
-              <caret line="1454" column="22" selection-start-line="1454" selection-start-column="22" selection-end-line="1454" selection-end-column="22" />
-              <folding>
-                <element signature="e#16709#16710#0" expanded="true" />
-                <element signature="e#16773#16774#0" expanded="true" />
-                <element signature="e#23216#23217#0" expanded="true" />
-                <element signature="e#23260#23261#0" expanded="true" />
-                <element signature="e#41278#41279#0" expanded="true" />
-                <element signature="e#41336#41337#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Math.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Math.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="775" column="44" lean-forward="true" selection-start-line="775" selection-start-column="44" selection-end-line="775" selection-end-column="44" />
-              <folding>
-                <element signature="e#33242#33243#0" expanded="true" />
-                <element signature="e#33327#33328#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="162">
+              <caret line="1004" column="11" selection-start-line="1004" selection-start-column="11" selection-end-line="1004" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -154,9 +86,9 @@
         <option value="$PROJECT_DIR$/src/Test.java" />
         <option value="$PROJECT_DIR$/src/package1/Solution.java" />
         <option value="$PROJECT_DIR$/src/package2/C.java" />
-        <option value="$PROJECT_DIR$/src/Solution.java" />
         <option value="$PROJECT_DIR$/src/diningPhilosophers/RandomWaitMethod.java" />
         <option value="$PROJECT_DIR$/src/diningPhilosophers/ChangeDirectionOfOnePhilosopherMethod.java" />
+        <option value="$PROJECT_DIR$/src/Solution.java" />
       </list>
     </option>
   </component>
@@ -184,8 +116,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -198,12 +130,6 @@
               <item name="TestJava" type="b2602c69:ProjectViewProjectNode" />
               <item name="TestJava" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TestJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TestJava" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="diningPhilosophers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TestJava" type="b2602c69:ProjectViewProjectNode" />
@@ -252,12 +178,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.TestDiningPhilosophers">
-    <configuration name="HeapSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="HeapSort" />
-      <module name="TestJava" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-    </configuration>
+  <component name="RunManager" selected="Application.ThisEscapeTest">
     <configuration name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Solution" />
       <module name="TestJava" />
@@ -276,6 +197,11 @@
     </configuration>
     <configuration name="TestProducerAndConsumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="TestProducerAndConsumer" />
+      <module name="TestJava" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="ThisEscapeTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ThisEscapeTest" />
       <module name="TestJava" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -327,18 +253,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.Solution" />
-      <item itemvalue="Application.HeapSort" />
       <item itemvalue="Application.ThreadJoinExample" />
       <item itemvalue="Application.TestProducerAndConsumer" />
       <item itemvalue="Application.TestDiningPhilosophers" />
+      <item itemvalue="Application.ThisEscapeTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ThisEscapeTest" />
         <item itemvalue="Application.TestDiningPhilosophers" />
         <item itemvalue="Application.TestProducerAndConsumer" />
         <item itemvalue="Application.Solution" />
         <item itemvalue="Application.ThreadJoinExample" />
-        <item itemvalue="Application.HeapSort" />
       </list>
     </recent_temporary>
   </component>
@@ -477,11 +403,17 @@
       <workItem from="1543626903698" duration="3078000" />
       <workItem from="1543970765250" duration="4547000" />
       <workItem from="1543989061970" duration="7603000" />
+      <workItem from="1544056763226" duration="2509000" />
+      <workItem from="1544061552518" duration="1618000" />
+      <workItem from="1544320885577" duration="1304000" />
+      <workItem from="1544410115093" duration="1320000" />
+      <workItem from="1544423881784" duration="9000" />
+      <workItem from="1544424164941" duration="1876000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="241537000" />
+    <option name="totallyTimeSpent" value="250173000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -498,32 +430,32 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49932975" weight="0.329429" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49731904" weight="0.32796487" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5020107" side_tool="true" visible="true" weight="0.24597365" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5214477" side_tool="true" visible="true" weight="0.24597365" />
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.3297587" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.47855228" weight="0.24597365" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4953083" weight="0.25036603" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4792225" weight="0.24597365" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49865952" weight="0.329429" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24932976" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.269437" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49798927" weight="0.329429" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.47050938" weight="0.30307466" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49731904" weight="0.32796487" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49798927" weight="0.329429" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -589,27 +521,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/StringLatin1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3476">
-          <caret line="201" selection-start-line="201" selection-end-line="201" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/FdLibm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="364" column="31" selection-start-line="364" selection-start-column="31" selection-end-line="364" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Double.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="48" column="19" selection-start-line="48" selection-start-column="19" selection-end-line="48" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/StringBuffer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1496">
@@ -875,10 +786,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="163">
           <caret line="103" column="11" selection-start-line="103" selection-start-column="11" selection-end-line="103" selection-end-column="11" />
-          <folding>
-            <element signature="e#3513#3514#0" expanded="true" />
-            <element signature="e#3571#3572#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -896,71 +803,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Solution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" column="20" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#ProducerThread#0;class#ProducerThread#0" />
-            <element signature="class#TimeThread#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Math.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="775" column="44" lean-forward="true" selection-start-line="775" selection-start-column="44" selection-end-line="775" selection-end-column="44" />
-          <folding>
-            <element signature="e#33242#33243#0" expanded="true" />
-            <element signature="e#33327#33328#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/System.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="606">
+        <state relative-caret-position="8664">
           <caret line="433" column="30" selection-start-line="433" selection-start-column="30" selection-end-line="433" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Thread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="514">
+        <state relative-caret-position="33072">
           <caret line="1454" column="22" selection-start-line="1454" selection-start-column="22" selection-end-line="1454" selection-end-column="22" />
-          <folding>
-            <element signature="e#16709#16710#0" expanded="true" />
-            <element signature="e#16773#16774#0" expanded="true" />
-            <element signature="e#23216#23217#0" expanded="true" />
-            <element signature="e#23260#23261#0" expanded="true" />
-            <element signature="e#41278#41279#0" expanded="true" />
-            <element signature="e#41336#41337#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/diningPhilosophers/RandomWaitMethod.java">
+    <entry file="file://$PROJECT_DIR$/src/diningPhilosophers/RandomWaitMethod.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Math.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="139" column="1" lean-forward="true" selection-start-line="24" selection-end-line="139" selection-end-column="1" />
-          <folding>
-            <element signature="method#Philosopher#0;class#Philosopher#0" />
-            <element signature="method#doAction#0;class#Philosopher#0" />
-            <element signature="method#run#0;class#Philosopher#0" />
-            <element signature="class#Clock#0" />
-            <element signature="class#TestDiningPhilosophers#0" />
-          </folding>
+        <state relative-caret-position="24">
+          <caret line="775" column="44" selection-start-line="775" selection-start-column="44" selection-end-line="775" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/diningPhilosophers/ChangeDirectionOfOnePhilosopherMethod.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="39" column="9" lean-forward="true" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
+        <state relative-caret-position="144">
+          <caret line="6" column="32" selection-end-line="139" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Override.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="696">
+          <caret line="52" column="18" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/ThreadLocal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="775">
+          <caret line="218" column="17" selection-start-line="218" selection-start-column="17" selection-end-line="218" selection-end-column="17" />
           <folding>
-            <element signature="method#ForkManager#0;class#ForkManager#0" />
+            <element signature="e#4309#4310#0" expanded="true" />
+            <element signature="e#4336#4337#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/HashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="1004" column="11" selection-start-line="1004" selection-start-column="11" selection-end-line="1004" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="94" column="13" selection-start-line="94" selection-start-column="13" selection-end-line="94" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#1080#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1221#1241#0" expanded="true" />
           </folding>
         </state>
       </provider>
