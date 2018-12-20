@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ffbcff5e-ced2-4ebe-a713-4c74a7d3e487" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestJava.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TestJava.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestJava/Solution.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Solution.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -20,13 +18,13 @@
       <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="76" column="77" selection-end-line="80" />
+            <state relative-caret-position="318">
+              <caret line="126" column="1" selection-start-line="31" selection-end-line="126" selection-end-column="1" />
               <folding>
-                <element signature="e#0#969#0" expanded="true" />
-                <element signature="class#TreeNode#0" />
-                <element signature="e#1060#1061#0" expanded="true" />
-                <element signature="e#1083#1084#0" expanded="true" />
+                <element signature="e#0#3449#0" expanded="true" />
+                <element signature="method#solve#0;class#Solution#0" />
+                <element signature="method#processFourEdges#0;class#Solution#0" />
+                <element signature="method#solveHelper#0;class#Solution#0" />
               </folding>
             </state>
           </provider>
@@ -109,8 +107,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -136,6 +132,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -422,12 +420,14 @@
       <workItem from="1544833358959" duration="600000" />
       <workItem from="1545095300891" duration="1973000" />
       <workItem from="1545097380864" duration="7370000" />
-      <workItem from="1545112934126" duration="901000" />
+      <workItem from="1545112934126" duration="1116000" />
+      <workItem from="1545132383686" duration="14000" />
+      <workItem from="1545291018453" duration="1370000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="269593000" />
+    <option name="totallyTimeSpent" value="271192000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -450,26 +450,26 @@
       <window_info active="true" anchor="bottom" id="Event Log" order="7" sideWeight="0.5234584" side_tool="true" visible="true" weight="0.24597365" />
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.3297587" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.47654155" weight="0.24597365" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4953083" weight="0.25036603" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.47654155" weight="0.24597365" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49865952" weight="0.329429" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4970874" visible="true" weight="0.30428955" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4970874" visible="true" weight="0.24329759" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" sideWeight="0.501938" side_tool="true" weight="0.30495977" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.46849865" weight="0.29868227" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.46849865" weight="0.29868227" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.3686327" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49731904" weight="0.32796487" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49731904" weight="0.329429" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49731904" weight="0.32796487" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -535,6 +535,19 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1968">
+          <caret line="82" lean-forward="true" selection-start-line="47" selection-end-line="82" />
+          <folding>
+            <element signature="e#0#3449#0" expanded="true" />
+            <element signature="method#solve#0;class#Solution#0" />
+            <element signature="method#processFourEdges#0;class#Solution#0" />
+            <element signature="method#solveHelper#0;class#Solution#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Collection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4272">
@@ -820,9 +833,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jrt://C:/Program Files/Java/jdk-10!/jdk.compiler/com/sun/tools/javac/util/List.class">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/List.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="163">
@@ -848,10 +858,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1973">
           <caret line="91" column="41" selection-start-line="91" selection-start-column="41" selection-end-line="91" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#14633#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -984,13 +990,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="76" column="77" selection-end-line="80" />
+        <state relative-caret-position="318">
+          <caret line="126" column="1" selection-start-line="31" selection-end-line="126" selection-end-column="1" />
           <folding>
-            <element signature="e#0#969#0" expanded="true" />
-            <element signature="class#TreeNode#0" />
-            <element signature="e#1060#1061#0" expanded="true" />
-            <element signature="e#1083#1084#0" expanded="true" />
+            <element signature="e#0#3449#0" expanded="true" />
+            <element signature="method#solve#0;class#Solution#0" />
+            <element signature="method#processFourEdges#0;class#Solution#0" />
+            <element signature="method#solveHelper#0;class#Solution#0" />
           </folding>
         </state>
       </provider>
