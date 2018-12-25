@@ -1,80 +1,32 @@
 /*
-A linked list is given such that each node contains an additional random pointer which could point to any node in the list or null.
+Given the head of a graph, return a deep copy (clone) of the graph.
+Each node in the graph contains a label (int) and a list
+(List[UndirectedGraphNode]) of its neighbors.
 
-        Return a deep copy of the list.*/
+There is an edge between the given node and each of the nodes in its neighbors.
 
 
-class RandomListNode {
-    int label;
-    RandomListNode next, random;
+OJ's undirected graph serialization (so you can understand error output):
+        Nodes are labeled uniquely.
 
-    RandomListNode(int x) {
-        this.label = x;
-    }
-}
+        We use # as a separator for each node, and , as a separator for node label and each neighbor of the node.
 
-public class Solution {
 
-    public static void main(String[] args) {
+        As an example, consider the serialized graph {0,1,2#1,2#2,2}.
 
-        RandomListNode head = new RandomListNode(-1);
+        The graph has a total of three nodes, and therefore contains three parts as separated by #.
 
-        RandomListNode another = new Solution().copyRandomList(head);
+        First node is labeled as 0. Connect node 0 to both nodes 1 and 2.
+        Second node is labeled as 1. Connect node 1 to node 2.
+        Third node is labeled as 2. Connect node 2 to node 2 (itself), thus forming a self-cycle.
 
-        if (head == another) {
-            System.out.println("haha");
-        }
-    }
 
-    public RandomListNode copyRandomList(RandomListNode head) {
+        Visually, the graph looks like the following:
 
-        // Step 0: Check input parameter
-        if (head == null) {
-            return null;
-        }
-
-        // Step 1: Deep Copy Another set of nodes
-        RandomListNode tempNode = head;
-        while (tempNode != null) {
-
-            RandomListNode nextNode = tempNode.next;
-            RandomListNode copyNode = new RandomListNode(tempNode.label);
-            tempNode.next = copyNode;
-            copyNode.next = nextNode;
-            tempNode = nextNode;
-        }
-
-        // Step 2: Add random node to copy nodes
-        tempNode = head;
-        while (tempNode != null) {
-
-            RandomListNode randomNode = tempNode.random;
-            tempNode = tempNode.next;
-
-            if (randomNode != null) {
-                tempNode.random = randomNode.next;
-            }
-
-            tempNode = tempNode.next;
-        }
-
-        // Step 3: Delete inner part
-        tempNode = head;
-        RandomListNode result = head.next;
-
-        while (tempNode != null) {
-
-            RandomListNode nextNode = tempNode.next;
-            RandomListNode nextNextNode = tempNode.next.next;
-
-            tempNode.next = nextNextNode;
-            if (nextNextNode != null) {
-                nextNode.next = nextNextNode.next;
-            }
-
-            tempNode = tempNode.next;
-        }
-
-        return result;
-    }
-}
+        1
+        / \
+        /   \
+        0 --- 2
+        / \
+        \_/
+        Note: The information about the tree serialization is only meant so that you can understand error output if you get a wrong answer. You don't need to understand the serialization to solve the problem.*/
