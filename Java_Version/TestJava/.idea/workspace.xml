@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ffbcff5e-ced2-4ebe-a713-4c74a7d3e487" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Solution.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TestJava/Solution.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TestJava/UndirectedGraphNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Solution.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,11 +20,10 @@
       <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="40" column="67" selection-start-line="40" selection-start-column="67" selection-end-line="40" selection-end-column="67" />
+            <state relative-caret-position="451">
+              <caret line="66" column="43" selection-end-line="69" />
               <folding>
-                <element signature="e#0#593#0" expanded="true" />
-                <element signature="imports" expanded="true" />
+                <element signature="e#0#6899#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -62,6 +63,7 @@
       <find>wait</find>
       <find>write</find>
       <find>acquire</find>
+      <find>Completed</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -94,6 +96,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/yahoo/rw/solutions/ReadersWriterInterface.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yahoo/rw/solutions/SecondReadersWriterSolution.java" />
         <option value="$PROJECT_DIR$/src/readersWritersProblem/Record.java" />
+        <option value="$PROJECT_DIR$/src/readersWritersProblem/ReadersFirst.java" />
+        <option value="$PROJECT_DIR$/src/readersWritersProblem/WritersFirst.java" />
         <option value="$PROJECT_DIR$/src/Solution.java" />
       </list>
     </option>
@@ -122,6 +126,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -146,8 +152,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -197,11 +201,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.Solution">
-    <configuration name="Example" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Example" />
-      <module name="TestJava" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-    </configuration>
     <configuration name="FirstReadersWriterTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="test.java.com.yahoo.rw.solutions.FirstReadersWriterTest" />
       <module name="TestJava" />
@@ -220,6 +219,11 @@
     </configuration>
     <configuration name="TestDiningPhilosophers (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="TestDiningPhilosophers" />
+      <module name="TestJava" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="TestMyRunnable" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TestMyRunnable" />
       <module name="TestJava" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -276,24 +280,24 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="Application.Example" />
       <item itemvalue="Application.TestDiningPhilosophers (1)" />
       <item itemvalue="Application.TestReadersWriters" />
       <item itemvalue="Application.FirstReadersWriterTest" />
       <item itemvalue="Application.Solution" />
+      <item itemvalue="Application.TestMyRunnable" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Solution" />
+        <item itemvalue="Application.TestMyRunnable" />
         <item itemvalue="Application.TestReadersWriters" />
         <item itemvalue="Application.FirstReadersWriterTest" />
         <item itemvalue="Application.TestDiningPhilosophers (1)" />
-        <item itemvalue="Application.Example" />
       </list>
     </recent_temporary>
   </component>
   <component name="StructureViewFactory">
-    <option name="ACTIVE_ACTIONS" value=",SHOW_INTERFACES,SHOW_FIELDS,SHOW_NON_PUBLIC,SHOW_INHERITED" />
+    <option name="ACTIVE_ACTIONS" value=",SHOW_INTERFACES,SHOW_FIELDS,SHOW_NON_PUBLIC" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -453,12 +457,18 @@
       <workItem from="1545642597169" duration="2185000" />
       <workItem from="1545698168457" duration="645000" />
       <workItem from="1545701799704" duration="1209000" />
-      <workItem from="1545717779821" duration="1053000" />
+      <workItem from="1545717779821" duration="6746000" />
+      <workItem from="1545790820514" duration="895000" />
+      <workItem from="1545810738418" duration="755000" />
+      <workItem from="1545812608597" duration="761000" />
+      <workItem from="1545813418573" duration="234000" />
+      <workItem from="1545870966526" duration="2146000" />
+      <workItem from="1545874060302" duration="5042000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="290899000" />
+    <option name="totallyTimeSpent" value="306425000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -475,6 +485,7 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49932975" weight="0.329429" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49731904" weight="0.32796487" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
@@ -482,21 +493,20 @@
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.3297587" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4953083" weight="0.25036603" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.47587132" weight="0.3338214" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.47587132" weight="0.29575402" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49865952" weight="0.329429" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4970874" visible="true" weight="0.26675603" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49487555" visible="true" weight="0.28954422" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info id="Structure" order="1" sideWeight="0.501938" side_tool="true" weight="0.30495977" />
+      <window_info id="Structure" order="1" sideWeight="0.50512445" side_tool="true" weight="0.27010724" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.46849865" weight="0.29721814" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.3686327" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.46849865" visible="true" weight="0.19180088" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.23525469" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49731904" weight="0.32796487" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -539,7 +549,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/StringUTF16.java</url>
+          <url />
           <line>417</line>
           <properties />
           <option name="timeStamp" value="40" />
@@ -548,7 +558,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="227" />
+      <option name="time" value="246" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -566,42 +576,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.instrument/sun/instrument/InstrumentationImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11784">
-          <caret line="543" selection-start-line="543" selection-end-line="543" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Collections.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52152">
-          <caret line="2374" selection-start-line="2374" selection-end-line="2374" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/HashSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="117" column="11" selection-start-line="117" selection-start-column="11" selection-end-line="117" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45648">
-          <caret line="1983" column="18" selection-start-line="1983" selection-start-column="18" selection-end-line="1983" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Set.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="683">
-          <caret line="370" column="12" selection-start-line="370" selection-start-column="12" selection-end-line="370" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SolutionTest.java" />
     <entry file="uml://JAVA/java.lang.AbstractStringBuilder">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -804,20 +778,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Thread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2448">
-          <caret line="140" column="29" selection-start-line="140" selection-start-column="29" selection-end-line="140" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/Future.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3000">
-          <caret line="158" column="26" selection-start-line="158" selection-start-column="26" selection-end-line="158" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/TimeUnit.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1032">
@@ -849,13 +809,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/Executors.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1128">
-          <caret line="89" column="34" selection-start-line="89" selection-start-column="34" selection-end-line="89" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="uml://JAVA/java.util.concurrent.FutureTask">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -882,13 +835,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3816">
           <caret line="198" column="25" selection-start-line="198" selection-start-column="25" selection-end-line="198" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/ExecutorService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="236" column="43" selection-start-line="236" selection-start-column="4" selection-end-line="236" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -941,13 +887,70 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/readersWritersProblem/ReadersFirst.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="678">
+          <caret line="306" column="29" selection-start-line="306" selection-start-column="29" selection-end-line="306" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/CompletionService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="74" column="14" selection-start-line="74" selection-start-column="14" selection-end-line="74" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/locks/ReentrantReadWriteLock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16992">
+          <caret line="765" column="10" selection-start-line="765" selection-start-column="10" selection-end-line="765" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/readersWritersProblem/WritersFirst.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/locks/ReadWriteLock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="117" column="25" selection-start-line="117" selection-start-column="25" selection-end-line="117" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/Executors.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4200">
+          <caret line="217" column="18" selection-start-line="217" selection-start-column="18" selection-end-line="217" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28800">
+          <caret line="1270" column="22" selection-start-line="1270" selection-start-column="22" selection-end-line="1270" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/Future.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1848">
+          <caret line="110" column="12" selection-start-line="110" selection-start-column="12" selection-end-line="110" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/ExecutorService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3528">
+          <caret line="181" column="19" selection-start-line="181" selection-start-column="19" selection-end-line="181" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="40" column="67" selection-start-line="40" selection-start-column="67" selection-end-line="40" selection-end-column="67" />
+        <state relative-caret-position="451">
+          <caret line="66" column="43" selection-end-line="69" />
           <folding>
-            <element signature="e#0#593#0" expanded="true" />
-            <element signature="imports" expanded="true" />
+            <element signature="e#0#6899#0" expanded="true" />
           </folding>
         </state>
       </provider>
