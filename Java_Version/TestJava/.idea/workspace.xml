@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ffbcff5e-ced2-4ebe-a713-4c74a7d3e487" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Solution.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -13,25 +14,18 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="63" column="30" selection-start-line="63" selection-start-column="30" selection-end-line="63" selection-end-column="30" />
+            <state relative-caret-position="342">
+              <caret line="87" column="56" selection-start-line="87" selection-start-column="56" selection-end-line="87" selection-end-column="56" />
               <folding>
-                <element signature="e#0#942#0" expanded="true" />
-                <element signature="imports" expanded="true" />
+                <element signature="e#0#231#0" expanded="true" />
+                <element signature="e#304#305#0" expanded="true" />
+                <element signature="e#327#328#0" expanded="true" />
+                <element signature="method#findMiddleNode#0;class#Solution#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="String.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/String.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="1870" column="18" selection-start-line="1870" selection-start-column="18" selection-end-line="1870" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -105,6 +99,7 @@
         <option value="$PROJECT_DIR$/src/readersWritersProblem/Record.java" />
         <option value="$PROJECT_DIR$/src/readersWritersProblem/ReadersFirst.java" />
         <option value="$PROJECT_DIR$/src/readersWritersProblem/WritersFirst.java" />
+        <option value="$PROJECT_DIR$/src/FileUtil.java" />
         <option value="$PROJECT_DIR$/src/Solution.java" />
       </list>
     </option>
@@ -133,8 +128,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -159,6 +152,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -192,6 +187,7 @@
       <recent name="" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
       <recent name="readersWritersProblem" />
     </key>
   </component>
@@ -471,11 +467,14 @@
       <workItem from="1545813418573" duration="234000" />
       <workItem from="1545870966526" duration="2146000" />
       <workItem from="1545874060302" duration="10237000" />
+      <workItem from="1545892797053" duration="778000" />
+      <workItem from="1545957575594" duration="113000" />
+      <workItem from="1545957734910" duration="7891000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="311620000" />
+    <option name="totallyTimeSpent" value="320402000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -492,7 +491,6 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49932975" weight="0.329429" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49731904" weight="0.32796487" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
@@ -504,7 +502,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49865952" weight="0.329429" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49487555" visible="true" weight="0.28954422" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49487555" visible="true" weight="0.3016086" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" sideWeight="0.50512445" side_tool="true" weight="0.27010724" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -514,6 +512,7 @@
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.46849865" weight="0.19180088" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.23525469" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49731904" weight="0.32796487" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -556,7 +555,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/StringUTF16.java</url>
+          <url />
           <line>417</line>
           <properties />
           <option name="timeStamp" value="40" />
@@ -583,54 +582,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="uml://JAVA/java.lang.StringBuilder">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>java.lang.StringBuilder</OriginalElement>
-          <nodes>
-            <node x="" y="">java.lang.CharSequence</node>
-            <node x="" y="">java.lang.Appendable</node>
-            <node x="" y="">java.lang.AbstractStringBuilder</node>
-            <node x="" y="">java.lang.StringBuilder</node>
-            <node x="" y="">java.io.Serializable</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="182.0" y="97.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Fields</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/java.io.PrintStream">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>java.io.PrintStream</OriginalElement>
-          <nodes>
-            <node x="" y="">java.io.OutputStream</node>
-            <node x="" y="">java.io.PrintStream</node>
-            <node x="" y="">java.lang.Appendable</node>
-            <node x="" y="">java.io.Closeable</node>
-            <node x="" y="">java.io.FilterOutputStream</node>
-            <node x="" y="">java.lang.AutoCloseable</node>
-            <node x="" y="">java.io.Flushable</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="189.0" y="178.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
     <entry file="jrt://C:/Program Files/Java/jdk-10!/java.base/java/io/Console.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24">
@@ -934,18 +885,76 @@
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
+        <state relative-caret-position="42984">
           <caret line="1870" column="18" selection-start-line="1870" selection-start-column="18" selection-end-line="1870" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/Command">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>Command</OriginalElement>
+          <nodes>
+            <node x="331.0" y="162.0">DeleteCommand</node>
+            <node x="309.5" y="81.0">Operator</node>
+            <node x="181.5" y="81.0">Command</node>
+            <node x="0.0" y="238.0">SqlExecuteTool</node>
+            <node x="160.0" y="162.0">UpdateCommand</node>
+            <node x="0.0" y="162.0">InsertCommand</node>
+            <node x="183.0" y="238.0">Client</node>
+            <node x="241.25" y="0.0">java.io.Serializable</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="UpdateCommand" target="Command">
+              <point x="0.0" y="-15.5" />
+              <point x="0.0" y="15.5" />
+            </edge>
+            <edge source="InsertCommand" target="Command">
+              <point x="0.0" y="-15.5" />
+              <point x="70.0" y="137.0" />
+              <point x="199.5" y="137.0" />
+              <point x="-36.0" y="15.5" />
+            </edge>
+            <edge source="Command" target="java.io.Serializable">
+              <point x="0.0" y="-15.5" />
+              <point x="235.5" y="56.0" />
+              <point x="269.5" y="56.0" />
+              <point x="-28.25" y="15.5" />
+            </edge>
+            <edge source="Operator" target="java.io.Serializable">
+              <point x="0.0" y="-15.5" />
+              <point x="360.0" y="56.0" />
+              <point x="326.0" y="56.0" />
+              <point x="28.25" y="15.5" />
+            </edge>
+            <edge source="DeleteCommand" target="Command">
+              <point x="0.0" y="-15.5" />
+              <point x="404.0" y="137.0" />
+              <point x="271.5" y="137.0" />
+              <point x="36.0" y="15.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="-230.0" y="-17.0" />
+          <SelectedNodes>
+            <node>Client</node>
+          </SelectedNodes>
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="63" column="30" selection-start-line="63" selection-start-column="30" selection-end-line="63" selection-end-column="30" />
+        <state relative-caret-position="342">
+          <caret line="87" column="56" selection-start-line="87" selection-start-column="56" selection-end-line="87" selection-end-column="56" />
           <folding>
-            <element signature="e#0#942#0" expanded="true" />
-            <element signature="imports" expanded="true" />
+            <element signature="e#0#231#0" expanded="true" />
+            <element signature="e#304#305#0" expanded="true" />
+            <element signature="e#327#328#0" expanded="true" />
+            <element signature="method#findMiddleNode#0;class#Solution#0" />
           </folding>
         </state>
       </provider>
