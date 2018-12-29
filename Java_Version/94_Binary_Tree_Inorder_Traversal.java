@@ -82,3 +82,20 @@ class Solution {
     }
 }*/
 
+class Solution {
+	
+	public List<Integer> inorderTraversal(TreeNode root) {
+
+        if (root == null) {
+            return new ArrayList<>();
+        }
+
+        List<Integer> result = new ArrayList<>();
+
+		Stack<TreeNode> stack = new Stack<>();
+        
+
+        return result;
+    }
+}
+

@@ -1,98 +1,32 @@
-/*
-
-Sort a linked list in O(n log n) time using constant space complexity.
-
-        Example 1:
-
-        Input: 4->2->1->3
-        Output: 1->2->3->4
-        Example 2:
-
-        Input: -1->5->3->4->0
-        Output: -1->0->3->4->5
-*/
-
-class ListNode {
-
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
-    }
-}
+import java.util.LinkedList;
+import java.util.List;
 
 class Solution {
 
-    public ListNode sortList(ListNode head) {
+    public List<Integer> postorderTraversal(TreeNode root) {
 
-        return mergeSort(head);
-    }
+        LinkedList<Integer> res = new LinkedList<>();
 
-    private ListNode mergeSort(ListNode head) {
-
-        if (head == null || head.next == null) {
-            return head;
+        if(root == null){
+            return res;
         }
 
-        ListNode middleNode = findMiddleNode(head);
+        Stack<TreeNode> stack = new Stack<>();
+        stack.push(root);
 
-        if (middleNode == null) {
-            return mergeSort(head);
+        while (!stack.isEmpty()) {
 
-        } else {
+            TreeNode curr = stack.pop();
+            res.addFirst(curr.val);
 
-            ListNode anotherHead = middleNode.next;
-            middleNode.next = null;
-
-            ListNode head1 = mergeSort(head);
-            ListNode head2 = mergeSort(anotherHead);
-
-            return mergeTwoLists(head1, head2);
-        }
-    }
-
-    private ListNode mergeTwoLists(ListNode head1, ListNode head2) {
-
-        ListNode dummyNode = new ListNode(0);
-        ListNode tempNode = dummyNode;
-
-        while (head1 != null && head2 != null) {
-
-            if (head1.val <= head2.val) {
-
-                tempNode.next = head1;
-                head1 = head1.next;
-
-            } else {
-
-                tempNode.next = head2;
-                head2 = head2.next;
+            if(curr.left != null){
+                stack.push(curr.left);
             }
-
-            tempNode = tempNode.next;
+            if(curr.right != null){
+                stack.push(curr.right);
+            }
         }
 
-        tempNode.next = (head1 != null ? head1 : head2);
-
-        return dummyNode.next;
-    }
-
-    private ListNode findMiddleNode(ListNode head) {
-
-        if (head == null) {
-            return null;
-        }
-
-        ListNode fast = head.next;
-        ListNode slow = head;
-
-        while (fast != null && fast.next != null) {
-
-            fast = fast.next.next;
-            slow = slow.next;
-        }
-
-        return slow;
+        return res;
     }
 }

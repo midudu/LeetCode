@@ -26,7 +26,7 @@ class TreeNode {
     }
 }
 
-class Solution {
+/* class Solution {
 
     private List<Integer> result = new ArrayList<>();
 
@@ -46,5 +46,37 @@ class Solution {
         result.add(root.val);
         preorderTraversalHelper(root.left);
         preorderTraversalHelper(root.right);
+    }
+} */
+
+
+class Solution {
+
+    public List<Integer> preorderTraversal(TreeNode root) {
+
+	    List<Integer> result = new ArrayList<>();
+	
+        if (root == null) {
+			return result;
+		}
+		
+		Stack<TreeNode> stack = new Stack<>();
+		stack.push(root);
+		
+		while (!stack.isEmpty()) {
+			
+			TreeNode currentNode = stack.pop();
+			result.add(currentNode.val);
+			
+			if (currentNode.right != null) {
+				stack.push(currentNode.right);
+			}
+			
+			if (currentNode.left != null) {
+				stack.push(currentNode.left);
+			}
+		}
+		
+		return result;
     }
 }
