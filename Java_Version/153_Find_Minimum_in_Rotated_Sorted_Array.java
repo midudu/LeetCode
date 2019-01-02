@@ -56,6 +56,8 @@ class Solution {
                 return middleIndex;
             } else {
 
+                // Here must compare nums[middleIndex] and nums[endIndex] because nums[middleIndex] > nums[startIndex]
+				// cannot determine which branch the middleIndex is on
                 if (nums[middleIndex] > nums[endIndex]) {
                     startIndex = middleIndex + 1;
                 } else {
