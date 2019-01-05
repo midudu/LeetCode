@@ -18,11 +18,10 @@
       <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+            <state relative-caret-position="318">
+              <caret line="79" column="34" lean-forward="true" selection-start-line="79" selection-start-column="34" selection-end-line="79" selection-end-column="34" />
               <folding>
-                <element signature="e#0#335#0" expanded="true" />
-                <element signature="imports" expanded="true" />
+                <element signature="e#0#443#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -31,7 +30,7 @@
       <file leaf-file-name="Arrays.java" pinned="false" current-in-tab="false">
         <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Arrays.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1064">
+            <state relative-caret-position="28464">
               <caret line="1243" column="23" selection-start-line="1243" selection-start-column="23" selection-end-line="1243" selection-end-column="23" />
             </state>
           </provider>
@@ -135,8 +134,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -480,12 +479,13 @@
       <workItem from="1546062850321" duration="8467000" />
       <workItem from="1546412116648" duration="3441000" />
       <workItem from="1546495576422" duration="7632000" />
-      <workItem from="1546587445450" duration="1723000" />
+      <workItem from="1546587445450" duration="1899000" />
+      <workItem from="1546646928218" duration="2346000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="342049000" />
+    <option name="totallyTimeSpent" value="344571000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -513,8 +513,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49865952" weight="0.329429" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49487555" visible="true" weight="0.2613941" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.23525469" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49487555" visible="true" weight="0.2647453" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" sideWeight="0.50512445" side_tool="true" weight="0.27010724" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -522,6 +521,7 @@
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.46849865" weight="0.34699854" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.23525469" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49731904" weight="0.32796487" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -571,11 +571,17 @@
           <properties />
           <option name="timeStamp" value="40" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Solution.java</url>
+          <line>86</line>
+          <properties />
+          <option name="timeStamp" value="250" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="250" />
+      <option name="time" value="251" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -940,10 +946,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="33432">
           <caret line="1457" column="22" selection-start-line="1457" selection-start-column="22" selection-end-line="1457" selection-end-column="22" />
-          <folding>
-            <element signature="e#56810#56811#0" expanded="true" />
-            <element signature="e#56866#56867#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -963,18 +965,17 @@
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Arrays.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1064">
+        <state relative-caret-position="28464">
           <caret line="1243" column="23" selection-start-line="1243" selection-start-column="23" selection-end-line="1243" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
+        <state relative-caret-position="318">
+          <caret line="79" column="34" lean-forward="true" selection-start-line="79" selection-start-column="34" selection-end-line="79" selection-end-column="34" />
           <folding>
-            <element signature="e#0#335#0" expanded="true" />
-            <element signature="imports" expanded="true" />
+            <element signature="e#0#443#0" expanded="true" />
           </folding>
         </state>
       </provider>
