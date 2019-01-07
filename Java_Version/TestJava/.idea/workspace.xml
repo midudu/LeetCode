@@ -18,10 +18,10 @@
       <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="28" lean-forward="true" selection-end-line="82" selection-end-column="1" />
+            <state relative-caret-position="52">
+              <caret line="16" column="14" lean-forward="true" selection-end-line="43" selection-end-column="1" />
               <folding>
-                <element signature="e#0#1254#0" expanded="true" />
+                <element signature="e#0#242#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -125,8 +125,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -151,6 +149,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -472,12 +472,13 @@
       <workItem from="1546495576422" duration="7632000" />
       <workItem from="1546587445450" duration="1899000" />
       <workItem from="1546646928218" duration="3201000" />
-      <workItem from="1546733850576" duration="1821000" />
+      <workItem from="1546733850576" duration="2606000" />
+      <workItem from="1546821486078" duration="1544000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="347247000" />
+    <option name="totallyTimeSpent" value="349576000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -494,18 +495,19 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49932975" weight="0.329429" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49731904" weight="0.32796487" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5241287" side_tool="true" weight="0.44948757" />
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.3297587" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.47587132" weight="0.2137628" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.47587132" visible="true" weight="0.2137628" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4953083" weight="0.25036603" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49865952" weight="0.329429" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49487555" visible="true" weight="0.2680965" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49487555" visible="true" weight="0.27144772" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" sideWeight="0.50512445" side_tool="true" weight="0.27010724" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -519,7 +521,6 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49731904" weight="0.2635432" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49731904" weight="0.32796487" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -933,10 +934,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="28" lean-forward="true" selection-end-line="82" selection-end-column="1" />
+        <state relative-caret-position="52">
+          <caret line="16" column="14" lean-forward="true" selection-end-line="43" selection-end-column="1" />
           <folding>
-            <element signature="e#0#1254#0" expanded="true" />
+            <element signature="e#0#242#0" expanded="true" />
           </folding>
         </state>
       </provider>
