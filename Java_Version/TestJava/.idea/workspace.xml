@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ffbcff5e-ced2-4ebe-a713-4c74a7d3e487" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Solution.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -32,10 +31,10 @@
       <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="582">
-              <caret line="129" column="44" selection-end-line="134" />
+            <state relative-caret-position="486">
+              <caret line="60" column="35" lean-forward="true" selection-end-line="63" selection-end-column="1" />
               <folding>
-                <element signature="e#0#1202#0" expanded="true" />
+                <element signature="e#0#388#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -490,12 +489,12 @@
       <workItem from="1546821486078" duration="2290000" />
       <workItem from="1546907834310" duration="5432000" />
       <workItem from="1546914184732" duration="4000" />
-      <workItem from="1547027499328" duration="6072000" />
+      <workItem from="1547027499328" duration="10227000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="361830000" />
+    <option name="totallyTimeSpent" value="365985000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -951,10 +950,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="582">
-          <caret line="129" column="44" selection-end-line="134" />
+        <state relative-caret-position="486">
+          <caret line="60" column="35" lean-forward="true" selection-end-line="63" selection-end-column="1" />
           <folding>
-            <element signature="e#0#1202#0" expanded="true" />
+            <element signature="e#0#388#0" expanded="true" />
           </folding>
         </state>
       </provider>
