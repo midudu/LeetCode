@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ffbcff5e-ced2-4ebe-a713-4c74a7d3e487" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TestJava/Solution.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestJava/Solution.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Solution.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -32,30 +33,11 @@
       <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="2" selection-end-line="67" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Vector.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Vector.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="741" column="44" lean-forward="true" selection-start-line="741" selection-start-column="44" selection-end-line="741" selection-end-column="44" />
+            <state relative-caret-position="130">
+              <caret line="39" column="23" lean-forward="true" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
               <folding>
-                <element signature="e#26846#26847#0" expanded="true" />
-                <element signature="e#26909#26910#0" expanded="true" />
+                <element signature="e#0#567#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Stack.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Stack.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="93" column="26" lean-forward="true" selection-start-line="93" selection-start-column="26" selection-end-line="93" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -514,11 +496,17 @@
       <workItem from="1547105085498" duration="9000" />
       <workItem from="1547253586357" duration="1182000" />
       <workItem from="1547340529829" duration="4689000" />
+      <workItem from="1547429908451" duration="3658000" />
+      <workItem from="1547454719065" duration="781000" />
+      <workItem from="1547455507917" duration="2886000" />
+      <workItem from="1547512386725" duration="3001000" />
+      <workItem from="1547516001205" duration="7000" />
+      <workItem from="1547599132708" duration="3527000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="377723000" />
+    <option name="totallyTimeSpent" value="391583000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -542,19 +530,19 @@
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5241287" side_tool="true" weight="0.44948757" />
       <window_info anchor="right" id="Maven Projects" order="6" weight="0.3297587" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.47587132" weight="0.2137628" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4953083" weight="0.25036603" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.47587132" weight="0.2137628" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49865952" weight="0.329429" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4875549" visible="true" weight="0.2989276" />
-      <window_info anchor="right" id="Database" order="7" weight="0.3297587" />
-      <window_info id="Structure" order="1" sideWeight="0.5124451" side_tool="true" visible="true" weight="0.2989276" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48609078" visible="true" weight="0.32372653" />
+      <window_info anchor="right" id="Database" order="8" weight="0.3297587" />
+      <window_info id="Structure" order="1" sideWeight="0.5131579" side_tool="true" weight="0.30294907" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.46849865" weight="0.27818447" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.46849865" visible="true" weight="0.34846267" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.23525469" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -604,12 +592,23 @@
           <properties />
           <option name="timeStamp" value="40" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Solution.java</url>
+          <line>39</line>
+          <properties />
+          <option name="timeStamp" value="281" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="261" />
+      <option name="time" value="282" />
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="pStack.get(0)" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="breakpointCondition">
@@ -626,35 +625,10 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/Callable.java">
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Vector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="48" column="22" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/java.util.concurrent.Executors">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>java.util.concurrent.Executors</OriginalElement>
-          <nodes>
-            <node x="" y="">java.util.concurrent.Executors</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="52.0" y="16.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/TimeUnit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1032">
-          <caret line="77" column="32" selection-start-line="77" selection-start-column="32" selection-end-line="77" selection-end-column="32" />
+        <state relative-caret-position="16680">
+          <caret line="695" column="31" selection-start-line="695" selection-start-column="31" selection-end-line="695" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -902,13 +876,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Deque.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="204" column="7" lean-forward="true" selection-start-line="204" selection-start-column="7" selection-end-line="204" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Arrays.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="28464">
@@ -934,10 +901,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4656">
           <caret line="234" column="19" selection-start-line="234" selection-start-column="19" selection-end-line="234" selection-end-column="19" />
-          <folding>
-            <element signature="e#8648#8649#0" expanded="true" />
-            <element signature="e#8693#8694#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -945,10 +908,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2520">
           <caret line="140" column="57" selection-start-line="140" selection-start-column="57" selection-end-line="140" selection-end-column="57" />
-          <folding>
-            <element signature="e#5648#5649#0" expanded="true" />
-            <element signature="e#5679#5680#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -956,10 +915,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8688">
           <caret line="423" column="13" selection-start-line="423" selection-start-column="13" selection-end-line="423" selection-end-column="13" />
-          <folding>
-            <element signature="e#15795#15796#0" expanded="true" />
-            <element signature="e#15831#15832#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -972,26 +927,135 @@
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Stack.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="93" column="26" lean-forward="true" selection-start-line="93" selection-start-column="26" selection-end-line="93" selection-end-column="26" />
+        <state relative-caret-position="1680">
+          <caret line="93" column="26" selection-start-line="93" selection-start-column="26" selection-end-line="93" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/Notes/Java_Learning/Java并发编程实战/2_结构化并发应用程序/chapter06_任务执行/DelegatedScheduledExecutorService.uml">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>java.util.concurrent.Executors.DelegatedScheduledExecutorService</OriginalElement>
+          <nodes>
+            <node x="69.2222222222222" y="162.0">java.util.concurrent.AbstractExecutorService</node>
+            <node x="186.625" y="0.0">java.util.concurrent.Executor</node>
+            <node x="445.75" y="243.0">java.util.concurrent.ThreadPoolExecutor</node>
+            <node x="0.0" y="243.0">java.util.concurrent.Executors.DelegatedExecutorService</node>
+            <node x="222.37500000000003" y="243.0">java.util.concurrent.ScheduledExecutorService</node>
+            <node x="334.2222222222223" y="324.0">java.util.concurrent.ScheduledThreadPoolExecutor</node>
+            <node x="165.625" y="81.0">java.util.concurrent.ExecutorService</node>
+            <node x="51.22222222222226" y="324.0">java.util.concurrent.Executors.DelegatedScheduledExecutorService</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="java.util.concurrent.AbstractExecutorService" target="java.util.concurrent.ExecutorService">
+              <point x="0.0" y="-15.5" />
+              <point x="164.7222222222222" y="137.0" />
+              <point x="200.875" y="137.0" />
+              <point x="-35.25" y="15.5" />
+            </edge>
+            <edge source="java.util.concurrent.Executors.DelegatedScheduledExecutorService" target="java.util.concurrent.Executors.DelegatedExecutorService">
+              <point x="-65.75" y="-15.5" />
+              <point x="116.97222222222226" y="299.0" />
+              <point x="101.0" y="299.0" />
+              <point x="0.0" y="15.5" />
+            </edge>
+            <edge source="java.util.concurrent.ScheduledThreadPoolExecutor" target="java.util.concurrent.ThreadPoolExecutor">
+              <point x="56.75" y="-15.5" />
+              <point x="504.4722222222223" y="299.0" />
+              <point x="528.75" y="299.0" />
+              <point x="0.0" y="15.5" />
+            </edge>
+            <edge source="java.util.concurrent.Executors.DelegatedExecutorService" target="java.util.concurrent.AbstractExecutorService">
+              <point x="-5.6843418860808015E-14" y="-15.5" />
+              <point x="100.99999999999994" y="223.0" />
+              <point x="116.9722222222222" y="223.0" />
+              <point x="-47.75" y="15.5" />
+            </edge>
+            <edge source="java.util.concurrent.ExecutorService" target="java.util.concurrent.Executor">
+              <point x="0.0" y="-15.5" />
+              <point x="0.0" y="15.5" />
+            </edge>
+            <edge source="java.util.concurrent.ScheduledThreadPoolExecutor" target="java.util.concurrent.ScheduledExecutorService">
+              <point x="-56.75" y="-15.5" />
+              <point x="390.9722222222223" y="299.0" />
+              <point x="374.625" y="299.0" />
+              <point x="50.75" y="15.5" />
+            </edge>
+            <edge source="java.util.concurrent.Executors.DelegatedScheduledExecutorService" target="java.util.concurrent.ScheduledExecutorService">
+              <point x="65.75" y="-15.5" />
+              <point x="248.47222222222226" y="299.0" />
+              <point x="273.125" y="299.0" />
+              <point x="-50.75" y="15.5" />
+            </edge>
+            <edge source="java.util.concurrent.ThreadPoolExecutor" target="java.util.concurrent.AbstractExecutorService">
+              <point x="0.0" y="-15.5" />
+              <point x="528.75" y="213.0" />
+              <point x="212.4722222222222" y="213.0" />
+              <point x="47.75" y="15.5" />
+            </edge>
+            <edge source="java.util.concurrent.ScheduledExecutorService" target="java.util.concurrent.ExecutorService">
+              <point x="0.0" y="-15.5" />
+              <point x="323.875" y="223.0" />
+              <point x="340.2222222222223" y="223.0" />
+              <point x="340.2222222222223" y="137.0" />
+              <point x="271.375" y="137.0" />
+              <point x="35.25" y="15.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="6.0" y="105.0" />
+          <SelectedNodes>
+            <node>java.util.concurrent.ThreadPoolExecutor</node>
+          </SelectedNodes>
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/Notes/Java_Learning/Java并发编程实战/2_结构化并发应用程序/chapter06_任务执行/FutureTask.uml">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>java.util.concurrent.FutureTask</OriginalElement>
+          <nodes>
+            <node x="" y="">java.util.concurrent.RunnableFuture</node>
+            <node x="" y="">java.util.concurrent.Future</node>
+            <node x="" y="">java.util.concurrent.FutureTask</node>
+            <node x="" y="">java.lang.Runnable</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="378.0" y="170.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Vector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="741" column="44" lean-forward="true" selection-start-line="741" selection-start-column="44" selection-end-line="741" selection-end-column="44" />
-          <folding>
-            <element signature="e#26846#26847#0" expanded="true" />
-            <element signature="e#26909#26910#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="15552">
+          <caret line="695" column="31" selection-start-line="695" selection-start-column="31" selection-end-line="695" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Deque.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12168">
+          <caret line="540" column="6" selection-start-line="540" selection-start-column="6" selection-end-line="540" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="2" selection-end-line="67" selection-end-column="1" />
+        <state relative-caret-position="130">
+          <caret line="39" column="23" lean-forward="true" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#567#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
