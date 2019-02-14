@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ffbcff5e-ced2-4ebe-a713-4c74a7d3e487" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Solution.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -32,8 +31,12 @@
       <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="52" column="59" selection-start-line="52" selection-start-column="59" selection-end-line="52" selection-end-column="59" />
+            <state relative-caret-position="328">
+              <caret line="64" column="13" lean-forward="true" selection-end-line="70" selection-end-column="1" />
+              <folding>
+                <element signature="e#0#1238#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -521,12 +524,12 @@
       <workItem from="1547882309989" duration="6986000" />
       <workItem from="1548041060457" duration="705000" />
       <workItem from="1548052819322" duration="39000" />
-      <workItem from="1548160445215" duration="1695000" />
+      <workItem from="1548160445215" duration="3810000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="405320000" />
+    <option name="totallyTimeSpent" value="407435000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -561,7 +564,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="7" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.46849865" visible="true" weight="0.4568082" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.46849865" weight="0.38945827" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.23525469" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -616,7 +619,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="299" />
+      <option name="time" value="301" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -1065,8 +1068,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="52" column="59" selection-start-line="52" selection-start-column="59" selection-end-line="52" selection-end-column="59" />
+        <state relative-caret-position="328">
+          <caret line="64" column="13" lean-forward="true" selection-end-line="70" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#1238#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
