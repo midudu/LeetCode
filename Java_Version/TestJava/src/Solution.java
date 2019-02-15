@@ -1,71 +1,45 @@
 /*
-You are playing the following Bulls and Cows game with your friend: You write down a number and ask your friend to guess what the number is. Each time your friend makes a guess, you provide a hint that indicates how many digits in said guess match your secret number exactly in both digit and position (called "bulls") and how many digits match the secret number but locate in the wrong position (called "cows"). Your friend will use successive guesses and hints to eventually derive the secret number.
+Additive number is a string whose digits can form additive sequence.
 
-        Write a function to return a hint according to the secret number and friend's guess, use A to indicate the bulls and B to indicate the cows.
+A valid additive sequence should contain at least three numbers.
+Except for the first two numbers, each subsequent number in the sequence must
+be the sum of the preceding two.
 
-        Please note that both secret number and friend's guess may contain duplicate digits.
+Given a string containing only digits '0'-'9', write a function to determine if
+it's an additive number.
+
+Note:
+    Numbers in the additive sequence cannot have leading zeros, so sequence
+    1, 2, 03 or 1, 02, 3 is invalid.
 
         Example 1:
 
-        Input: secret = "1807", guess = "7810"
+        Input: "112358"
+        Output: true
 
-        Output: "1A3B"
+        Explanation: The digits can form an additive sequence: 1, 1, 2, 3, 5, 8.
+        1 + 1 = 2, 1 + 2 = 3, 2 + 3 = 5, 3 + 5 = 8
 
-        Explanation: 1 bull and 3 cows. The bull is 8, the cows are 0, 1 and 7.
         Example 2:
 
-        Input: secret = "1123", guess = "0111"
+        Input: "199100199"
+        Output: true
 
-        Output: "1A1B"
+        Explanation: The additive sequence is: 1, 99, 100, 199.
 
-        Explanation: The 1st 1 in friend's guess is a bull, the 2nd or 3rd 1 is a cow.
+        1 + 99 = 100, 99 + 100 = 199
 
-Note: You may assume that the secret number and your friend's guess only contain digits,
-and their lengths are always equal.
-*/
-
-import java.util.HashMap;
-import java.util.HashSet;
+        Follow up:
+        How would you handle overflow for very large input integers?*/
 
 class Solution {
 
-    public static void main(String[] args) {
+    public boolean isAdditiveNumber(String num) {
 
-        new Solution().getHint("1122", "1222");
-    }
-
-    public String getHint(String secret, String guess) {
-
-        if (secret == null || secret.length() == 0) {
-            return "0A0B";
+        if (num == null || num.length() < 3) {
+            return false;
         }
 
-        int bull = 0, cow = 0;
 
-        int[] numberCount = new int[10];
-        HashSet<Integer> unequalBits = new HashSet<>();
-
-        for (int i = 0; i < secret.length(); i++) {
-
-            if (secret.charAt(i) == guess.charAt(i)) {
-                bull++;
-            } else {
-                unequalBits.add(i);
-                numberCount[secret.charAt(i) - '0']++;
-            }
-        }
-
-        for (int bit : unequalBits) {
-
-            int currentNum = guess.charAt(bit) - '0';
-
-            if (numberCount[currentNum] > 0) {
-                cow++;
-                numberCount[currentNum]--;
-            }
-        }
-
-        return String.valueOf(bull) + "A"
-                + String.valueOf(cow) + "B";
     }
 }
