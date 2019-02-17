@@ -31,20 +31,11 @@
       <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="108" column="1" selection-start-line="108" selection-start-column="1" selection-end-line="108" selection-end-column="1" />
+            <state relative-caret-position="253">
+              <caret line="62" column="52" selection-end-line="64" selection-end-column="1" />
               <folding>
-                <element signature="e#0#1455#0" expanded="true" />
+                <element signature="e#0#895#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Integer.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Integer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="69" column="47" selection-start-line="69" selection-start-column="38" selection-end-line="69" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -75,7 +66,7 @@
       <find>Effective</find>
       <find>notify</find>
       <find>notifyAll</find>
-      <find>Time expired</find>
+      <find />
       <find>synchronizedList</find>
       <find>Callable</find>
       <find>available</find>
@@ -224,7 +215,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Test">
+  <component name="RunManager" selected="Application.Solution">
     <configuration name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Solution" />
       <module name="TestJava" />
@@ -300,10 +291,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Solution" />
         <item itemvalue="Application.Test" />
         <item itemvalue="Application.Son" />
         <item itemvalue="Application.StaticTest" />
-        <item itemvalue="Application.Solution" />
         <item itemvalue="Application.Trie" />
       </list>
     </recent_temporary>
@@ -507,12 +498,12 @@
       <workItem from="1548160445215" duration="3810000" />
       <workItem from="1550143560522" duration="4362000" />
       <workItem from="1550228742567" duration="15000" />
-      <workItem from="1550388184008" duration="9409000" />
+      <workItem from="1550388184008" duration="12040000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="421221000" />
+    <option name="totallyTimeSpent" value="423852000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -536,7 +527,7 @@
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5241287" side_tool="true" weight="0.44948757" />
       <window_info anchor="right" id="Maven Projects" order="6" weight="0.3297587" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.47587132" visible="true" weight="0.18148148" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.47587132" visible="true" weight="0.34444445" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4953083" weight="0.25036603" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49865952" weight="0.329429" />
       <window_info id="Capture Tool" order="2" />
@@ -593,7 +584,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/StringUTF16.java</url>
+          <url />
           <line>417</line>
           <properties />
           <option name="timeStamp" value="40" />
@@ -625,13 +616,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Vector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16680">
-          <caret line="695" column="31" selection-start-line="695" selection-start-column="31" selection-end-line="695" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="uml://JAVA/java.util.concurrent.Future">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -768,13 +752,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3528">
           <caret line="181" column="19" selection-start-line="181" selection-start-column="19" selection-end-line="181" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42984">
-          <caret line="1870" column="18" selection-start-line="1870" selection-start-column="18" selection-end-line="1870" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -1053,12 +1030,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/StringLatin1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="70" column="12" lean-forward="true" selection-start-line="70" selection-start-column="12" selection-end-line="70" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="2691" column="46" lean-forward="true" selection-start-line="2691" selection-start-column="46" selection-end-line="2691" selection-end-column="46" />
+          <folding>
+            <element signature="e#121550#121551#0" expanded="true" />
+            <element signature="e#121607#121608#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="108" column="1" selection-start-line="108" selection-start-column="1" selection-end-line="108" selection-end-column="1" />
+        <state relative-caret-position="253">
+          <caret line="62" column="52" selection-end-line="64" selection-end-column="1" />
           <folding>
-            <element signature="e#0#1455#0" expanded="true" />
+            <element signature="e#0#895#0" expanded="true" />
           </folding>
         </state>
       </provider>

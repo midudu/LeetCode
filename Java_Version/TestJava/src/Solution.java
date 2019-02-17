@@ -1,63 +1,66 @@
-/*
-Given a string s, find the longest palindromic substring in s.
-You may assume that the maximum length of s is 1000.
+/*Given a 32-bit signed integer, reverse digits of an integer.
 
-Example 1:
+        Example 1:
 
-Input: "babad"
-Output: "bab"
-Note: "aba" is also a valid answer.
+        Input: 123
+        Output:  321
 
-Example 2:
+        Example 2:
 
-Input: "cbbd"
-Output: "bb"*/
+        Input: -123
+        Output: -321
+        Example 3:
 
+        Input: 120
+        Output: 21
 
-// O(n^2): Check every character which might be the middle of the palindromic
-// substring
+Note:
+Assume we are dealing with an environment which could only hold integers within
+the 32-bit signed integer range. For the purpose of this problem, assume that
+your function returns 0 when the reversed integer overflows.*/
+
+// Method 1: long unsupported
 class Solution {
 
-    public String longestPalindrome(String s) {
+    public int reverse(int x) {
 
-        if (s == null || s.length() <= 1) {
-            return s;
+        int finalResult = 0;
+
+        while (x != 0) {
+
+            // The result of a negative number % 10 is still negative
+            int tail = x % 10;
+
+            int currentResult = finalResult * 10 + tail;
+
+            // Overflow happens
+            if (currentResult / 10 != finalResult) {
+                return 0;
+            }
+
+            finalResult = currentResult;
+            x /= 10;
         }
 
-        // answerInformation[0]: the start index of the answer
-        // answerInformation[0]: the length of the answer (for comparison in
-        //                       every loop)
-        int[] answerInformation = new int[2];
-
-        for (int middleIndex = 0; middleIndex < s.length(); middleIndex++) {
-            checkCurrentSituation(s, middleIndex, answerInformation);
-        }
-
-        return s.substring(answerInformation[0],
-                answerInformation[0] + answerInformation[1]);
-    }
-
-    private void checkCurrentSituation(
-            String s, int currentMiddleIndex, int[] answerInformation) {
-
-        int leftIndex = currentMiddleIndex - 1;
-        while (currentMiddleIndex < s.length() - 1
-                && s.charAt(currentMiddleIndex) == s.charAt(currentMiddleIndex + 1)) {
-            currentMiddleIndex++;
-        }
-
-        int rightIndex = currentMiddleIndex + 1;
-
-        while (leftIndex >= 0 && rightIndex < s.length()
-                && s.charAt(leftIndex) == s.charAt(rightIndex)) {
-            leftIndex--;
-            rightIndex++;
-        }
-
-        int currentLength = rightIndex - leftIndex - 1;
-        if (currentLength > answerInformation[1]) {
-            answerInformation[0] = leftIndex + 1;
-            answerInformation[1] = currentLength;
-        }
+        return finalResult;
     }
 }
+
+// Method 2: long supported
+/*
+class Solution {
+
+    public int reverse(int x) {
+
+        long result = 0;
+
+        while (x != 0) {
+
+            result = result * 10 + (x % 10);
+
+            x /= 10;
+        }
+
+        return ((int) result == result ? (int)result : 0);
+    }
+}*/
