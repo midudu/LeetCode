@@ -1,45 +1,48 @@
-/*
-Additive number is a string whose digits can form additive sequence.
+/*Given a string, find the length of the longest substring without repeating
+characters.
 
-A valid additive sequence should contain at least three numbers.
-Except for the first two numbers, each subsequent number in the sequence must
-be the sum of the preceding two.
+Examples:
 
-Given a string containing only digits '0'-'9', write a function to determine if
-it's an additive number.
+    Given "abcabcbb", the answer is "abc", which the length is 3.
 
-Note:
-    Numbers in the additive sequence cannot have leading zeros, so sequence
-    1, 2, 03 or 1, 02, 3 is invalid.
+    Given "bbbbb", the answer is "b", with the length of 1.
 
-        Example 1:
+    Given "pwwkew", the answer is "wke", with the length of 3.
 
-        Input: "112358"
-        Output: true
+Note that the answer must be a substring, "pwke" is a subsequence and not a
+substring.
+*/
 
-        Explanation: The digits can form an additive sequence: 1, 1, 2, 3, 5, 8.
-        1 + 1 = 2, 1 + 2 = 3, 2 + 3 = 5, 3 + 5 = 8
+import java.lang.Math;
+import java.util.HashMap;
 
-        Example 2:
-
-        Input: "199100199"
-        Output: true
-
-        Explanation: The additive sequence is: 1, 99, 100, 199.
-
-        1 + 99 = 100, 99 + 100 = 199
-
-        Follow up:
-        How would you handle overflow for very large input integers?*/
 
 class Solution {
+    public int lengthOfLongestSubstring(String s) {
 
-    public boolean isAdditiveNumber(String num) {
-
-        if (num == null || num.length() < 3) {
-            return false;
+        if (s == null || s.length() == 0) {
+            return 0;
         }
 
+        HashMap<Character, Integer> lastExistingCharIndex = new HashMap<>();
 
+        int result = 0;
+        int startIndex = 0;
+
+        for (int i = 0; i < s.length(); i++) {
+
+            if (lastExistingCharIndex.containsKey(s.charAt(i))) {
+
+                // In case of situation like "abba"
+                startIndex = Math.max(lastExistingCharIndex.get(s.charAt(i)) + 1,
+                        startIndex);
+            }
+
+            lastExistingCharIndex.put(s.charAt(i), i);
+
+            result = Math.max(result, i - startIndex + 1);
+        }
+
+        return result;
     }
 }
