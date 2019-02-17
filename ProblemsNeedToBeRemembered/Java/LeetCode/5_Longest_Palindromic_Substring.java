@@ -13,11 +13,10 @@ Example 2:
 Input: "cbbd"
 Output: "bb"*/
 
-class Solution {
 
-    private int leftIndex = -1;
-    private int rightIndex = -1;
-    private int length = 0;
+// O(n^2): Check every character which might be the middle of the palindromic
+// substring
+class Solution {
 
     public String longestPalindrome(String s) {
 
@@ -25,37 +24,40 @@ class Solution {
             return s;
         }
 
-        for (int i = 0; i < s.length(); i++) {
+        // answerInformation[0]: the start index of the answer
+        // answerInformation[0]: the length of the answer (for comparison in
+        //                       every loop)
+        int[] answerInformation = new int[2];
 
-            extendPalindromeStringFromCenter(i, i, s);
-            extendPalindromeStringFromCenter(i, i + 1, s);
+        for (int middleIndex = 0; middleIndex < s.length(); middleIndex++) {
+            checkCurrentSituation(s, middleIndex, answerInformation);
         }
 
-        return s.substring(this.leftIndex, this.rightIndex + 1);
+        return s.substring(answerInformation[0],
+                answerInformation[0] + answerInformation[1]);
     }
 
-    private void extendPalindromeStringFromCenter(
-            int leftIndex, int rightIndex, String originalString) {
+    private void checkCurrentSituation(
+            String s, int currentMiddleIndex, int[] answerInformation) {
 
-        while (true) {
+        int leftIndex = currentMiddleIndex - 1;
+        while (currentMiddleIndex < s.length() - 1
+                && s.charAt(currentMiddleIndex) == s.charAt(currentMiddleIndex + 1)) {
+            currentMiddleIndex++;
+        }
 
-            if (leftIndex < 0 || rightIndex >= originalString.length()
-                    || originalString.charAt(leftIndex) != originalString.charAt(rightIndex)) {
+        int rightIndex = currentMiddleIndex + 1;
 
-                leftIndex++;
-                rightIndex--;
-
-                if (rightIndex - leftIndex + 1 > this.length) {
-                    this.leftIndex = leftIndex;
-                    this.rightIndex = rightIndex;
-                    this.length = this.rightIndex - this.leftIndex + 1;
-                }
-
-                return;
-            }
-
+        while (leftIndex >= 0 && rightIndex < s.length()
+                && s.charAt(leftIndex) == s.charAt(rightIndex)) {
             leftIndex--;
             rightIndex++;
+        }
+
+        int currentLength = rightIndex - leftIndex - 1;
+        if (currentLength > answerInformation[1]) {
+            answerInformation[0] = leftIndex + 1;
+            answerInformation[1] = currentLength;
         }
     }
 }

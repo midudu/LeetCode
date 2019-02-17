@@ -1,48 +1,63 @@
-/*Given a string, find the length of the longest substring without repeating
-characters.
+/*
+Given a string s, find the longest palindromic substring in s.
+You may assume that the maximum length of s is 1000.
 
-Examples:
+Example 1:
 
-    Given "abcabcbb", the answer is "abc", which the length is 3.
+Input: "babad"
+Output: "bab"
+Note: "aba" is also a valid answer.
 
-    Given "bbbbb", the answer is "b", with the length of 1.
+Example 2:
 
-    Given "pwwkew", the answer is "wke", with the length of 3.
-
-Note that the answer must be a substring, "pwke" is a subsequence and not a
-substring.
-*/
-
-import java.lang.Math;
-import java.util.HashMap;
+Input: "cbbd"
+Output: "bb"*/
 
 
+// O(n^2): Check every character which might be the middle of the palindromic
+// substring
 class Solution {
-    public int lengthOfLongestSubstring(String s) {
 
-        if (s == null || s.length() == 0) {
-            return 0;
+    public String longestPalindrome(String s) {
+
+        if (s == null || s.length() <= 1) {
+            return s;
         }
 
-        HashMap<Character, Integer> lastExistingCharIndex = new HashMap<>();
+        // answerInformation[0]: the start index of the answer
+        // answerInformation[0]: the length of the answer (for comparison in
+        //                       every loop)
+        int[] answerInformation = new int[2];
 
-        int result = 0;
-        int startIndex = 0;
-
-        for (int i = 0; i < s.length(); i++) {
-
-            if (lastExistingCharIndex.containsKey(s.charAt(i))) {
-
-                // In case of situation like "abba"
-                startIndex = Math.max(lastExistingCharIndex.get(s.charAt(i)) + 1,
-                        startIndex);
-            }
-
-            lastExistingCharIndex.put(s.charAt(i), i);
-
-            result = Math.max(result, i - startIndex + 1);
+        for (int middleIndex = 0; middleIndex < s.length(); middleIndex++) {
+            checkCurrentSituation(s, middleIndex, answerInformation);
         }
 
-        return result;
+        return s.substring(answerInformation[0],
+                answerInformation[0] + answerInformation[1]);
+    }
+
+    private void checkCurrentSituation(
+            String s, int currentMiddleIndex, int[] answerInformation) {
+
+        int leftIndex = currentMiddleIndex - 1;
+        while (currentMiddleIndex < s.length() - 1
+                && s.charAt(currentMiddleIndex) == s.charAt(currentMiddleIndex + 1)) {
+            currentMiddleIndex++;
+        }
+
+        int rightIndex = currentMiddleIndex + 1;
+
+        while (leftIndex >= 0 && rightIndex < s.length()
+                && s.charAt(leftIndex) == s.charAt(rightIndex)) {
+            leftIndex--;
+            rightIndex++;
+        }
+
+        int currentLength = rightIndex - leftIndex - 1;
+        if (currentLength > answerInformation[1]) {
+            answerInformation[0] = leftIndex + 1;
+            answerInformation[1] = currentLength;
+        }
     }
 }
