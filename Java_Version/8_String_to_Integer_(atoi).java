@@ -1,62 +1,35 @@
-/*Author: Bochen (mddboc@foxmail.com)
-Last Modified: Tue Apr 10 22:28:45 CST 2018*/
-
 /*Implement atoi to convert a string to an integer.
 
-        Hint: Carefully consider all possible input cases. If you want a challenge, please do not see below and ask yourself what are the possible input cases.
+Hint: Carefully consider all possible input cases. If you want a challenge,
+please do not see below and ask yourself what are the possible input cases.
 
-        Notes: It is intended for this problem to be specified vaguely (ie, no given input specs). You are responsible to gather all the input requirements up front.
-
-
-
-        Requirements for atoi:
-
-        The function first discards as many whitespace characters as necessary until the first non-whitespace character is found. Then, starting from this character, takes an optional initial plus or minus sign followed by as many numerical digits as possible, and interprets them as a numerical value.
-
-        The string can contain additional characters after those that form the integral number, which are ignored and have no effect on the behavior of this function.
-
-        If the first sequence of non-whitespace characters in str is not a valid integral number, or if no such sequence exists because either str is empty or it contains only whitespace characters, no conversion is performed.
-
-        If no valid conversion could be performed, a zero value is returned. If the correct value is out of the range of representable values, INT_MAX (2147483647) or INT_MIN (-2147483648) is returned.*/
+Notes: It is intended for this problem to be specified vaguely (ie, no given
+input specs). You are responsible to gather all the input requirements up
+front.
 
 
-import java.lang.System;
-import java.util.*;
-import java.lang.Math;
-import java.util.HashMap;
+Requirements for atoi:
 
+  The function first discards as many whitespace characters as necessary
+until the first non-whitespace character is found. Then, starting from this
+character, takes an optional initial plus or minus sign followed by as many
+numerical digits as possible, and interprets them as a numerical value.
 
-class ListNode {
-    int val;
-    ListNode next;
+The string can contain additional characters after those that form the
+integral number, which are ignored and have no effect on the behavior of this
+function.
 
-    ListNode(int x) {
-        val = x;
-    }
-}
+If the first sequence of non-whitespace characters in str is not a valid
+integral number, or if no such sequence exists because either str is empty or
+it contains only whitespace characters, no conversion is performed.
 
+If no valid conversion could be performed, a zero value is returned. If the
+correct value is out of the range of representable values, INT_MAX (2147483647)
+or INT_MIN (-2147483648) is returned.*/
 
-public class Main {
-    public static void main(String[] args) {
-        String x = "1";
-
-        Solution solution = new Solution();
-
-        int receive = solution.myAtoi(x);
-
-
-        System.out.println("haha");
-
-    }
-
-
-}
 
 
 class Solution {
-
-    boolean minus = false;
-    int result = 0;
 
     public int myAtoi(String str) {
 
@@ -64,43 +37,81 @@ class Solution {
             return 0;
         }
 
-        int strLength = str.length();
-        char[] chars = str.toCharArray();
-        int i = 0;
-        for (i = 0; i < strLength; i++) {
-            if (chars[i] != ' ') {
-                break;
-            }
+        int currentIndex = 0;
+        while (currentIndex < str.length()
+                && str.charAt(currentIndex) == ' ') {
+            currentIndex++;
         }
-        if (chars[i] == '+') {
-            minus = false;
-            i++;
-        } else if (chars[i] == '-') {
-            minus = true;
-            i++;
+
+        if (currentIndex == str.length()) {
+            return 0;
         }
 
 
-        int currentResult = 0;
-        for (; i < strLength; i++) {
-            if (chars[i] >= '0' && chars[i] <= '9') {
-                if (!minus) {
-                    currentResult = result * 10 + (chars[i] - '0');
-                } else {
-                    currentResult = result * 10 - (chars[i] - '0');
+        boolean isPositive = true;
+        if (str.charAt(currentIndex) == '+') {
+            currentIndex++;
+        } else if (str.charAt(currentIndex) == '-') {
+            isPositive = false;
+            currentIndex++;
+        }
+
+        return isPositive ?
+                handlePositiveInteger(str, currentIndex) :
+                handleNegativeInteger(str, currentIndex);
+    }
+
+    private int handlePositiveInteger(
+            String str, int startIndex) {
+
+        long result = 0;
+
+        while (startIndex < str.length()) {
+
+            char currentChar = str.charAt(startIndex);
+
+            if (currentChar >= '0' && currentChar <= '9') {
+
+                result = result * 10 + (currentChar - '0');
+
+                if (result > Integer.MAX_VALUE) {
+                    return Integer.MAX_VALUE;
                 }
 
-                if (currentResult / 10 != result) {
-                    result = (minus ? Integer.MIN_VALUE : Integer.MAX_VALUE);
-                    return result;
-                }
-                result = currentResult;
             } else {
                 break;
             }
+
+            startIndex++;
         }
 
+        return (int) result;
+    }
 
-        return result;
+    private int handleNegativeInteger(
+            String str, int startIndex) {
+
+        long result = 0;
+
+        while (startIndex < str.length()) {
+
+            char currentChar = str.charAt(startIndex);
+
+            if (currentChar >= '0' && currentChar <= '9') {
+
+                result = result * 10 - (currentChar - '0');
+
+                if (result < Integer.MIN_VALUE) {
+                    return Integer.MIN_VALUE;
+                }
+
+            } else {
+                break;
+            }
+
+            startIndex++;
+        }
+
+        return (int) result;
     }
 }
