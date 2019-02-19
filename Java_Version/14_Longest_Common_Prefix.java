@@ -1,77 +1,48 @@
-/*Author: Bochen (mddboc@foxmail.com)
-Last Modified: Tue Apr 10 22:28:44 CST 2018*/
+/*Write a function to find the longest common prefix string amongst an array of
+strings.
 
-/*Write a function to find the longest common prefix string amongst an array of strings.*/
+If there is no common prefix, return an empty string "".
 
+        Example 1:
 
-import java.lang.System;
+        Input: ["flower","flow","flight"]
+        Output: "fl"
 
+        Example 2:
 
-public class Main
-{
-    public static void main(String[] args)
-    {
-        String[] input = {"a", "b"};
+        Input: ["dog","racecar","car"]
+        Output: ""
+        Explanation: There is no common prefix among the input strings.
 
-        Solution solution = new Solution();
+        Note:
 
-        String receiveFlag = solution.longestCommonPrefix(input);
-
-        System.out.println("haha");
-    }
-
-
-}
+        All given inputs are in lowercase letters a-z.*/
 
 
 class Solution {
     public String longestCommonPrefix(String[] strs) {
 
-        if (strs == null || strs.length < 1)
-        {
+        if (strs == null || strs.length == 0) {
             return "";
-        }
-        else if (strs.length == 1)
-        {
+        } else if (strs.length == 1) {
             return strs[0];
         }
 
+        String result = strs[0];
 
-        int minLength = this.findMinLength(strs);
-        String prefix = strs[0].substring(0,minLength);
-        for ( int index = 1; index < strs.length; index++  )
-        {
-            while (true)
-            {
-                if ( strs[index].indexOf(prefix) != 0 )
-                {
-                    prefix = prefix.substring(0, prefix.length() - 1);
-                }
-                else
-                {
-                    break;
-                }
+        for (int i = 1; i < strs.length; i++) {
+
+            while (!strs[i].startsWith(result)) {
+
+                result = result.substring(0,
+                        result.length() - 1);
+            }
+
+            if (result.length() == 0) {
+                return "";
             }
         }
 
-        return prefix;
-    }
-
-
-    private int findMinLength(String[] strs)
-    {
-        int strsLength = strs.length;
-
-
-        int minLength = strs[0].length();
-        for (int index = 0; index < strsLength; index++ )
-        {
-            if ( strs[index].length() < minLength )
-            {
-                minLength = strs[index].length();
-            }
-        }
-
-        return minLength;
+        return result;
     }
 }

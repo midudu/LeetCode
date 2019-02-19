@@ -2,6 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ffbcff5e-ced2-4ebe-a713-4c74a7d3e487" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/../12_Integer_to_Roman.java" beforeDir="false" afterPath="$PROJECT_DIR$/../12_Integer_to_Roman.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../13_Roman_to_Integer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../13_Roman_to_Integer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../14_Longest_Common_Prefix.java" beforeDir="false" afterPath="$PROJECT_DIR$/../14_Longest_Common_Prefix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../15_three_Sum.java" beforeDir="false" afterPath="$PROJECT_DIR$/../15_three_Sum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../16_three_Sum_Closest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../16_three_Sum_Closest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../17_Letter_Combinations_of_a_Phone_Number.java" beforeDir="false" afterPath="$PROJECT_DIR$/../17_Letter_Combinations_of_a_Phone_Number.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Solution.java" afterDir="false" />
     </list>
@@ -32,23 +38,32 @@
       <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="20" column="20" selection-end-line="40" selection-end-column="1" />
+            <state relative-caret-position="391">
+              <caret line="42" column="33" selection-end-line="45" selection-end-column="1" />
               <folding>
-                <element signature="e#0#1113#0" expanded="true" />
+                <element signature="e#0#1776#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Math.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Math.java">
+      <file leaf-file-name="Stack.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Stack.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="1426" column="22" selection-start-line="1426" selection-start-column="22" selection-end-line="1426" selection-end-column="22" />
+            <state relative-caret-position="319">
+              <caret line="48" column="6" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Vector.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Vector.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="463">
+              <caret line="341" column="32" selection-start-line="341" selection-start-column="32" selection-end-line="341" selection-end-column="32" />
               <folding>
-                <element signature="e#55263#55264#0" expanded="true" />
-                <element signature="e#55302#55303#0" expanded="true" />
+                <element signature="e#12760#12761#0" expanded="true" />
+                <element signature="e#12800#12801#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -77,7 +92,7 @@
       <find>Effective</find>
       <find>notify</find>
       <find>notifyAll</find>
-      <find />
+      <find>Time expired</find>
       <find>synchronizedList</find>
       <find>Callable</find>
       <find>available</find>
@@ -157,6 +172,7 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -182,7 +198,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -515,12 +530,15 @@
       <workItem from="1550143560522" duration="4362000" />
       <workItem from="1550228742567" duration="15000" />
       <workItem from="1550388184008" duration="12163000" />
-      <workItem from="1550451625796" duration="8064000" />
+      <workItem from="1550451625796" duration="8869000" />
+      <workItem from="1550563839466" duration="4459000" />
+      <workItem from="1550578616539" duration="72000" />
+      <workItem from="1550578904831" duration="2077000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="432039000" />
+    <option name="totallyTimeSpent" value="439452000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -537,7 +555,6 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49932975" weight="0.329429" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49731904" weight="0.32796487" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
@@ -549,7 +566,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49865952" weight="0.329429" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48609078" visible="true" weight="0.19805983" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48609078" visible="true" weight="0.19482619" />
       <window_info anchor="right" id="Database" order="8" weight="0.3297587" />
       <window_info id="Structure" order="1" sideWeight="0.5131579" side_tool="true" weight="0.30294907" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -559,6 +576,7 @@
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.46849865" weight="0.31296295" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.23525469" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49731904" weight="0.32796487" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -570,16 +588,15 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.23525469" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.47587132" visible="true" weight="0.14074074" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48609078" visible="true" weight="0.19805983" />
-      <window_info id="Structure" order="1" sideWeight="0.5131579" side_tool="true" weight="0.30294907" />
       <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="Structure" order="1" sideWeight="0.5131579" side_tool="true" weight="0.30294907" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49932975" weight="0.329429" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.46849865" weight="0.31296295" />
       <window_info anchor="right" id="Database" order="8" weight="0.3297587" />
@@ -588,11 +605,12 @@
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5241287" side_tool="true" weight="0.44948757" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.4953083" weight="0.25036603" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Capture Tool" order="5" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49731904" weight="0.32796487" />
       <window_info anchor="right" id="Maven Projects" order="6" weight="0.3297587" />
-      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48609078" visible="true" weight="0.19805983" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -631,7 +649,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url />
+          <url>jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/StringUTF16.java</url>
           <line>417</line>
           <properties />
           <option name="timeStamp" value="40" />
@@ -832,13 +850,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Stack.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1680">
-          <caret line="93" column="26" selection-start-line="93" selection-start-column="26" selection-end-line="93" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://E:/Notes/Java_Learning/Java并发编程实战/2_结构化并发应用程序/chapter06_任务执行/DelegatedScheduledExecutorService.uml">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -942,13 +953,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Vector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15552">
-          <caret line="695" column="31" selection-start-line="695" selection-start-column="31" selection-end-line="695" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Deque.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="12168">
@@ -977,17 +981,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="2691" column="46" lean-forward="true" selection-start-line="2691" selection-start-column="46" selection-end-line="2691" selection-end-column="46" />
-          <folding>
-            <element signature="e#121550#121551#0" expanded="true" />
-            <element signature="e#121607#121608#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.xml/com/sun/org/apache/xpath/internal/operations/Equals.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -1006,10 +999,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="352" lean-forward="true" selection-start-line="352" selection-end-line="352" />
-          <folding>
-            <element signature="e#5877#5878#0" expanded="true" />
-            <element signature="e#5913#5914#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1031,10 +1020,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="487">
           <caret line="1276" column="13" selection-start-line="1276" selection-start-column="7" selection-end-line="1276" selection-end-column="13" />
-          <folding>
-            <element signature="e#49836#49837#0" expanded="true" />
-            <element signature="e#49905#49906#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1068,21 +1053,42 @@
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Math.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
+        <state relative-caret-position="32376">
           <caret line="1426" column="22" selection-start-line="1426" selection-start-column="22" selection-end-line="1426" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="1468" column="19" selection-start-line="1468" selection-start-column="19" selection-end-line="1468" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Vector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="341" column="32" selection-start-line="341" selection-start-column="32" selection-end-line="341" selection-end-column="32" />
           <folding>
-            <element signature="e#55263#55264#0" expanded="true" />
-            <element signature="e#55302#55303#0" expanded="true" />
+            <element signature="e#12760#12761#0" expanded="true" />
+            <element signature="e#12800#12801#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Stack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="48" column="6" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="20" column="20" selection-end-line="40" selection-end-column="1" />
+        <state relative-caret-position="391">
+          <caret line="42" column="33" selection-end-line="45" selection-end-column="1" />
           <folding>
-            <element signature="e#0#1113#0" expanded="true" />
+            <element signature="e#0#1776#0" expanded="true" />
           </folding>
         </state>
       </provider>

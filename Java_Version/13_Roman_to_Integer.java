@@ -1,87 +1,88 @@
-/*Author: Bochen (mddboc@foxmail.com)
-Last Modified: Tue Apr 10 22:28:44 CST 2018*/
+/*Roman numerals are represented by seven different symbols: I, V, X, L, C, D
+and M.
 
-/*Given a roman numeral, convert it to an integer.Given a roman numeral, convert it to an integer.
+        Symbol       Value
+        I             1
+        V             5
+        X             10
+        L             50
+        C             100
+        D             500
+        M             1000
 
-        Input is guaranteed to be within the range from 1 to 3999.*/
+For example, two is written as II in Roman numeral, just two one's added
+together. Twelve is written as, XII, which is simply X + II. The number twenty seven is written as XXVII, which is XX + V + II.
 
+Roman numerals are usually written largest to smallest from left to right.
+However, the numeral for four is not IIII. Instead, the number four is written
+as IV. Because the one is before the five we subtract it making four. The same
+principle applies to the number nine, which is written as IX. There are six
+instances where subtraction is used:
 
-import java.lang.System;
-import java.util.HashMap;
+        I can be placed before V (5) and X (10) to make 4 and 9.
+        X can be placed before L (50) and C (100) to make 40 and 90.
+        C can be placed before D (500) and M (1000) to make 400 and 900.
+        Given a roman numeral, convert it to an integer. Input is guaranteed to be within the range from 1 to 3999.
 
+        Example 1:
 
-public class Main
-{
-    public static void main(String[] args)
-    {
-        /*String[] input = {"a", "b"};
+        Input: "III"
+        Output: 3
 
-        Solution solution = new Solution();
+        Example 2:
 
-        String receiveFlag = solution.longestCommonPrefix(input);
+        Input: "IV"
+        Output: 4
 
-        System.out.println("haha");*/
+        Example 3:
 
-    }
+        Input: "IX"
+        Output: 9
 
+        Example 4:
 
-}
+        Input: "LVIII"
+        Output: 58
+        Explanation: L = 50, V= 5, III = 3.
 
+        Example 5:
+
+        Input: "MCMXCIV"
+        Output: 1994
+        Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.*/
 
 class Solution {
     public int romanToInt(String s) {
 
-        if ( s == null || s.length() == 0)
-        {
+        if (s == null || s.length() == 0) {
             return 0;
         }
 
-        HashMap<Character, Integer> hashMap = new HashMap<Character, Integer>(10);
-        this.putHashMap(hashMap);
+        int[] map = new int[256];
+        map['I'] = 1;
+        map['V'] = 5;
+        map['X'] = 10;
+        map['L'] = 50;
+        map['C'] = 100;
+        map['D'] = 500;
+        map['M'] = 1000;
 
-        if ( s.length() == 1)
-        {
-            return hashMap.get(s.charAt(0)).intValue();
-        }
+        int result = 0;
+        int currentIndex = 0;
+        while (currentIndex < s.length()) {
 
+            if (currentIndex != s.length() - 1
+                    && map[s.charAt(currentIndex)] < map[s.charAt(currentIndex + 1)]) {
 
-        return romanToIntForLengthMoreThanOne(s, hashMap);
-    }
+                result += map[s.charAt(currentIndex + 1)] - map[s.charAt(currentIndex)];
+                currentIndex += 2;
+            } else {
 
-    private void putHashMap(HashMap<Character, Integer> hashMap)
-    {
-        hashMap.put('I',1);
-        hashMap.put('V',5);
-        hashMap.put('X',10);
-        hashMap.put('L',50);
-        hashMap.put('C',100);
-        hashMap.put('D',500);
-        hashMap.put('M',1000);
-    }
-
-    private int romanToIntForLengthMoreThanOne(String s, HashMap<Character, Integer> hashMap)
-    {
-        int sLength = s.length();
-
-        int returnValue = new Integer(0);
-
-        for (int i = 0; i < sLength - 1; i++)
-        {
-            int currentValue = hashMap.get(s.charAt(i)).intValue();
-            int nextValue = hashMap.get(s.charAt(i+1)).intValue();
-
-            if ( currentValue < nextValue )
-            {
-                returnValue -= currentValue;
-            }
-            else
-            {
-                returnValue += currentValue;
+                result += map[s.charAt(currentIndex)];
+                currentIndex++;
             }
         }
 
-        returnValue += hashMap.get(s.charAt(sLength - 1)).intValue();
-
-        return returnValue;
+        return result;
     }
 }

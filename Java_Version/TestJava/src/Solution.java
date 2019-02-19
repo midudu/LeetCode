@@ -1,40 +1,46 @@
-/*Given n non-negative integers a1, a2, ..., an, where each represents a point
-at coordinate (i, ai). n vertical lines are drawn such that the two endpoints
-of line i is at (i, ai) and (i, 0). Find two lines, which together with x-axis
- forms a container, such that the container contains the most water.
+/*Given a string containing just the characters '(', ')', '{', '}', '[' and ']',
+determine if the input string is valid.
 
-Note: You may not slant the container and n is at least 2.*/
-
-import java.lang.Math;
+The brackets must close in the correct order, "()" and "()[]{}" are all valid
+but "(]" and "([)]" are not.*/
 
 class Solution {
-    public int maxArea(int[] height) {
 
-        int startPointer = 0, endPointer = height.length - 1;
-        int maxAreaValue = 0;
+    public boolean isValid(String s) {
 
-        while (startPointer < endPointer) {
+        if (s == null || s.length() == 0) {
+            return true;
+        }
 
-            int leftHeight = height[startPointer];
-            int rightHeight = height[endPointer];
-            int currentArea = (endPointer - startPointer)
-                    * Math.min(leftHeight, rightHeight);
-            maxAreaValue = (currentArea > maxAreaValue ?
-                    currentArea : maxAreaValue);
+        char[] map = new char[256];
+        map[')'] = '(';
+        map['}'] = '{';
+        map[']'] = '[';
 
-            if (leftHeight <= rightHeight) {
-                while (startPointer < endPointer
-                        && height[startPointer] <= leftHeight) {
-                    startPointer++;
-                }
+        char[] stack = new char[s.length()];
+        int currentIndex = -1;
+
+        for (int i = 0; i < s.length(); i++) {
+
+            char currentChar = s.charAt(i);
+            if (currentChar == '(' || currentChar == '{'
+                    || currentChar == '[') {
+                currentIndex++;
+                stack[currentIndex] = currentChar;
             } else {
-                while (startPointer < endPointer
-                        && height[endPointer] <= rightHeight) {
-                    endPointer--;
+                if (currentIndex == -1) {
+                    return false;
+                } else {
+                    if (stack[currentIndex] == map[currentChar]) {
+                        currentIndex--;
+                    } else {
+                        return false;
+                    }
                 }
             }
         }
 
-        return maxAreaValue;
+        return currentIndex == -1;
+
     }
 }

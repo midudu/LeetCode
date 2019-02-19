@@ -18,36 +18,9 @@ your answer could be in any order you want.*/
 
 import java.util.*;
 
-// Complex Version
-/* class MyTree {
-
-    String value;
-
-    ArrayList<MyTree> sons;
-
-    MyTree(String value) {
-        this.value = value;
-        this.sons = new ArrayList<>();
-    }
-}
-
-
 class Solution {
 
-    HashMap<Character, String> hashMap = new HashMap<>();
-
-    {
-        hashMap.put('2', "abc");
-        hashMap.put('3', "def");
-        hashMap.put('4', "ghi");
-        hashMap.put('5', "jkl");
-        hashMap.put('6', "mno");
-        hashMap.put('7', "pqrs");
-        hashMap.put('8', "tuv");
-        hashMap.put('9', "wxyz");
-        hashMap.put('0', " ");
-        hashMap.put('1', "*");
-    }
+    private List<String> result = new ArrayList<>();
 
     public List<String> letterCombinations(String digits) {
 
@@ -55,105 +28,30 @@ class Solution {
             return new ArrayList<>();
         }
 
-        MyTree root = new MyTree("");
+        String[] map = {" ", "*", "abc", "def", "ghi", "jkl", "mno",
+                "pqrs", "tuv", "wxyz"};
 
-        generateTree(digits, root);
-
-        outputInListStringForm(root);
+        letterCombinationsHelper(digits, 0, "", map);
 
         return this.result;
     }
 
-    private void generateTree(String digits, MyTree root) {
+    private void letterCombinationsHelper(
+            String digits, int currentIndex,
+            String existingString, String[] map) {
 
-        Queue<MyTree> queue = new LinkedList<>();
-        queue.offer(root);
+        if (currentIndex == digits.length()) {
 
-        for (int i = 0; i < digits.length(); i++) {
+            this.result.add(existingString);
 
-
-            String possibleValues = this.hashMap.getOrDefault(digits.charAt(i), "");
-            if (possibleValues.equals("")) {
-                continue;
-            }
-
-            int size = queue.size();
-            for (int j = 0; j < size; j++) {
-
-                MyTree currentTree = queue.poll();
-
-                for (int k = 0; k < possibleValues.length(); k++) {
-
-                    MyTree sonTree
-                            = new MyTree(String.valueOf(possibleValues.charAt(k)));
-
-                    currentTree.sons.add(sonTree);
-
-                    queue.offer(sonTree);
-                }
-            }
-        }
-    }
-
-
-    private List<String> result = new ArrayList<>();
-
-    private void outputInListStringForm(MyTree root) {
-
-        for (int i = 0; i < root.sons.size(); i++) {
-            outputInListStringFormHelper(root.sons.get(i), new StringBuilder());
-        }
-    }
-
-    private void outputInListStringFormHelper(MyTree root, StringBuilder existingString) {
-
-        existingString.append(root.value);
-
-        if (root.sons.isEmpty()) {
-            result.add(existingString.toString());
-        } else {
-            for (int i = 0; i < root.sons.size(); i++) {
-                outputInListStringFormHelper(root.sons.get(i), existingString);
-            }
+            return;
         }
 
-        existingString.deleteCharAt(existingString.length() - 1);
+        String possibleValues = map[digits.charAt(currentIndex) - '0'];
+        for (int i = 0; i < possibleValues.length(); i++) {
+            letterCombinationsHelper(digits, currentIndex + 1,
+                    existingString + possibleValues.charAt(i), map);
+        }
     }
-} */
-
-// Simple Version
-class Solution {
-	
-	private List<String> result = new ArrayList<>();
-	
-	public List<String> letterCombinations(String digits) {
-		
-		if ( digits == null || digits.isEmpty() ) {
-			return new ArrayList<>();
-		}
-		
-		String[] map = {" ", "*", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
-		
-		letterCombinationsHelper(digits, 0, "", map);
-		
-		return this.result;
-	}
-	
-	private void letterCombinationsHelper(
-	    String digits, int currentIndex, String existingString, String[] map) {
-		
-		if ( currentIndex == digits.length() ) {
-			
-			this.result.add(existingString);
-			
-			return;
-		}
-		
-		String possibleValues = map[digits.charAt(currentIndex) - '0'];
-		for (int i = 0; i < possibleValues.length(); i++) {
-			letterCombinationsHelper(digits, currentIndex+1, 
-			existingString + possibleValues.charAt(i), map);
-		}
-	}
 }
 

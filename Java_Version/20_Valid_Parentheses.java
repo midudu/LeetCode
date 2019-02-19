@@ -1,63 +1,38 @@
-/*Author: Bochen (mddboc@foxmail.com)
-Last Modified: Tue Apr 10 22:28:44 CST 2018*/
+/*Given a string containing just the characters '(', ')', '{', '}', '[' and ']',
+determine if the input string is valid.
 
-/*Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
-
-        The brackets must close in the correct order, "()" and "()[]{}" are all valid but "(]" and "([)]" are not.*/
-
-import java.util.*;
-import java.lang.Math;
-import java.lang.System;
-import java.lang.Integer;
-
-
-public class Main {
-
-    public static void main(String[] args) {
-        int[] nums = {5, 5, 3, 5, 1, -5, 1, -2};
-
-        Solution solution = new Solution();
-        List<List<Integer>> receive = solution.fourSum(nums, 4);
-
-
-        System.out.println("haha");
-    }
-
-}
-
-
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
-    }
-}
+The brackets must close in the correct order, "()" and "()[]{}" are all valid
+but "(]" and "([)]" are not.*/
 
 class Solution {
 
-    HashMap<Character, Character> map = new HashMap<Character, Character>();
-
     public boolean isValid(String s) {
 
-        this.buildHashMap();
+        if (s == null || s.length() == 0) {
+            return true;
+        }
 
-        Stack<Character> count = new Stack<>();
-        int sLength = s.length();
-        char currentChar;
+        char[] map = new char[256];
+        map[')'] = '(';
+        map['}'] = '{';
+        map[']'] = '[';
 
-        for (int i = 0; i < sLength; i++) {
+        char[] stack = new char[s.length()];
+        int currentIndex = -1;
 
-            currentChar = s.charAt(i);
-            if (currentChar == '(' || currentChar == '{' || currentChar == '['){
-                count.push(currentChar);
+        for (int i = 0; i < s.length(); i++) {
+
+            char currentChar = s.charAt(i);
+            if (currentChar == '(' || currentChar == '{'
+                    || currentChar == '[') {
+                currentIndex++;
+                stack[currentIndex] = currentChar;
             } else {
-                if (count.empty()){
+                if (currentIndex == -1) {
                     return false;
                 } else {
-                    if (count.peek() == map.get(currentChar)){
-                        count.pop();
+                    if (stack[currentIndex] == map[currentChar]) {
+                        currentIndex--;
                     } else {
                         return false;
                     }
@@ -65,17 +40,7 @@ class Solution {
             }
         }
 
-        if (!count.empty()) {
-            return false;
-        } else {
-            return true;
-        }
+        return currentIndex == -1;
 
-    }
-
-    private void buildHashMap() {
-        map.put(')', '(');
-        map.put(']', '[');
-        map.put('}', '{');
     }
 }

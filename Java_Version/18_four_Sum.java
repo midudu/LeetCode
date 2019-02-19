@@ -1,6 +1,3 @@
-/*Author: Bochen (mddboc@foxmail.com)
-Last Modified: Tue Apr 10 22:28:44 CST 2018*/
-
 /*Given an array S of n integers, are there elements a, b, c, and d in S such that a + b + c + d = target? Find all unique quadruplets in the array which gives the sum of target.
 
         Note: The solution set must not contain duplicate quadruplets.
@@ -15,24 +12,7 @@ Last Modified: Tue Apr 10 22:28:44 CST 2018*/
         ]*/
 
 import java.util.*;
-import java.lang.Math;
-import java.lang.System;
 import java.lang.Integer;
-
-
-public class Main {
-
-    public static void main(String[] args) {
-        int[] nums = {5, 5, 3, 5, 1, -5, 1, -2};
-
-        Solution solution = new Solution();
-        List<List<Integer>> receive = solution.fourSum(nums, 4);
-
-
-        System.out.println("haha");
-    }
-
-}
 
 
 class Solution {
@@ -46,17 +26,34 @@ class Solution {
 
         Arrays.sort(nums);
 
-
         int numsLength = nums.length;
         int startPointer, endPointer;
         int sum;
         for (int i = 0; i < numsLength - 3; i++) {
+
+            if (nums[i] + nums[i + 1] + nums[i + 2] + nums[i + 3] > target) {
+                break;
+            }
+
+            if (nums[i] + nums[nums.length - 1]
+                    + nums[nums.length - 2] + nums[nums.length - 3] < target) {
+                continue;
+            }
 
             if (i != 0 && nums[i] == nums[i - 1]) {
                 continue;
             }
 
             for (int j = i + 1; j < numsLength - 2; j++) {
+
+                if (nums[i] + nums[j] + nums[j + 1] + nums[j + 2] > target) {
+                    break;
+                }
+
+                if (nums[i] + nums[j]
+                        + nums[nums.length - 1] + nums[nums.length - 2] < target) {
+                    continue;
+                }
 
                 if (j != i + 1 && nums[j] == nums[j - 1]) {
                     continue;
@@ -66,49 +63,49 @@ class Solution {
                     continue;
                 }
 
+                int newTarget = target - nums[i] - nums[j];
+
                 startPointer = j + 1;
                 endPointer = numsLength - 1;
 
                 while (startPointer < endPointer) {
+
                     if (startPointer != j + 1) {
                         while (nums[startPointer] == nums[startPointer - 1]) {
                             startPointer++;
                         }
                     }
+
                     if (endPointer != numsLength - 1) {
                         while (nums[endPointer] == nums[endPointer + 1]) {
                             endPointer--;
                         }
                     }
+
                     if (startPointer >= endPointer) {
                         break;
                     }
 
-                    sum = nums[i] + nums[j] + nums[startPointer] + nums[endPointer];
-                    if (sum < target) {
+                    sum = nums[startPointer] + nums[endPointer];
+                    if (sum < newTarget) {
                         startPointer++;
-                    } else if (sum > target) {
+                    } else if (sum > newTarget) {
                         endPointer--;
                     } else {
-                        result.add(putRightResult(nums[i], nums[j], nums[startPointer], nums[endPointer]));
+
+                        List<Integer> currentResult = new ArrayList<>();
+                        currentResult.add(nums[i]);
+                        currentResult.add(nums[j]);
+                        currentResult.add(nums[startPointer]);
+                        currentResult.add(nums[endPointer]);
+
+                        result.add(currentResult);
                         startPointer++;
                         endPointer--;
                     }
                 }
             }
-
-
         }
-
-        return result;
-    }
-
-    private List<Integer> putRightResult(int num1, int num2, int num3, int num4) {
-        List<Integer> result = new LinkedList<Integer>();
-        result.add(num1);
-        result.add(num2);
-        result.add(num3);
-        result.add(num4);
 
         return result;
     }
