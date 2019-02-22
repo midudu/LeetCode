@@ -1,6 +1,6 @@
 /*
-Merge k sorted linked lists and return it as one sorted list.
-Analyze and describe its complexity.
+  Merge k sorted linked lists and return it as one sorted list.
+  Analyze and describe its complexity.
 
 Example:
 
@@ -14,8 +14,6 @@ Output: 1->1->2->3->4->4->5->6
 */
 
 
-import java.util.List;
-
 class ListNode {
 
     int val;
@@ -28,25 +26,6 @@ class ListNode {
 
 class Solution {
 
-    public static void main(String[] args) {
-
-        ListNode headA = new ListNode(0);
-        headA.next = new ListNode(2);
-        headA.next.next = new ListNode(4);
-        headA.next.next.next = new ListNode(6);
-        headA.next.next.next.next = new ListNode(8);
-
-        ListNode headB = new ListNode(1);
-        headB.next = new ListNode(3);
-        headB.next.next = new ListNode(5);
-        headB.next.next.next = new ListNode(7);
-        headB.next.next.next.next = new ListNode(9);
-
-        ListNode result = new Solution().mergeTwoLists(headA, headB);
-
-        System.out.println("");
-    }
-
     public ListNode mergeKLists(ListNode[] lists) {
 
         if (lists == null || lists.length == 0) {
@@ -56,11 +35,10 @@ class Solution {
         return mergeKListsHelper(lists, 0, lists.length - 1);
     }
 
-    private ListNode mergeKListsHelper(ListNode[] lists, int startIndex, int endIndex) {
+    private ListNode mergeKListsHelper(ListNode[] lists,
+                                       int startIndex, int endIndex) {
 
-        if (startIndex > endIndex) {
-            return null;
-        } else if (startIndex == endIndex) {
+        if (startIndex == endIndex) {
             return lists[startIndex];
         }
 
@@ -74,8 +52,8 @@ class Solution {
 
     private ListNode mergeTwoLists(ListNode headA, ListNode headB) {
 
-        ListNode psudoHead = new ListNode(0);
-        ListNode pointer = psudoHead;
+        ListNode pseudoHead = new ListNode(0);
+        ListNode pointer = pseudoHead;
 
         while (headA != null && headB != null) {
 
@@ -92,6 +70,6 @@ class Solution {
 
         pointer.next = (headA == null ? headB : headA);
 
-        return psudoHead.next;
+        return pseudoHead.next;
     }
 }

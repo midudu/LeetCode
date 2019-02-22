@@ -1,46 +1,56 @@
-/*Given a string containing just the characters '(', ')', '{', '}', '[' and ']',
-determine if the input string is valid.
+/*
+  Implement strStr().
 
-The brackets must close in the correct order, "()" and "()[]{}" are all valid
-but "(]" and "([)]" are not.*/
+  Return the index of the first occurrence of needle in haystack, or -1 if
+needle is not part of haystack.
+
+  Example 1:
+
+  Input: haystack = "hello", needle = "ll"
+  Output: 2
+
+  Example 2:
+
+  Input: haystack = "aaaaa", needle = "bba"
+  Output: -1
+*/
 
 class Solution {
 
-    public boolean isValid(String s) {
+    public int strStr(String haystack, String needle) {
 
-        if (s == null || s.length() == 0) {
-            return true;
+        if (haystack == null
+                || needle == null
+                || haystack.length() < needle.length()) {
+            return -1;
         }
 
-        char[] map = new char[256];
-        map[')'] = '(';
-        map['}'] = '{';
-        map[']'] = '[';
+        if (haystack.isEmpty()) {
+            return 0;
+        }
+        if (needle.isEmpty()) {
+            return 0;
+        }
 
-        char[] stack = new char[s.length()];
-        int currentIndex = -1;
+        int end = haystack.length() - needle.length() + 1;
+        for (int i = 0; i < end; i++) {
 
-        for (int i = 0; i < s.length(); i++) {
+            if (haystack.charAt(i) == needle.charAt(0)) {
 
-            char currentChar = s.charAt(i);
-            if (currentChar == '(' || currentChar == '{'
-                    || currentChar == '[') {
-                currentIndex++;
-                stack[currentIndex] = currentChar;
-            } else {
-                if (currentIndex == -1) {
-                    return false;
-                } else {
-                    if (stack[currentIndex] == map[currentChar]) {
-                        currentIndex--;
-                    } else {
-                        return false;
+                boolean flag = true;
+                for (int j = 1; j < needle.length(); j++) {
+                    if (haystack.charAt(i + j) != needle.charAt(j)) {
+                        flag = false;
+                        break;
                     }
+                }
+
+                if (flag) {
+                    return i;
                 }
             }
         }
 
-        return currentIndex == -1;
-
+        return -1;
     }
 }

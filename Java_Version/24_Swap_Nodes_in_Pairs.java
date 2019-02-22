@@ -7,10 +7,11 @@ Given 1->2->3->4, you should return the list as 2->1->4->3.
 
 Note:
 
-Your algorithm should use only constant extra space.
-You may not modify the values in the list's nodes, only nodes itself may be changed.
-*/
+  Your algorithm should use only constant extra space.
 
+  You may not modify the values in the list's nodes, only nodes itself may be
+changed.
+*/
 
 
 class ListNode {
@@ -30,28 +31,25 @@ class Solution {
             return null;
         }
 
-        ListNode psudoHead = new ListNode(0);
-        psudoHead.next = head;
+        ListNode pseudoHead = new ListNode(0);
+        pseudoHead.next = head;
 
-        ListNode pointer = psudoHead;
+        ListNode pointer = pseudoHead;
 
-        while (true) {
+        while (pointer.next != null
+                && pointer.next.next != null) {
 
-            if (pointer.next == null || pointer.next.next == null) {
-                break;
-            }
+            ListNode firstNode = pointer.next;
+            ListNode secondNode = pointer.next.next;
+            ListNode nextPairNode = pointer.next.next.next;
 
-            ListNode nextNode = pointer.next;
-            ListNode nextNextNode = pointer.next.next;
-            ListNode nextNextNextNode = pointer.next.next.next;
+            pointer.next = secondNode;
+            secondNode.next = firstNode;
+            firstNode.next = nextPairNode;
 
-            pointer.next = nextNextNode;
-            nextNextNode.next = nextNode;
-            nextNode.next = nextNextNextNode;
-
-            pointer = pointer.next.next;
+            pointer = firstNode;
         }
 
-        return psudoHead.next;
+        return pseudoHead.next;
     }
 }

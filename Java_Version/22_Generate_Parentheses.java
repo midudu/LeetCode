@@ -1,6 +1,6 @@
 /*
-Given n pairs of parentheses,
-write a function to generate all combinations of well-formed parentheses.
+  Given n pairs of parentheses,
+  write a function to generate all combinations of well-formed parentheses.
 
 For example, given n = 3, a solution set is:
 
@@ -43,12 +43,14 @@ class Solution {
 
         if (existingLeftNumbers < n) {
             generateParenthesisHelper(result, existingString + "(",
-                    existingLeftNumbers + 1, existingRightNumbers, n);
+                    existingLeftNumbers + 1,
+                    existingRightNumbers, n);
         }
 
         if (existingRightNumbers < n && existingRightNumbers < existingLeftNumbers) {
             generateParenthesisHelper(result, existingString + ")",
-                    existingLeftNumbers, existingRightNumbers + 1, n);
+                    existingLeftNumbers,
+                    existingRightNumbers + 1, n);
         }
     }
 }
