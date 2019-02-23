@@ -32,29 +32,20 @@
       <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="42" column="17" lean-forward="true" selection-end-line="52" selection-end-column="1" />
+            <state relative-caret-position="296">
+              <caret line="58" column="12" selection-end-line="64" selection-end-column="1" />
               <folding>
-                <element signature="e#0#440#0" expanded="true" />
+                <element signature="e#0#1476#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="String.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/String.java">
+      <file leaf-file-name="Integer.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Integer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="1663" column="48" lean-forward="true" selection-start-line="1663" selection-start-column="48" selection-end-line="1663" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StringUTF16.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/StringUTF16.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="367" column="23" selection-start-line="367" selection-start-column="23" selection-end-line="367" selection-end-column="23" />
+            <state relative-caret-position="200">
+              <caret line="63" column="38" selection-start-line="63" selection-start-column="38" selection-end-line="63" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -65,6 +56,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit4 Test Class" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -155,14 +147,15 @@
     <option name="width" value="1182" />
     <option name="height" value="840" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -187,6 +180,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -206,7 +200,7 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -525,12 +519,17 @@
       <workItem from="1550578616539" duration="72000" />
       <workItem from="1550578904831" duration="2242000" />
       <workItem from="1550824115563" duration="31000" />
-      <workItem from="1550836932363" duration="3689000" />
+      <workItem from="1550836932363" duration="3894000" />
+      <workItem from="1550891745146" duration="65000" />
+      <workItem from="1550891867588" duration="219000" />
+      <workItem from="1550892089814" duration="201000" />
+      <workItem from="1550894349114" duration="383000" />
+      <workItem from="1550920798590" duration="2463000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="443337000" />
+    <option name="totallyTimeSpent" value="446873000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -547,28 +546,28 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49932975" weight="0.329429" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49731904" weight="0.32796487" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5241287" side_tool="true" weight="0.44948757" />
       <window_info anchor="right" id="Maven Projects" order="6" weight="0.3297587" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4953083" weight="0.25036603" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.47587132" weight="0.14074074" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4953083" weight="0.25036603" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49865952" weight="0.329429" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48609078" visible="true" weight="0.16329831" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48609078" visible="true" weight="0.22635408" />
       <window_info anchor="right" id="Database" order="8" weight="0.3297587" />
       <window_info id="Structure" order="1" sideWeight="0.5131579" side_tool="true" weight="0.30294907" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.46849865" visible="true" weight="0.13148148" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.46849865" weight="0.31296295" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.23525469" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49731904" weight="0.32796487" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -576,28 +575,28 @@
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.4953083" weight="0.25036603" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.23525469" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="8" weight="0.3297587" />
-      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.4953083" weight="0.25036603" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.47587132" visible="true" weight="0.14074074" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48609078" visible="true" weight="0.19805983" />
       <window_info id="Structure" order="1" sideWeight="0.5131579" side_tool="true" weight="0.30294907" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49932975" weight="0.329429" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.47587132" visible="true" weight="0.14074074" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49731904" weight="0.2635432" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.46849865" weight="0.31296295" />
+      <window_info anchor="right" id="Database" order="8" weight="0.3297587" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49865952" weight="0.329429" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5241287" side_tool="true" weight="0.44948757" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.46849865" weight="0.31296295" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5241287" side_tool="true" weight="0.44948757" />
       <window_info id="Capture Tool" order="5" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49731904" weight="0.32796487" />
@@ -650,7 +649,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="302" />
+      <option name="time" value="307" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -673,17 +672,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/readersWritersProblem/Writers.java" />
-    <entry file="file://$PROJECT_DIR$/src/readersWritersProblem/FirstReadersWriterSolution.java" />
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/atomic/AtomicInteger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="82" column="39" selection-start-line="82" selection-start-column="39" selection-end-line="82" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yahoo/rw/solutions/ReentrantRWLock.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yahoo/rw/solutions/Readers.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/com/yahoo/rw/solutions/ReentrantRWLockTest.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yahoo/rw/solutions/Writers.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/com/yahoo/rw/solutions/FirstReadersWriterTest.java" />
@@ -979,13 +967,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Integer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="1198" column="41" lean-forward="true" selection-start-line="1198" selection-start-column="41" selection-end-line="1198" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Object.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -1053,10 +1034,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7296">
           <caret line="341" column="32" selection-start-line="341" selection-start-column="32" selection-end-line="341" selection-end-column="32" />
-          <folding>
-            <element signature="e#12760#12761#0" expanded="true" />
-            <element signature="e#12800#12801#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1067,26 +1044,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/String.java">
+    <entry file="file://$PROJECT_DIR$/src/gag.java" />
+    <entry file="file://$PROJECT_DIR$/src/haha.java" />
+    <entry file="file://$PROJECT_DIR$/src/nima.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/StringUTF16.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="1663" column="48" lean-forward="true" selection-start-line="1663" selection-start-column="48" selection-end-line="1663" selection-end-column="48" />
+        <state relative-caret-position="439">
+          <caret line="367" column="23" selection-start-line="367" selection-start-column="23" selection-end-line="367" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/StringUTF16.java">
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="367" column="23" selection-start-line="367" selection-start-column="23" selection-end-line="367" selection-end-column="23" />
+        <state relative-caret-position="439">
+          <caret line="1663" column="48" selection-start-line="1663" selection-start-column="48" selection-end-line="1663" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gasgsa.java" />
+    <entry file="file://$PROJECT_DIR$/src/clla.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Integer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="63" column="38" selection-start-line="63" selection-start-column="38" selection-end-line="63" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="42" column="17" lean-forward="true" selection-end-line="52" selection-end-column="1" />
+        <state relative-caret-position="296">
+          <caret line="58" column="12" selection-end-line="64" selection-end-column="1" />
           <folding>
-            <element signature="e#0#440#0" expanded="true" />
+            <element signature="e#0#1476#0" expanded="true" />
           </folding>
         </state>
       </provider>

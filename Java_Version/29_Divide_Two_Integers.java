@@ -24,53 +24,49 @@ integers within the 32-bit signed integer range: [−2^31,  2^31 − 1].
 For the purpose of this problem, assume that your function returns 2^31 − 1
 when the division result overflows.*/
 
-/* Method 1: hard but not Use Long
+// Method 1: hard but not Use Long
 class Solution {
-
-
     public int divide(int dividend, int divisor) {
 
         if (dividend == Integer.MIN_VALUE && divisor == -1) {
             return Integer.MAX_VALUE;
         }
 
-        if (dividend > 0 && divisor > 0) {
-            return divideHelper(-dividend, -divisor);
-        } else if (dividend > 0) {
-            return -divideHelper(-dividend, divisor);
-        } else if (divisor > 0) {
-            return -divideHelper(dividend, -divisor);
-        } else {
-            return divideHelper(dividend, divisor);
+        boolean isNegative = (dividend < 0) ^ (divisor < 0);
+
+        if (dividend > 0) {
+            dividend = -dividend;
         }
+        if (divisor > 0) {
+            divisor = -divisor;
+        }
+
+        return isNegative ? -division(dividend, divisor) :
+                division(dividend, divisor);
     }
 
-    private int divideHelper(int dividend, int divisor) {
+    private int division(int dividend, int divisor) {
 
-        // base case
-        if (divisor < dividend) {
+        if (dividend > divisor) {
             return 0;
         }
 
-        // get highest digit of divisor
-        int cur = 0, res = 0;
-        while ((divisor << cur) >= dividend
-                && (divisor << cur) < 0
-                && cur < 31) {
-            cur++;
+        int currSum = divisor << 1;
+        int prevSum = divisor;
+        int quotient = 1;
+
+        while (dividend <= currSum && currSum < prevSum) {
+            prevSum = currSum;
+            currSum <<= 1;
+            quotient <<= 1;
         }
 
-        res = dividend - (divisor << (cur - 1));
-        if (res > divisor) {
-            return (1 << (cur - 1));
-        }
-
-        return (1 << (cur - 1)) + divide(res, divisor);
+        return quotient + division(dividend - prevSum, divisor);
     }
-
-}*/
+}
 
 // Method 2: easy but use Long
+/*
 public class Solution {
 
     public int divide(int dividend, int divisor) {
@@ -99,4 +95,4 @@ public class Solution {
         }
         return ((dividend < 0 && divisor > 0) || (dividend > 0 && divisor < 0)) ? -count : count;
     }
-}
+}*/
