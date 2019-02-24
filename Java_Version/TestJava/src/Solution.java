@@ -1,65 +1,67 @@
 /*
-Given two non-negative integers num1 and num2 represented as strings,
-return the product of num1 and num2, also represented as a string.
+Suppose an array sorted in ascending order is rotated at some pivot unknown
+to you beforehand.
+
+(i.e., [0,1,2,4,5,6,7] might become [4,5,6,7,0,1,2]).
+
+You are given a target value to search. If found in the array return its
+index, otherwise return -1.
+
+You may assume no duplicate exists in the array.
+
+Your algorithm's runtime complexity must be in the order of O(log n).
 
 Example 1:
 
-        Input: num1 = "2", num2 = "3"
-        Output: "6"
+        Input: nums = [4,5,6,7,0,1,2], target = 0
+        Output: 4
 
 Example 2:
 
-        Input: num1 = "123", num2 = "456"
-        Output: "56088"
-
-Note:
-
-  The length of both num1 and num2 is < 110.
-
-  Both num1 and num2 contain only digits 0-9.
-
-  Both num1 and num2 do not contain any leading zero, except the number 0 itself.
-
-  You must not use any built-in BigInteger library or convert the inputs to
-integer directly.
-*/
+        Input: nums = [4,5,6,7,0,1,2], target = 3
+        Output: -1*/
 
 class Solution {
 
-    public String multiply(String num1, String num2) {
+    public int search(int[] nums, int target) {
 
-        int len1 = num1.length(), len2 = num2.length();
+        if (nums == null || nums.length == 0) {
+            return -1;
+        }
 
-        // There are at most (len1 + len2) bits for the multiply result
-        int[] result = new int[len1 + len2];
+        int startIndex = 0, endIndex = nums.length - 1;
 
-        for (int i = len1 - 1; i >= 0; i--) {
-            for (int j = len2 - 1; j >= 0; j--) {
+        while (startIndex <= endIndex) {
 
-                int carryBitPosition = i + j;
-                int currentPosition = i + j + 1;
+            int middleIndex = startIndex + (endIndex - startIndex) / 2;
 
-                int multiplicationResult =
-                        (num1.charAt(i) - '0') * (num2.charAt(j) - '0');
-                int totalResult =
-                        multiplicationResult + result[currentPosition];
+            if (nums[middleIndex] == target) {
+                return middleIndex;
+            }
 
-                result[carryBitPosition] += totalResult / 10;
-                result[currentPosition] = totalResult % 10;
+            if (nums[middleIndex] >= nums[startIndex]) {
+                if (nums[middleIndex] < target) {
+                    startIndex = middleIndex + 1;
+                } else {
+                    if (nums[startIndex] <= target) {
+                        endIndex = middleIndex - 1;
+                    } else {
+                        startIndex = middleIndex + 1;
+                    }
+                }
+            } else {
+                if (nums[middleIndex] < target) {
+                    if (nums[endIndex] >= target) {
+                        startIndex = middleIndex + 1;
+                    } else {
+                        endIndex = middleIndex - 1;
+                    }
+                } else {
+                    endIndex = middleIndex - 1;
+                }
             }
         }
 
-        StringBuilder stringBuilder = new StringBuilder();
-
-        for (int currentBitNum : result) {
-
-            if (currentBitNum == 0 && stringBuilder.length() == 0) {
-                continue;
-            }
-
-            stringBuilder.append(currentBitNum);
-        }
-
-        return stringBuilder.length() == 0 ? "0" : stringBuilder.toString();
+        return -1;
     }
 }
