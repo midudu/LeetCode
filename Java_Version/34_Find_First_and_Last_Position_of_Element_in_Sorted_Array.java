@@ -24,47 +24,85 @@ class Solution {
             return new int[]{-1, -1};
         }
 
-        return searchRangeHelper(nums, target, 0, nums.length - 1);
-    }
-
-    private int[] searchRangeHelper(int[] nums, int target,
-                                    int startIndex, int endIndex) {
-
-        if (startIndex > endIndex) {
+        int targetIndex = findTargetIndex(nums, target);
+        if (targetIndex == -1) {
             return new int[]{-1, -1};
         }
 
-        if (startIndex == endIndex) {
+        int firstNonTargetIndex = findFirstNonTargetIndex(
+                nums, targetIndex, target);
+        int lastNonTargetIndex = findLastNonTargetIndex(
+                nums, targetIndex, target);
 
-            if (nums[startIndex] == target) {
-                return new int[]{startIndex, endIndex};
+        return new int[]{
+                firstNonTargetIndex + 1, lastNonTargetIndex - 1};
+    }
+
+    private int findTargetIndex(int[] nums, int target) {
+
+        int startIndex = 0, endIndex = nums.length - 1;
+
+        while (startIndex <= endIndex) {
+
+            int middleIndex = startIndex + (endIndex - startIndex) / 2;
+
+            if (nums[middleIndex] == target) {
+                return middleIndex;
+            } else if (nums[middleIndex] < target) {
+                startIndex = middleIndex + 1;
             } else {
-                return new int[]{-1, -1};
+                endIndex = middleIndex - 1;
             }
         }
 
-        if (startIndex + 1 == endIndex) {
-            int[] result = new int[2];
-            if (nums[startIndex] == target) {
-                result[0] = startIndex;
-                result[1] = (nums[endIndex] == target ? endIndex : startIndex);
-                return result;
+        return -1;
+    }
+
+    private int findFirstNonTargetIndex(
+            int[] nums, int maximumIndex, int target) {
+
+        int startIndex = 0, endIndex = maximumIndex - 1;
+
+        while (startIndex < endIndex - 1) {
+
+            int middleIndex = startIndex + (endIndex - startIndex) / 2;
+
+            if (nums[middleIndex] == target) {
+                endIndex = middleIndex - 1;
             } else {
-                result[0] = result[1] = (nums[endIndex] == target ? endIndex : -1);
-                return result;
+                startIndex = middleIndex;
             }
         }
 
-        int middleIndex = startIndex + (endIndex - startIndex) / 2;
-        if (nums[middleIndex] == target) {
-            int[] result1 = searchRangeHelper(nums, target, startIndex, middleIndex);
-            int[] result2 = searchRangeHelper(nums, target, middleIndex, endIndex);
-            return new int[]{result1[0], result2[1]};
+        if (endIndex >= 0 && nums[endIndex] != target) {
+            return endIndex;
+        } else if (nums[startIndex] != target) {
+            return startIndex;
+        }
 
-        } else if (nums[middleIndex] < target) {
-            return searchRangeHelper(nums, target, middleIndex + 1, endIndex);
+        return -1;
+    }
+
+    private int findLastNonTargetIndex(
+            int[] nums, int minimumIndex, int target) {
+
+        int startIndex = minimumIndex + 1, endIndex = nums.length - 1;
+
+        while (startIndex < endIndex) {
+
+            int middleIndex = startIndex + (endIndex - startIndex) / 2;
+
+            if (nums[middleIndex] == target) {
+                startIndex = middleIndex + 1;
+            } else {
+                endIndex = middleIndex;
+            }
+        }
+
+        if (startIndex < nums.length && nums[startIndex] != target) {
+            return startIndex;
         } else {
-            return searchRangeHelper(nums, target, startIndex, middleIndex - 1);
+            return nums.length;
         }
     }
 }
