@@ -1,97 +1,46 @@
-/*
-Determine if a 9x9 Sudoku board is valid.
+/*Given a string, find the length of the longest substring without repeating
+characters.
 
-Only the filled cells need to be validated according to the following rules:
+Examples:
 
-1. Each row must contain the digits 1-9 without repetition.
-2. Each column must contain the digits 1-9 without repetition.
-3. Each of the 9 3x3 sub-boxes of the grid must contain the digits 1-9 without
-repetition.
+    Given "abcabcbb", the answer is "abc", which the length is 3.
 
-The Sudoku board could be partially filled, where empty cells are filled with the
-character '.'.
+    Given "bbbbb", the answer is "b", with the length of 1.
 
-Example 1:
+    Given "pwwkew", the answer is "wke", with the length of 3.
 
-Input:
-        [
-        ["5","3",".",".","7",".",".",".","."],
-        ["6",".",".","1","9","5",".",".","."],
-        [".","9","8",".",".",".",".","6","."],
-        ["8",".",".",".","6",".",".",".","3"],
-        ["4",".",".","8",".","3",".",".","1"],
-        ["7",".",".",".","2",".",".",".","6"],
-        [".","6",".",".",".",".","2","8","."],
-        [".",".",".","4","1","9",".",".","5"],
-        [".",".",".",".","8",".",".","7","9"]
-        ]
-Output: true
-
-
-Example 2:
-
-Input:
-        [
-        ["8","3",".",".","7",".",".",".","."],
-        ["6",".",".","1","9","5",".",".","."],
-        [".","9","8",".",".",".",".","6","."],
-        ["8",".",".",".","6",".",".",".","3"],
-        ["4",".",".","8",".","3",".",".","1"],
-        ["7",".",".",".","2",".",".",".","6"],
-        [".","6",".",".",".",".","2","8","."],
-        [".",".",".","4","1","9",".",".","5"],
-        [".",".",".",".","8",".",".","7","9"]
-        ]
-
-Output: false
-        Explanation: Same as Example 1, except with the 5 in the top left corner being
-        modified to 8. Since there are two 8's in the top left 3x3 sub-box, it is invalid.
-
-Note:
-
-A Sudoku board (partially filled) could be valid but is not necessarily solvable.
-
-Only the filled cells need to be validated according to the mentioned rules.
-
-The given board contain only digits 1-9 and the character '.'.
-The given board size is always 9x9.
-
+Note that the answer must be a substring, "pwke" is a subsequence and not a
+substring.
 */
+
+import java.lang.Math;
+import java.util.HashMap;
+import java.util.Map;
+
 
 class Solution {
 
-    public boolean isValidSudoku(char[][] board) {
+    public int lengthOfLongestSubstring(String s) {
 
-        if (board == null
-                || board.length != 9 || board[0].length != 9) {
-            return false;
+        if ( s == null || s.length() == 0 ) {
+            return 0;
         }
 
-        int[] rowChecker = new int[9];
-        int[] colChecker = new int[9];
-        int[] boxChecker = new int[9];
+        Map<Character, Integer> map = new HashMap<>();
 
-        for (int row = 0; row < 9; row++) {
-            for (int col = 0; col < 9; col++) {
+        int result = 0;
+        int startIndex = 0;
 
-                if (board[row][col] == '.') {
-                    continue;
-                }
+        for ( int i = 0; i < s.length(); i++ ) {
 
-                int currentNumber = (1 << (board[row][col] - '0'));
-
-                if ((rowChecker[row] & currentNumber) != 0
-                        || (colChecker[col] & currentNumber) != 0
-                        || (boxChecker[(row / 3) * 3 + col / 3] & currentNumber) != 0) {
-                    return false;
-                }
-
-                rowChecker[row] |= currentNumber;
-                colChecker[col] |= currentNumber;
-                boxChecker[(row / 3) * 3 + col / 3] |= currentNumber;
+            if ( map.(s.charAt(i))) {
+                startIndex = Math.max(startIndex, map.get(s.charAt(i)) + 1);
             }
+
+            result = Math.max(result, i - startIndex + 1);
+            map.put(s.charAt(i), i);
         }
 
-        return true;
+        return result;
     }
 }

@@ -1,21 +1,3 @@
-/*
-Given a string s, find the longest palindromic substring in s.
-You may assume that the maximum length of s is 1000.
-
-Example 1:
-
-Input: "babad"
-Output: "bab"
-Note: "aba" is also a valid answer.
-
-Example 2:
-
-Input: "cbbd"
-Output: "bb"*/
-
-
-// O(n^2): Check every character which might be the middle of the palindromic
-// substring
 class Solution {
 
     public String longestPalindrome(String s) {
@@ -24,13 +6,20 @@ class Solution {
             return s;
         }
 
+        char[] sChar = s.toCharArray();
+
         // answerInformation[0]: the start index of the answer
         // answerInformation[0]: the length of the answer (for comparison in
         //                       every loop)
         int[] answerInformation = new int[2];
 
         for (int middleIndex = 0; middleIndex < s.length(); middleIndex++) {
-            checkCurrentSituation(s, middleIndex, answerInformation);
+            
+            if ( middleIndex != 0 && sChar[middleIndex] == sChar[middleIndex - 1] ) {
+                continue;
+            }
+            
+            checkCurrentSituation(sChar, middleIndex, answerInformation);
         }
 
         return s.substring(answerInformation[0],
@@ -38,18 +27,18 @@ class Solution {
     }
 
     private void checkCurrentSituation(
-            String s, int currentMiddleIndex, int[] answerInformation) {
-
+            char[] s, int currentMiddleIndex, int[] answerInformation) {
+                
         int leftIndex = currentMiddleIndex - 1;
-        while (currentMiddleIndex < s.length() - 1
-                && s.charAt(currentMiddleIndex) == s.charAt(currentMiddleIndex + 1)) {
+        while (currentMiddleIndex < s.length - 1
+                && s[currentMiddleIndex] == s[currentMiddleIndex + 1]) {
             currentMiddleIndex++;
         }
 
         int rightIndex = currentMiddleIndex + 1;
 
-        while (leftIndex >= 0 && rightIndex < s.length()
-                && s.charAt(leftIndex) == s.charAt(rightIndex)) {
+        while (leftIndex >= 0 && rightIndex < s.length
+                && s[leftIndex] == s[rightIndex]) {
             leftIndex--;
             rightIndex++;
         }

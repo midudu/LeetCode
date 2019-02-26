@@ -15,7 +15,7 @@
         Output: 21
 
 Note:
-Assume we are dealing with an environment which could only hold integers within
+  Assume we are dealing with an environment which could only hold integers within
 the 32-bit signed integer range. For the purpose of this problem, assume that
 your function returns 0 when the reversed integer overflows.*/
 
@@ -24,27 +24,26 @@ class Solution {
 
     public int reverse(int x) {
 
-        int finalResult = 0;
-
-        while (x != 0) {
-
-            // The result of a negative number % 10 is still negative
-            int tail = x % 10;
-
-            int currentResult = finalResult * 10 + tail;
-
-            // Overflow happens
-            if (currentResult / 10 != finalResult) {
-                return 0;
-            }
-
-            finalResult = currentResult;
-            x /= 10;
-        }
-
-        return finalResult;
+        int result = 0;
+		
+		while ( x != 0 ) {
+			
+			int remainder = x % 10;
+			
+			if ( (result * 10 / 10) != result ) {
+				return 0;
+			}
+			
+			result = result * 10 + remainder;
+			
+			x /= 10;
+		}
+		
+		return result;
     }
 }
+
+
 
 // Method 2: long supported
 /*
