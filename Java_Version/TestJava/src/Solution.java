@@ -1,46 +1,76 @@
-/*Given a string, find the length of the longest substring without repeating
-characters.
+/*
+Given two integers dividend and divisor,
+divide two integers without using multiplication, division and mod operator.
 
-Examples:
+Return the quotient after dividing dividend by divisor.
 
-    Given "abcabcbb", the answer is "abc", which the length is 3.
+The integer division should truncate toward zero.
 
-    Given "bbbbb", the answer is "b", with the length of 1.
+Example 1:
+        Input: dividend = 10, divisor = 3
+        Output: 3
 
-    Given "pwwkew", the answer is "wke", with the length of 3.
+        Example 2:
 
-Note that the answer must be a substring, "pwke" is a subsequence and not a
-substring.
-*/
+        Input: dividend = 7, divisor = -3
+        Output: -2
+        Note:
 
-import java.lang.Math;
-import java.util.HashMap;
-import java.util.Map;
+Both dividend and divisor will be 32-bit signed integers.
+The divisor will never be 0.
 
+Assume we are dealing with an environment which could only store
+integers within the 32-bit signed integer range: [−2^31,  2^31 − 1].
+For the purpose of this problem, assume that your function returns 2^31 − 1
+when the division result overflows.*/
 
 class Solution {
 
-    public int lengthOfLongestSubstring(String s) {
+    public static void main(String[] args) {
 
-        if ( s == null || s.length() == 0 ) {
+        new Solution().divide(-2147483648, -1);
+    }
+
+    public int divide(int dividend, int divisor) {
+
+        if (dividend == 0x7FFFFFFF && divisor == -1) {
+            return 0x7FFFFFFF;
+        }
+
+        if (dividend == 0) {
             return 0;
         }
 
-        Map<Character, Integer> map = new HashMap<>();
+        if (dividend > 0 && divisor > 0) {
+            return divideHelper(-dividend, -divisor);
+        } else if (dividend > 0 && divisor < 0) {
+            return -divideHelper(-dividend, divisor);
+        } else if (dividend < 0 && divisor > 0) {
+            return -divideHelper(dividend, -divisor);
+        } else {
+            return divideHelper(dividend, divisor);
+        }
+    }
+
+    private int divideHelper(int dividend, int divisor) {
 
         int result = 0;
-        int startIndex = 0;
 
-        for ( int i = 0; i < s.length(); i++ ) {
+        while (dividend <= divisor) {
 
-            if ( map.(s.charAt(i))) {
-                startIndex = Math.max(startIndex, map.get(s.charAt(i)) + 1);
+            int movingBit = 0;
+            while (dividend < (divisor << movingBit)) {
+
+                int currentResult = (divisor << movingBit);
+                movingBit++;
             }
 
-            result = Math.max(result, i - startIndex + 1);
-            map.put(s.charAt(i), i);
+            result += (1 << (movingBit - 1));
+
+            dividend -= (divisor << (movingBit - 1));
         }
 
         return result;
     }
 }
+

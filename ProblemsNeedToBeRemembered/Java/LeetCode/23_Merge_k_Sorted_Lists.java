@@ -27,49 +27,49 @@ class ListNode {
 class Solution {
 
     public ListNode mergeKLists(ListNode[] lists) {
-
-        if (lists == null || lists.length == 0) {
-            return null;
-        }
-
-        return mergeKListsHelper(lists, 0, lists.length - 1);
+		
+		if ( lists == null || lists.length == 0 ) {
+			return null;
+		}
+		
+		return mergeKListsHelper(lists, 0, lists.length - 1);
     }
-
-    private ListNode mergeKListsHelper(ListNode[] lists,
-                                       int startIndex, int endIndex) {
-
-        if (startIndex == endIndex) {
-            return lists[startIndex];
-        }
-
-        int middleIndex = startIndex + (endIndex - startIndex) / 2;
-
-        ListNode listA = mergeKListsHelper(lists, startIndex, middleIndex);
-        ListNode listB = mergeKListsHelper(lists, middleIndex + 1, endIndex);
-
-        return mergeTwoLists(listA, listB);
-    }
-
-    private ListNode mergeTwoLists(ListNode headA, ListNode headB) {
-
-        ListNode pseudoHead = new ListNode(0);
-        ListNode pointer = pseudoHead;
-
-        while (headA != null && headB != null) {
-
-            if (headA.val < headB.val) {
-                pointer.next = headA;
-                headA = headA.next;
-            } else {
-                pointer.next = headB;
-                headB = headB.next;
-            }
-
-            pointer = pointer.next;
-        }
-
-        pointer.next = (headA == null ? headB : headA);
-
-        return pseudoHead.next;
-    }
+	
+	private ListNode mergeKListsHelper(ListNode[] lists, 
+	    int startIndex, int endIndex) {
+			
+		if ( startIndex == endIndex ) {
+			return lists[startIndex];
+		}
+		
+		int middleIndex = startIndex + ( endIndex - startIndex ) / 2;
+		
+		ListNode firstNode = mergeKListsHelper(lists, startIndex, middleIndex);
+		ListNode secondNode = mergeKListsHelper(lists, middleIndex + 1, endIndex);
+		
+		return mergeTwoNodes(firstNode, secondNode);
+	}
+	
+	private ListNode mergeTwoNodes(ListNode firstNode, ListNode secondNode) {
+		
+		ListNode pseudoHead = new ListNode(0);
+		ListNode currentNode = pseudoHead;
+		
+		while ( firstNode != null && secondNode != null ) {
+			
+			if ( firstNode.val <= secondNode.val ) {
+				currentNode.next = firstNode;
+				firstNode = firstNode.next;
+			} else {
+				currentNode.next = secondNode;
+				secondNode = secondNode.next;
+			}
+			
+			currentNode = currentNode.next;
+		}
+		
+		currentNode.next = ( firstNode != null ? firstNode : secondNode );
+		
+		return pseudoHead.next;
+	}
 }

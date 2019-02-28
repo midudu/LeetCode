@@ -26,23 +26,25 @@ it reads the same backward as forward.
 
 
 class Solution {
+	
     public boolean isPalindrome(int x) {
 
-        if (x < 0) {
-            return false;
-        } else if (x < 10) {
-            return true;
-        } else if (x % 10 == 0) {
-            return false;
-        }
-
-        int reverseResult = 0;
-        while (x > reverseResult) {
-
-            reverseResult = reverseResult * 10 + x % 10;
-            x /= 10;
-        }
-
-        return x == reverseResult || x == reverseResult / 10;
+	    if ( x < 0 ) {
+			return false;
+		} else if ( x < 10 ) {
+			return true;
+		} else if ( x % 10 == 0 ) {
+			return false;
+		}
+		
+		int reverseResult = 0;
+		
+		while ( x > reverseResult ) {
+			
+			reverseResult = reverseResult * 10 + x % 10;
+			x /= 10;
+		}
+		
+		return ( x == reverseResult || reverseResult / 10 == x );
     }
 }

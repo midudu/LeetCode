@@ -14,7 +14,6 @@ Inputs are in the left-hand column and its corresponding outputs are in the righ
         1,1,5 → 1,5,1*/
 
 
-
 public class Solution {
 
     public void nextPermutation(int[] nums) {
