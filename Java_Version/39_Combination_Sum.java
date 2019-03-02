@@ -1,7 +1,7 @@
 /*
-Given a set of candidate numbers (candidates) (without duplicates)
-and a target number (target),
-find all unique combinations in candidates where the candidate numbers sums to target.
+Given a set of candidate numbers (candidates) (without duplicates) and a target
+number (target), find all unique combinations in candidates where the candidate
+numbers sums to target.
 
 The same repeated number may be chosen from candidates unlimited number of times.
 
@@ -27,7 +27,8 @@ The solution set must not contain duplicate combinations.
         [2,2,2,2],
         [2,3,3],
         [3,5]
-        ]*/
+        ]
+*/
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -35,53 +36,45 @@ import java.util.List;
 
 class Solution {
 
-    public static void main(String[] args) throws InterruptedException{
-
-        int[] candidates = {2,3,5};
-        int target = 8;
-
-        List<List<Integer>> result = new Solution().combinationSum(candidates, target);
-
-        Thread.sleep(1000);
-    }
-
-
-    private List<List<Integer>> result = new ArrayList<>();
-
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
 
-        if (candidates == null || candidates.length == 0) {
-            return result;
+        if (candidates == null || candidates.length == 0
+                || target <= 0) {
+            return new ArrayList<>();
         }
 
         Arrays.sort(candidates);
 
-        ArrayList<Integer> list = new ArrayList<>();
-        combinationSumHelper(candidates, target, candidates.length, list);
+
+        List<List<Integer>> result = new ArrayList<>();
+        List<Integer> existingCandidates = new ArrayList<>();
+
+        combinationSumHelper(candidates, target, 0,
+                existingCandidates, result);
 
         return result;
     }
 
-    private void combinationSumHelper(int[] candidates, int target, int endIndex,
-                                      ArrayList<Integer> existingCandidates) {
+    private void combinationSumHelper(
+            int[] candidates, int target, int startIndex,
+            List<Integer> existingCandidates, List<List<Integer>> result) {
 
-        int index = Arrays.binarySearch(candidates, 0, endIndex, target);
-        if (index >= 0) {
+        if (target == 0) {
 
-            List<Integer> existingCandidatesCopy = new ArrayList<Integer>(existingCandidates);
-            existingCandidatesCopy.add(candidates[index]);
-            result.add(existingCandidatesCopy);
+            result.add(new ArrayList<>(existingCandidates));
+            return;
         }
 
-        int insertIndex = (index >= 0 ? index : -index - 1);
-        for (int i = insertIndex - 1; i >= 0; i--) {
+        for (int i = startIndex; i < candidates.length; i++) {
+
+            if (candidates[i] > target) {
+                break;
+            }
 
             existingCandidates.add(candidates[i]);
-
-            combinationSumHelper(candidates, target - candidates[i],
-                    i + 1, existingCandidates);
-
-            existingCandidates.remove(existingCandidates.size()-1);
+            combinationSumHelper(candidates, target - candidates[i], i,
+                    existingCandidates, result);
+            existingCandidates.remove(existingCandidates.size() - 1);
         }
     }
 }

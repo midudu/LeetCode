@@ -1,76 +1,68 @@
 /*
-Given two integers dividend and divisor,
-divide two integers without using multiplication, division and mod operator.
+Given a collection of numbers that might contain duplicates, return all possible
+unique permutations.
 
-Return the quotient after dividing dividend by divisor.
+        Example:
 
-The integer division should truncate toward zero.
+        Input: [1,1,2]
+        Output:
+        [
+        [1,1,2],
+        [1,2,1],
+        [2,1,1]
+        ]
+*/
 
-Example 1:
-        Input: dividend = 10, divisor = 3
-        Output: 3
-
-        Example 2:
-
-        Input: dividend = 7, divisor = -3
-        Output: -2
-        Note:
-
-Both dividend and divisor will be 32-bit signed integers.
-The divisor will never be 0.
-
-Assume we are dealing with an environment which could only store
-integers within the 32-bit signed integer range: [−2^31,  2^31 − 1].
-For the purpose of this problem, assume that your function returns 2^31 − 1
-when the division result overflows.*/
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 class Solution {
 
-    public static void main(String[] args) {
+    public List<List<Integer>> permuteUnique(int[] nums) {
 
-        new Solution().divide(-2147483648, -1);
-    }
-
-    public int divide(int dividend, int divisor) {
-
-        if (dividend == 0x7FFFFFFF && divisor == -1) {
-            return 0x7FFFFFFF;
+        if (nums == null || nums.length == 0) {
+            return new ArrayList<>();
         }
 
-        if (dividend == 0) {
-            return 0;
-        }
+        Arrays.sort(nums);
 
-        if (dividend > 0 && divisor > 0) {
-            return divideHelper(-dividend, -divisor);
-        } else if (dividend > 0 && divisor < 0) {
-            return -divideHelper(-dividend, divisor);
-        } else if (dividend < 0 && divisor > 0) {
-            return -divideHelper(dividend, -divisor);
-        } else {
-            return divideHelper(dividend, divisor);
-        }
-    }
+        boolean[] used = new boolean[nums.length];
+        List<List<Integer>> result = new ArrayList<>();
+        List<Integer> existingNumbers = new ArrayList<>();
 
-    private int divideHelper(int dividend, int divisor) {
-
-        int result = 0;
-
-        while (dividend <= divisor) {
-
-            int movingBit = 0;
-            while (dividend < (divisor << movingBit)) {
-
-                int currentResult = (divisor << movingBit);
-                movingBit++;
-            }
-
-            result += (1 << (movingBit - 1));
-
-            dividend -= (divisor << (movingBit - 1));
-        }
+        permuteUniqueHelper(nums, used, existingNumbers, result);
 
         return result;
     }
-}
 
+    private void permuteUniqueHelper(
+            int[] nums, boolean[] used,
+            List<Integer> existingNumbers, List<List<Integer>> result) {
+
+        if (existingNumbers.size() == nums.length) {
+
+            result.add(new ArrayList<>(existingNumbers));
+            return;
+        }
+
+        for (int i = 0; i < nums.length; i++) {
+
+            if (used[i]) {
+                continue;
+            }
+
+            if (i != 0 && nums[i] == nums[i - 1] && !used[i - 1]) {
+                continue;
+            }
+
+            used[i] = true;
+            existingNumbers.add(nums[i]);
+
+            permuteUniqueHelper(nums, used, existingNumbers, result);
+
+            existingNumbers.remove(existingNumbers.size() - 1);
+            used[i] = false;
+        }
+    }
+}

@@ -12,36 +12,35 @@ Given a collection of distinct integers, return all possible permutations.
         [2,3,1],
         [3,1,2],
         [3,2,1]
-        ]*/
+        ]
+*/
 
 import java.util.ArrayList;
 import java.util.List;
 
 class Solution {
 
-    private List<List<Integer>> result = new ArrayList<>();
-
     public List<List<Integer>> permute(int[] nums) {
 
-        if ( nums == null || nums.length == 0) {
-            return result;
+        if (nums == null || nums.length == 0) {
+            return new ArrayList<>();
         }
 
-        ArrayList<Integer> existingNumbers = new ArrayList<>();
+        List<List<Integer>> result = new ArrayList<>();
+        List<Integer> existingNumbers = new ArrayList<>();
 
-        permuteHelper(nums, 0, existingNumbers);
+        permuteHelper(nums, 0, existingNumbers, result);
 
-        return this.result;
+        return result;
     }
 
-    private void permuteHelper(int[] nums, int currentIndex, ArrayList<Integer> existingNumbers) {
+    private void permuteHelper(
+            int[] nums, int currentIndex,
+            List<Integer> existingNumbers, List<List<Integer>> result) {
 
-        if (currentIndex == nums.length - 1) {
+        if (currentIndex == nums.length) {
 
-            ArrayList<Integer> currentResult = new ArrayList<>(existingNumbers);
-            currentResult.add(nums[currentIndex]);
-            this.result.add(currentResult);
-
+            result.add(new ArrayList<>(existingNumbers));
             return;
         }
 
@@ -52,9 +51,8 @@ class Solution {
             nums[i] = temp;
 
             existingNumbers.add(nums[currentIndex]);
-
-            permuteHelper(nums, currentIndex + 1, existingNumbers);
-
+            permuteHelper(nums, currentIndex + 1,
+                    existingNumbers, result);
             existingNumbers.remove(existingNumbers.size() - 1);
 
             nums[i] = nums[currentIndex];

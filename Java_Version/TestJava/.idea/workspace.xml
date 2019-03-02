@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ffbcff5e-ced2-4ebe-a713-4c74a7d3e487" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Solution.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ProblemsNeedToBeRemembered/Java/LeetCode/23_Merge_k_Sorted_Lists.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ProblemsNeedToBeRemembered/Java/LeetCode/23_Merge_k_Sorted_Lists.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ProblemsNeedToBeRemembered/Java/LeetCode/9_Palindrome_Number.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ProblemsNeedToBeRemembered/Java/LeetCode/9_Palindrome_Number.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,17 +32,12 @@
       <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24">
-              <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Integer.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Integer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24">
-              <caret line="63" column="60" selection-start-line="63" selection-start-column="50" selection-end-line="63" selection-end-column="60" />
+            <state relative-caret-position="255">
+              <caret line="33" column="40" selection-end-line="67" selection-end-column="1" />
+              <folding>
+                <element signature="e#0#1724#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -139,7 +133,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="210" />
     <option name="y" value="3" />
     <option name="width" value="1182" />
@@ -153,7 +147,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
@@ -180,6 +173,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -527,12 +521,14 @@
       <workItem from="1551011427187" duration="415000" />
       <workItem from="1551094765791" duration="2318000" />
       <workItem from="1551175698442" duration="616000" />
-      <workItem from="1551343491039" duration="615000" />
+      <workItem from="1551343491039" duration="1164000" />
+      <workItem from="1551440394535" duration="30000" />
+      <workItem from="1551519775548" duration="2879000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="456186000" />
+    <option name="totallyTimeSpent" value="459644000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -556,19 +552,19 @@
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5241287" side_tool="true" weight="0.44948757" />
       <window_info anchor="right" id="Maven Projects" order="6" weight="0.32902184" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.47587132" weight="0.14074074" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4953083" weight="0.25036603" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.47587132" weight="0.14074074" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49865952" weight="0.329429" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48609078" visible="true" weight="0.1301536" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48609078" visible="true" weight="0.12530315" />
       <window_info anchor="right" id="Database" order="8" weight="0.3297587" />
       <window_info id="Structure" order="1" sideWeight="0.5131579" side_tool="true" weight="0.30294907" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="7" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.46849865" visible="true" weight="0.13148148" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.46849865" weight="0.11851852" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.23525469" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -582,29 +578,29 @@
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.47587132" visible="true" weight="0.14074074" />
       <window_info anchor="right" id="Theme Preview" order="7" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48609078" visible="true" weight="0.19805983" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="Structure" order="1" sideWeight="0.5131579" side_tool="true" weight="0.30294907" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49932975" weight="0.329429" />
-      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.4953083" weight="0.25036603" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49731904" weight="0.2635432" />
       <window_info anchor="right" id="Database" order="8" weight="0.3297587" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49865952" weight="0.329429" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.46849865" weight="0.31296295" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.4953083" weight="0.25036603" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5241287" side_tool="true" weight="0.44948757" />
       <window_info id="Capture Tool" order="5" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49731904" weight="0.2635432" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49731904" weight="0.32796487" />
       <window_info anchor="right" id="Maven Projects" order="6" weight="0.3297587" />
-      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48609078" visible="true" weight="0.19805983" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -643,34 +639,16 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url />
+          <url>jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/StringUTF16.java</url>
           <line>417</line>
           <properties />
           <option name="timeStamp" value="40" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Solution.java</url>
-          <line>72</line>
-          <properties />
-          <option name="timeStamp" value="317" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Solution.java</url>
-          <line>67</line>
-          <properties />
-          <option name="timeStamp" value="318" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Solution.java</url>
-          <line>69</line>
-          <properties />
-          <option name="timeStamp" value="319" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="320" />
+      <option name="time" value="323" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -1086,15 +1064,19 @@
     <entry file="file://$PROJECT_DIR$/src/clla.java" />
     <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Integer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
+        <state relative-caret-position="792">
           <caret line="63" column="60" selection-start-line="63" selection-start-column="50" selection-end-line="63" selection-end-column="60" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+        <state relative-caret-position="255">
+          <caret line="33" column="40" selection-end-line="67" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#1724#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
