@@ -1,68 +1,42 @@
 /*
-Given a collection of numbers that might contain duplicates, return all possible
-unique permutations.
+Implement pow(x, n), which calculates x raised to the power n (xn).
 
-        Example:
+        Example 1:
 
-        Input: [1,1,2]
-        Output:
-        [
-        [1,1,2],
-        [1,2,1],
-        [2,1,1]
-        ]
-*/
+        Input: 2.00000, 10
+        Output: 1024.00000
+        Example 2:
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+        Input: 2.10000, 3
+        Output: 9.26100
+        Example 3:
+
+        Input: 2.00000, -2
+        Output: 0.25000
+        Explanation: 2-2 = 1/22 = 1/4 = 0.25
+        Note:
+
+        -100.0 < x < 100.0
+
+        n is a 32-bit signed integer, within the range [−2^31, 2^31 − 1]*/
+
+import java.util.HashMap;
 
 class Solution {
 
-    public List<List<Integer>> permuteUnique(int[] nums) {
+    public double myPow(double x, int n) {
 
-        if (nums == null || nums.length == 0) {
-            return new ArrayList<>();
+        if (n == 0) {
+            return 1.0;
         }
 
-        Arrays.sort(nums);
-
-        boolean[] used = new boolean[nums.length];
-        List<List<Integer>> result = new ArrayList<>();
-        List<Integer> existingNumbers = new ArrayList<>();
-
-        permuteUniqueHelper(nums, used, existingNumbers, result);
-
-        return result;
-    }
-
-    private void permuteUniqueHelper(
-            int[] nums, boolean[] used,
-            List<Integer> existingNumbers, List<List<Integer>> result) {
-
-        if (existingNumbers.size() == nums.length) {
-
-            result.add(new ArrayList<>(existingNumbers));
-            return;
+        // x^n = (1/x)^(-n) = (1/x) * (1/x)^(-n-1), in case of overflow of n for n
+        // = Integer.MIN_VALUE case
+        if (n < 0) {
+            return 1 / x * myPow(1 / x, -(n + 1));
         }
 
-        for (int i = 0; i < nums.length; i++) {
-
-            if (used[i]) {
-                continue;
-            }
-
-            if (i != 0 && nums[i] == nums[i - 1] && !used[i - 1]) {
-                continue;
-            }
-
-            used[i] = true;
-            existingNumbers.add(nums[i]);
-
-            permuteUniqueHelper(nums, used, existingNumbers, result);
-
-            existingNumbers.remove(existingNumbers.size() - 1);
-            used[i] = false;
-        }
+        return n % 2 == 0 ?
+                myPow(x * x, n / 2) : x * myPow(x * x, n / 2);
     }
 }

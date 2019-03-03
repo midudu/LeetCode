@@ -18,73 +18,80 @@ Given an array of strings, group anagrams together.
 import java.util.*;
 
 // Method 1: Prime numbers: fast but might have maximum values limitation?
+/*class Solution {
 
-class Solution {
     public List<List<String>> groupAnagrams(String[] strs) {
 
-        // let prime numbers to make up of key
-        int[] prime = {2, 3, 5, 7, 11, 13, 17,
+        if (strs == null || strs.length == 0) {
+            return new ArrayList<>();
+        }
+
+        // let prime numbers to make up of key(26 keys which represent 26 alphabets)
+        int[] primeKeys = {2, 3, 5, 7, 11, 13, 17,
                 19, 23, 29, 31, 41, 43, 47, 53,
                 59, 61, 67, 71, 73, 79, 83, 89,
                 97, 101, 103};
 
         List<List<String>> result = new ArrayList<>();
-        HashMap<Integer, Integer> map = new HashMap<>();
 
-        for (String s : strs) {
+        // Value represents the index in result
+        HashMap<Integer, Integer> hashMap = new HashMap<>();
 
-            int key = 1;
-            for (char c : s.toCharArray()) {
-                key *= prime[c - 'a'];
+        for (String string : strs) {
+
+            int currentKey = 1;
+            for (char c : string.toCharArray()) {
+                currentKey *= primeKeys[c - 'a'];
             }
 
-            List<String> stringList;
-            if (map.containsKey(key)) {
-                stringList = result.get(map.get(key));
+            List<String> currentStringList;
+            if (hashMap.containsKey(currentKey)) {
+                currentStringList = result.get(hashMap.get(currentKey));
             } else {
-                stringList = new ArrayList<>();
-                result.add(stringList);
-                map.put(key, result.size() - 1);
+                currentStringList = new ArrayList<>();
+                result.add(currentStringList);
+                hashMap.put(currentKey, result.size() - 1);
             }
-            stringList.add(s);
+
+            currentStringList.add(string);
         }
+
         return result;
     }
-}
+}*/
 
 
-/*
-Method 2: Convert String to char array and then sort it as key: secure but slow
+// Method 2: Convert String to char array and then sort it as key: secure but slow
 
 class Solution {
     public List<List<String>> groupAnagrams(String[] strs) {
 
-        if(strs == null || strs.length == 0) {
-
-            List<List<String>> result = new ArrayList<>();
-            return result;
+        if (strs == null || strs.length == 0) {
+            return new ArrayList<>();
         }
 
-        Map<String, List> ans = new HashMap<String, List>();
+        Map<String, Integer> map = new HashMap<String, Integer>();
+        List<List<String>> result = new ArrayList<>(strs.length);
 
-        for(String s : strs){
+        for (String s : strs) {
 
             char[] ca = s.toCharArray();
-
             Arrays.sort(ca);
+            String currentKey = String.valueOf(ca);
 
-            String key = String.valueOf(ca);
+            List<String> currentStringList;
 
-            if(!ans.containsKey(key)) {
-                ans.put(key, new ArrayList());
+            if (!map.containsKey(currentKey)) {
+                currentStringList = new ArrayList<>();
+                result.add(currentStringList);
+                map.put(currentKey, result.size() - 1);
+            } else {
+                currentStringList = result.get(map.get(currentKey));
             }
-            //then add the String to this key's List
-            ans.get(key).add(s);
+
+            currentStringList.add(s);
         }
-        //seems like the values() function will return a array of all the values
-        //each value is a list
-        //then ArrayList will transfer the array to a list
-        //so it would be a list of the list<String>
-        return new ArrayList(ans.values());
+
+        return result;
     }
-}*/
+}
