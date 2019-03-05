@@ -1,42 +1,124 @@
 /*
-Implement pow(x, n), which calculates x raised to the power n (xn).
+Given a matrix of m x n elements (m rows, n columns), return all elements of the
+matrix in spiral order.
 
-        Example 1:
+Example 1:
 
-        Input: 2.00000, 10
-        Output: 1024.00000
+        Input:
+        [
+        [ 1, 2, 3 ],
+        [ 4, 5, 6 ],
+        [ 7, 8, 9 ]
+        ]
+        Output: [1,2,3,6,9,8,7,4,5]
+
         Example 2:
 
-        Input: 2.10000, 3
-        Output: 9.26100
-        Example 3:
+        Input:
+        [
+        [1, 2, 3, 4],
+        [5, 6, 7, 8],
+        [9,10,11,12]
+        ]
+        Output: [1,2,3,4,8,12,11,10,9,5,6,7]*/
 
-        Input: 2.00000, -2
-        Output: 0.25000
-        Explanation: 2-2 = 1/22 = 1/4 = 0.25
-        Note:
+import java.util.*;
+import java.lang.*;
 
-        -100.0 < x < 100.0
+// Recursive Method
+/*
+class Solution {
 
-        n is a 32-bit signed integer, within the range [−2^31, 2^31 − 1]*/
+    public List<Integer> spiralOrder(int[][] matrix) {
 
-import java.util.HashMap;
+        List<Integer> result = new ArrayList<>();
+
+        if (matrix == null || matrix.length == 0) {
+            return result;
+        }
+
+        spiralOrderHelper(matrix, 0, matrix.length - 1,
+                0, matrix[0].length - 1, result);
+
+        return result;
+    }
+
+    private void spiralOrderHelper(
+            int[][] matrix, int startRow, int endRow,
+            int startCol, int endCol, List<Integer> result) {
+
+        if (startRow > endRow || startCol > endCol) {
+            return;
+        }
+
+        for (int col = startCol; col <= endCol; col++) {
+            result.add(matrix[startRow][col]);
+        }
+
+        for (int row = startRow + 1; row <= endRow; row++) {
+            result.add(matrix[row][endCol]);
+        }
+
+        if (endRow != startRow) {
+            for (int col = endCol - 1; col >= startCol; col--) {
+                result.add(matrix[endRow][col]);
+            }
+        }
+
+        if (endCol != startCol) {
+            for (int row = endRow - 1; row > startRow; row--) {
+                result.add(matrix[row][startCol]);
+            }
+        }
+
+        spiralOrderHelper(matrix, startRow + 1, endRow - 1,
+                startCol + 1, endCol - 1, result);
+    }
+}*/
+
+// Non-Recursive Method
 
 class Solution {
 
-    public double myPow(double x, int n) {
+    public List<Integer> spiralOrder(int[][] matrix) {
 
-        if (n == 0) {
-            return 1.0;
+        if (matrix == null
+                || matrix.length == 0 || matrix[0].length == 0) {
+            return new ArrayList<>();
         }
 
-        // x^n = (1/x)^(-n) = (1/x) * (1/x)^(-n-1), in case of overflow of n for n
-        // = Integer.MIN_VALUE case
-        if (n < 0) {
-            return 1 / x * myPow(1 / x, -(n + 1));
+        List<Integer> result = new ArrayList<>();
+
+        int startRow = 0, endRow = matrix.length - 1;
+        int startCol = 0, endCol = matrix[0].length - 1;
+
+        while (startRow <= endRow && startCol <= endCol) {
+
+            for (int i = startCol; i <= endCol; i++) {
+                result.add(matrix[startRow][i]);
+            }
+            for (int i = startRow + 1; i <= endRow; i++) {
+                result.add(matrix[i][endCol]);
+            }
+
+            if (startRow < endRow) {
+                for (int i = endCol - 1; i >= startCol; i--) {
+                    result.add(matrix[endRow][i]);
+                }
+            }
+
+            if (startCol < endCol) {
+                for (int i = endRow - 1; i > startRow; i--) {
+                    result.add(matrix[i][startCol]);
+                }
+            }
+
+            startRow++;
+            endRow--;
+            startCol++;
+            endCol--;
         }
 
-        return n % 2 == 0 ?
-                myPow(x * x, n / 2) : x * myPow(x * x, n / 2);
+        return result;
     }
 }
