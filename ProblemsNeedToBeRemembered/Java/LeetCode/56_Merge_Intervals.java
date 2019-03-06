@@ -6,6 +6,7 @@ Given a collection of intervals, merge all overlapping intervals.
         Input: [[1,3],[2,6],[8,10],[15,18]]
         Output: [[1,6],[8,10],[15,18]]
         Explanation: Since intervals [1,3] and [2,6] overlaps, merge them into [1,6].
+
         Example 2:
 
         Input: [[1,4],[4,5]]
@@ -13,9 +14,7 @@ Given a collection of intervals, merge all overlapping intervals.
         Explanation: Intervals [1,4] and [4,5] are considerred overlapping.*/
 
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 class Interval {
 
@@ -33,6 +32,8 @@ class Interval {
     }
 }
 
+// Method 1: Comparator Used
+/*
 class Solution {
 
     class IntervalComparator implements Comparator<Interval> {
@@ -73,6 +74,44 @@ class Solution {
                 result.add(currentInterval);
             }
         }
+
+        return result;
+    }
+}*/
+
+// Method 2: Comparator Not Used
+class Solution {
+    public List<Interval> merge(List<Interval> intervals) {
+
+        List<Interval> result = new ArrayList<>();
+
+        if (intervals == null || intervals.size() == 0) {
+            return result;
+        }
+
+        int[] start = new int[intervals.size()];
+        int[] end = new int[intervals.size()];
+
+        for (int i = 0; i < intervals.size(); i++) {
+
+            start[i] = intervals.get(i).start;
+            end[i] = intervals.get(i).end;
+        }
+
+        Arrays.sort(start);
+        Arrays.sort(end);
+
+        int startIndex = 0;
+
+        for (int i = 1; i < intervals.size(); i++) {
+
+            if (start[i] > end[i - 1]) {
+                result.add(new Interval(start[startIndex], end[i - 1]));
+                startIndex = i;
+            }
+        }
+
+        result.add(new Interval(start[startIndex], end[intervals.size() - 1]));
 
         return result;
     }

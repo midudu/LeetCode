@@ -1,123 +1,117 @@
 /*
-Given a matrix of m x n elements (m rows, n columns), return all elements of the
-matrix in spiral order.
+Given a collection of intervals, merge all overlapping intervals.
 
-Example 1:
+        Example 1:
 
-        Input:
-        [
-        [ 1, 2, 3 ],
-        [ 4, 5, 6 ],
-        [ 7, 8, 9 ]
-        ]
-        Output: [1,2,3,6,9,8,7,4,5]
+        Input: [[1,3],[2,6],[8,10],[15,18]]
+        Output: [[1,6],[8,10],[15,18]]
+        Explanation: Since intervals [1,3] and [2,6] overlaps, merge them into [1,6].
 
         Example 2:
 
-        Input:
-        [
-        [1, 2, 3, 4],
-        [5, 6, 7, 8],
-        [9,10,11,12]
-        ]
-        Output: [1,2,3,4,8,12,11,10,9,5,6,7]*/
+        Input: [[1,4],[4,5]]
+        Output: [[1,5]]
+        Explanation: Intervals [1,4] and [4,5] are considerred overlapping.*/
+
 
 import java.util.*;
-import java.lang.*;
 
-// Recursive Method
+class Interval {
+
+    int start;
+    int end;
+
+    Interval() {
+        start = 0;
+        end = 0;
+    }
+
+    Interval(int s, int e) {
+        start = s;
+        end = e;
+    }
+}
+
+// Method 1: Comparator Used
 /*
 class Solution {
 
-    public List<Integer> spiralOrder(int[][] matrix) {
+    class IntervalComparator implements Comparator<Interval> {
 
-        List<Integer> result = new ArrayList<>();
+        public int compare(Interval o1, Interval o2) {
 
-        if (matrix == null || matrix.length == 0) {
-            return result;
+            if (o1.start != o2.start) {
+                return Integer.compare(o1.start, o2.start);
+            } else {
+                return Integer.compare(o1.end, o2.end);
+            }
+        }
+    }
+
+    public List<Interval> merge(List<Interval> intervals) {
+
+        if (intervals == null || intervals.isEmpty()) {
+            return intervals;
         }
 
-        spiralOrderHelper(matrix, 0, matrix.length - 1,
-                0, matrix[0].length - 1, result);
+        IntervalComparator intervalComparator = new IntervalComparator();
+
+        intervals.sort(intervalComparator);
+
+        List<Interval> result = new ArrayList<>(intervals.size());
+
+        for (int i = 0; i < intervals.size(); i++) {
+
+            if (result.isEmpty()) {
+                result.add(intervals.get(i));
+            }
+
+            Interval currentInterval = intervals.get(i);
+            Interval lastInterval = result.get(result.size() - 1);
+            if (currentInterval.start <= lastInterval.end) {
+                lastInterval.end = Math.max(currentInterval.end, lastInterval.end);
+            } else {
+                result.add(currentInterval);
+            }
+        }
 
         return result;
     }
-
-    private void spiralOrderHelper(
-            int[][] matrix, int startRow, int endRow,
-            int startCol, int endCol, List<Integer> result) {
-
-        if (startRow > endRow || startCol > endCol) {
-            return;
-        }
-
-        for (int col = startCol; col <= endCol; col++) {
-            result.add(matrix[startRow][col]);
-        }
-
-        for (int row = startRow + 1; row <= endRow; row++) {
-            result.add(matrix[row][endCol]);
-        }
-
-        if (endRow != startRow) {
-            for (int col = endCol - 1; col >= startCol; col--) {
-                result.add(matrix[endRow][col]);
-            }
-        }
-
-        if (endCol != startCol) {
-            for (int row = endRow - 1; row > startRow; row--) {
-                result.add(matrix[row][startCol]);
-            }
-        }
-
-        spiralOrderHelper(matrix, startRow + 1, endRow - 1,
-                startCol + 1, endCol - 1, result);
-    }
 }*/
 
-// Non-Recursive Method
-
+// Method 2: Comparator Not Used
 class Solution {
+    public List<Interval> merge(List<Interval> intervals) {
 
-    public List<Integer> spiralOrder(int[][] matrix) {
+        List<Interval> result = new ArrayList<>();
 
-        if (matrix == null
-                || matrix.length == 0 || matrix[0].length == 0) {
-            return new ArrayList<>();
+        if (intervals == null || intervals.size() == 0) {
+            return result;
         }
 
-        List<Integer> result = new ArrayList<>();
+        int[] start = new int[intervals.size()];
+        int[] end = new int[intervals.size()];
 
-        int startRow = 0, endRow = matrix.length - 1;
-        int startCol = 0, endCol = matrix[0].length - 1;
+        for (int i = 0; i < intervals.size(); i++) {
 
-        while (startRow <= endRow && startCol <= endCol) {
-
-            for (int i = startCol; i <= endCol; i++) {
-                result.add(matrix[startRow][i]);
-            }
-            for (int i = startRow + 1; i <= endRow; i++) {
-                result.add(matrix[i][endCol]);
-            }
-
-            if (startRow < endRow) {
-                for (int i = endCol - 1; i >= startCol; i--) {
-                    result.add(matrix[endRow][i]);
-                }
-            }
-
-            if (startCol < endCol) {
-                for (int i = endRow - 1; i > startRow; i--) {
-                    result.add(matrix[i][startCol]);
-                }
-            }
-
-            startRow++;
-            endRow--;
-            startCol++;
-            endCol--;
+            start[i] = intervals.get(i).start;
+            end[i] = intervals.get(i).end;
         }
+
+        Arrays.sort(start);
+        Arrays.sort(end);
+
+        int startIndex = 0;
+
+        for (int i = 1; i < intervals.size(); i++) {
+
+            if (start[i] > end[i - 1]) {
+                result.add(new Interval(start[startIndex], end[i - 1]));
+                startIndex = i;
+            }
+        }
+
+        result.add(new Interval(start[startIndex], end[intervals.size() - 1]));
 
         return result;
     }
