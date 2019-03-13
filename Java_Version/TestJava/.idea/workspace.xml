@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ffbcff5e-ced2-4ebe-a713-4c74a7d3e487" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestJava/Solution.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Solution.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ProblemsNeedToBeRemembered/Java/LeetCode/55_Jump_Game.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../ProblemsNeedToBeRemembered/Java/LeetCode/55_Jump_Game.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,10 +32,12 @@
       <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="46" column="8" selection-end-line="49" selection-end-column="1" />
+            <state relative-caret-position="295">
+              <caret line="61" column="43" selection-end-line="65" />
               <folding>
-                <element signature="e#0#1641#0" expanded="true" />
+                <element signature="e#0#1863#0" expanded="true" />
+                <element signature="e#712#713#0" expanded="true" />
+                <element signature="e#735#736#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -151,6 +151,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -177,7 +178,6 @@
         </subPane>
       </pane>
       <pane id="AndroidView" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -536,12 +536,13 @@
       <workItem from="1552117688359" duration="4021000" />
       <workItem from="1552131483847" duration="4286000" />
       <workItem from="1552354639763" duration="10464000" />
-      <workItem from="1552387585462" duration="1475000" />
+      <workItem from="1552387585462" duration="1614000" />
+      <workItem from="1552478795993" duration="1886000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="486195000" />
+    <option name="totallyTimeSpent" value="488220000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -558,50 +559,50 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49932975" weight="0.329429" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49731904" weight="0.32796487" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5241287" side_tool="true" weight="0.44948757" />
       <window_info anchor="right" id="Maven Projects" order="6" weight="0.32902184" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.47587132" weight="0.21851853" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4953083" weight="0.25036603" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.47587132" weight="0.21851853" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49865952" weight="0.329429" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48341233" visible="true" weight="0.13500404" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48341233" visible="true" weight="0.13662086" />
       <window_info anchor="right" id="Database" order="8" weight="0.3297587" />
       <window_info id="Structure" order="1" sideWeight="0.5165877" side_tool="true" weight="0.19886823" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="7" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.46849865" visible="true" weight="0.38148147" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.46849865" weight="0.38148147" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.23524657" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49731904" weight="0.2635432" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49731904" weight="0.32796487" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.4953083" weight="0.25036603" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.23525469" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.47587132" visible="true" weight="0.14074074" />
+      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.4953083" weight="0.25036603" />
       <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48609078" visible="true" weight="0.19805983" />
       <window_info id="Structure" order="1" sideWeight="0.5131579" side_tool="true" weight="0.30294907" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49932975" weight="0.329429" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.47587132" visible="true" weight="0.14074074" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49731904" weight="0.2635432" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="8" weight="0.3297587" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49865952" weight="0.329429" />
@@ -610,7 +611,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5241287" side_tool="true" weight="0.44948757" />
       <window_info id="Capture Tool" order="5" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49731904" weight="0.2635432" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49731904" weight="0.32796487" />
       <window_info anchor="right" id="Maven Projects" order="6" weight="0.3297587" />
       <window_info id="Favorites" order="6" side_tool="true" />
@@ -1092,15 +1093,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="1084" column="31" lean-forward="true" selection-start-line="1084" selection-start-column="31" selection-end-line="1084" selection-end-column="31" />
-          <folding>
-            <element signature="e#29596#31703#0" />
-            <element signature="e#32758#32759#0" expanded="true" />
-            <element signature="e#32809#32810#0" expanded="true" />
-            <element signature="e#42980#42981#0" expanded="true" />
-            <element signature="e#43019#43020#0" expanded="true" />
-            <element signature="e#44647#44648#0" expanded="true" />
-            <element signature="e#44695#44696#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1136,12 +1128,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="1069" column="65" lean-forward="true" selection-start-line="1069" selection-start-column="41" selection-end-line="1069" selection-end-column="65" />
-          <folding>
-            <element signature="e#41278#41279#0" expanded="true" />
-            <element signature="e#41336#41337#0" expanded="true" />
-            <element signature="e#41873#41874#0" expanded="true" />
-            <element signature="e#41916#41917#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1149,12 +1135,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3768">
           <caret line="202" selection-start-line="202" selection-end-line="202" />
-          <folding>
-            <element signature="docComment;method#CountDownLatch#0;class#CountDownLatch#0" />
-            <element signature="docComment;method#await#0;class#CountDownLatch#0" />
-            <element signature="docComment;method#await#1;class#CountDownLatch#0" />
-            <element signature="docComment;method#countDown#0;class#CountDownLatch#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1162,9 +1142,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6336">
           <caret line="302" column="22" selection-start-line="302" selection-start-column="22" selection-end-line="302" selection-end-column="22" />
-          <folding>
-            <element signature="e#12145#23514#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1172,28 +1149,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3288">
           <caret line="171" column="50" selection-start-line="171" selection-start-column="50" selection-end-line="171" selection-end-column="50" />
-          <folding>
-            <element signature="class#Sync#0;class#Semaphore#0" />
-            <element signature="docComment;class#NonfairSync#0;class#Semaphore#0" />
-            <element signature="class#NonfairSync#0;class#Semaphore#0" />
-            <element signature="class#FairSync#0;class#Semaphore#0" />
-            <element signature="docComment;method#Semaphore#0;class#Semaphore#0" />
-            <element signature="docComment;method#Semaphore#1;class#Semaphore#0" />
-            <element signature="docComment;method#acquire#0;class#Semaphore#0" />
-            <element signature="docComment;method#acquireUninterruptibly#0;class#Semaphore#0" />
-            <element signature="docComment;method#tryAcquire#0;class#Semaphore#0" />
-            <element signature="docComment;method#tryAcquire#1;class#Semaphore#0" />
-            <element signature="method#tryAcquire#1;class#Semaphore#0" />
-            <element signature="docComment;method#release#0;class#Semaphore#0" />
-            <element signature="docComment;method#acquire#1;class#Semaphore#0" />
-            <element signature="docComment;method#acquireUninterruptibly#1;class#Semaphore#0" />
-            <element signature="docComment;method#tryAcquire#2;class#Semaphore#0" />
-            <element signature="docComment;method#tryAcquire#3;class#Semaphore#0" />
-            <element signature="docComment;method#release#1;class#Semaphore#0" />
-            <element signature="docComment;method#availablePermits#0;class#Semaphore#0" />
-            <element signature="docComment;method#drainPermits#0;class#Semaphore#0" />
-            <element signature="docComment;method#reducePermits#0;class#Semaphore#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1220,10 +1175,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="46" column="8" selection-end-line="49" selection-end-column="1" />
+        <state relative-caret-position="295">
+          <caret line="61" column="43" selection-end-line="65" />
           <folding>
-            <element signature="e#0#1641#0" expanded="true" />
+            <element signature="e#0#1863#0" expanded="true" />
+            <element signature="e#712#713#0" expanded="true" />
+            <element signature="e#735#736#0" expanded="true" />
           </folding>
         </state>
       </provider>

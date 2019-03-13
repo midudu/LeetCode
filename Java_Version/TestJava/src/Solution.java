@@ -1,50 +1,71 @@
 /*
-Given a positive integer n, generate a square matrix filled with elements from
-1 to n^2 in spiral order.
+Given a linked list, rotate the list to the right by k places, where k is
+non-negative.
 
-Example:
+Example 1:
 
-Input: 3
-Output:
-        [
-        [ 1, 2, 3 ],
-        [ 8, 9, 4 ],
-        [ 7, 6, 5 ]
-        ]
-        */
+        Input: 1->2->3->4->5->NULL, k = 2
+        Output: 4->5->1->2->3->NULL
+
+        Explanation:
+        rotate 1 steps to the right: 5->1->2->3->4->NULL
+        rotate 2 steps to the right: 4->5->1->2->3->NULL
+
+Example 2:
+
+        Input: 0->1->2->NULL, k = 4
+        Output: 2->0->1->NULL
+
+        Explanation:
+        rotate 1 steps to the right: 2->0->1->NULL
+        rotate 2 steps to the right: 1->2->0->NULL
+        rotate 3 steps to the right: 0->1->2->NULL
+        rotate 4 steps to the right: 2->0->1->NULL
+*/
+
+
+class ListNode {
+
+    int val;
+    ListNode next;
+
+    ListNode(int x) {
+        val = x;
+    }
+}
 
 class Solution {
-    public int[][] generateMatrix(int n) {
 
-        int[][] result = new int[n][n];
+    public ListNode rotateRight(ListNode head, int k) {
 
-        int num = 1;
-        int i;
-        int rowStart = 0;
-        int rowEnd = n;
-        int colStart = 0;
-        int colEnd = n;
-
-        while (rowStart < rowEnd && colStart < colEnd) {
-
-            for (i = colStart; i < colEnd; i++) {
-                result[rowStart][i] = num++;
-            }
-            rowStart++;
-            for (i = rowStart; i < rowEnd; i++) {
-                result[i][colEnd - 1] = num++;
-            }
-            colEnd--;
-            for (i = colEnd - 1; i >= colStart; i--) {
-                result[rowEnd - 1][i] = num++;
-            }
-            rowEnd--;
-            for (i = rowEnd - 1; i >= rowStart; i--) {
-                result[i][colStart] = num++;
-            }
-            colStart++;
+        if (head == null || k == 0) {
+            return head;
         }
 
-        return result;
+        ListNode fastPointer = head;
+        int length = 0;
+        for (int i = 0; i < k; i++) {
+            fastPointer = fastPointer.next;
+            if (fastPointer == null) {
+                length = i + 1;
+                break;
+            }
+        }
+
+        if (length != 0) {
+            return rotateRight(head, k % length);
+        }
+
+        ListNode slowPointer = head;
+        while (fastPointer.next != null) {
+            fastPointer = fastPointer.next;
+            slowPointer = slowPointer.next;
+        }
+
+        ListNode newHead = slowPointer.next;
+        fastPointer.next = head;
+        slowPointer.next = null;
+
+        return newHead;
     }
 }

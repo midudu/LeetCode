@@ -1,7 +1,7 @@
 /*
-The set [1,2,3,...,n] contains a total of n! unique permutations.
-
-        By listing and labeling all of the permutations in order, we get the following sequence for n = 3:
+The set [1,2,3,...,n] contains a total of n! unique permutations. By listing
+and labeling all of the permutations in order, we get the following sequence
+for n = 3:
 
         "123"
         "132"
@@ -9,7 +9,8 @@ The set [1,2,3,...,n] contains a total of n! unique permutations.
         "231"
         "312"
         "321"
-        Given n and k, return the kth permutation sequence.
+
+Given n and k, return the kth permutation sequence.
 
         Note:
 
@@ -22,36 +23,53 @@ The set [1,2,3,...,n] contains a total of n! unique permutations.
         Example 2:
 
         Input: n = 4, k = 9
-        Output: "2314"*/
+        Output: "2314"
+*/
 
 import java.util.LinkedList;
 import java.util.List;
 
 class Solution {
+
     public String getPermutation(int n, int k) {
 
-        List<Integer> nums = new LinkedList<>();
-        int[] fact = new int[n];
-        fact[0] = 1;
+        boolean[] hasUsed = new boolean[n];
 
-        StringBuilder sb = new StringBuilder();
+        int[] totalNumbers = new int[n];
+        totalNumbers[0] = 1;
 
-        for (int i = 0; i < n; i++) {
-            nums.add(i + 1);
-            if (i != 0)
-                fact[i] = fact[i - 1] * i;
+        for (int i = 1; i < n; i++) {
+
+            totalNumbers[i] = totalNumbers[i - 1] * i;
         }
+
+        StringBuilder result = new StringBuilder();
 
         k--;
 
         for (int i = n; i >= 1; i--) {
-            int index = k / fact[i - 1];
-            sb.append(nums.get(index));
-            k %= fact[i - 1];
-            nums.remove(index);
+
+            int currentIndex = k / totalNumbers[i - 1];
+
+            int count = 0;
+            for (int j = 0; ; j++) {
+                if (count == currentIndex) {
+                    if (!hasUsed[j]) {
+                        hasUsed[j] = true;
+                        result.append(j+1);
+                        break;
+                    }
+                } else {
+                    if (!hasUsed[j]) {
+                        count++;
+                    }
+                }
+            }
+
+            k %= totalNumbers[i - 1];
 
         }
 
-        return sb.toString();
+        return result.toString();
     }
 }
