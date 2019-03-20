@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ffbcff5e-ced2-4ebe-a713-4c74a7d3e487" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TestJava/Solution.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Solution.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -32,12 +33,10 @@
       <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="61" column="43" selection-end-line="65" />
+            <state relative-caret-position="229">
+              <caret line="71" column="45" selection-end-line="117" selection-end-column="1" />
               <folding>
-                <element signature="e#0#1863#0" expanded="true" />
-                <element signature="e#712#713#0" expanded="true" />
-                <element signature="e#735#736#0" expanded="true" />
+                <element signature="class#TreeNode#0" />
               </folding>
             </state>
           </provider>
@@ -56,8 +55,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>acquire</find>
-      <find>Completed</find>
       <find>MAX_</find>
       <find>valueOf</find>
       <find>join</find>
@@ -86,6 +83,8 @@
       <find>Condition</find>
       <find>interrupt</find>
       <find>interrupted</find>
+      <find>ExecutorService</find>
+      <find>awaitTermination</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -152,7 +151,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -178,13 +176,14 @@
         </subPane>
       </pane>
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="Mutex&#9;PSI&#9;JAVA://sun.awt.Mutex&#10;Sema&#9;PSI&#9;JAVA://java.util.concurrent.Semaphore&#10;CountDownLatch&#9;PSI&#9;JAVA://java.util.concurrent.CountDownLatch&#10;Thread&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Thread.java&#10;BlockingQueue&#9;PSI&#9;JAVA://java.util.concurrent.BlockingQueue&#10;Concurrent&#9;PSI&#9;JAVA://java.util.concurrent.ConcurrentHashMap&#10;Hash&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/HashMap.java&#10;Coll&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Collections.java&#10;Intege&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Integer.java&#10;String&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/String.java&#10;Integer&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Integer.java&#10;Executor&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/ExecutorService.java&#10;Callable&#9;PSI&#9;JAVA://java.util.concurrent.Callable&#10;Future&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/FutureTask.java&#10;equals&#9;PSI&#9;JAVA://com.sun.org.apache.xpath.internal.operations.Equals&#10;Inte&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Integer.java&#10;Objec&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Object.java&#10;Runn&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Runnable.java&#10;futuretas&#9;PSI&#9;JAVA://java.util.concurrent.FutureTask&#10;synchronizedlist&#9;PSI&#9;JAVA://java.util.Collections.SynchronizedList&#10;interrupt&#9;PSI&#9;JAVA://java.lang.Thread#interrupt&#10;wait&#9;PSI&#9;JAVA://java.lang.Object#wait&#10;LinkedList&#9;PSI&#9;JAVA://java.util.LinkedList&#10;Map&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Map.java&#10;Col&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Collection.java&#10;Error&#9;PSI&#9;JAVA://java.lang.Error&#10;Exception&#9;PSI&#9;JAVA://java.lang.Exception&#10;executeBatch&#9;PSI&#9;JAVA://java.sql.Statement#executeBatch&#10;reflect&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/reflect&#10;Arrays&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Arrays.java&#10;Ser&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/io/Serializable.java&#10;Clone&#9;PSI&#9;JAVA://java.lang.Cloneable&#10;Comparab&#9;PSI&#9;JAVA://java.lang.Comparable" />
+    <property name="SearchEverywhereHistoryKey" value="Collections&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Collections.java&#10;Mutex&#9;PSI&#9;JAVA://sun.awt.Mutex&#10;Sema&#9;PSI&#9;JAVA://java.util.concurrent.Semaphore&#10;CountDownLatch&#9;PSI&#9;JAVA://java.util.concurrent.CountDownLatch&#10;Thread&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Thread.java&#10;BlockingQueue&#9;PSI&#9;JAVA://java.util.concurrent.BlockingQueue&#10;Concurrent&#9;PSI&#9;JAVA://java.util.concurrent.ConcurrentHashMap&#10;Hash&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/HashMap.java&#10;Coll&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Collections.java&#10;Intege&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Integer.java&#10;String&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/String.java&#10;Integer&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Integer.java&#10;Executor&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/ExecutorService.java&#10;Callable&#9;PSI&#9;JAVA://java.util.concurrent.Callable&#10;Future&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/FutureTask.java&#10;equals&#9;PSI&#9;JAVA://com.sun.org.apache.xpath.internal.operations.Equals&#10;Inte&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Integer.java&#10;Objec&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Object.java&#10;Runn&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Runnable.java&#10;futuretas&#9;PSI&#9;JAVA://java.util.concurrent.FutureTask&#10;synchronizedlist&#9;PSI&#9;JAVA://java.util.Collections.SynchronizedList&#10;interrupt&#9;PSI&#9;JAVA://java.lang.Thread#interrupt&#10;wait&#9;PSI&#9;JAVA://java.lang.Object#wait&#10;LinkedList&#9;PSI&#9;JAVA://java.util.LinkedList&#10;Map&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Map.java&#10;Col&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Collection.java&#10;Error&#9;PSI&#9;JAVA://java.lang.Error&#10;Exception&#9;PSI&#9;JAVA://java.lang.Exception&#10;executeBatch&#9;PSI&#9;JAVA://java.sql.Statement#executeBatch&#10;reflect&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/reflect&#10;Arrays&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Arrays.java&#10;Ser&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/io/Serializable.java&#10;Clone&#9;PSI&#9;JAVA://java.lang.Cloneable&#10;Comparab&#9;PSI&#9;JAVA://java.lang.Comparable" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
@@ -226,7 +225,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Solution">
+  <component name="RunManager" selected="Application.TraverseNonRecursively">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="App" />
       <module name="TestJava" />
@@ -237,11 +236,6 @@
       <module name="TestJava" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Test" />
-      <module name="TestJava" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-    </configuration>
     <configuration name="TestThreadLocal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="TestThreadLocal" />
       <module name="TestJava" />
@@ -249,6 +243,11 @@
     </configuration>
     <configuration name="ThreadLocalExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ThreadLocalExample" />
+      <module name="TestJava" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="TraverseNonRecursively" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TraverseNonRecursively" />
       <module name="TestJava" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -295,18 +294,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.Solution" />
-      <item itemvalue="Application.Test" />
       <item itemvalue="Application.TestThreadLocal" />
       <item itemvalue="Application.ThreadLocalExample" />
       <item itemvalue="Application.App" />
+      <item itemvalue="Application.TraverseNonRecursively" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TraverseNonRecursively" />
         <item itemvalue="Application.Solution" />
         <item itemvalue="Application.App" />
         <item itemvalue="Application.TestThreadLocal" />
         <item itemvalue="Application.ThreadLocalExample" />
-        <item itemvalue="Application.Test" />
       </list>
     </recent_temporary>
   </component>
@@ -537,12 +536,16 @@
       <workItem from="1552131483847" duration="4286000" />
       <workItem from="1552354639763" duration="10464000" />
       <workItem from="1552387585462" duration="1614000" />
-      <workItem from="1552478795993" duration="1886000" />
+      <workItem from="1552478795993" duration="2804000" />
+      <workItem from="1552484380181" duration="864000" />
+      <workItem from="1552529964601" duration="1588000" />
+      <workItem from="1552993593585" duration="2393000" />
+      <workItem from="1553081049598" duration="1584000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="488220000" />
+    <option name="totallyTimeSpent" value="495567000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -559,6 +562,7 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49932975" weight="0.329429" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49731904" weight="0.32796487" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
@@ -566,13 +570,13 @@
       <window_info anchor="right" id="Maven Projects" order="6" weight="0.32902184" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4953083" weight="0.25036603" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.47587132" weight="0.21851853" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.47587132" visible="true" weight="0.16666667" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49865952" weight="0.329429" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48341233" visible="true" weight="0.13662086" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.47962964" visible="true" weight="0.20533548" />
       <window_info anchor="right" id="Database" order="8" weight="0.3297587" />
-      <window_info id="Structure" order="1" sideWeight="0.5165877" side_tool="true" weight="0.19886823" />
+      <window_info id="Structure" order="1" sideWeight="0.5194085" side_tool="true" weight="0.20291026" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="7" />
@@ -584,13 +588,12 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49731904" weight="0.2635432" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49731904" weight="0.32796487" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.23525469" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.4953083" weight="0.25036603" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.47587132" visible="true" weight="0.14074074" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48609078" visible="true" weight="0.19805983" />
@@ -598,16 +601,16 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49932975" weight="0.329429" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.47587132" visible="true" weight="0.14074074" />
+      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.4953083" weight="0.25036603" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Database" order="8" weight="0.3297587" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49865952" weight="0.329429" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.46849865" weight="0.31296295" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5241287" side_tool="true" weight="0.44948757" />
       <window_info id="Capture Tool" order="5" />
@@ -685,69 +688,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="uml://JAVA/Command">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>Command</OriginalElement>
-          <nodes>
-            <node x="331.0" y="162.0">DeleteCommand</node>
-            <node x="309.5" y="81.0">Operator</node>
-            <node x="181.5" y="81.0">Command</node>
-            <node x="0.0" y="238.0">SqlExecuteTool</node>
-            <node x="160.0" y="162.0">UpdateCommand</node>
-            <node x="0.0" y="162.0">InsertCommand</node>
-            <node x="183.0" y="238.0">Client</node>
-            <node x="241.25" y="0.0">java.io.Serializable</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="UpdateCommand" target="Command">
-              <point x="0.0" y="-15.5" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="InsertCommand" target="Command">
-              <point x="0.0" y="-15.5" />
-              <point x="70.0" y="137.0" />
-              <point x="199.5" y="137.0" />
-              <point x="-36.0" y="15.5" />
-            </edge>
-            <edge source="Command" target="java.io.Serializable">
-              <point x="0.0" y="-15.5" />
-              <point x="235.5" y="56.0" />
-              <point x="269.5" y="56.0" />
-              <point x="-28.25" y="15.5" />
-            </edge>
-            <edge source="Operator" target="java.io.Serializable">
-              <point x="0.0" y="-15.5" />
-              <point x="360.0" y="56.0" />
-              <point x="326.0" y="56.0" />
-              <point x="28.25" y="15.5" />
-            </edge>
-            <edge source="DeleteCommand" target="Command">
-              <point x="0.0" y="-15.5" />
-              <point x="404.0" y="137.0" />
-              <point x="271.5" y="137.0" />
-              <point x="36.0" y="15.5" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="-230.0" y="-17.0" />
-          <SelectedNodes>
-            <node>Client</node>
-          </SelectedNodes>
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/jdk/internal/util/Preconditions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="69" selection-start-line="69" selection-end-line="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="460">
@@ -780,88 +720,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8688">
           <caret line="423" column="13" selection-start-line="423" selection-start-column="13" selection-end-line="423" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/Notes/Java_Learning/Java并发编程实战/2_结构化并发应用程序/chapter06_任务执行/DelegatedScheduledExecutorService.uml">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>java.util.concurrent.Executors.DelegatedScheduledExecutorService</OriginalElement>
-          <nodes>
-            <node x="69.2222222222222" y="162.0">java.util.concurrent.AbstractExecutorService</node>
-            <node x="186.625" y="0.0">java.util.concurrent.Executor</node>
-            <node x="445.75" y="243.0">java.util.concurrent.ThreadPoolExecutor</node>
-            <node x="0.0" y="243.0">java.util.concurrent.Executors.DelegatedExecutorService</node>
-            <node x="222.37500000000003" y="243.0">java.util.concurrent.ScheduledExecutorService</node>
-            <node x="334.2222222222223" y="324.0">java.util.concurrent.ScheduledThreadPoolExecutor</node>
-            <node x="165.625" y="81.0">java.util.concurrent.ExecutorService</node>
-            <node x="51.22222222222226" y="324.0">java.util.concurrent.Executors.DelegatedScheduledExecutorService</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="java.util.concurrent.AbstractExecutorService" target="java.util.concurrent.ExecutorService">
-              <point x="0.0" y="-15.5" />
-              <point x="164.7222222222222" y="137.0" />
-              <point x="200.875" y="137.0" />
-              <point x="-35.25" y="15.5" />
-            </edge>
-            <edge source="java.util.concurrent.Executors.DelegatedScheduledExecutorService" target="java.util.concurrent.Executors.DelegatedExecutorService">
-              <point x="-65.75" y="-15.5" />
-              <point x="116.97222222222226" y="299.0" />
-              <point x="101.0" y="299.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="java.util.concurrent.ScheduledThreadPoolExecutor" target="java.util.concurrent.ThreadPoolExecutor">
-              <point x="56.75" y="-15.5" />
-              <point x="504.4722222222223" y="299.0" />
-              <point x="528.75" y="299.0" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="java.util.concurrent.Executors.DelegatedExecutorService" target="java.util.concurrent.AbstractExecutorService">
-              <point x="-5.6843418860808015E-14" y="-15.5" />
-              <point x="100.99999999999994" y="223.0" />
-              <point x="116.9722222222222" y="223.0" />
-              <point x="-47.75" y="15.5" />
-            </edge>
-            <edge source="java.util.concurrent.ExecutorService" target="java.util.concurrent.Executor">
-              <point x="0.0" y="-15.5" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="java.util.concurrent.ScheduledThreadPoolExecutor" target="java.util.concurrent.ScheduledExecutorService">
-              <point x="-56.75" y="-15.5" />
-              <point x="390.9722222222223" y="299.0" />
-              <point x="374.625" y="299.0" />
-              <point x="50.75" y="15.5" />
-            </edge>
-            <edge source="java.util.concurrent.Executors.DelegatedScheduledExecutorService" target="java.util.concurrent.ScheduledExecutorService">
-              <point x="65.75" y="-15.5" />
-              <point x="248.47222222222226" y="299.0" />
-              <point x="273.125" y="299.0" />
-              <point x="-50.75" y="15.5" />
-            </edge>
-            <edge source="java.util.concurrent.ThreadPoolExecutor" target="java.util.concurrent.AbstractExecutorService">
-              <point x="0.0" y="-15.5" />
-              <point x="528.75" y="213.0" />
-              <point x="212.4722222222222" y="213.0" />
-              <point x="47.75" y="15.5" />
-            </edge>
-            <edge source="java.util.concurrent.ScheduledExecutorService" target="java.util.concurrent.ExecutorService">
-              <point x="0.0" y="-15.5" />
-              <point x="323.875" y="223.0" />
-              <point x="340.2222222222223" y="223.0" />
-              <point x="340.2222222222223" y="137.0" />
-              <point x="271.375" y="137.0" />
-              <point x="35.25" y="15.5" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="6.0" y="105.0" />
-          <SelectedNodes>
-            <node>java.util.concurrent.ThreadPoolExecutor</node>
-          </SelectedNodes>
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>
@@ -939,27 +797,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="53" column="19" lean-forward="true" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/ExecutorService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="57" column="14" lean-forward="true" selection-start-line="57" selection-start-column="14" selection-end-line="57" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/Executor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="891">
-          <caret line="135" column="9" selection-start-line="135" selection-start-column="9" selection-end-line="135" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/Future.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
         </state>
       </provider>
     </entry>
@@ -1075,13 +912,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Collections.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="174" column="27" selection-start-line="174" selection-start-column="27" selection-end-line="174" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/jdk/internal/misc/Unsafe.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="129">
@@ -1173,14 +1003,196 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://E:/Notes/Java_Learning/Java并发编程实战/2_结构化并发应用程序/chapter06_任务执行/DelegatedScheduledExecutorService.uml">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>java.util.concurrent.Executors.DelegatedScheduledExecutorService</OriginalElement>
+          <nodes>
+            <node x="67.47222222222217" y="162.0">java.util.concurrent.AbstractExecutorService</node>
+            <node x="181.74999999999994" y="0.0">java.util.concurrent.Executor</node>
+            <node x="435.99999999999994" y="243.0">java.util.concurrent.ThreadPoolExecutor</node>
+            <node x="0.0" y="243.0">java.util.concurrent.Executors.DelegatedExecutorService</node>
+            <node x="217.99999999999997" y="243.0">java.util.concurrent.ScheduledExecutorService</node>
+            <node x="326.72222222222223" y="324.0">java.util.concurrent.ScheduledThreadPoolExecutor</node>
+            <node x="0.0" y="400.0">java.util.concurrent.Executors</node>
+            <node x="161.74999999999994" y="81.0">java.util.concurrent.ExecutorService</node>
+            <node x="49.72222222222223" y="324.0">java.util.concurrent.Executors.DelegatedScheduledExecutorService</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="java.util.concurrent.AbstractExecutorService" target="java.util.concurrent.ExecutorService">
+              <point x="0.0" y="-15.5" />
+              <point x="160.47222222222217" y="137.0" />
+              <point x="195.99999999999994" y="137.0" />
+              <point x="-34.25" y="15.5" />
+            </edge>
+            <edge source="java.util.concurrent.Executors.DelegatedScheduledExecutorService" target="java.util.concurrent.Executors.DelegatedExecutorService">
+              <point x="-64.25" y="-15.5" />
+              <point x="113.97222222222223" y="299.0" />
+              <point x="98.5" y="299.0" />
+              <point x="0.0" y="15.5" />
+            </edge>
+            <edge source="java.util.concurrent.ScheduledThreadPoolExecutor" target="java.util.concurrent.ThreadPoolExecutor">
+              <point x="55.5" y="-15.5" />
+              <point x="493.22222222222223" y="299.0" />
+              <point x="517.0" y="299.0" />
+              <point x="0.0" y="15.5" />
+            </edge>
+            <edge source="java.util.concurrent.Executors.DelegatedExecutorService" target="java.util.concurrent.AbstractExecutorService">
+              <point x="-5.6843418860808015E-14" y="-15.5" />
+              <point x="98.49999999999994" y="223.0" />
+              <point x="113.97222222222217" y="223.0" />
+              <point x="-46.5" y="15.5" />
+            </edge>
+            <edge source="java.util.concurrent.ExecutorService" target="java.util.concurrent.Executor">
+              <point x="0.0" y="-15.5" />
+              <point x="0.0" y="15.5" />
+            </edge>
+            <edge source="java.util.concurrent.ScheduledThreadPoolExecutor" target="java.util.concurrent.ScheduledExecutorService">
+              <point x="-55.5" y="-15.5" />
+              <point x="382.22222222222223" y="299.0" />
+              <point x="365.75" y="299.0" />
+              <point x="49.25" y="15.5" />
+            </edge>
+            <edge source="java.util.concurrent.Executors.DelegatedScheduledExecutorService" target="java.util.concurrent.ScheduledExecutorService">
+              <point x="64.25" y="-15.5" />
+              <point x="242.47222222222223" y="299.0" />
+              <point x="267.25" y="299.0" />
+              <point x="-49.25" y="15.5" />
+            </edge>
+            <edge source="java.util.concurrent.ScheduledExecutorService" target="java.util.concurrent.ExecutorService">
+              <point x="0.0" y="-15.5" />
+              <point x="316.5" y="223.0" />
+              <point x="332.97222222222223" y="223.0" />
+              <point x="332.97222222222223" y="137.0" />
+              <point x="264.49999999999994" y="137.0" />
+              <point x="34.25" y="15.5" />
+            </edge>
+            <edge source="java.util.concurrent.ThreadPoolExecutor" target="java.util.concurrent.AbstractExecutorService">
+              <point x="0.0" y="-15.5" />
+              <point x="517.0" y="213.0" />
+              <point x="206.97222222222217" y="213.0" />
+              <point x="46.5" y="15.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="11.0" y="176.0" />
+          <SelectedNodes>
+            <node>java.util.concurrent.Executors</node>
+          </SelectedNodes>
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/Executor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2952">
+          <caret line="123" column="17" selection-start-line="123" selection-start-column="17" selection-end-line="123" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/Future.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1296">
+          <caret line="87" column="17" selection-start-line="87" selection-start-column="17" selection-end-line="87" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/ExecutorService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="202" column="44" lean-forward="true" selection-start-line="202" selection-start-column="44" selection-end-line="202" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Collections.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3288">
+          <caret line="174" column="27" selection-start-line="174" selection-start-column="27" selection-end-line="174" selection-end-column="27" />
+          <folding>
+            <element signature="e#7288#7289#0" expanded="true" />
+            <element signature="e#7316#7317#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/java.util.concurrent.ThreadPoolExecutor">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>java.util.concurrent.ThreadPoolExecutor</OriginalElement>
+          <nodes>
+            <node x="48.25" y="162.0">java.util.concurrent.AbstractExecutorService</node>
+            <node x="161.75" y="0.0">java.util.concurrent.Executor</node>
+            <node x="141.0" y="243.0">java.util.concurrent.ThreadPoolExecutor</node>
+            <node x="0.0" y="243.0">java.util.concurrent.ForkJoinPool</node>
+            <node x="156.75" y="324.0">java.util.concurrent.ScheduledThreadPoolExecutor</node>
+            <node x="141.75" y="81.0">java.util.concurrent.ExecutorService</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="java.util.concurrent.AbstractExecutorService" target="java.util.concurrent.ExecutorService">
+              <point x="0.0" y="-15.5" />
+              <point x="141.25" y="137.0" />
+              <point x="176.0" y="137.0" />
+              <point x="-34.25" y="15.5" />
+            </edge>
+            <edge source="java.util.concurrent.ForkJoinPool" target="java.util.concurrent.AbstractExecutorService">
+              <point x="0.0" y="-15.5" />
+              <point x="60.5" y="218.0" />
+              <point x="94.75" y="218.0" />
+              <point x="-46.5" y="15.5" />
+            </edge>
+            <edge source="java.util.concurrent.ScheduledThreadPoolExecutor" target="java.util.concurrent.ThreadPoolExecutor">
+              <point x="-55.5" y="-15.5" />
+              <point x="212.25" y="299.0" />
+              <point x="222.0" y="299.0" />
+              <point x="0.0" y="15.5" />
+            </edge>
+            <edge source="java.util.concurrent.ExecutorService" target="java.util.concurrent.Executor">
+              <point x="0.0" y="-15.5" />
+              <point x="0.0" y="15.5" />
+            </edge>
+            <edge source="java.util.concurrent.ScheduledThreadPoolExecutor" target="java.util.concurrent.ExecutorService">
+              <point x="55.5" y="-15.5" />
+              <point x="323.25" y="299.0" />
+              <point x="313.5" y="299.0" />
+              <point x="313.5" y="137.0" />
+              <point x="244.5" y="137.0" />
+              <point x="34.25" y="15.5" />
+            </edge>
+            <edge source="java.util.concurrent.ThreadPoolExecutor" target="java.util.concurrent.AbstractExecutorService">
+              <point x="0.0" y="-15.5" />
+              <point x="222.0" y="218.0" />
+              <point x="187.75" y="218.0" />
+              <point x="46.5" y="15.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="190.0" y="178.0" />
+          <SelectedNodes>
+            <node>java.util.concurrent.ScheduledThreadPoolExecutor</node>
+          </SelectedNodes>
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/Executors.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="305" selection-start-line="305" selection-end-line="305" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="61" column="43" selection-end-line="65" />
+        <state relative-caret-position="229">
+          <caret line="71" column="45" selection-end-line="117" selection-end-column="1" />
           <folding>
-            <element signature="e#0#1863#0" expanded="true" />
-            <element signature="e#712#713#0" expanded="true" />
-            <element signature="e#735#736#0" expanded="true" />
+            <element signature="class#TreeNode#0" />
           </folding>
         </state>
       </provider>
