@@ -1,15 +1,17 @@
 /*
-A robot is located at the top-left corner of a m x n grid (marked 'Start' in the diagram below).
+A robot is located at the top-left corner of a m x n grid (marked 'Start' in
+the diagram below).
 
-        The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked 'Finish' in the diagram below).
+The robot can only move either down or right at any point in time. The robot is
+trying to reach the bottom-right corner of the grid (marked 'Finish' in the
+diagram below).
 
-        Now consider if some obstacles are added to the grids. How many unique paths would there be?
+Now consider if some obstacles are added to the grids. How many unique paths
+would there be?
 
+An obstacle and empty space is marked as 1 and 0 respectively in the grid.
 
-
-        An obstacle and empty space is marked as 1 and 0 respectively in the grid.
-
-        Note: m and n will be at most 100.
+Note: m and n will be at most 100.
 
         Example 1:
 
@@ -20,6 +22,7 @@ A robot is located at the top-left corner of a m x n grid (marked 'Start' in the
         [0,0,0]
         ]
         Output: 2
+
         Explanation:
         There is one obstacle in the middle of the 3x3 grid above.
         There are two ways to reach the bottom-right corner:
@@ -40,52 +43,38 @@ class Solution {
                 = new int[obstacleGrid.length][obstacleGrid[0].length];
         numbersOfPaths[0][0] = 1;
 
-        uniquePathsWithObstaclesHelper(0, 0,
-                obstacleGrid, numbersOfPaths);
+        for (int row = 1; row < numbersOfPaths.length; row++) {
+            if (obstacleGrid[row][0] == 1 || numbersOfPaths[row - 1][0] == 0) {
+                numbersOfPaths[row][0] = 0;
+            } else {
+                numbersOfPaths[row][0] = 1;
+            }
+        }
+
+        for (int col = 1; col < numbersOfPaths[0].length; col++) {
+
+            if (obstacleGrid[0][col] == 1 || numbersOfPaths[0][col - 1] == 0) {
+                numbersOfPaths[0][col] = 0;
+            } else {
+                numbersOfPaths[0][col] = 1;
+            }
+        }
+
+        for (int row = 1; row < numbersOfPaths.length; row++) {
+            for (int col = 1; col < numbersOfPaths[0].length; col++) {
+
+                if (obstacleGrid[row][col] == 1) {
+                    numbersOfPaths[row][col] = 0;
+                } else {
+                    numbersOfPaths[row][col] =
+                            numbersOfPaths[row - 1][col] + numbersOfPaths[row][col - 1];
+                }
+            }
+        }
+
 
         return numbersOfPaths[numbersOfPaths.length - 1][numbersOfPaths[0].length - 1];
     }
 
-    private void uniquePathsWithObstaclesHelper(
-            int currentRow, int currentCol, int[][] obstacleGrid, int[][] numberOfPaths) {
 
-        if (currentRow >= numberOfPaths.length
-                || currentCol >= numberOfPaths[0].length) {
-            return;
-        }
-
-        for (int col = currentCol; col < numberOfPaths[0].length; col++) {
-
-            if (obstacleGrid[currentRow][col] == 1) {
-                numberOfPaths[currentRow][col] = 0;
-                continue;
-            }
-
-            if (col != 0) {
-                numberOfPaths[currentRow][col] += numberOfPaths[currentRow][col - 1];
-            }
-            if (currentRow != 0) {
-                numberOfPaths[currentRow][col] += numberOfPaths[currentRow - 1][col];
-            }
-        }
-
-        for (int row = currentRow + 1; row < numberOfPaths.length; row++) {
-
-            if (obstacleGrid[row][currentCol] == 1) {
-                numberOfPaths[row][currentCol] = 0;
-                continue;
-            }
-
-            if (currentCol != 0) {
-                numberOfPaths[row][currentCol] += numberOfPaths[row][currentCol - 1];
-            }
-
-            if (row != 0) {
-                numberOfPaths[row][currentCol] += numberOfPaths[row - 1][currentCol];
-            }
-        }
-
-        uniquePathsWithObstaclesHelper(currentRow + 1, currentCol + 1,
-                obstacleGrid, numberOfPaths);
-    }
 }

@@ -32,61 +32,11 @@
       <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
-              <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+            <state relative-caret-position="96">
+              <caret line="40" column="52" lean-forward="true" selection-start-line="40" selection-start-column="52" selection-end-line="40" selection-end-column="52" />
               <folding>
-                <element signature="method#main#0;class#SparseTable#0" />
-                <element signature="method#SparseTable#0;class#SparseTable#0" />
-                <element signature="method#findTableLength#0;class#SparseTable#0" />
-                <element signature="method#indexOfOneBit#0;class#SparseTable#0" />
-                <element signature="method#initFirstColumn#0;class#SparseTable#0" />
-                <element signature="method#buildTable#0;class#SparseTable#0" />
-                <element signature="method#printTable#0;class#SparseTable#0" />
+                <element signature="e#0#1914#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Arrays.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Arrays.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="5097" column="25" selection-start-line="5097" selection-start-column="25" selection-end-line="5097" selection-end-column="25" />
-              <folding>
-                <element signature="e#200641#200642#0" expanded="true" />
-                <element signature="e#200682#200683#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Collections.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Collections.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="421" column="46" lean-forward="true" selection-start-line="421" selection-start-column="46" selection-end-line="421" selection-end-column="46" />
-              <folding>
-                <element signature="e#7288#7289#0" expanded="true" />
-                <element signature="e#7316#7317#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HashMap.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/HashMap.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="379" column="8" selection-start-line="379" selection-start-column="8" selection-end-line="379" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Integer.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Integer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="1575" column="22" selection-start-line="1575" selection-start-column="22" selection-end-line="1575" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -200,6 +150,7 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -225,14 +176,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="HashMa&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/HashMap.java&#10;Collections&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Collections.java&#10;Mutex&#9;PSI&#9;JAVA://sun.awt.Mutex&#10;Sema&#9;PSI&#9;JAVA://java.util.concurrent.Semaphore&#10;CountDownLatch&#9;PSI&#9;JAVA://java.util.concurrent.CountDownLatch&#10;Thread&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Thread.java&#10;BlockingQueue&#9;PSI&#9;JAVA://java.util.concurrent.BlockingQueue&#10;Concurrent&#9;PSI&#9;JAVA://java.util.concurrent.ConcurrentHashMap&#10;Hash&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/HashMap.java&#10;Coll&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Collections.java&#10;Intege&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Integer.java&#10;String&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/String.java&#10;Integer&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Integer.java&#10;Executor&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/ExecutorService.java&#10;Callable&#9;PSI&#9;JAVA://java.util.concurrent.Callable&#10;Future&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/FutureTask.java&#10;equals&#9;PSI&#9;JAVA://com.sun.org.apache.xpath.internal.operations.Equals&#10;Inte&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Integer.java&#10;Objec&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Object.java&#10;Runn&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Runnable.java&#10;futuretas&#9;PSI&#9;JAVA://java.util.concurrent.FutureTask&#10;synchronizedlist&#9;PSI&#9;JAVA://java.util.Collections.SynchronizedList&#10;interrupt&#9;PSI&#9;JAVA://java.lang.Thread#interrupt&#10;wait&#9;PSI&#9;JAVA://java.lang.Object#wait&#10;LinkedList&#9;PSI&#9;JAVA://java.util.LinkedList&#10;Map&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Map.java&#10;Col&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Collection.java&#10;Error&#9;PSI&#9;JAVA://java.lang.Error&#10;Exception&#9;PSI&#9;JAVA://java.lang.Exception&#10;executeBatch&#9;PSI&#9;JAVA://java.sql.Statement#executeBatch&#10;reflect&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/reflect&#10;Arrays&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Arrays.java&#10;Ser&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/io/Serializable.java&#10;Clone&#9;PSI&#9;JAVA://java.lang.Cloneable&#10;Comparab&#9;PSI&#9;JAVA://java.lang.Comparable" />
+    <property name="SearchEverywhereHistoryKey" value="ReadW&#9;PSI&#9;JAVA://java.util.concurrent.locks.ReadWriteLock&#10;Block&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/ArrayBlockingQueue.java&#10;Semaphore&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/Semaphore.java&#10;HashMa&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/HashMap.java&#10;Collections&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Collections.java&#10;Mutex&#9;PSI&#9;JAVA://sun.awt.Mutex&#10;Sema&#9;PSI&#9;JAVA://java.util.concurrent.Semaphore&#10;CountDownLatch&#9;PSI&#9;JAVA://java.util.concurrent.CountDownLatch&#10;Thread&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Thread.java&#10;BlockingQueue&#9;PSI&#9;JAVA://java.util.concurrent.BlockingQueue&#10;Concurrent&#9;PSI&#9;JAVA://java.util.concurrent.ConcurrentHashMap&#10;Hash&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/HashMap.java&#10;Coll&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Collections.java&#10;Intege&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Integer.java&#10;String&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/String.java&#10;Integer&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Integer.java&#10;Executor&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/ExecutorService.java&#10;Callable&#9;PSI&#9;JAVA://java.util.concurrent.Callable&#10;Future&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/FutureTask.java&#10;equals&#9;PSI&#9;JAVA://com.sun.org.apache.xpath.internal.operations.Equals&#10;Inte&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Integer.java&#10;Objec&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Object.java&#10;Runn&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Runnable.java&#10;futuretas&#9;PSI&#9;JAVA://java.util.concurrent.FutureTask&#10;synchronizedlist&#9;PSI&#9;JAVA://java.util.Collections.SynchronizedList&#10;interrupt&#9;PSI&#9;JAVA://java.lang.Thread#interrupt&#10;wait&#9;PSI&#9;JAVA://java.lang.Object#wait&#10;LinkedList&#9;PSI&#9;JAVA://java.util.LinkedList&#10;Map&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Map.java&#10;Col&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Collection.java&#10;Error&#9;PSI&#9;JAVA://java.lang.Error&#10;Exception&#9;PSI&#9;JAVA://java.lang.Exception&#10;executeBatch&#9;PSI&#9;JAVA://java.sql.Statement#executeBatch&#10;reflect&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/reflect&#10;Arrays&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Arrays.java&#10;Ser&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/io/Serializable.java&#10;Clone&#9;PSI&#9;JAVA://java.lang.Cloneable&#10;Comparab&#9;PSI&#9;JAVA://java.lang.Comparable" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
@@ -590,12 +540,16 @@
       <workItem from="1552529964601" duration="1588000" />
       <workItem from="1552993593585" duration="2393000" />
       <workItem from="1553081049598" duration="3220000" />
-      <workItem from="1553156095504" duration="5359000" />
+      <workItem from="1553156095504" duration="6756000" />
+      <workItem from="1553219425013" duration="575000" />
+      <workItem from="1553220032145" duration="4000" />
+      <workItem from="1553220060078" duration="3302000" />
+      <workItem from="1553244338570" duration="2406000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="502562000" />
+    <option name="totallyTimeSpent" value="510246000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -612,7 +566,6 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49932975" weight="0.329429" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49731904" weight="0.32796487" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
@@ -624,16 +577,17 @@
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49865952" weight="0.329429" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.47962964" visible="true" weight="0.13742927" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.47962964" visible="true" weight="0.14713015" />
       <window_info anchor="right" id="Database" order="8" weight="0.3297587" />
       <window_info id="Structure" order="1" sideWeight="0.5194085" side_tool="true" weight="0.20291026" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.46849865" visible="true" weight="0.21481481" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.46849865" weight="0.21481481" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.23524657" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49731904" weight="0.32796487" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -644,24 +598,24 @@
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49731904" weight="0.2635432" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.23525469" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.4953083" weight="0.25036603" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.47587132" visible="true" weight="0.14074074" />
       <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48609078" visible="true" weight="0.19805983" />
       <window_info id="Structure" order="1" sideWeight="0.5131579" side_tool="true" weight="0.30294907" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49932975" weight="0.329429" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.47587132" visible="true" weight="0.14074074" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="8" weight="0.3297587" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49865952" weight="0.329429" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.46849865" weight="0.31296295" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.4953083" weight="0.25036603" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5241287" side_tool="true" weight="0.44948757" />
       <window_info id="Capture Tool" order="5" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -738,20 +692,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="439" selection-start-line="439" selection-end-line="439" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/AbstractStringBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29280">
-          <caret line="1269" column="33" selection-start-line="1269" selection-start-column="33" selection-end-line="1269" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/List.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="14496">
@@ -955,13 +895,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/locks/ReentrantLock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="265" column="16" selection-start-line="265" selection-start-column="16" selection-end-line="265" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Queue.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -1004,13 +937,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/Semaphore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3288">
-          <caret line="171" column="50" selection-start-line="171" selection-start-column="50" selection-end-line="171" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Object.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7176">
@@ -1022,13 +948,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="40" column="21" lean-forward="true" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/ArrayBlockingQueue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1944">
-          <caret line="126" lean-forward="true" selection-end-line="1637" />
         </state>
       </provider>
     </entry>
@@ -1207,22 +1126,22 @@
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/HashMap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
+        <state relative-caret-position="8280">
           <caret line="379" column="8" selection-start-line="379" selection-start-column="8" selection-end-line="379" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Integer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
+        <state relative-caret-position="36120">
           <caret line="1575" column="22" selection-start-line="1575" selection-start-column="22" selection-end-line="1575" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Collections.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="421" column="46" lean-forward="true" selection-start-line="421" selection-start-column="46" selection-end-line="421" selection-end-column="46" />
+        <state relative-caret-position="9168">
+          <caret line="421" column="46" selection-start-line="421" selection-start-column="46" selection-end-line="421" selection-end-column="46" />
           <folding>
             <element signature="e#7288#7289#0" expanded="true" />
             <element signature="e#7316#7317#0" expanded="true" />
@@ -1232,7 +1151,7 @@
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Arrays.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
+        <state relative-caret-position="120048">
           <caret line="5097" column="25" selection-start-line="5097" selection-start-column="25" selection-end-line="5097" selection-end-column="25" />
           <folding>
             <element signature="e#200641#200642#0" expanded="true" />
@@ -1241,18 +1160,65 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/Semaphore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4224">
+          <caret line="292" column="54" selection-start-line="292" selection-start-column="54" selection-end-line="292" selection-end-column="54" />
+          <folding>
+            <element signature="class#Sync#0;class#Semaphore#0" />
+            <element signature="class#NonfairSync#0;class#Semaphore#0" />
+            <element signature="class#FairSync#0;class#Semaphore#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/ArrayBlockingQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2208">
+          <caret line="137" column="33" selection-start-line="137" selection-start-column="33" selection-end-line="137" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/locks/ReentrantLock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4800">
+          <caret line="247" column="11" selection-start-line="247" selection-start-column="11" selection-end-line="247" selection-end-column="11" />
+          <folding>
+            <element signature="e#8033#8034#0" expanded="true" />
+            <element signature="e#8097#8098#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/locks/ReadWriteLock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2160">
+          <caret line="123" column="9" selection-start-line="123" selection-start-column="9" selection-end-line="123" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/locks/ReentrantReadWriteLock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4848">
+          <caret line="239" column="11" selection-start-line="239" selection-start-column="11" selection-end-line="239" selection-end-column="11" />
+          <folding>
+            <element signature="class#Sync#0;class#ReentrantReadWriteLock#0" />
+            <element signature="class#NonfairSync#0;class#ReentrantReadWriteLock#0" />
+            <element signature="class#FairSync#0;class#ReentrantReadWriteLock#0" />
+            <element signature="class#ReadLock#0;class#ReentrantReadWriteLock#0" />
+            <element signature="e#27267#27268#0" expanded="true" />
+            <element signature="e#27307#27308#0" expanded="true" />
+            <element signature="class#WriteLock#0;class#ReentrantReadWriteLock#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+        <state relative-caret-position="96">
+          <caret line="40" column="52" lean-forward="true" selection-start-line="40" selection-start-column="52" selection-end-line="40" selection-end-column="52" />
           <folding>
-            <element signature="method#main#0;class#SparseTable#0" />
-            <element signature="method#SparseTable#0;class#SparseTable#0" />
-            <element signature="method#findTableLength#0;class#SparseTable#0" />
-            <element signature="method#indexOfOneBit#0;class#SparseTable#0" />
-            <element signature="method#initFirstColumn#0;class#SparseTable#0" />
-            <element signature="method#buildTable#0;class#SparseTable#0" />
-            <element signature="method#printTable#0;class#SparseTable#0" />
+            <element signature="e#0#1914#0" expanded="true" />
           </folding>
         </state>
       </provider>
