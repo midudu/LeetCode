@@ -1,49 +1,49 @@
 /*
-Given a m x n grid filled with non-negative numbers, find a path from top left
-to bottom right which minimizes the sum of all numbers along its path.
 
-Note: You can only move either down or right at any point in time.
+Implement int sqrt(int x). Compute and return the square root of x.
 
-Example:
+x is guaranteed to be a non-negative integer.
 
-        Input:
-        [
-        [1,3,1],
-        [1,5,1],
-        [4,2,1]
-        ]
-        Output: 7
 
-        Explanation: Because the path 1→3→1→1→1 minimizes the sum.
+        Example 1:
+
+        Input: 4
+        Output: 2
+        Example 2:
+
+        Input: 8
+        Output: 2
+
+        Explanation: The square root of 8 is 2.82842..., and since we want to
+        return an integer, the decimal part will be truncated.
 */
+
 
 class Solution {
 
-    public int minPathSum(int[][] grid) {
+    public int mySqrt(int x) {
 
-        if (grid == null ||
-                grid.length == 0 || grid[0].length == 0) {
+        if (x == 0) {
             return 0;
         }
 
-        int[][] sumOfPath = new int[grid.length][grid[0].length];
-        sumOfPath[0][0] = grid[0][0];
+        int startIndex = 0, endIndex = x;
 
-        for (int col = 1; col < grid[0].length; col++) {
-            sumOfPath[0][col] = grid[0][col] + sumOfPath[0][col - 1];
-        }
-        for (int row = 1; row < grid.length; row++) {
-            sumOfPath[row][0] = grid[row][0] + sumOfPath[row - 1][0];
-        }
+        while (startIndex < endIndex - 1) {
 
-        for (int row = 1; row < grid.length; row++) {
-            for (int col = 1; col < grid[0].length; col++) {
-                sumOfPath[row][col] = grid[row][col]
-                        + Math.min(sumOfPath[row - 1][col],
-                        sumOfPath[row][col - 1]);
+            int middleIndex = startIndex + (endIndex - startIndex) / 2;
+
+            int currentResult = x / middleIndex;
+
+            if (currentResult == middleIndex) {
+                return middleIndex;
+            } else if (currentResult < middleIndex) {
+                endIndex = middleIndex - 1;
+            } else {
+                startIndex = middleIndex;
             }
         }
 
-        return sumOfPath[sumOfPath.length - 1][sumOfPath[0].length - 1];
+        return (endIndex <= x / endIndex ? endIndex : startIndex);
     }
 }

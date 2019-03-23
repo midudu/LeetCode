@@ -1,11 +1,8 @@
-/*Author: Bochen (mddboc@foxmail.com)
-Last Modified: Tue Apr 10 22:28:45 CST 2018*/
+/*
 
-/*Implement int sqrt(int x).
+Implement int sqrt(int x). Compute and return the square root of x.
 
-        Compute and return the square root of x.
-
-        x is guaranteed to be a non-negative integer.
+x is guaranteed to be a non-negative integer.
 
 
         Example 1:
@@ -16,53 +13,37 @@ Last Modified: Tue Apr 10 22:28:45 CST 2018*/
 
         Input: 8
         Output: 2
-        Explanation: The square root of 8 is 2.82842..., and since we want to return an integer, the decimal part will be truncated.*/
 
-
-import java.util.*;
-import java.lang.Math;
-import java.lang.System;
-import java.lang.Integer;
-
-
-public class Main {
-
-    public static void main(String[] args) throws ArithmeticException {
-
-        String input = "ab";
-
-        boolean answer = new Solution().repeatedSubstringPattern(input);
-
-        System.out.println("haha");
-    }
-
-}
-
-
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
-    }
-}
-
-
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(int x) {
-        val = x;
-    }
-}
+        Explanation: The square root of 8 is 2.82842..., and since we want to
+        return an integer, the decimal part will be truncated.
+*/
 
 
 class Solution {
+
     public int mySqrt(int x) {
 
-        return (int)Math.sqrt(x);
+        if (x == 0) {
+            return 0;
+        }
+
+        int startIndex = 0, endIndex = x;
+
+        while (startIndex < endIndex - 1) {
+
+            int middleIndex = startIndex + (endIndex - startIndex) / 2;
+
+            int currentResult = x / middleIndex;
+
+            if (currentResult == middleIndex) {
+                return middleIndex;
+            } else if (currentResult < middleIndex) {
+                endIndex = middleIndex - 1;
+            } else {
+                startIndex = middleIndex;
+            }
+        }
+
+        return (endIndex <= x / endIndex ? endIndex : startIndex);
     }
 }
