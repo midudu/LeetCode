@@ -1,22 +1,29 @@
 /*
 Given an absolute path for a file (Unix-style), simplify it.
 
-        For example,
+For example,
         path = "/home/", => "/home"
         path = "/a/./b/../../c/", => "/c"
         path = "/a/../../b/../c//.//", => "/c"
         path = "/a//b////c/d//././/..", => "/a/b/c"
 
-        In a UNIX-style file system, a period ('.') refers to the current directory, so it can be ignored in a simplified path. Additionally, a double period ("..") moves up a directory, so it cancels out whatever the last directory was. For more information, look here: https://en.wikipedia.org/wiki/Path_(computing)#Unix_style
+In a UNIX-style file system, a period ('.') refers to the current directory, so
+it can be ignored in a simplified path. Additionally, a double period ("..")
+moves up a directory, so it cancels out whatever the last directory was. For
+more information, look here:
+https://en.wikipedia.org/wiki/Path_(computing)#Unix_style
 
-        Corner Cases:
+Corner Cases:
+  Did you consider the case where path = "/../"?
+  In this case, you should return "/".
 
-        Did you consider the case where path = "/../"?
-        In this case, you should return "/".
-        Another corner case is the path might contain multiple slashes '/' together, such as "/home//foo/".
-        In this case, you should ignore redundant slashes and return "/home/foo".*/
+  Another corner case is the path might contain multiple slashes '/' together,
+such as "/home//foo/". In this case, you should ignore redundant slashes and
+return "/home/foo".*/
 
-import java.util.Stack;
+import java.util.ArrayDeque;
+import java.util.Deque;
+
 
 class Solution {
 
@@ -26,44 +33,43 @@ class Solution {
             return path;
         }
 
-        Stack<String> stack = new Stack<>();
+        Deque<String> deque = new ArrayDeque<>();
 
-        int pointer = 0;
-        while (pointer != path.length()) {
+        int lastSlashIndex = 0;
 
-            while (pointer != path.length() && path.charAt(pointer) == '/') {
-                pointer++;
+        while (lastSlashIndex < path.length()) {
+
+            int nextSlashIndex = lastSlashIndex + 1;
+
+            while (nextSlashIndex < path.length() && path.charAt(nextSlashIndex) != '/') {
+                nextSlashIndex++;
             }
-            int startIndex = pointer;
 
-            while (pointer != path.length() && path.charAt(pointer) != '/') {
-                pointer++;
-            }
-            int endIndex = pointer;
+            String currentPath = path.substring(
+                    lastSlashIndex + 1, nextSlashIndex);
 
-            String currentString = path.substring(startIndex, endIndex);
-            if (currentString.equals("..")) {
-                if (!stack.isEmpty()) {
-                    stack.pop();
+            lastSlashIndex = nextSlashIndex;
+
+            if (currentPath.isEmpty() || currentPath.equals(".")) {
+                ;
+            } else if (currentPath.equals("..")) {
+                if (!deque.isEmpty()) {
+                    deque.pollLast();
                 }
-            } else if (!currentString.isEmpty()) {
-                if (!currentString.equals(".")) {
-                    stack.push(currentString);
-                }
+            } else {
+                deque.addLast(currentPath);
             }
         }
 
-        if (stack.isEmpty()) {
+        if (deque.isEmpty()) {
             return "/";
         }
 
         StringBuilder result = new StringBuilder();
-        while (!stack.isEmpty()) {
+        while (!deque.isEmpty()) {
 
-            String currentPath = stack.pop();
-
-            result.insert(0, currentPath);
-            result.insert(0, "/");
+            result.append("/");
+            result.append(deque.pollFirst());
         }
 
         return result.toString();

@@ -1,49 +1,77 @@
-/*
-
-Implement int sqrt(int x). Compute and return the square root of x.
-
-x is guaranteed to be a non-negative integer.
-
+/* Given a m x n matrix, if an element is 0, set its entire row and column to 0.
+Do it in-place.
 
         Example 1:
 
-        Input: 4
-        Output: 2
+        Input:
+        [
+        [1,1,1],
+        [1,0,1],
+        [1,1,1]
+        ]
+        Output:
+        [
+        [1,0,1],
+        [0,0,0],
+        [1,0,1]
+        ]
+
         Example 2:
 
-        Input: 8
-        Output: 2
+        Input:
+        [
+        [0,1,2,0],
+        [3,4,5,2],
+        [1,3,1,5]
+        ]
+        Output:
+        [
+        [0,0,0,0],
+        [0,4,5,0],
+        [0,3,1,0]
+        ]
 
-        Explanation: The square root of 8 is 2.82842..., and since we want to
-        return an integer, the decimal part will be truncated.
-*/
+Follow up:
+
+  A straight forward solution using O(mn) space is probably a bad idea.
+  A simple improvement uses O(m + n) space, but still not the best solution.
+
+  Could you devise a constant space solution?*/
 
 
 class Solution {
 
-    public int mySqrt(int x) {
+    public void setZeroes(int[][] matrix) {
 
-        if (x == 0) {
-            return 0;
-        }
+        int[] zeroInRow = new int[matrix.length];
+        int[] zeroInCol = new int[matrix[0].length];
 
-        int startIndex = 0, endIndex = x;
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[0].length; j++) {
 
-        while (startIndex < endIndex - 1) {
-
-            int middleIndex = startIndex + (endIndex - startIndex) / 2;
-
-            int currentResult = x / middleIndex;
-
-            if (currentResult == middleIndex) {
-                return middleIndex;
-            } else if (currentResult < middleIndex) {
-                endIndex = middleIndex - 1;
-            } else {
-                startIndex = middleIndex;
+                if (matrix[i][j] == 0) {
+                    zeroInRow[i] = 1;
+                    zeroInCol[j] = 1;
+                }
             }
         }
 
-        return (endIndex <= x / endIndex ? endIndex : startIndex);
+        for (int i = 0; i < matrix.length; i++) {
+
+            if (zeroInRow[i] == 1) {
+                for (int j = 0; j < matrix[0].length; j++) {
+                    matrix[i][j] = 0;
+                }
+            }
+        }
+
+        for (int j = 0; j < matrix[0].length; j++) {
+
+            if (zeroInCol[j] == 1) {
+                for (int i = 0; i < matrix.length; i++) {
+                    matrix[i][j] = 0;
+                }
+            }
+        }
     }
 }
