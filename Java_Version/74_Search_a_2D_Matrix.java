@@ -1,8 +1,10 @@
 /*
-Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:
+Write an efficient algorithm that searches for a value in an m x n matrix. This
+matrix has the following properties:
 
-        Integers in each row are sorted from left to right.
-        The first integer of each row is greater than the last integer of the previous row.
+  Integers in each row are sorted from left to right.
+  The first integer of each row is greater than the last integer of the previous row.
+
         Example 1:
 
         Input:
@@ -13,6 +15,7 @@ Write an efficient algorithm that searches for a value in an m x n matrix. This 
         ]
         target = 3
         Output: true
+
         Example 2:
 
         Input:
@@ -22,7 +25,8 @@ Write an efficient algorithm that searches for a value in an m x n matrix. This 
         [23, 30, 34, 50]
         ]
         target = 13
-        Output: false*/
+        Output: false
+*/
 
 class Solution {
 
@@ -33,6 +37,7 @@ class Solution {
         }
 
         int row = searchRow(matrix, target);
+
         if (row == -1) {
             return false;
         }
@@ -43,16 +48,11 @@ class Solution {
     private int searchRow(int[][] matrix, int target) {
 
         int startRow = 0, endRow = matrix.length - 1;
-        while (startRow <= endRow) {
 
-            if (startRow == endRow) {
-                return (matrix[startRow][0] <= target ? startRow : -1);
-            } else if (startRow + 1 == endRow) {
-                return (matrix[endRow][0] <= target ? endRow :
-                        (matrix[startRow][0] <= target ? startRow : -1));
-            }
+        while (startRow < endRow - 1) {
 
             int middleRow = startRow + (endRow - startRow) / 2;
+
             if (matrix[middleRow][0] == target) {
                 return middleRow;
             } else if (matrix[middleRow][0] < target) {
@@ -62,20 +62,19 @@ class Solution {
             }
         }
 
-        return -1;
+        if (endRow < startRow) {
+            return -1;
+        }
+
+        return (matrix[endRow][0] <= target ? endRow :
+                (matrix[startRow][0] <= target ? startRow : -1));
     }
 
     private boolean searchCol(int[][] matrix, int row, int target) {
 
-        int startCol = 0, endCol = matrix[0].length - 1;
+        int startCol = 0, endCol = matrix[row].length - 1;
 
         while (startCol <= endCol) {
-
-            if (startCol == endCol) {
-                return matrix[row][startCol] == target;
-            } else if (startCol + 1 == endCol) {
-                return matrix[row][startCol] == target || matrix[row][endCol] == target;
-            }
 
             int middleCol = startCol + (endCol - startCol) / 2;
             if (matrix[row][middleCol] == target) {

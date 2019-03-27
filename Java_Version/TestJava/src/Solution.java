@@ -1,69 +1,55 @@
 /*
-Given a collection of numbers that might contain duplicates, return all possible
-unique permutations.
+Given an array with n objects colored red, white or blue, sort them in-place so
+that objects of the same color are adjacent, with the colors in the order red,
+white and blue.
+
+Here, we will use the integers 0, 1, and 2 to represent the color red, white,
+and blue respectively.
+
+Note: You are not suppose to use the library's sort function for this problem.
 
         Example:
 
-        Input: [1,1,2]
-        Output:
-        [
-        [1,1,2],
-        [1,2,1],
-        [2,1,1]
-        ]
-*/
+        Input: [2,0,2,1,1,0]
+        Output: [0,0,1,1,2,2]
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+Follow up:
+  A rather straight forward solution is a two-pass algorithm using counting
+sort. First, iterate the array counting number of 0's, 1's, and 2's, then
+overwrite array with total number of 0's, then 1's and followed by 2's.
+
+Could you come up with a one-pass algorithm using only constant space?
+*/
 
 class Solution {
 
-    public List<List<Integer>> permuteUnique(int[] nums) {
+    public void sortColors(int[] nums) {
 
-        if ( nums == null || nums.length == 0 ) {
-            return new ArrayList<>();
-        }
-
-        Arrays.sort(nums);
-
-        List<List<Integer>> result = new ArrayList<>();
-        boolean[] hasUsed = new boolean[nums.length];
-
-        List<Integer> currentResult = new ArrayList<>();
-
-        permuteUniqueHelper(nums, hasUsed, currentResult, result);
-
-        return result;
-    }
-
-    private void permuteUniqueHelper(
-            int[] nums, boolean[] hasUsed,
-            List<Integer> currentResult, List<List<Integer>> result) {
-
-        if ( currentResult.size() == nums.length ) {
-
-            List<Integer> currentResultCopy = new ArrayList<Integer>(currentResult);
-            result.add(currentResultCopy);
+        if (nums == null || nums.length == 0) {
             return;
         }
 
-        Integer lastNumber = null;
+        int redPointer = 0, whitePointer = 0, bluePointer = nums.length - 1;
 
-        for (int i = 0; i < nums.length; i++) {
+        while (whitePointer <= bluePointer) {
 
-            if (hasUsed[i] == true || (lastNumber != null && lastNumber == nums[i])) {
-                continue;
+            if (nums[whitePointer] == 0) {
+                swap(nums, redPointer, whitePointer);
+                redPointer++;
+                whitePointer++;
+            } else if (nums[whitePointer] == 1) {
+                whitePointer++;
+            } else {
+                swap(nums, whitePointer, bluePointer);
+                bluePointer--;
             }
-
-            hasUsed[i] = true;
-            lastNumber = nums[i];
-            currentResult.add(nums[i]);
-
-            permuteUniqueHelper(nums, hasUsed, currentResult, result);
-
-            hasUsed[i] = false;
-            currentResult.remove(currentResult.size() - 1);
         }
+    }
+
+    private void swap(int[] nums, int i, int j) {
+
+        int temp = nums[i];
+        nums[i] = nums[j];
+        nums[j] = temp;
     }
 }
