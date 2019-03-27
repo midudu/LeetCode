@@ -1,77 +1,69 @@
-/* Given a m x n matrix, if an element is 0, set its entire row and column to 0.
-Do it in-place.
+/*
+Given a collection of numbers that might contain duplicates, return all possible
+unique permutations.
 
-        Example 1:
+        Example:
 
-        Input:
-        [
-        [1,1,1],
-        [1,0,1],
-        [1,1,1]
-        ]
+        Input: [1,1,2]
         Output:
         [
-        [1,0,1],
-        [0,0,0],
-        [1,0,1]
+        [1,1,2],
+        [1,2,1],
+        [2,1,1]
         ]
+*/
 
-        Example 2:
-
-        Input:
-        [
-        [0,1,2,0],
-        [3,4,5,2],
-        [1,3,1,5]
-        ]
-        Output:
-        [
-        [0,0,0,0],
-        [0,4,5,0],
-        [0,3,1,0]
-        ]
-
-Follow up:
-
-  A straight forward solution using O(mn) space is probably a bad idea.
-  A simple improvement uses O(m + n) space, but still not the best solution.
-
-  Could you devise a constant space solution?*/
-
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 class Solution {
 
-    public void setZeroes(int[][] matrix) {
+    public List<List<Integer>> permuteUnique(int[] nums) {
 
-        int[] zeroInRow = new int[matrix.length];
-        int[] zeroInCol = new int[matrix[0].length];
-
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[0].length; j++) {
-
-                if (matrix[i][j] == 0) {
-                    zeroInRow[i] = 1;
-                    zeroInCol[j] = 1;
-                }
-            }
+        if ( nums == null || nums.length == 0 ) {
+            return new ArrayList<>();
         }
 
-        for (int i = 0; i < matrix.length; i++) {
+        Arrays.sort(nums);
 
-            if (zeroInRow[i] == 1) {
-                for (int j = 0; j < matrix[0].length; j++) {
-                    matrix[i][j] = 0;
-                }
-            }
+        List<List<Integer>> result = new ArrayList<>();
+        boolean[] hasUsed = new boolean[nums.length];
+
+        List<Integer> currentResult = new ArrayList<>();
+
+        permuteUniqueHelper(nums, hasUsed, currentResult, result);
+
+        return result;
+    }
+
+    private void permuteUniqueHelper(
+            int[] nums, boolean[] hasUsed,
+            List<Integer> currentResult, List<List<Integer>> result) {
+
+        if ( currentResult.size() == nums.length ) {
+
+            List<Integer> currentResultCopy = new ArrayList<Integer>(currentResult);
+            result.add(currentResultCopy);
+            return;
         }
 
-        for (int j = 0; j < matrix[0].length; j++) {
+        Integer lastNumber = null;
 
-            if (zeroInCol[j] == 1) {
-                for (int i = 0; i < matrix.length; i++) {
-                    matrix[i][j] = 0;
-                }
+        for (int i = 0; i < nums.length; i++) {
+
+            if (hasUsed[i] == true || (lastNumber != null && lastNumber == nums[i])) {
+                continue;
             }
+
+            hasUsed[i] = true;
+            lastNumber = nums[i];
+            currentResult.add(nums[i]);
+
+            permuteUniqueHelper(nums, hasUsed, currentResult, result);
+
+            hasUsed[i] = false;
+            currentResult.remove(currentResult.size() - 1);
         }
     }
 }

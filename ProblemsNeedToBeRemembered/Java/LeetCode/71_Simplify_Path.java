@@ -69,7 +69,8 @@ class Solution {
         while (!deque.isEmpty()) {
 
             result.append("/");
-            result.append(deque.pollFirst());
+            result.append(deque.pollFirst());     // 使用deque作为数据结构，
+			                                      // 可以在StringBuilder中append()而不是insert()
         }
 
         return result.toString();

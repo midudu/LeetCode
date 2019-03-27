@@ -37,7 +37,7 @@ class Solution {
         }
 
         if (carryBit != 0) {
-            result.append(1);
+            result.append(1);     //先append()再reverse的效率高于insert()
         }
 
         return result.reverse().toString();

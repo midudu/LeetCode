@@ -29,6 +29,7 @@ class Solution {
         if (n == 0) {
             return 1.0;
         }
+		
 
         // x^n = (1/x)^(-n) = (1/x) * (1/x)^(-n-1), in case of overflow of n for n
         // = Integer.MIN_VALUE case

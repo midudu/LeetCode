@@ -47,6 +47,7 @@ class Solution {
             }
         }
     }
+	
 
     public List<Interval> merge(List<Interval> intervals) {
 

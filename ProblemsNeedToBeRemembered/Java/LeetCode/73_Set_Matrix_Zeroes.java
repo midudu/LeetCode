@@ -38,7 +38,6 @@ Follow up:
 
   Could you devise a constant space solution?*/
 
-
 class Solution {
 
     public void setZeroes(int[][] matrix) {
