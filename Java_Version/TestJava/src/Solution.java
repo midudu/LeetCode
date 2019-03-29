@@ -1,94 +1,60 @@
 /*
-Given a 2D board and a word, find if the word exists in the grid.
+  Given a sorted array nums, remove the duplicates in-place such that duplicates
+appeared at most twice and return the new length.
 
-The word can be constructed from letters of sequentially adjacent cell,
-where "adjacent" cells are those horizontally or vertically neighboring.
+Do not allocate extra space for another array, you must do this by modifying the
+input array in-place with O(1) extra memory.
 
-The same letter cell may not be used more than once.
+Example 1:
 
-        Example:
+        Given nums = [1,1,1,2,2,3],
 
-        board =
-        [
-        ['A','B','C','E'],
-        ['S','F','C','S'],
-        ['A','D','E','E']
-        ]
+        Your function should return length = 5, with the first five elements of
+nums being 1, 1, 2, 2 and 3 respectively.
 
-        Given word = "ABCCED", return true.
-        Given word = "SEE", return true.
-        Given word = "ABCB", return false.*/
+        It doesn't matter what you leave beyond the returned length.
+
+Example 2:
+
+        Given nums = [0,0,1,1,1,1,2,3,3],
+
+        Your function should return length = 7, with the first seven elements of nums being modified to 0, 0, 1, 1, 2, 3 and 3 respectively.
+
+        It doesn't matter what values are set beyond the returned length.
+*/
 
 class Solution {
 
+    public int removeDuplicates(int[] nums) {
 
-    public boolean exist(char[][] board, String word) {
-
-        if (word == null || word.isEmpty()) {
-            return true;
+        if (nums == null || nums.length == 0) {
+            return 0;
         }
 
-        if (board == null || board.length == 0 || board[0].length == 0) {
-            return false;
-        }
+        int lastValue = nums[0];
+        int lastValueCount = 1;
+        int newArrayPointer = 1;
 
-        boolean[][] hasVisited
-                = new boolean[board.length][board[0].length];
+        for (int i = 1; i < nums.length; i++) {
 
-        char firstChar = word.charAt(0);
-        for (int row = 0; row < board.length; row++) {
-            for (int col = 0; col < board[row].length; col++) {
+            if (nums[i] != lastValue) {
 
-                if (board[row][col] == firstChar) {
+                nums[newArrayPointer] = nums[i];
+                newArrayPointer++;
+                lastValue = nums[i];
+                lastValueCount = 1;
 
-                    boolean findFlag
-                            = existHelper(board, word, row, col,
-                            0, hasVisited);
+            } else {
 
-                    if (findFlag) {
-                        return true;
-                    }
+                lastValueCount++;
+
+                if (lastValueCount <= 2) {
+                    nums[newArrayPointer] = nums[i];
+                    newArrayPointer++;
                 }
             }
         }
 
-        return false;
-    }
-
-    private boolean existHelper(char[][] board, String word,
-                                int currentRow, int currentCol,
-                                int wordIndex, boolean[][] hasVisited) {
-
-        if (currentCol < 0 || currentCol >= board[0].length
-                || currentRow < 0 || currentRow >= board.length) {
-            return false;
-        }
-
-        if (hasVisited[currentRow][currentCol]) {
-            return false;
-        }
-
-        if (board[currentRow][currentCol] != word.charAt(wordIndex)) {
-            return false;
-        }
-
-        if (wordIndex == word.length() - 1) {
-            return true;
-        }
-
-        hasVisited[currentRow][currentCol] = true;
-
-        boolean result = existHelper(board, word, currentRow + 1, currentCol,
-                wordIndex + 1, hasVisited)
-                || existHelper(board, word, currentRow - 1, currentCol,
-                wordIndex + 1, hasVisited)
-                || existHelper(board, word, currentRow, currentCol - 1,
-                wordIndex + 1, hasVisited)
-                || existHelper(board, word, currentRow, currentCol + 1,
-                wordIndex + 1, hasVisited);
-
-        hasVisited[currentRow][currentCol] = false;
-
-        return result;
+        return newArrayPointer;
     }
 }

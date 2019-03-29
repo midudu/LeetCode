@@ -1,10 +1,10 @@
 /*
-Given a 2D board and a word, find if the word exists in the grid.
+  Given a 2D board and a word, find if the word exists in the grid.
 
-The word can be constructed from letters of sequentially adjacent cell,
+  The word can be constructed from letters of sequentially adjacent cell,
 where "adjacent" cells are those horizontally or vertically neighboring.
 
-The same letter cell may not be used more than once.
+  The same letter cell may not be used more than once.
 
         Example:
 
@@ -36,6 +36,7 @@ class Solution {
                 = new boolean[board.length][board[0].length];
 
         char firstChar = word.charAt(0);
+
         for (int row = 0; row < board.length; row++) {
             for (int col = 0; col < board[row].length; col++) {
 
@@ -55,9 +56,10 @@ class Solution {
         return false;
     }
 
-    private boolean existHelper(char[][] board, String word,
-                                int currentRow, int currentCol,
-                                int wordIndex, boolean[][] hasVisited) {
+    private boolean existHelper(
+            char[][] board, String word,
+            int currentRow, int currentCol,
+            int wordIndex, boolean[][] hasVisited) {
 
         if (currentCol < 0 || currentCol >= board[0].length
                 || currentRow < 0 || currentRow >= board.length) {
