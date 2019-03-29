@@ -1,9 +1,10 @@
 /*
-Given a set of distinct integers, nums, return all possible subsets (the power set).
+Given a set of distinct integers, nums, return all possible subsets (the power
+set).
 
-        Note: The solution set must not contain duplicate subsets.
+Note: The solution set must not contain duplicate subsets.
 
-        Example:
+Example:
 
         Input: nums = [1,2,3]
         Output:
@@ -16,7 +17,8 @@ Given a set of distinct integers, nums, return all possible subsets (the power s
         [2,3],
         [1,2],
         []
-        ]*/
+        ]
+*/
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,9 +40,10 @@ class Solution {
         return result;
     }
 
-    private void subsetsHelper(int[] nums, int currentIndex,
-                               ArrayList<Integer> existingSet,
-                               List<List<Integer>> result) {
+    private void subsetsHelper(
+            int[] nums, int currentIndex,
+            ArrayList<Integer> existingSet,
+            List<List<Integer>> result) {
 
         if (currentIndex == nums.length) {
             result.add(existingSet);

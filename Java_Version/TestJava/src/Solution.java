@@ -1,55 +1,94 @@
 /*
-Given an array with n objects colored red, white or blue, sort them in-place so
-that objects of the same color are adjacent, with the colors in the order red,
-white and blue.
+Given a 2D board and a word, find if the word exists in the grid.
 
-Here, we will use the integers 0, 1, and 2 to represent the color red, white,
-and blue respectively.
+The word can be constructed from letters of sequentially adjacent cell,
+where "adjacent" cells are those horizontally or vertically neighboring.
 
-Note: You are not suppose to use the library's sort function for this problem.
+The same letter cell may not be used more than once.
 
         Example:
 
-        Input: [2,0,2,1,1,0]
-        Output: [0,0,1,1,2,2]
+        board =
+        [
+        ['A','B','C','E'],
+        ['S','F','C','S'],
+        ['A','D','E','E']
+        ]
 
-Follow up:
-  A rather straight forward solution is a two-pass algorithm using counting
-sort. First, iterate the array counting number of 0's, 1's, and 2's, then
-overwrite array with total number of 0's, then 1's and followed by 2's.
-
-Could you come up with a one-pass algorithm using only constant space?
-*/
+        Given word = "ABCCED", return true.
+        Given word = "SEE", return true.
+        Given word = "ABCB", return false.*/
 
 class Solution {
 
-    public void sortColors(int[] nums) {
 
-        if (nums == null || nums.length == 0) {
-            return;
+    public boolean exist(char[][] board, String word) {
+
+        if (word == null || word.isEmpty()) {
+            return true;
         }
 
-        int redPointer = 0, whitePointer = 0, bluePointer = nums.length - 1;
+        if (board == null || board.length == 0 || board[0].length == 0) {
+            return false;
+        }
 
-        while (whitePointer <= bluePointer) {
+        boolean[][] hasVisited
+                = new boolean[board.length][board[0].length];
 
-            if (nums[whitePointer] == 0) {
-                swap(nums, redPointer, whitePointer);
-                redPointer++;
-                whitePointer++;
-            } else if (nums[whitePointer] == 1) {
-                whitePointer++;
-            } else {
-                swap(nums, whitePointer, bluePointer);
-                bluePointer--;
+        char firstChar = word.charAt(0);
+        for (int row = 0; row < board.length; row++) {
+            for (int col = 0; col < board[row].length; col++) {
+
+                if (board[row][col] == firstChar) {
+
+                    boolean findFlag
+                            = existHelper(board, word, row, col,
+                            0, hasVisited);
+
+                    if (findFlag) {
+                        return true;
+                    }
+                }
             }
         }
+
+        return false;
     }
 
-    private void swap(int[] nums, int i, int j) {
+    private boolean existHelper(char[][] board, String word,
+                                int currentRow, int currentCol,
+                                int wordIndex, boolean[][] hasVisited) {
 
-        int temp = nums[i];
-        nums[i] = nums[j];
-        nums[j] = temp;
+        if (currentCol < 0 || currentCol >= board[0].length
+                || currentRow < 0 || currentRow >= board.length) {
+            return false;
+        }
+
+        if (hasVisited[currentRow][currentCol]) {
+            return false;
+        }
+
+        if (board[currentRow][currentCol] != word.charAt(wordIndex)) {
+            return false;
+        }
+
+        if (wordIndex == word.length() - 1) {
+            return true;
+        }
+
+        hasVisited[currentRow][currentCol] = true;
+
+        boolean result = existHelper(board, word, currentRow + 1, currentCol,
+                wordIndex + 1, hasVisited)
+                || existHelper(board, word, currentRow - 1, currentCol,
+                wordIndex + 1, hasVisited)
+                || existHelper(board, word, currentRow, currentCol - 1,
+                wordIndex + 1, hasVisited)
+                || existHelper(board, word, currentRow, currentCol + 1,
+                wordIndex + 1, hasVisited);
+
+        hasVisited[currentRow][currentCol] = false;
+
+        return result;
     }
 }

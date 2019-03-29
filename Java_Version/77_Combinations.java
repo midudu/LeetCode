@@ -1,7 +1,8 @@
 /*
-Given two integers n and k, return all possible combinations of k numbers out of 1 ... n.
+Given two integers n and k, return all possible combinations of k numbers out
+of 1 ... n.
 
-        Example:
+Example:
 
         Input: n = 4, k = 2
         Output:
@@ -12,40 +13,53 @@ Given two integers n and k, return all possible combinations of k numbers out of
         [1,2],
         [1,3],
         [1,4],
-        ]*/
+        ]
+*/
 
 import java.util.ArrayList;
 import java.util.List;
 
 class Solution {
 
-    public List<List<Integer>> combine(int n, int k) {
+    public static void main(String[] args) {
 
-        List<List<Integer>> answer = new ArrayList<>();
-
-        combine(answer, new ArrayList<>(), 1, n, k);
-
-        return answer;
+        new Solution().combine(4,2);
     }
 
-    private void combine(List<List<Integer>> answer,
-                         List<Integer> arr, int startNum, int n, int k) {
+    public List<List<Integer>> combine(int n, int k) {
 
-        if (arr.size() == k) {
+        if (n < 1 || k > n) {
+            return new ArrayList<>();
+        }
 
-            answer.add(new ArrayList<>(arr));
+        List<List<Integer>> result = new ArrayList<>();
 
-        } else {
+        List<Integer> currentResult = new ArrayList<>();
 
-            int index = arr.size();
-            int endNum = n - k + index + 1;
+        combineHelper(1, n, k, currentResult, result);
 
-            for (int i = startNum; i <= endNum; i++) {
+        return result;
+    }
 
-                arr.add(i);
-                combine(answer, arr, i + 1, n, k);
-                arr.remove(index);
-            }
+    private void combineHelper(
+            int startNumber, int n, int k,
+            List<Integer> currentResult, List<List<Integer>> result) {
+
+        if (currentResult.size() == k) {
+            List<Integer> currentResultCopy = new ArrayList<>(currentResult);
+            result.add(currentResultCopy);
+            return;
+        }
+
+        for (int i = startNumber; i + k <= n + 1 + currentResult.size(); i++) {
+
+            currentResult.add(i);
+
+            combineHelper(i + 1,
+                    n, k,
+                    currentResult, result);
+
+            currentResult.remove(currentResult.size() - 1);
         }
     }
 }
