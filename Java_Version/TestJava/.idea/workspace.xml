@@ -32,10 +32,12 @@
       <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="59" column="12" selection-end-line="95" selection-end-column="1" />
+            <state relative-caret-position="120">
+              <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
               <folding>
-                <element signature="e#0#2670#0" expanded="true" />
+                <element signature="e#0#2035#0" expanded="true" />
+                <element signature="method#NumArray#0;class#NumArray#0" />
+                <element signature="method#update#0;class#NumArray#0" />
               </folding>
             </state>
           </provider>
@@ -151,7 +153,6 @@
     <panes>
       <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -176,6 +177,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -224,9 +226,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Solution">
+  <component name="RunManager" selected="Application.NumArray">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="App" />
+      <module name="TestJava" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="NumArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="NumArray" />
       <module name="TestJava" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -237,11 +244,6 @@
     </configuration>
     <configuration name="SparseTable" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="SparseTable" />
-      <module name="TestJava" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-    </configuration>
-    <configuration name="TestThreadLocal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="TestThreadLocal" />
       <module name="TestJava" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -293,18 +295,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.Solution" />
-      <item itemvalue="Application.TestThreadLocal" />
       <item itemvalue="Application.App" />
       <item itemvalue="Application.TraverseNonRecursively" />
       <item itemvalue="Application.SparseTable" />
+      <item itemvalue="Application.NumArray" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.NumArray" />
         <item itemvalue="Application.Solution" />
         <item itemvalue="Application.SparseTable" />
         <item itemvalue="Application.TraverseNonRecursively" />
         <item itemvalue="Application.App" />
-        <item itemvalue="Application.TestThreadLocal" />
       </list>
     </recent_temporary>
   </component>
@@ -551,12 +553,14 @@
       <workItem from="1553671807621" duration="1238000" />
       <workItem from="1553674028171" duration="1684000" />
       <workItem from="1553740796139" duration="11227000" />
-      <workItem from="1553820351274" duration="5967000" />
+      <workItem from="1553820351274" duration="11630000" />
+      <workItem from="1553907184279" duration="309000" />
+      <workItem from="1554018836379" duration="5288000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="552408000" />
+    <option name="totallyTimeSpent" value="563668000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -580,55 +584,55 @@
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5241287" side_tool="true" weight="0.44948757" />
       <window_info anchor="right" id="Maven Projects" order="6" weight="0.32902184" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4953083" weight="0.25036603" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.47587132" weight="0.16666667" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4953083" weight="0.25036603" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49865952" weight="0.329429" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4715909" visible="true" weight="0.13338722" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.23524657" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4715909" visible="true" weight="0.13662086" />
       <window_info anchor="right" id="Database" order="8" weight="0.3297587" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49731904" weight="0.2635432" />
       <window_info id="Structure" order="1" sideWeight="0.52840906" side_tool="true" weight="0.1851253" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.46849865" visible="true" weight="0.22777778" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.46849865" visible="true" weight="0.30185184" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.23524657" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49731904" weight="0.2635432" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.23525469" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.4953083" weight="0.25036603" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.47587132" visible="true" weight="0.14074074" />
       <window_info anchor="right" id="Theme Preview" order="7" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48609078" visible="true" weight="0.19805983" />
       <window_info id="Structure" order="1" sideWeight="0.5131579" side_tool="true" weight="0.30294907" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49932975" weight="0.329429" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.47587132" visible="true" weight="0.14074074" />
+      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.4953083" weight="0.25036603" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49731904" weight="0.2635432" />
       <window_info anchor="right" id="Database" order="8" weight="0.3297587" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49865952" weight="0.329429" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.46849865" weight="0.31296295" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5241287" side_tool="true" weight="0.44948757" />
       <window_info id="Capture Tool" order="5" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49731904" weight="0.2635432" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49731904" weight="0.32796487" />
       <window_info anchor="right" id="Maven Projects" order="6" weight="0.3297587" />
-      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -672,11 +676,23 @@
           <properties />
           <option name="timeStamp" value="40" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Solution.java</url>
+          <line>63</line>
+          <properties />
+          <option name="timeStamp" value="359" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Solution.java</url>
+          <line>83</line>
+          <properties />
+          <option name="timeStamp" value="361" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="358" />
+      <option name="time" value="364" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -1079,10 +1095,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23760">
           <caret line="1035" column="7" selection-start-line="1035" selection-start-column="7" selection-end-line="1035" selection-end-column="7" />
-          <folding>
-            <element signature="e#49626#49627#0" expanded="true" />
-            <element signature="e#49682#49683#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1125,10 +1137,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="156" column="19" selection-start-line="156" selection-start-column="19" selection-end-line="156" selection-end-column="19" />
-          <folding>
-            <element signature="e#5877#5878#0" expanded="true" />
-            <element signature="e#5913#5914#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1136,10 +1144,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="55" column="19" selection-start-line="55" selection-start-column="19" selection-end-line="55" selection-end-column="19" />
-          <folding>
-            <element signature="e#3862#3863#0" expanded="true" />
-            <element signature="e#3913#3914#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1147,16 +1151,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="282">
           <caret line="1840" column="48" lean-forward="true" selection-start-line="1840" selection-start-column="48" selection-end-line="1840" selection-end-column="48" />
-          <folding>
-            <element signature="e#15619#15662#0" expanded="true" />
-            <element signature="e#23587#23588#0" expanded="true" />
-            <element signature="e#23641#23642#0" expanded="true" />
-            <element signature="e#24282#24283#0" expanded="true" />
-            <element signature="e#24347#24348#0" expanded="true" />
-            <element signature="e#27830#27873#1" expanded="true" />
-            <element signature="e#68662#68663#0" expanded="true" />
-            <element signature="e#68719#68720#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1199,19 +1193,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="1870" column="18" selection-start-line="1870" selection-start-column="18" selection-end-line="1870" selection-end-column="18" />
-          <folding>
-            <element signature="e#58282#58283#0" expanded="true" />
-            <element signature="e#58326#58327#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="59" column="12" selection-end-line="95" selection-end-column="1" />
+        <state relative-caret-position="120">
+          <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
           <folding>
-            <element signature="e#0#2670#0" expanded="true" />
+            <element signature="e#0#2035#0" expanded="true" />
+            <element signature="method#NumArray#0;class#NumArray#0" />
+            <element signature="method#update#0;class#NumArray#0" />
           </folding>
         </state>
       </provider>
