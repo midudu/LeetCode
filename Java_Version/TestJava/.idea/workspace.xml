@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ffbcff5e-ced2-4ebe-a713-4c74a7d3e487" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TestJava/NumArray.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Solution.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ProblemsNeedToBeRemembered/Java/LeetCode/307_Range_Sum_Query_Mutable.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../ProblemsNeedToBeRemembered/Java/LeetCode/307_Range_Sum_Query_Mutable.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,13 +33,10 @@
       <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="103" column="21" selection-end-line="169" />
+            <state relative-caret-position="367">
+              <caret line="36" column="20" selection-end-line="41" selection-end-column="1" />
               <folding>
-                <element signature="e#0#3597#0" expanded="true" />
-                <element signature="method#NumArray#0;class#NumArray#0" />
-                <element signature="method#update#0;class#NumArray#0" />
-                <element signature="method#NumArray#0;class#NumArray#0" />
+                <element signature="e#0#638#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -141,8 +138,7 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="210" />
-    <option name="y" value="3" />
-    <option name="width" value="1182" />
+    <option name="width" value="1185" />
     <option name="height" value="840" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -153,9 +149,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -180,6 +173,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -228,7 +224,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.NumArray">
+  <component name="RunManager" selected="Application.Solution">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="App" />
       <module name="TestJava" />
@@ -239,13 +235,13 @@
       <module name="TestJava" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Solution" />
+    <configuration name="SegmentTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SegmentTree" />
       <module name="TestJava" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="SparseTable" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="SparseTable" />
+    <configuration name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Solution" />
       <module name="TestJava" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -299,14 +295,14 @@
       <item itemvalue="Application.Solution" />
       <item itemvalue="Application.App" />
       <item itemvalue="Application.TraverseNonRecursively" />
-      <item itemvalue="Application.SparseTable" />
+      <item itemvalue="Application.SegmentTree" />
       <item itemvalue="Application.NumArray" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SegmentTree" />
         <item itemvalue="Application.NumArray" />
         <item itemvalue="Application.Solution" />
-        <item itemvalue="Application.SparseTable" />
         <item itemvalue="Application.TraverseNonRecursively" />
         <item itemvalue="Application.App" />
       </list>
@@ -559,11 +555,17 @@
       <workItem from="1553907184279" duration="309000" />
       <workItem from="1554018836379" duration="6303000" />
       <workItem from="1554109403666" duration="1321000" />
+      <workItem from="1554191041735" duration="2010000" />
+      <workItem from="1554257253140" duration="591000" />
+      <workItem from="1554260066408" duration="880000" />
+      <workItem from="1554260994288" duration="33000" />
+      <workItem from="1554261061705" duration="2717000" />
+      <workItem from="1554359886574" duration="1261000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="566004000" />
+    <option name="totallyTimeSpent" value="573496000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -580,7 +582,6 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49932975" weight="0.329429" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49731904" weight="0.32796487" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
@@ -588,11 +589,11 @@
       <window_info anchor="right" id="Maven Projects" order="6" weight="0.32902184" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4953083" weight="0.25036603" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.47587132" weight="0.16666667" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.47587132" weight="0.2611111" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49865952" weight="0.329429" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4715909" visible="true" weight="0.13904607" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4715909" visible="true" weight="0.12611157" />
       <window_info anchor="right" id="Database" order="8" weight="0.3297587" />
       <window_info id="Structure" order="1" sideWeight="0.52840906" side_tool="true" weight="0.1851253" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -606,12 +607,13 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49731904" weight="0.2635432" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49731904" weight="0.32796487" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49731904" weight="0.2635432" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.23525469" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.47587132" visible="true" weight="0.14074074" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -623,12 +625,12 @@
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49731904" weight="0.2635432" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="8" weight="0.3297587" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49865952" weight="0.329429" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.46849865" weight="0.31296295" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.4953083" weight="0.25036603" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5241287" side_tool="true" weight="0.44948757" />
       <window_info id="Capture Tool" order="5" />
@@ -674,7 +676,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/StringUTF16.java</url>
+          <url />
           <line>417</line>
           <properties />
           <option name="timeStamp" value="40" />
@@ -1189,13 +1191,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="103" column="21" selection-end-line="169" />
+        <state relative-caret-position="367">
+          <caret line="36" column="20" selection-end-line="41" selection-end-column="1" />
           <folding>
-            <element signature="e#0#3597#0" expanded="true" />
-            <element signature="method#NumArray#0;class#NumArray#0" />
-            <element signature="method#update#0;class#NumArray#0" />
-            <element signature="method#NumArray#0;class#NumArray#0" />
+            <element signature="e#0#638#0" expanded="true" />
           </folding>
         </state>
       </provider>
