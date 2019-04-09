@@ -1,114 +1,63 @@
 /*
-  A car travels from a starting position to a destination which is target miles
-east of the starting position.
+The gray code is a binary numeral system where two successive values differ in
+only one bit.
 
-  Along the way, there are gas stations.  Each station[i] represents a gas
-station that is station[i][0] miles east of the starting position, and has
-station[i][1] liters of gas.
-
-  The car starts with an infinite tank of gas, which initially has startFuel
-liters of fuel in it.  It uses 1 liter of gas per 1 mile that it drives.
-
-  When the car reaches a gas station, it may stop and refuel, transferring all
-the gas from the station into the car.
-
-  What is the least number of refueling stops the car must make in order to
-reach its destination?  If it cannot reach the destination, return -1.
-
-  Note that if the car reaches a gas station with 0 fuel left, the car can
-still refuel there.  If the car reaches the destination with 0 fuel left, it is still considered to have arrived.
-
+Given a non-negative integer n representing the total number of bits in the
+code, print the sequence of gray code. A gray code sequence must begin with 0.
 
 Example 1:
 
-        Input: target = 1, startFuel = 1, stations = []
-        Output: 0
-        Explanation: We can reach the target without refueling.
-
-Example 2:
-
-        Input: target = 100, startFuel = 1, stations = [[10,100]]
-        Output: -1
-        Explanation: We can't reach the target (or even the first gas station).
-
-Example 3:
-
-        Input: target = 100, startFuel = 10, stations = [[10,60],[20,30],[30,30],[60,40]]
-        Output: 2
+        Input: 2
+        Output: [0,1,3,2]
         Explanation:
-        We start with 10 liters of fuel.
-        We drive to position 10, expending 10 liters of fuel.  We refuel from 0
-        liters to 60 liters of gas. Then, we drive from position 10 to position
-        60 (expending 50 liters of fuel), and refuel from 10 liters to 50
-        liters of gas.  We then drive to and reach the target. We made 2
-        refueling stops along the way, so we return 2.
+        00 - 0
+        01 - 1
+        11 - 3
+        10 - 2
 
-Note:
+For a given n, a gray code sequence may not be uniquely defined.
 
-  1 <= target, startFuel, stations[i][1] <= 10^9
-  0 <= stations.length <= 500
-  0 < stations[0][0] < stations[1][0] < ... < stations[stations.length-1][0] < target
+For example, [0,2,3,1] is also a valid gray code sequence.
+
+        00 - 0
+        10 - 2
+        11 - 3
+        01 - 1
+
+        Example 2:
+
+        Input: 0
+        Output: [0]
+
+Explanation: We define the gray code sequence to begin with 0.
+
+A gray code sequence of n has size = 2^n, which for n = 0 the size is 2^0 = 1.
+
+Therefore, for n = 0 the gray code sequence is [0].
 */
 
-// Method 1: Dynamic Programming: O(n^2)
-/*
+
+import java.util.ArrayList;
+import java.util.List;
+
 class Solution {
 
-    public int minRefuelStops(int target, int startFuel, int[][] stations) {
+    public List<Integer> grayCode(int n) {
 
-        long[] furthestDistanceOfCurrentStopCount = new long[stations.length + 1];
-        furthestDistanceOfCurrentStopCount[0] = startFuel;
+        int finalSize = (1 << n);
+        List<Integer> result = new ArrayList<>(finalSize);
 
-        for (int i = 0; i < stations.length; ++i) {
+        result.add(0);
+        int prefix = 1;
 
-            for (int t = i; t >= 0 &&
-                    furthestDistanceOfCurrentStopCount[t] >= stations[i][0];
-                 --t) {
+        while (result.size() != finalSize) {
 
-                furthestDistanceOfCurrentStopCount[t + 1] = Math.max(
-                        furthestDistanceOfCurrentStopCount[t + 1],
-                        furthestDistanceOfCurrentStopCount[t] + stations[i][1]);
-            }
-        }
-
-        for (int t = 0; t <= stations.length; ++t) {
-
-            if (furthestDistanceOfCurrentStopCount[t] >= target) {
-                return t;
-            }
-        }
-
-
-        return -1;
-    }
-}
-*/
-
-import java.util.PriorityQueue;
-
-// Method 2: Priority Queue: O(nlogn)
-class Solution {
-
-    public int minRefuelStops(int target, int startFuel, int[][] stations) {
-
-        PriorityQueue<Integer> pq = new PriorityQueue<>();
-        int currentFuel = startFuel;
-
-        int currentStationIndex = 0, result;
-        for (result = 0; currentFuel < target; result++) {
-
-            while (currentStationIndex < stations.length &&
-                    stations[currentStationIndex][0] <= currentFuel) {
-
-                pq.offer(-stations[currentStationIndex][1]);
-                currentStationIndex++;
+            int currentSize = result.size();
+            for (int i = 0; i < currentSize; i++) {
+                result.add(result.get(currentSize - 1 - i) + prefix);
             }
 
-            if (pq.isEmpty()) {
-                return -1;
-            } else {
-                currentFuel += -pq.poll();
-            }
+            prefix <<= 1;
         }
 
         return result;
