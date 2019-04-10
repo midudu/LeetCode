@@ -1,8 +1,9 @@
 /*
-Given a collection of integers that might contain duplicates, nums,
-return all possible subsets (the power set).
+  Given a collection of integers that might contain duplicates, nums, return
+all possible subsets (the power set).
 
-Note: The solution set must not contain duplicate subsets.
+Note:
+  The solution set must not contain duplicate subsets.
 
 Example:
 
@@ -15,14 +16,15 @@ Output:
         [2,2],
         [1,2],
         []
-        ]*/
+        ]
+*/
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 class Solution {
-    
+
     public List<List<Integer>> subsetsWithDup(int[] nums) {
 
         if (nums == null || nums.length == 0) {
@@ -55,7 +57,7 @@ class Solution {
             int[] nums, int currentIndex,
             List<Integer> existingNumbers, List<List<Integer>> result) {
 
-        if (currentIndex >= nums.length) {
+        if (currentIndex == nums.length) {
             result.add(existingNumbers);
             return;
         }
