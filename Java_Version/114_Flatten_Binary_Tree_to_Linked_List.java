@@ -1,13 +1,15 @@
-/* Given a binary tree, flatten it to a linked list in-place.
+/*
+  Given a binary tree, flatten it to a linked list in-place.
 
-For example, given the following tree:
+  For example, given the following tree:
 
     1
    / \
   2   5
  / \   \
 3   4   6
-The flattened tree should look like:
+
+  The flattened tree should look like:
 
 1
  \
@@ -19,10 +21,12 @@ The flattened tree should look like:
        \
         5
          \
-          6 */
+          6
+*/
 
 
 class TreeNode {
+
     int val;
     TreeNode left;
     TreeNode right;
@@ -34,6 +38,7 @@ class TreeNode {
 
 
 class Solution {
+
     public void flatten(TreeNode root) {
 
         flattenHelper(root);
@@ -45,18 +50,18 @@ class Solution {
             return null;
         }
 
-        TreeNode leftLeaf = root.left;
-        TreeNode rightLeaf = root.right;
+        TreeNode leftNode = root.left;
+        TreeNode rightNode = root.right;
 
         root.left = null;
-        root.right = flattenHelper(leftLeaf);
+        root.right = flattenHelper(leftNode);
 
-        TreeNode temp = root;
-        while (temp.right != null) {
-            temp = temp.right;
+        TreeNode pointer = root;
+        while (pointer.right != null) {
+            pointer = pointer.right;
         }
 
-        temp.right = flattenHelper(rightLeaf);
+        pointer.right = flattenHelper(rightNode);
 
         return root;
     }

@@ -1,33 +1,8 @@
-/*Author: Bochen (mddboc@foxmail.com)
-Last Modified: Tue Apr 10 22:28:44 CST 2018*/
+/*
+  Given a singly linked list, determine if it is a palindrome.
 
-/*Given a singly linked list, determine if it is a palindrome.
-
-        Follow up:
+  Follow up:
         Could you do it in O(n) time and O(1) space?*/
-
-import sun.plugin.javascript.navig.LinkArray;
-
-import java.util.*;
-import java.lang.Math;
-import java.lang.System;
-import java.lang.Integer;
-
-
-public class Main {
-
-    public static void main(String[] args) throws ArithmeticException {
-
-        ListNode root = new ListNode(1);
-        root.next = new ListNode(0);
-        root.next.next = new ListNode(1);
-
-        new Solution().isPalindrome(root);
-
-        System.out.println("haha");
-    }
-
-}
 
 
 class ListNode {
@@ -40,59 +15,72 @@ class ListNode {
 }
 
 
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(int x) {
-        val = x;
-    }
-}
-
-
 class Solution {
+
+    public static void main(String[] args) {
+
+        ListNode head = new ListNode(1);
+        head.next = new ListNode(2);
+        head.next.next = new ListNode(3);
+        head.next.next.next = new ListNode(4);
+        //head.next.next.next.next = new ListNode(5);
+
+        boolean result = new Solution().isPalindrome(head);
+
+        System.out.println();
+    }
+
     public boolean isPalindrome(ListNode head) {
 
         if (head == null || head.next == null) {
             return true;
         }
 
-        ListNode slowPointer = head, fastPointer = head;
-        while (fastPointer.next != null && fastPointer.next.next != null) {
-            fastPointer = fastPointer.next.next;
-            slowPointer = slowPointer.next;
+        ListNode slow = head, fast = head.next;
+        ListNode lastNode = null, nextNode = slow.next;
+
+        while (fast != null && fast.next != null) {
+
+            fast = fast.next.next;
+
+            nextNode = slow.next;
+            slow.next = lastNode;
+
+            lastNode = slow;
+            slow = nextNode;
         }
 
-        ListNode middleNode = slowPointer.next;
-        ListNode anotherHead = reverseList(middleNode);
+        if (fast == null) {
+            slow = slow.next;
+            while (slow != null) {
 
-        while (true) {
-            if (head.val != anotherHead.val) {
+                if (slow.val != lastNode.val) {
+                    return false;
+                }
+
+                slow = slow.next;
+                lastNode = lastNode.next;
+            }
+
+            return true;
+        } else {
+
+            if (slow.val != slow.next.val) {
                 return false;
             }
 
-            if (head == middleNode || anotherHead == middleNode) {
-                return true;
+            slow = slow.next.next;
+            while (slow != null) {
+
+                if (slow.val != lastNode.val) {
+                    return false;
+                }
+
+                slow = slow.next;
+                lastNode = lastNode.next;
             }
 
-            head = head.next;
-            anotherHead = anotherHead.next;
+            return true;
         }
-    }
-
-    private ListNode reverseList(ListNode head) {
-
-        ListNode lastNode = null;
-        ListNode nextNode;
-
-        while (head != null) {
-            nextNode = head.next;
-            head.next = lastNode;
-            lastNode = head;
-            head = nextNode;
-        }
-
-        return lastNode;
     }
 }
