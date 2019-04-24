@@ -20,64 +20,75 @@
 
 public class Solution {
 
-    private long inversePairsNumber = 0;
-
     public int InversePairs(int[] array) {
 
         if (array == null || array.length == 0) {
             return 0;
         }
 
-        mergeSortHelper(array, 0, array.length - 1);
+        int[] currentResult = new int[1];
 
-        return (int)(inversePairsNumber%1000000007);
+        mergeSortHelper(array, 0, array.length - 1,
+                currentResult);
+
+        return currentResult[0];
     }
 
-    private void mergeSortHelper(int[] nums, int startIndex, int endIndex) {
+    private void mergeSortHelper(
+            int[] nums, int startIndex, int endIndex,
+            int[] currentResult) {
 
         if (startIndex < endIndex) {
 
             int middleIndex = startIndex + (endIndex - startIndex) / 2;
-            mergeSortHelper(nums, startIndex, middleIndex);
-            mergeSortHelper(nums, middleIndex + 1, endIndex);
-            mergeProcess(nums, startIndex, middleIndex, endIndex);
+
+            mergeSortHelper(nums, startIndex, middleIndex,
+                    currentResult);
+
+            mergeSortHelper(nums, middleIndex + 1, endIndex,
+                    currentResult);
+
+            mergeProcess(nums, startIndex, middleIndex, endIndex, currentResult);
         }
     }
 
-    private void mergeProcess(int[] nums, int startIndex,
-                                     int middleIndex, int endIndex) {
+    private void mergeProcess(
+            int[] nums, int startIndex, int middleIndex, int endIndex,
+            int[] currentResult) {
 
         int leftIndex = startIndex, rightIndex = middleIndex + 1;
-        int newNumsIndex = 0;
-        int[] newNums = new int[endIndex - startIndex + 1];
+        int newNumbersIndex = 0;
+
+        int[] newNumbers = new int[endIndex - startIndex + 1];
 
         while (leftIndex <= middleIndex && rightIndex <= endIndex) {
 
             if (nums[leftIndex] <= nums[rightIndex]) {
-                newNums[newNumsIndex] = nums[leftIndex];
+                newNumbers[newNumbersIndex] = nums[leftIndex];
                 leftIndex++;
             } else {
-                newNums[newNumsIndex] = nums[rightIndex];
+                newNumbers[newNumbersIndex] = nums[rightIndex];
                 rightIndex++;
-                inversePairsNumber += (middleIndex - leftIndex + 1);
-            }
-            newNumsIndex++;
-        }
 
+                int currentInversePairNumber = middleIndex - leftIndex + 1;
+
+                if (currentResult[0] >= 1000000007 - currentInversePairNumber) {
+                    currentResult[0] = currentResult[0]
+                            - 1000000007 + currentInversePairNumber;
+                } else {
+                    currentResult[0] += currentInversePairNumber;
+                }
+            }
+
+            newNumbersIndex++;
+        }
 
         if (leftIndex <= middleIndex) {
             System.arraycopy(nums, leftIndex,
-                    nums, startIndex + newNumsIndex,
+                    nums, startIndex + newNumbersIndex,
                     middleIndex - leftIndex + 1);
         }
-        System.arraycopy(newNums, 0, nums, startIndex, newNumsIndex);
-    }
 
-    public static void main(String[] args) {
-
-        Solution solution = new Solution();
-        int result = solution.InversePairs(new int[]{1,5,3,2,6});
-
-        System.out.print(result);
+        System.arraycopy(newNumbers, 0, nums, startIndex, newNumbersIndex);
     }
 }

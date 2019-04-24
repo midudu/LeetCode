@@ -1,86 +1,74 @@
-/*
-  Given a singly linked list, determine if it is a palindrome.
+public class Solution {
 
-  Follow up:
-        Could you do it in O(n) time and O(1) space?*/
+    public int InversePairs(int[] array) {
 
+        if (array == null || array.length == 0) {
+            return 0;
+        }
 
-class ListNode {
-    int val;
-    ListNode next;
+        int[] currentResult = new int[1];
 
-    ListNode(int x) {
-        val = x;
-    }
-}
+        mergeSortHelper(array, 0, array.length - 1,
+                currentResult);
 
-
-class Solution {
-
-    public static void main(String[] args) {
-
-        ListNode head = new ListNode(1);
-        head.next = new ListNode(2);
-        head.next.next = new ListNode(3);
-        head.next.next.next = new ListNode(4);
-        //head.next.next.next.next = new ListNode(5);
-
-        boolean result = new Solution().isPalindrome(head);
-
-        System.out.println();
+        return currentResult[0];
     }
 
-    public boolean isPalindrome(ListNode head) {
+    private void mergeSortHelper(
+            int[] nums, int startIndex, int endIndex,
+            int[] currentResult) {
 
-        if (head == null || head.next == null) {
-            return true;
+        if (startIndex < endIndex) {
+
+            int middleIndex = startIndex + (endIndex - startIndex) / 2;
+
+            mergeSortHelper(nums, startIndex, middleIndex,
+                    currentResult);
+
+            mergeSortHelper(nums, middleIndex + 1, endIndex,
+                    currentResult);
+
+            mergeProcess(nums, startIndex, middleIndex, endIndex, currentResult);
         }
+    }
 
-        ListNode slow = head, fast = head.next;
-        ListNode lastNode = null, nextNode = slow.next;
+    private void mergeProcess(
+            int[] nums, int startIndex, int middleIndex, int endIndex,
+            int[] currentResult) {
 
-        while (fast != null && fast.next != null) {
+        int leftIndex = startIndex, rightIndex = middleIndex + 1;
+        int newNumbersIndex = 0;
 
-            fast = fast.next.next;
+        int[] newNumbers = new int[endIndex - startIndex + 1];
 
-            nextNode = slow.next;
-            slow.next = lastNode;
+        while (leftIndex <= middleIndex && rightIndex <= endIndex) {
 
-            lastNode = slow;
-            slow = nextNode;
-        }
+            if (nums[leftIndex] <= nums[rightIndex]) {
+                newNumbers[newNumbersIndex] = nums[leftIndex];
+                leftIndex++;
+            } else {
+                newNumbers[newNumbersIndex] = nums[rightIndex];
+                rightIndex++;
 
-        if (fast == null) {
-            slow = slow.next;
-            while (slow != null) {
+                int currentInversePairNumber = middleIndex - leftIndex + 1;
 
-                if (slow.val != lastNode.val) {
-                    return false;
+                if (currentResult[0] >= 1000000007 - currentInversePairNumber) {
+                    currentResult[0] = currentResult[0]
+                            - 1000000007 + currentInversePairNumber;
+                } else {
+                    currentResult[0] += currentInversePairNumber;
                 }
-
-                slow = slow.next;
-                lastNode = lastNode.next;
             }
 
-            return true;
-        } else {
-
-            if (slow.val != slow.next.val) {
-                return false;
-            }
-
-            slow = slow.next.next;
-            while (slow != null) {
-
-                if (slow.val != lastNode.val) {
-                    return false;
-                }
-
-                slow = slow.next;
-                lastNode = lastNode.next;
-            }
-
-            return true;
+            newNumbersIndex++;
         }
+
+        if (leftIndex <= middleIndex) {
+            System.arraycopy(nums, leftIndex,
+                    nums, startIndex + newNumbersIndex,
+                    middleIndex - leftIndex + 1);
+        }
+
+        System.arraycopy(newNumbers, 0, nums, startIndex, newNumbersIndex);
     }
 }
