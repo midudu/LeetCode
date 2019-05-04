@@ -1,72 +1,123 @@
 /*
-  Given a set of distinct positive integers, find the largest subset such that
-every pair (Si, Sj) of elements in this subset satisfies:
+  Given a binary tree, check whether it is a mirror of itself (ie, symmetric
+around its center).
 
-  Si % Sj = 0 or Sj % Si = 0.
+  For example, this binary tree [1,2,2,3,4,4,3] is symmetric:
 
-  If there are multiple solutions, return any subset is fine.
+        1
+        / \
+        2   2
+        / \ / \
+        3  4 4  3
 
-Example 1:
+  But the following [1,2,2,null,3,null,3] is not:
+        1
+        / \
+        2   2
+        \   \
+        3    3
 
-        Input: [1,2,3]
-        Output: [1,2] (of course, [1,3] will also be ok)
-
-Example 2:
-
-        Input: [1,2,4,8]
-        Output: [1,2,4,8]
+Note:
+  Bonus points if you could solve it both recursively and iteratively.
 */
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
+class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
+
+    TreeNode(int x) {
+        val = x;
+    }
+}
+
+// Method 1: Recursive method
+/*
 class Solution {
 
-    public List<Integer> largestDivisibleSubset(int[] nums) {
+    public boolean isSymmetric(TreeNode root) {
 
-        List<Integer> result = new ArrayList<>();
-        if (nums == null || nums.length == 0) {
-            return result;
+        if (root == null) {
+            return true;
         }
 
-        Arrays.sort(nums);
+        return isSymmetricHelper(root.left, root.right);
+    }
 
-        int n = nums.length, maxLength = 0, maxLengthIndex = 0;
+    private boolean isSymmetricHelper(TreeNode left, TreeNode right) {
 
-        int[] dp = new int[n];
-        int[] pre = new int[n];
+        if (left == null || right == null) {
+            return left == right;
+        }
 
-        for (int i = 0; i < n; i++) {
+        if (left.val != right.val) {
+            return false;
+        }
 
-            dp[i] = 1;
-            pre[i] = -1;
+        return isSymmetricHelper(left.left, right.right)
+                && isSymmetricHelper(left.right,right.left);
+    }
+}*/
 
-            for (int j = 0; j < i; j++) {
+// Method 2: Non-recursive method
+class Solution {
 
-                if (nums[i] % nums[j] == 0) {
+    public boolean isSymmetric(TreeNode root) {
 
-                    // dp[i] = max(dp[i], dp[j] + 1)
-                    if (dp[j] + 1 > dp[i]) {
+        if (root == null) {
+            return true;
+        }
 
-                        dp[i] = dp[j] + 1;
-                        pre[i] = j;
-                    }
+        if (root.left == null || root.right == null) {
+            return (root.left == root.right);
+        }
+
+        Stack<TreeNode> stack = new Stack<>();
+        stack.push(root.left);
+        stack.push(root.right);
+
+        while (!stack.empty()) {
+
+            if ((stack.size() & 1) != 0) {
+                return false;
+            }
+
+            TreeNode right = stack.pop();
+            TreeNode left = stack.pop();
+
+            if (right.val != left.val) {
+                return false;
+            }
+
+            if (left.left != null) {
+
+                if (right.right == null) {
+                    return false;
                 }
+
+                stack.push(left.left);
+                stack.push(right.right);
+
+            } else if (right.right != null) {
+                return false;
             }
 
-            if (dp[i] > maxLength) {
-                maxLength = dp[i];
-                maxLengthIndex = i;
+            if (left.right != null) {
+
+                if (right.left == null) {
+                    return false;
+                }
+
+                stack.push(left.right);
+                stack.push(right.left);
+
+            } else if (right.left != null) {
+                return false;
             }
         }
 
-        while (maxLengthIndex >= 0) {
-
-            result.add(nums[maxLengthIndex]);
-            maxLengthIndex = pre[maxLengthIndex];
-        }
-
-        return result;
+        return true;
     }
 }
