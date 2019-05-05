@@ -32,8 +32,8 @@
       <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="60" column="5" lean-forward="true" selection-end-line="122" selection-end-column="1" />
+            <state relative-caret-position="295">
+              <caret line="56" column="9" lean-forward="true" selection-end-line="122" selection-end-column="1" />
               <folding>
                 <element signature="e#0#1797#0" expanded="true" />
                 <element signature="e#1313#1314#0" expanded="true" />
@@ -584,12 +584,12 @@
       <workItem from="1556442649352" duration="6000" />
       <workItem from="1556621677082" duration="1341000" />
       <workItem from="1556698948751" duration="2218000" />
-      <workItem from="1556969629864" duration="1530000" />
+      <workItem from="1556969629864" duration="1605000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="644253000" />
+    <option name="totallyTimeSpent" value="644328000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1174,8 +1174,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="60" column="5" lean-forward="true" selection-end-line="122" selection-end-column="1" />
+        <state relative-caret-position="295">
+          <caret line="56" column="9" lean-forward="true" selection-end-line="122" selection-end-column="1" />
           <folding>
             <element signature="e#0#1797#0" expanded="true" />
             <element signature="e#1313#1314#0" expanded="true" />
