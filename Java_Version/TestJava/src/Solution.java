@@ -1,29 +1,32 @@
 /*
-  Given a binary tree, check whether it is a mirror of itself (ie, symmetric
-around its center).
+  Given a binary tree, return the level order traversal of its nodes' values.
+(ie, from left to right, level by level).
 
-  For example, this binary tree [1,2,2,3,4,4,3] is symmetric:
+For example:
+  Given binary tree [3,9,20,null,null,15,7],
 
-        1
-        / \
-        2   2
-        / \ / \
-        3  4 4  3
+    3
+   / \
+  9  20
+    /  \
+   15   7
 
-  But the following [1,2,2,null,3,null,3] is not:
-        1
-        / \
-        2   2
-        \   \
-        3    3
+  return its level order traversal as:
 
-Note:
-  Bonus points if you could solve it both recursively and iteratively.
+[
+  [3],
+  [9,20],
+  [15,7]
+]
 */
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
 
 class TreeNode {
+
     int val;
     TreeNode left;
     TreeNode right;
@@ -33,91 +36,43 @@ class TreeNode {
     }
 }
 
-// Method 1: Recursive method
-/*
+
 class Solution {
 
-    public boolean isSymmetric(TreeNode root) {
+    public List<List<Integer>> levelOrder(TreeNode root) {
+
+        List<List<Integer>> result = new ArrayList<>();
 
         if (root == null) {
-            return true;
+            return result;
         }
 
-        return isSymmetricHelper(root.left, root.right);
-    }
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
 
-    private boolean isSymmetricHelper(TreeNode left, TreeNode right) {
+        while (!queue.isEmpty()) {
 
-        if (left == null || right == null) {
-            return left == right;
-        }
+            int currentSize = queue.size();
 
-        if (left.val != right.val) {
-            return false;
-        }
+            List<Integer> currentList = new ArrayList<>(currentSize);
 
-        return isSymmetricHelper(left.left, right.right)
-                && isSymmetricHelper(left.right,right.left);
-    }
-}*/
+            for (int i = 0; i < currentSize; i++) {
 
-// Method 2: Non-recursive method
-class Solution {
+                TreeNode currentNode = queue.poll();
 
-    public boolean isSymmetric(TreeNode root) {
-
-        if (root == null) {
-            return true;
-        }
-
-        if (root.left == null || root.right == null) {
-            return (root.left == root.right);
-        }
-
-        Stack<TreeNode> stack = new Stack<>();
-        stack.push(root.left);
-        stack.push(root.right);
-
-        while (!stack.empty()) {
-
-            if ((stack.size() & 1) != 0) {
-                return false;
-            }
-
-            TreeNode right = stack.pop();
-            TreeNode left = stack.pop();
-
-            if (right.val != left.val) {
-                return false;
-            }
-
-            if (left.left != null) {
-
-                if (right.right == null) {
-                    return false;
+                if (currentNode.left != null) {
+                    queue.offer(currentNode.left);
+                }
+                if (currentNode.right != null) {
+                    queue.offer(currentNode.right);
                 }
 
-                stack.push(left.left);
-                stack.push(right.right);
-
-            } else if (right.right != null) {
-                return false;
+                currentList.add(currentNode.val);
             }
 
-            if (left.right != null) {
-
-                if (right.left == null) {
-                    return false;
-                }
-
-                stack.push(left.right);
-                stack.push(right.left);
-
-            } else if (right.left != null) {
-                return false;
-            }
+            result.add(currentList);
         }
 
-        return true;
+        return result;
     }
 }
