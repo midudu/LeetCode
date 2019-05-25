@@ -1,112 +1,80 @@
 /*
-  Given a non-empty array of numbers, a0, a1, a2, … , an-1, where 0 ≤ ai < 2^31.
-
-  Find the maximum result of ai XOR aj, where 0 ≤ i, j < n.
-
-  Could you do this in O(n) runtime?
+  Given an unsorted array of integers, find the length of longest increasing
+subsequence.
 
 Example:
 
-  Input: [3, 10, 5, 25, 2, 8]
+    Input: [10,9,2,5,3,7,101,18]
+    Output: 4
 
-  Output: 28
+Explanation:
 
-  Explanation: The maximum result is 5 ^ 25 = 28.
+    The longest increasing subsequence is [2,3,7,101], therefore the length is 4.
+
+Note:
+
+    There may be more than one LIS combination, it is only necessary for you to
+return the length. Your algorithm should run in O(n2) complexity.
+
+Follow up:
+    Could you improve it to O(n log n) time complexity?
 */
-
-class TrieNode {
-
-    TrieNode leftNode, rightNode;
-    int value;
-}
-
-class TrieTree {
-
-    private TrieNode root = new TrieNode();
-
-    public void insertNum(int num) {
-
-        TrieNode currentNode = root;
-
-        for (int i = 30; i >= 0; i--) {
-
-            int currentBit = (num & (1 << i));
-
-            if (currentBit != 0) {
-                if (currentNode.leftNode == null) {
-                    currentNode.leftNode = new TrieNode();
-                }
-                currentNode = currentNode.leftNode;
-            } else {
-                if (currentNode.rightNode == null) {
-                    currentNode.rightNode = new TrieNode();
-                }
-                currentNode = currentNode.rightNode;
-            }
-        }
-
-        currentNode.value = num;
-    }
-
-    public int findAnswer(int num) {
-
-        TrieNode currentNode = this.root;
-
-        for (int i = 30; i >= 0; i--) {
-
-            int currentBit = (num & (1 << i));
-
-            if (currentBit != 0) {
-                if (currentNode.rightNode != null) {
-                    currentNode = currentNode.rightNode;
-                } else {
-                    currentNode = currentNode.leftNode;
-                }
-            } else {
-                if (currentNode.leftNode != null) {
-                    currentNode = currentNode.leftNode;
-                } else {
-                    currentNode = currentNode.rightNode;
-                }
-            }
-        }
-
-        return (num ^ currentNode.value);
-    }
-}
 
 class Solution {
 
     public static void main(String[] args) {
 
-        int[] nums = new int[]{3, 10, 5, 25, 2, 8};
+        int[] data = {10,9,2,5,3,7,101,18};
 
-        System.out.println(new Solution().findMaximumXOR(nums));
+        int result = new Solution().lengthOfLIS(data);
     }
 
-    public int findMaximumXOR(int[] nums) {
+    private int findFirstLessOrEqualIndex(
+            int[] nums, int endIndex, int theInsertedNum) {
 
-        if (nums == null || nums.length < 1) {
-            throw new RuntimeException("input parameters are illegal");
-        }
+        int startIndex = 0;
 
-        TrieTree trieTree = new TrieTree();
+        while (startIndex < endIndex) {
 
-        for (int num : nums) {
-            trieTree.insertNum(num);
-        }
+            int middleIndex = startIndex + (endIndex - startIndex) / 2;
 
-        int result = Integer.MIN_VALUE;
-
-        for (int num : nums) {
-
-            int currentResult = trieTree.findAnswer(num);
-
-            if (currentResult > result) {
-                result = currentResult;
+            if (nums[middleIndex] == theInsertedNum) {
+                return middleIndex;
+            } else if (nums[middleIndex] < theInsertedNum) {
+                startIndex = middleIndex + 1;
+            } else {
+                endIndex = middleIndex;
             }
         }
 
-        return result;
+        return startIndex;
+    }
+
+    public int lengthOfLIS(int[] nums) {
+
+        if (nums == null || nums.length == 0) {
+            return 0;
+        }
+
+        int[] minLastNumOfCurrentLength = new int[nums.length + 1];
+        minLastNumOfCurrentLength[1] = nums[0];
+        int currentIndex = 1;
+
+        for (int i = 1; i < nums.length; i++) {
+
+            if (nums[i] > minLastNumOfCurrentLength[currentIndex]) {
+                currentIndex++;
+                minLastNumOfCurrentLength[currentIndex] = nums[i];
+            } else if (nums[i] == minLastNumOfCurrentLength[currentIndex]) {
+                continue;
+            } else {
+                int index = findFirstLessOrEqualIndex(
+                        minLastNumOfCurrentLength, currentIndex, nums[i]);
+
+                minLastNumOfCurrentLength[index] = nums[i];
+            }
+        }
+
+        return currentIndex;
     }
 }

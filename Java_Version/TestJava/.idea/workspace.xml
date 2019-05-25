@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ffbcff5e-ced2-4ebe-a713-4c74a7d3e487" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Solution.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -32,10 +31,11 @@
       <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="105" column="34" lean-forward="true" selection-end-line="111" selection-end-column="1" />
+            <state relative-caret-position="136">
+              <caret line="72" column="16" selection-start-line="72" selection-start-column="16" selection-end-line="72" selection-end-column="16" />
               <folding>
-                <element signature="e#0#326#0" expanded="true" />
+                <element signature="e#0#1306#0" expanded="true" />
+                <element signature="method#findFirstLessOrEqualIndex#0;class#Solution#0" />
               </folding>
             </state>
           </provider>
@@ -585,12 +585,12 @@
       <workItem from="1556969629864" duration="1605000" />
       <workItem from="1558363283207" duration="454000" />
       <workItem from="1558786187158" duration="152000" />
-      <workItem from="1558786388590" duration="1003000" />
+      <workItem from="1558786388590" duration="2557000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="645937000" />
+    <option name="totallyTimeSpent" value="647491000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -626,7 +626,7 @@
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.46849865" visible="true" weight="0.23888889" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.46849865" visible="true" weight="0.20925926" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.2392886" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -708,21 +708,15 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Solution.java</url>
-          <line>98</line>
+          <line>77</line>
           <properties />
-          <option name="timeStamp" value="462" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Solution.java</url>
-          <line>109</line>
-          <properties />
-          <option name="timeStamp" value="463" />
+          <option name="timeStamp" value="464" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="464" />
+      <option name="time" value="465" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -1187,10 +1181,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="105" column="34" lean-forward="true" selection-end-line="111" selection-end-column="1" />
+        <state relative-caret-position="136">
+          <caret line="72" column="16" selection-start-line="72" selection-start-column="16" selection-end-line="72" selection-end-column="16" />
           <folding>
-            <element signature="e#0#326#0" expanded="true" />
+            <element signature="e#0#1306#0" expanded="true" />
+            <element signature="method#findFirstLessOrEqualIndex#0;class#Solution#0" />
           </folding>
         </state>
       </provider>
