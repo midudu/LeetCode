@@ -1,120 +1,79 @@
 /*
-  Given a non-empty array containing only positive integers, find if the array
-can be partitioned into two subsets such that the sum of elements in both
-subsets is equal.
+  Given preorder and inorder traversal of a tree, construct the binary tree.
 
 Note:
+  You may assume that duplicates do not exist in the tree.
 
-  Each of the array element will not exceed 100.
-  The array size will not exceed 200.
+For example, given
 
-Example 1:
+  preorder = [3,9,20,15,7]
+  inorder = [9,3,15,20,7]
 
-        Input: [1, 5, 11, 5]
+Return the following binary tree:
 
-        Output: true
-
-        Explanation: The array can be partitioned as [1, 5, 5] and [11].
-
-Example 2:
-
-        Input: [1, 2, 3, 5]
-
-        Output: false
-
-        Explanation: The array cannot be partitioned into equal sum subsets.
+    3
+   / \
+  9  20
+    /  \
+   15   7
 */
 
-import java.util.Arrays;
 
-// Method 1: Packing-Solution
-/*class Solution {
+import java.util.HashMap;
+import java.util.Map;
 
-    public static void main(String[] args) {
+class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
 
-        int[] nums = {1, 5, 11, 5};
-
-        boolean result = new Solution().canPartition(nums);
-
-        System.out.println(result);
+    TreeNode(int x) {
+        val = x;
     }
+}
 
-    public boolean canPartition(int[] nums) {
 
-        if (nums == null || nums.length == 0) {
-            return true;
-        }
-
-        int sum = 0;
-        for (int i = 0; i < nums.length; i++) {
-            sum += nums[i];
-        }
-
-        if ((sum & 1) != 0) {
-            return false;
-        }
-
-        sum /= 2;
-        boolean[][] canFirstNElementsMakeM = new boolean[sum + 1][nums.length + 1];
-
-        for (int col = 0; col < canFirstNElementsMakeM[0].length; col++) {
-            canFirstNElementsMakeM[0][col] = true;
-        }
-
-        for (int currentSum = 1; currentSum < canFirstNElementsMakeM.length;
-             currentSum++) {
-
-            for (int col = 1; col < canFirstNElementsMakeM[0].length; col++) {
-
-                if (nums[col - 1] > currentSum) {
-                    canFirstNElementsMakeM[currentSum][col]
-                            = canFirstNElementsMakeM[currentSum][col - 1];
-                } else {
-                    canFirstNElementsMakeM[currentSum][col]
-                            = canFirstNElementsMakeM[currentSum][col - 1]
-                            | canFirstNElementsMakeM[currentSum - nums[col - 1]][col - 1];
-                }
-
-                if (currentSum == sum && canFirstNElementsMakeM[currentSum][col]) {
-                    return true;
-                }
-            }
-        }
-
-        return false;
-    }
-}*/
-
-// Method 2: DFS
 class Solution {
-    public boolean canPartition(int[] nums) {
-        int sum = 0;
-        for (int num : nums) {
-            sum += num;
+
+    private Map<Integer, Integer> map = new HashMap<>();
+
+    public TreeNode buildTree(int[] preorder, int[] inorder) {
+
+        if (preorder == null || inorder == null) {
+            return null;
         }
-        if (sum % 2 == 1) {
-            return false;
+
+        if (preorder.length != inorder.length) {
+            throw new RuntimeException("wrong input");
         }
-        int target = sum / 2;
-        Arrays.sort(nums);
-        return dfs(nums, 0, target);
+
+        for (int i = 0; i < inorder.length; i++) {
+            map.put(inorder[i], i);
+        }
+
+        return buildTreeHelper(preorder, 0, preorder.length - 1,
+                0);
     }
 
-    private boolean dfs(int[] nums, int index, int target) {
-        if (target == 0) {
-            return true;
+    private TreeNode buildTreeHelper(
+            int[] preOrder, int preStartIndex, int preEndIndex,
+            int inStartIndex) {
+
+        if (preStartIndex > preEndIndex) {
+            return null;
+        } else if (preStartIndex == preEndIndex) {
+            return new TreeNode(preOrder[preStartIndex]);
         }
-        for (int i = index; i < nums.length; i++) {
-            if (i > index && nums[i] == nums[i - 1]) {
-                continue;
-            }
-            if (nums[i] > target) {
-                break;
-            }
-            if (dfs(nums, i + 1, target - nums[i])) {
-                return true;
-            }
-        }
-        return false;
+
+        TreeNode root = new TreeNode(preOrder[preStartIndex]);
+
+        int rootIndexInOrder = this.map.get(root.val);
+        int length = rootIndexInOrder - inStartIndex;
+
+        root.left = buildTreeHelper(preOrder, preStartIndex + 1, preStartIndex + length, inStartIndex);
+        root.right = buildTreeHelper(preOrder, preStartIndex + length + 1, preEndIndex,
+                rootIndexInOrder + 1);
+
+        return root;
     }
 }
