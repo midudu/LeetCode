@@ -1,84 +1,92 @@
-/*
-  Given a non-empty array of non-negative integers nums, the degree of this
-array is defined as the maximum frequency of any one of its elements.
+/*Author: Bochen (mddboc@foxmail.com)
+Last Modified: Tue Apr 10 22:28:45 CST 2018*/
 
-  Your task is to find the smallest possible length of a (contiguous) subarray
-of nums, that has the same degree as nums.
+/*Given a non-empty array of non-negative integers nums, the degree of this array is defined as the maximum frequency of any one of its elements.
 
-Example 1:
+        Your task is to find the smallest possible length of a (contiguous) subarray of nums, that has the same degree as nums.
 
+        Example 1:
         Input: [1, 2, 2, 3, 1]
         Output: 2
-
         Explanation:
-          The input array has a degree of 2 because both elements 1 and 2 appear twice.
+        The input array has a degree of 2 because both elements 1 and 2 appear twice.
         Of the subarrays that have the same degree:
         [1, 2, 2, 3, 1], [1, 2, 2, 3], [2, 2, 3, 1], [1, 2, 2], [2, 2, 3], [2, 2]
         The shortest length is 2. So return 2.
-
-Example 2:
-
+        Example 2:
         Input: [1,2,2,3,1,4,2]
         Output: 6
-
-Note:
+        Note:
 
         nums.length will be between 1 and 50,000.
-        nums[i] will be an integer between 0 and 49,999.
-*/
+        nums[i] will be an integer between 0 and 49,999.*/
 
+import java.util.Arrays;
+import java.lang.Math;
+import java.lang.System;
 import java.util.HashMap;
-import java.util.HashSet;
+import java.lang.Integer;
+import java.util.Iterator;
+import java.util.Map;
 
-class Node {
 
-    int startIndex;
-    int endIndex;
-    int frequency;
+public class Main {
 
-    Node(int startIndex, int endIndex, int frequency) {
+    public static void main(String[] args) {
+        int[] nums = {2, 2};
 
-        this.startIndex = startIndex;
-        this.endIndex = endIndex;
-        this.frequency = frequency;
+        Solution solution = new Solution();
+        int receive = solution.findShortestSubArray(nums);
+
+
+        System.out.println("haha");
     }
+
 }
 
-class Solution {
 
+class Solution {
     public int findShortestSubArray(int[] nums) {
 
-        if (nums == null || nums.length == 0) {
-            return 0;
-        }
+        HashMap<Integer, int[]> hashMap = new HashMap<>();
 
-        HashMap<Integer, Node> map = new HashMap<>();
+        int numsLength = nums.length;
+        Integer lastCount = 0;
 
-        for (int i = 0; i < nums.length; i++) {
+        for (int i = 0; i < numsLength; i++) {
 
-            if (map.containsKey(nums[i])) {
-                map.put(nums[i], new Node(map.get(nums[i]).startIndex, i,
-                        map.get(nums[i]).frequency + 1));
+            if (hashMap.containsKey(nums[i])){
+                int[] currentNumber = {hashMap.get(nums[i])[0] + 1, hashMap.get(nums[i])[1], i};
+                hashMap.replace(nums[i], currentNumber);
             } else {
-                map.put(nums[i], new Node(i, i, 1));
+                int[] currentNumber = {1, i, i};
+                hashMap.put(nums[i], currentNumber);
             }
+
         }
 
-        int length = Integer.MAX_VALUE;
-        int frequency = Integer.MIN_VALUE;
-
-        for (Node node : map.values()) {
-
-            if (node.frequency > frequency) {
-                length = node.endIndex - node.startIndex;
-                frequency = node.frequency;
-            } else if (node.frequency == frequency) {
-                if (node.endIndex - node.startIndex < length) {
-                    length = node.endIndex - node.startIndex;
+        int maxFrequency = 0;
+        int currentFrequency = 0;
+        int maxNumber = -1;
+        int returnValue = numsLength;
+        int currentReturnValue = 0;
+        int currentNumber = 0;
+        Iterator iterator = hashMap.entrySet().iterator();
+        while (iterator.hasNext()){
+            Map.Entry entry = (Map.Entry)iterator.next();
+            currentFrequency = ((int [])entry.getValue())[0];
+            if (currentFrequency>maxFrequency){
+                maxFrequency = currentFrequency;
+                maxNumber = (Integer) entry.getKey();
+                returnValue = hashMap.get(maxNumber)[2] - hashMap.get(maxNumber)[1] + 1;
+            } else if ( currentFrequency == maxFrequency ){
+                currentNumber = (Integer) entry.getKey();
+                currentReturnValue = hashMap.get(currentNumber)[2] - hashMap.get(currentNumber)[1] + 1;
+                if (currentReturnValue<returnValue){
+                    returnValue = currentReturnValue;
                 }
             }
         }
-
-        return length + 1;
+        return returnValue;
     }
 }
