@@ -1,59 +1,36 @@
-/*Author: Bochen (mddboc@foxmail.com)
-Last Modified: Tue Apr 10 22:28:45 CST 2018*/
+/*
+  Given two binary trees and imagine that when you put one of them to cover the
+other, some nodes of the two trees are overlapped while the others are not.
 
-/*Given two binary trees and imagine that when you put one of them to cover the other, some nodes of the two trees are overlapped while the others are not.
+  You need to merge them into a new binary tree. The merge rule is that if two
+nodes overlap, then sum node values up as the new value of the merged node.
+Otherwise, the NOT null node will be used as the node of new tree.
 
-        You need to merge them into a new binary tree. The merge rule is that if two nodes overlap, then sum node values up as the new value of the merged node. Otherwise, the NOT null node will be used as the node of new tree.
+Example 1:
 
-        Example 1:
         Input:
+
         Tree 1                     Tree 2
-        1                         2
-        / \                       / \
-        3   2                     1   3
-        /                           \   \
-        5                             4   7
+
+             1                         2
+            / \                       / \
+           3   2                     1   3
+          /                           \   \
+         5                             4   7
+
         Output:
+
         Merged tree:
-        3
-        / \
-        4   5
-        / \   \
+
+            3
+           / \
+          4   5
+         / \   \
         5   4   7
-        Note: The merging process must start from the root nodes of both trees.*/
 
-import sun.reflect.generics.tree.Tree;
-
-import java.util.*;
-import java.lang.Math;
-import java.lang.System;
-import java.lang.Integer;
-
-
-public class Main {
-
-    public static void main(String[] args) {
-        int[] nums = {5, 5, 3, 5, 1, -5, 1, -2};
-
-        Solution solution = new Solution();
-        List<List<Integer>> receive = solution.fourSum(nums, 4);
-
-
-        System.out.println("haha");
-    }
-
-}
-
-
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
-    }
-}
-
+Note:
+  The merging process must start from the root nodes of both trees.
+*/
 
 class TreeNode {
     int val;
@@ -67,35 +44,39 @@ class TreeNode {
 
 class Solution {
 
-    public TreeNode mergeTrees(TreeNode t1, TreeNode t2) {
+    public static void main(String[] args) {
 
-        if (t1 == null && t2 == null) {
-            return null;
-        }
+        TreeNode left = new TreeNode(1);
+        left.left = new TreeNode(3);
+        left.right = new TreeNode(2);
+        left.left.left = new TreeNode(5);
 
-        TreeNode resultTree = null;
+        TreeNode right = new TreeNode(2);
+        right.left = new TreeNode(1);
+        right.right = new TreeNode(3);
+        right.left.right = new TreeNode(4);
+        right.right.right = new TreeNode(7);
 
-        if (t1 == null) {
+        TreeNode result = new Solution().mergeTrees(left, right);
 
-            resultTree = new TreeNode(t2.val);
-            resultTree.left = this.mergeTrees(null, t2.left);
-            resultTree.right = this.mergeTrees(null, t2.right);
-
-        } else if (t2 == null) {
-
-            resultTree = new TreeNode(t1.val);
-            resultTree.left = this.mergeTrees(t1.left, null);
-            resultTree.right = this.mergeTrees(t1.right, null);
-
-        } else {
-
-            resultTree = new TreeNode(t1.val + t2.val);
-            resultTree.left = this.mergeTrees(t1.left, t2.left);
-            resultTree.right = this.mergeTrees(t1.right, t2.right);
-        }
-
-        return resultTree;
+        System.out.println();
     }
 
+    public TreeNode mergeTrees(TreeNode t1, TreeNode t2) {
+
+        if (t1 == null || t2 == null) {
+            if (t1 == null && t2 == null) {
+                return null;
+            } else {
+                return (t1 == null ? t2 : t1);
+            }
+        }
+
+        TreeNode root = new TreeNode(t1.val + t2.val);
+        root.left = mergeTrees(t1.left, t2.left);
+        root.right = mergeTrees(t1.right, t2.right);
+
+        return root;
+    }
 
 }
