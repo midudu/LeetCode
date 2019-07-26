@@ -32,7 +32,7 @@ class Solution {
 
     public static void main(String[] args) {
 
-        int[] nums = {1, 2, 3, 5};
+        int[] nums = {1, 5, 11, 5};
 
         System.out.println(new Solution().canPartition(nums));
     }
@@ -91,25 +91,14 @@ class Solution {
     // 0-1 packing method
     private boolean canPartitionHelperPackingProblem(int[] nums, int target) {
 
-        boolean[][] canMakeSumWithFirstNElements = new boolean[target + 1][nums.length + 1];
-
-        for (int i = 0; i < canMakeSumWithFirstNElements[0].length; i++) {
-            canMakeSumWithFirstNElements[0][i] = true;
-        }
-
-        for (int sum = 1; sum <= target; sum++) {
-            for (int firstNElements = 1; firstNElements <= nums.length; firstNElements++) {
-
-                canMakeSumWithFirstNElements[sum][firstNElements]
-                        = canMakeSumWithFirstNElements[sum][firstNElements - 1];
-
-                if (nums[firstNElements - 1] <= sum) {
-                    canMakeSumWithFirstNElements[sum][firstNElements] |=
-                            canMakeSumWithFirstNElements[sum - nums[firstNElements - 1]][firstNElements - 1];
-                }
+        boolean[] result = new boolean[target + 1];
+        result[0] = true;
+        for (int i = 1; i <= nums.length; i++) {
+            for (int j = target; j >= nums[i - 1]; j--) {
+                result[j] |= result[j - nums[i - 1]];
             }
         }
 
-        return canMakeSumWithFirstNElements[target][nums.length];
+        return result[target];
     }
 }
