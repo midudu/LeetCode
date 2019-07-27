@@ -27,16 +27,14 @@ Example 2:
 
 import java.util.Arrays;
 
-// Method 1: Packing-Solution
-/*class Solution {
+
+class Solution {
 
     public static void main(String[] args) {
 
         int[] nums = {1, 5, 11, 5};
 
-        boolean result = new Solution().canPartition(nums);
-
-        System.out.println(result);
+        System.out.println(new Solution().canPartition(nums));
     }
 
     public boolean canPartition(int[] nums) {
@@ -45,76 +43,62 @@ import java.util.Arrays;
             return true;
         }
 
-        int sum = 0;
-        for (int i = 0; i < nums.length; i++) {
-            sum += nums[i];
-        }
-
+        int sum = getSum(nums);
         if ((sum & 1) != 0) {
             return false;
         }
 
-        sum /= 2;
-        boolean[][] canFirstNElementsMakeM = new boolean[sum + 1][nums.length + 1];
-
-        for (int col = 0; col < canFirstNElementsMakeM[0].length; col++) {
-            canFirstNElementsMakeM[0][col] = true;
-        }
-
-        for (int currentSum = 1; currentSum < canFirstNElementsMakeM.length;
-             currentSum++) {
-
-            for (int col = 1; col < canFirstNElementsMakeM[0].length; col++) {
-
-                if (nums[col - 1] > currentSum) {
-                    canFirstNElementsMakeM[currentSum][col]
-                            = canFirstNElementsMakeM[currentSum][col - 1];
-                } else {
-                    canFirstNElementsMakeM[currentSum][col]
-                            = canFirstNElementsMakeM[currentSum][col - 1]
-                            | canFirstNElementsMakeM[currentSum - nums[col - 1]][col - 1];
-                }
-
-                if (currentSum == sum && canFirstNElementsMakeM[currentSum][col]) {
-                    return true;
-                }
-            }
-        }
-
-        return false;
-    }
-}*/
-
-// Method 2: DFS
-class Solution {
-    public boolean canPartition(int[] nums) {
-        int sum = 0;
-        for (int num : nums) {
-            sum += num;
-        }
-        if (sum % 2 == 1) {
-            return false;
-        }
-        int target = sum / 2;
         Arrays.sort(nums);
-        return dfs(nums, 0, target);
+
+        // return canPartitionHelperDFS(nums, 0, sum / 2);
+        return canPartitionHelperPackingProblem(nums, sum / 2);
     }
 
-    private boolean dfs(int[] nums, int index, int target) {
+    private int getSum(int[] nums) {
+
+        int result = 0;
+        for (int num : nums) {
+            result += num;
+        }
+
+        return result;
+    }
+
+    // dfs method
+    private boolean canPartitionHelperDFS(int[] nums, int startIndex, int target) {
+
         if (target == 0) {
             return true;
         }
-        for (int i = index; i < nums.length; i++) {
-            if (i > index && nums[i] == nums[i - 1]) {
+        for (int i = startIndex; i < nums.length; i++) {
+
+            if (i > startIndex && nums[i] == nums[i - 1]) {
                 continue;
             }
             if (nums[i] > target) {
                 break;
             }
-            if (dfs(nums, i + 1, target - nums[i])) {
+
+            if (canPartitionHelperDFS(nums, i + 1,
+                    target - nums[i])) {
                 return true;
             }
         }
+
         return false;
+    }
+
+    // 0-1 packing method
+    private boolean canPartitionHelperPackingProblem(int[] nums, int target) {
+
+        boolean[] result = new boolean[target + 1];
+        result[0] = true;
+        for (int i = 1; i <= nums.length; i++) {
+            for (int j = target; j >= nums[i - 1]; j--) {  //要从后往前
+                result[j] |= result[j - nums[i - 1]];
+            }
+        }
+
+        return result[target];
     }
 }
