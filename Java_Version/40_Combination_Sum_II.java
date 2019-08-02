@@ -1,18 +1,18 @@
 /*
-Given a collection of candidate numbers (candidates) and a target number (target),
-find all unique combinations in candidates where the candidate numbers sums to
-target.
+  Given a collection of candidate numbers (candidates) and a target number
+(target), find all unique combinations in candidates where the candidate
+numbers sums to target.
 
-Each number in candidates may only be used once in the combination.
+  Each number in candidates may only be used once in the combination.
 
 Note:
+  1. All numbers (including target) will be positive integers.
+  2. The solution set must not contain duplicate combinations.
 
-All numbers (including target) will be positive integers.
-The solution set must not contain duplicate combinations.
 
 Example 1:
 
-Input: candidates = [10,1,2,7,6,1,5], target = 8,
+  Input: candidates = [10,1,2,7,6,1,5], target = 8,
 
         A solution set is:
         [
@@ -39,11 +39,20 @@ import java.util.List;
 
 class Solution {
 
+    public static void main(String[] args) {
+
+        int[] candidates = {2, 5, 2, 1, 2};
+        int target = 5;
+
+        List<List<Integer>> result = new Solution().combinationSum2(candidates, target);
+
+        System.out.println(result.toString());
+    }
+
     public List<List<Integer>> combinationSum2(int[] candidates, int target) {
 
         if (candidates == null || candidates.length == 0
                 || target <= 0) {
-
             return new ArrayList<>();
         }
 
@@ -63,8 +72,11 @@ class Solution {
             List<Integer> existingCandidates, List<List<Integer>> result) {
 
         if (target == 0) {
-
             result.add(new ArrayList<>(existingCandidates));
+            return;
+        }
+
+        if (startIndex == candidates.length) {
             return;
         }
 

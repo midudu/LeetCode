@@ -1,9 +1,11 @@
 /*
-Given two integers n and k, return all possible combinations of k numbers out of 1 ... n.
+  Given two integers n and k, return all possible combinations of k numbers out
+of 1 ... n.
 
-        Example:
+Example:
 
         Input: n = 4, k = 2
+
         Output:
         [
         [2,4],
@@ -12,40 +14,48 @@ Given two integers n and k, return all possible combinations of k numbers out of
         [1,2],
         [1,3],
         [1,4],
-        ]*/
+        ]
+*/
 
 import java.util.ArrayList;
 import java.util.List;
 
 class Solution {
 
-    public List<List<Integer>> combine(int n, int k) {
+    public static void main(String[] args) {
 
-        List<List<Integer>> answer = new ArrayList<>();
-
-        combine(answer, new ArrayList<>(), 1, n, k);
-
-        return answer;
+        List<List<Integer>> result = new Solution().combine(4,2);
+        System.out.println(result.toString());
     }
 
-    private void combine(List<List<Integer>> answer,
-                         List<Integer> arr, int startNum, int n, int k) {
+    public List<List<Integer>> combine(int n, int k) {
 
-        if (arr.size() == k) {
+        if (n < 1 || k < 0 || k > n) {
+            throw new RuntimeException("illegal input");
+        }
 
-            answer.add(new ArrayList<>(arr));
+        List<List<Integer>> result = new ArrayList<>();
 
-        } else {
+        combineHelper(result, new ArrayList<>(), 1, n, k);
 
-            int index = arr.size();
-            int endNum = n - k + index + 1;
+        return result;
+    }
 
-            for (int i = startNum; i <= endNum; i++) {
+    private void combineHelper(
+            List<List<Integer>> result, List<Integer> existingNums,
+            int startNum, int n, int k) {
 
-                arr.add(i);
-                combine(answer, arr, i + 1, n, k);
-                arr.remove(index);
-            }
+        if (existingNums.size() == k) {
+            result.add(new ArrayList<>(existingNums));
+            return;
+        }
+
+        int endNum = n - k + 1 + existingNums.size();
+        for (int i = startNum; i <= endNum; i++) {
+
+            existingNums.add(i);
+            combineHelper(result, existingNums, i + 1, n, k);
+            existingNums.remove(existingNums.size() - 1);
         }
     }
 }

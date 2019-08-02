@@ -1,45 +1,60 @@
 /*
-Given an array with n objects colored red, white or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white and blue.
+  Given an array with n objects colored red, white or blue, sort them in-place
+so that objects of the same color are adjacent, with the colors in the order
+red, white and blue.
 
-        Here, we will use the integers 0, 1, and 2 to represent the color red, white, and blue respectively.
+  Here, we will use the integers 0, 1, and 2 to represent the color red, white,
+and blue respectively.
 
-        Note: You are not suppose to use the library's sort function for this problem.
+Note:
+  You are not suppose to use the library's sort function for this problem.
 
-        Example:
+Example:
 
         Input: [2,0,2,1,1,0]
         Output: [0,0,1,1,2,2]
-        Follow up:
 
-        A rather straight forward solution is a two-pass algorithm using counting sort.
-        First, iterate the array counting number of 0's, 1's, and 2's, then overwrite array with total number of 0's, then 1's and followed by 2's.
-        Could you come up with a one-pass algorithm using only constant space?*/
+Follow up:
+  A rather straight forward solution is a two-pass algorithm using counting
+sort.
+  First, iterate the array counting number of 0's, 1's, and 2's, then overwrite
+array with total number of 0's, then 1's and followed by 2's.
+  Could you come up with a one-pass algorithm using only constant space?
+*/
 
+import java.util.Arrays;
+
+// See "https://en.wikipedia.org/wiki/Dutch_national_flag_problem"
 class Solution {
+
+    public static void main(String[] args) {
+
+        int[] nums = {2,0,2,1,1,0};
+
+        new Solution().sortColors(nums);
+
+        System.out.println(Arrays.toString(nums));
+    }
 
     public void sortColors(int[] nums) {
 
         if (nums == null || nums.length == 0) {
             return;
         }
-		
-		// See "https://en.wikipedia.org/wiki/Dutch_national_flag_problem"
 
-        int topPointer = 0;   // top pointer is at the bottom of the top group
-        int middlePointer = 0;  // middle pointer is at the bottom of the middle group
-        int bottomPointer = nums.length - 1;  // bottom pointer is at the top of the bottom group
+        int zeroPointer = 0, onePointer = 0, twoPointer = nums.length - 1;
 
-        while (middlePointer <= bottomPointer) {
+        while (onePointer <= twoPointer) {
 
-            if (nums[middlePointer] == 1) {
-                middlePointer++;
-            } else if (nums[middlePointer] == 2) {
-                swap(nums, middlePointer, bottomPointer);
-                bottomPointer--;
-            } else if (nums[middlePointer] == 0) {
-                swap(nums, topPointer, middlePointer);
-                topPointer++;
-                middlePointer++;
+            if (nums[onePointer] == 1) {
+                onePointer++;
+            } else if (nums[onePointer] == 2) {
+                swap(nums, onePointer, twoPointer);
+                twoPointer--;
+            } else {
+                swap(nums, zeroPointer, onePointer);
+                zeroPointer++;
+                onePointer++;
             }
         }
     }

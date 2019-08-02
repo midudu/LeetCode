@@ -1,7 +1,7 @@
 /*
-Given a binary tree, return the inorder traversal of its nodes' values.
+  Given a binary tree, return the inorder traversal of its nodes' values.
 
-        Example:
+  Example:
 
         Input: [1,null,2,3]
         1
@@ -11,7 +11,9 @@ Given a binary tree, return the inorder traversal of its nodes' values.
         3
 
         Output: [1,3,2]
-        Follow up: Recursive solution is trivial, could you do it iteratively?*/
+
+  Follow up: Recursive solution is trivial, could you do it iteratively?
+*/
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,23 +32,42 @@ class TreeNode {
 // Method 2: Non-Recursive version
 class Solution {
 
+    public static void main(String[] args) {
+
+        TreeNode root = new TreeNode(1);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(3);
+        root.left.left = new TreeNode(4);
+        root.left.right = new TreeNode(5);
+        root.left.left.left = new TreeNode(6);
+
+        System.out.println(new Solution().inorderTraversal(root).toString());
+    }
+
     public List<Integer> inorderTraversal(TreeNode root) {
 
         List<Integer> result = new ArrayList<>();
+
+        if (root == null) {
+            return result;
+        }
+
         Stack<TreeNode> stack = new Stack<>();
         TreeNode currentNode = root;
 
-        while(currentNode != null || !stack.isEmpty()) {
+        while (!stack.isEmpty() || currentNode != null) {
 
-            if(currentNode != null) {
+            while (currentNode != null) {
                 stack.push(currentNode);
                 currentNode = currentNode.left;
-            } else {
-                currentNode = stack.pop();
-                result.add(currentNode.val);
-                currentNode = currentNode.right;
             }
+
+            TreeNode mostLeftNode = stack.pop();
+            result.add(mostLeftNode.val);
+
+            currentNode = mostLeftNode.right;
         }
+
         return result;
     }
 }
