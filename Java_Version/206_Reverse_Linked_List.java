@@ -1,30 +1,16 @@
-/*Author: Bochen (mddboc@foxmail.com)
-Last Modified: Tue Apr 10 22:28:44 CST 2018*/
+/*
+  Reverse a singly linked list.
 
-/*Reverse a singly linked list.*/
+Example:
 
+        Input: 1->2->3->4->5->NULL
+        Output: 5->4->3->2->1->NULL
 
-import sun.plugin.javascript.navig.LinkArray;
+Follow up:
+  A linked list can be reversed either iteratively or recursively. Could you
+implement both?
+*/
 
-import java.util.*;
-import java.lang.Math;
-import java.lang.System;
-import java.lang.Integer;
-
-
-public class Main {
-
-    public static void main(String[] args) throws ArithmeticException {
-
-        ListNode root = new ListNode(1);
-        root.next = new ListNode(2);
-
-        ListNode result = new Solution().reverseList(root);
-
-        //System.out.println(result);
-    }
-
-}
 
 
 class ListNode {
@@ -37,48 +23,55 @@ class ListNode {
 }
 
 
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(int x) {
-        val = x;
-    }
-}
-
 
 class Solution {
+
+    public static void main(String[] args) {
+
+        ListNode head = new ListNode(1);
+        head.next = new ListNode(2);
+
+        ListNode newHead = new Solution().reverseList(head);
+
+        System.out.println();
+    }
+
     public ListNode reverseList(ListNode head) {
 
-        //Recursive
-        /*if (head == null || head.next == null) {
-            return head;
-        }
+        return reverseListNonRecursively(head);
+        // return reverseListRecursively(head);
+    }
 
-        ListNode node = head.next;
-        ListNode resultNode = reverseList(node);
-        node.next = head;
-        head.next = null;
-
-        return resultNode;*/
-
-        //Non-recursive
+    private ListNode reverseListNonRecursively(ListNode head) {
 
         if (head == null || head.next == null) {
             return head;
         }
 
-        ListNode slowNode = head, fastNode = head.next;
-        while (fastNode != null) {
+        ListNode lastNode = null, currentNode = head;
+        while (currentNode != null) {
+            ListNode nextNode = currentNode.next;
+            currentNode.next = lastNode;
 
-            ListNode tempNode = fastNode.next;
-            fastNode.next = slowNode;
-            slowNode = fastNode;
-            fastNode = tempNode;
+            lastNode = currentNode;
+            currentNode = nextNode;
         }
-        head.next = null;
 
-        return slowNode;
+        return lastNode;
+    }
+
+    private ListNode reverseListRecursively(ListNode head) {
+
+        if (head == null) {
+            return null;
+        } else if (head.next == null) {
+            return head;
+        }
+
+        ListNode nextNode = head.next;
+        head.next = null;
+        ListNode newHead = reverseListRecursively(nextNode);
+        nextNode.next = head;
+        return newHead;
     }
 }
