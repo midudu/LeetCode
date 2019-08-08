@@ -1,8 +1,9 @@
 /*
-Given a set of distinct integers, nums, return all possible subsets (the power
+  Given a set of distinct integers, nums, return all possible subsets (the power
 set).
 
-Note: The solution set must not contain duplicate subsets.
+Note:
+  The solution set must not contain duplicate subsets.
 
 Example:
 
@@ -25,6 +26,14 @@ import java.util.List;
 
 class Solution {
 
+    public static void main(String[] args) {
+
+        int[] nums = {1, 2, 3};
+        List<List<Integer>> result = new Solution().subsets(nums);
+
+        System.out.println();
+    }
+
     public List<List<Integer>> subsets(int[] nums) {
 
         if (nums == null || nums.length == 0) {
@@ -33,7 +42,7 @@ class Solution {
 
         List<List<Integer>> result = new ArrayList<>();
 
-        ArrayList<Integer> currentSet = new ArrayList<>();
+        List<Integer> currentSet = new ArrayList<>();
 
         subsetsHelper(nums, 0, currentSet, result);
 
@@ -41,19 +50,19 @@ class Solution {
     }
 
     private void subsetsHelper(
-            int[] nums, int currentIndex,
-            ArrayList<Integer> existingSet,
+            int[] nums, int startIndex,
+            List<Integer> existingSet,
             List<List<Integer>> result) {
 
-        if (currentIndex == nums.length) {
+        if (startIndex == nums.length) {
             result.add(existingSet);
             return;
         }
 
-        subsetsHelper(nums, currentIndex + 1, existingSet, result);
+        subsetsHelper(nums, startIndex + 1, existingSet, result);
 
-        ArrayList<Integer> existingSetCopy = new ArrayList<>(existingSet);
-        existingSetCopy.add(nums[currentIndex]);
-        subsetsHelper(nums, currentIndex + 1, existingSetCopy, result);
+        List<Integer> existingSetCopy = new ArrayList<>(existingSet);
+        existingSetCopy.add(nums[startIndex]);
+        subsetsHelper(nums, startIndex + 1, existingSetCopy, result);
     }
 }
