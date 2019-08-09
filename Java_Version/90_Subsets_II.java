@@ -30,7 +30,6 @@ class Solution {
         if (nums == null || nums.length == 0) {
             return new ArrayList<>();
         }
-
         Arrays.sort(nums);
 
         List<List<Integer>> result = new ArrayList<>();
