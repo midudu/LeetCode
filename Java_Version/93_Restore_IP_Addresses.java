@@ -1,5 +1,5 @@
 /*
-  Given a string containing only digits, restore it by returning all possible 
+  Given a string containing only digits, restore it by returning all possible
 valid IP address combinations.
 
 Example:
@@ -30,13 +30,10 @@ class Solution {
     }
 
     private void restoreIpAddressHelper(
-            String s, int currentIndex,
-            List<String> existingResult, List<String> result) {
+            String s, int currentIndex, List<String> existingResult, List<String> result) {
 
         if (existingResult.size() == 4) {
-
             if (currentIndex >= s.length()) {
-
                 StringBuilder currentIp = new StringBuilder();
                 for (int i = 0; i < 3; i++) {
                     currentIp.append(existingResult.get(i));
@@ -46,7 +43,6 @@ class Solution {
 
                 result.add(currentIp.toString());
             }
-
             return;
         }
 
@@ -61,10 +57,8 @@ class Solution {
 
         // 2 bit
         if (currentIndex <= s.length() - 2) {
-            String twoBitIp = s.substring(currentIndex, currentIndex + 2);
-            if (Integer.valueOf(twoBitIp) >= 10
-                    && Integer.valueOf(twoBitIp) <= 99) {
-
+            if (s.charAt(currentIndex) != '0') {
+                String twoBitIp = s.substring(currentIndex, currentIndex + 2);
                 existingResult.add(twoBitIp);
                 restoreIpAddressHelper(s, currentIndex + 2,
                         existingResult, result);
@@ -74,11 +68,12 @@ class Solution {
 
         // 3 bit
         if (currentIndex <= s.length() - 3) {
-
-            String threeBitIp = s.substring(currentIndex, currentIndex + 3);
-            if (Integer.valueOf(threeBitIp) >= 100
-                    && Integer.valueOf(threeBitIp) <= 255) {
-
+            if (s.charAt(currentIndex) == '0' || s.charAt(currentIndex) > '2') {
+            } else if (s.charAt(currentIndex) == '2' && s.charAt(currentIndex + 1) > '5') {
+            } else if (s.charAt(currentIndex) == '2' && s.charAt(currentIndex + 1) == '5'
+                    && s.charAt(currentIndex + 2) > '5') {
+            } else {
+                String threeBitIp = s.substring(currentIndex, currentIndex + 3);
                 existingResult.add(threeBitIp);
                 restoreIpAddressHelper(s, currentIndex + 3,
                         existingResult, result);
