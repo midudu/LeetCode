@@ -1,20 +1,25 @@
 /*
-Given a binary tree, return the postorder traversal of its nodes' values.
+  Given a binary tree, return the post_order traversal of its nodes' values.
 
-        Example:
+Example:
 
         Input: [1,null,2,3]
+
         1
-        \
-        2
-        /
+         \
+          2
+         /
         3
 
         Output: [3,2,1]
-        Follow up: Recursive solution is trivial, could you do it iteratively?*/
 
-import java.util.ArrayList;
+Follow up:
+  Recursive solution is trivial, could you do it iteratively?
+*/
+
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Stack;
 
 class TreeNode {
 
@@ -52,31 +57,47 @@ class TreeNode {
 } */
 
 class Solution {
-	
-	public List<Integer> postorderTraversal(TreeNode root) {
-		
-        LinkedList<Integer> res = new LinkedList<>();
-		
-        if(root == null){
-            return res;
+
+    public static void main(String[] args) {
+
+        TreeNode root = new TreeNode(5);
+        root.left = new TreeNode(3);
+        root.right = new TreeNode(8);
+        root.left.left = new TreeNode(7);
+        root.right.left = new TreeNode(10);
+        root.right.right = new TreeNode(11);
+        root.left.left.right = new TreeNode(9);
+
+        List<Integer> list = new Solution().postorderTraversal(root);
+
+        System.out.println();
+    }
+
+    public List<Integer> postorderTraversal(TreeNode root) {
+
+        LinkedList<Integer> result = new LinkedList<>();
+
+        if (root == null) {
+            return result;
         }
-		
-		Stack<TreeNode> stack = new Stack<>();
+
+        Stack<TreeNode> stack = new Stack<>();
         stack.push(root);
-		
+
         while (!stack.isEmpty()) {
 
-            TreeNode curr = stack.pop();
-            res.addFirst(curr.val);
-			
-            if(curr.left != null){
-                stack.push(curr.left);   
+            TreeNode currentNode = stack.pop();
+            result.addFirst(currentNode.val);
+
+            if (currentNode.left != null) {
+                stack.push(currentNode.left);
             }
-            if(curr.right != null){
-                stack.push(curr.right);
+
+            if (currentNode.right != null) {
+                stack.push(currentNode.right);
             }
         }
-		
-        return res;
+
+        return result;
     }
 }
