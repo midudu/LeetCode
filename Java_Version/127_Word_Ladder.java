@@ -1,17 +1,19 @@
-/*Given two words (beginWord and endWord), and a dictionary's word list,
-find the length of shortest transformation sequence from beginWord to endWord,
-such that:
+/*
+  Given two words (beginWord and endWord), and a dictionary's word list, find
+the length of shortest transformation sequence from beginWord to endWord, such
+that:
+  1. Only one letter can be changed at a time.
+  2. Each transformed word must exist in the word list. Note that beginWord is
+  not a transformed word.
 
-        Only one letter can be changed at a time.
-        Each transformed word must exist in the word list. Note that beginWord is not a transformed word.
-        Note:
+Note:
+  1. Return 0 if there is no such transformation sequence.
+  2. All words have the same length.
+  3. All words contain only lowercase alphabetic characters.
+  4. You may assume no duplicates in the word list.
+  5. You may assume beginWord and endWord are non-empty and are not the same.
 
-        Return 0 if there is no such transformation sequence.
-        All words have the same length.
-        All words contain only lowercase alphabetic characters.
-        You may assume no duplicates in the word list.
-        You may assume beginWord and endWord are non-empty and are not the same.
-        Example 1:
+Example 1:
 
         Input:
         beginWord = "hit",
@@ -20,9 +22,11 @@ such that:
 
         Output: 5
 
-        Explanation: As one shortest transformation is "hit" -> "hot" -> "dot" -> "dog" -> "cog",
-        return its length 5.
-        Example 2:
+        Explanation: As one shortest transformation is
+          "hit" -> "hot" -> "dot" -> "dog" -> "cog",
+          return its length 5.
+
+Example 2:
 
         Input:
         beginWord = "hit"
@@ -31,7 +35,9 @@ such that:
 
         Output: 0
 
-        Explanation: The endWord "cog" is not in wordList, therefore no possible transformation.*/
+        Explanation: The endWord "cog" is not in wordList, therefore no
+          possible transformation.
+*/
 
 
 import java.util.HashSet;
@@ -40,27 +46,17 @@ import java.util.Set;
 
 class Solution {
 
-    // This algorithm use bi-direction BFS
     public int ladderLength(String beginWord, String endWord, List<String> wordList) {
 
-        /*There are two HashSets, and during recursion the beginSet and endSet
-        will exchange their identity according to the their inner elements'
-        numbers*/
-        // A HashSet to store the words in starting searching direction
-        Set<String> beginSet = new HashSet<>();
-        // A HashSet to store the words in target searching direction
-        Set<String> endSet = new HashSet<>();
-
-        beginSet.add(beginWord);
-        endSet.add(endWord);
-
-        /*A HashSet to store all the words and if a word has been visited, it
-        will be deleted*/
         Set<String> dict = new HashSet<>(wordList);
-
         if (!dict.contains(endWord)) {
             return 0;
         }
+
+        Set<String> beginSet = new HashSet<>();
+        beginSet.add(beginWord);
+        Set<String> endSet = new HashSet<>();
+        endSet.add(endWord);
 
         return search(beginSet, endSet, dict, 1);
     }
@@ -69,30 +65,19 @@ class Solution {
             Set<String> beginSet, Set<String> endSet, Set<String> dict,
             int existingWordNumbers) {
 
-        /* If {@code beginSet} or {@code endSet} is empty, this means there is
-         * no way between start node to end node. As a result, return 0
-         */
         if (beginSet.isEmpty() || endSet.isEmpty()) {
             return 0;
         }
 
         existingWordNumbers++;
-
-        // Remove all the nodes in {@code dict} which have been visited
         dict.removeAll(beginSet);
 
-        // This HashSet will store the next layer nodes from the
-        // {@code beginSet}
         Set<String> nextLayerSet = new HashSet<>();
 
-        // Iterate {@code beginSet}
         for (String str : beginSet) {
 
             char[] chs = str.toCharArray();
-
-            // Try to replace every char in the current word with a-z
             for (int i = 0; i < chs.length; i++) {
-
                 char c = chs[i];
 
                 for (char j = 'a'; j <= 'z'; j++) {
@@ -115,10 +100,6 @@ class Solution {
             }
         }
 
-        // For the next recursion process, the beginSet is gonna be a set with
-        // less elements' number so as to improve the efficiency of iteration (
-        // it takes O(n) to iterate but O(1) to check if an element is contained
-        // in another HashSet ideally)
         return nextLayerSet.size() > endSet.size() ?
                 search(endSet, nextLayerSet, dict, existingWordNumbers) :
                 search(nextLayerSet, endSet, dict, existingWordNumbers);
