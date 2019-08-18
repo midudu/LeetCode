@@ -1,37 +1,8 @@
-/*Author: Bochen (mddboc@foxmail.com)
-Last Modified: Tue Apr 10 22:28:44 CST 2018*/
+/*
+  Given a linked list, determine if it has a cycle in it.
 
-/*Given a linked list, determine if it has a cycle in it.
-
-        Follow up:
+Follow up:
         Can you solve it without using extra space?*/
-
-
-import java.util.*;
-import java.lang.Math;
-import java.lang.System;
-import java.lang.Integer;
-
-
-public class Main {
-
-    public static void main(String[] args) throws ArithmeticException {
-
-        TreeNode root = new TreeNode(1);
-        root.left = new TreeNode(2);
-        root.right = new TreeNode(2);
-        root.left.left = new TreeNode(3);
-        root.left.right = new TreeNode(4);
-        root.right.left = new TreeNode(4);
-        root.right.right = new TreeNode(3);
-
-        boolean result = new Solution().isSymmetric(root);
-
-        System.out.println(result);
-    }
-
-}
-
 
 class ListNode {
     int val;
@@ -43,32 +14,17 @@ class ListNode {
 }
 
 
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(int x) {
-        val = x;
-    }
-}
-
-
 class Solution {
+
     public boolean hasCycle(ListNode head) {
 
-        if (head == null) {
-            return false;
-        }
+        ListNode slow = head, fast = head;
 
-        ListNode slowPointer = head, fastPointer = head;
+        while (fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
 
-        while (fastPointer!=null && fastPointer.next != null) {
-
-            fastPointer = fastPointer.next.next;
-            slowPointer = slowPointer.next;
-			
-            if (fastPointer == slowPointer) {
+            if (fast == slow) {
                 return true;
             }
         }

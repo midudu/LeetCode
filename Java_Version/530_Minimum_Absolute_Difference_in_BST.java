@@ -1,25 +1,29 @@
-/*Given a binary search tree with non-negative values, find the minimum absolute difference between values of any two nodes.
+/*
+  Given a binary search tree with non-negative values, find the minimum
+absolute difference between values of any two nodes.
 
-        Example:
+Example:
 
         Input:
 
-        1
-        \
-        3
-        /
-        2
+          1
+           \
+           3
+          /
+         2
 
         Output:
         1
 
         Explanation:
-        The minimum absolute difference is 1, which is the difference between 2 and 1 (or between 2 and 3).
-        Note: There are at least two nodes in this BST.*/
+          The minimum absolute difference is 1, which is the difference between
+        2 and 1 (or between 2 and 3).
 
+Note:
+  There are at least two nodes in this BST.
+*/
 
-import java.util.*;
-
+/*
 class TreeNode {
     int val;
     TreeNode left;
@@ -29,43 +33,51 @@ class TreeNode {
         val = x;
     }
 }
-
-public class Test {
-    public static void main(String[] args) {
-
-        new Solution().findRelativeRanks(new int[]{2, 4, 5, 1, 0});
-    }
-}
-
+*/
 
 class Solution {
 
-    private List<Integer> tree = new LinkedList<>();
+    public static void main(String[] args) {
+
+        TreeNode root = new TreeNode(1);
+        root.right = new TreeNode(3);
+        root.right.left = new TreeNode(2);
+
+        System.out.println(new Solution().getMinimumDifference(root));
+    }
+
+    private int result = Integer.MAX_VALUE;
 
     public int getMinimumDifference(TreeNode root) {
 
-        this.getMinimumDifferenceHelper(root);
+        getMinimumDifferenceHelper(root);
 
-        int result = Integer.MAX_VALUE;
-
-        for (int i = 0; i < tree.size() - 1; i++) {
-            int temp = Math.abs(tree.get(i + 1) - tree.get(i));
-            result = Math.min(result, temp);
-        }
-
-        return result;
+        return this.result;
     }
 
-    private void getMinimumDifferenceHelper(TreeNode root) {
+    private Integer[] getMinimumDifferenceHelper(TreeNode root) {
 
-        if (root == null) {
-            return;
+        if (root.left == null && root.right == null) {
+            return new Integer[]{root.val, root.val};
         }
 
-        getMinimumDifferenceHelper(root.left);
+        if (root.left == null) {
+            Integer[] rightResult = getMinimumDifferenceHelper(root.right);
+            this.result = Math.min(result, rightResult[0] - root.val);
+            return new Integer[]{root.val, rightResult[1]};
+        }
 
-        tree.add(root.val);
+        if (root.right == null) {
+            Integer[] leftResult = getMinimumDifferenceHelper(root.left);
+            this.result = Math.min(result, root.val - leftResult[1]);
+            return new Integer[]{leftResult[0], root.val};
+        }
 
-        getMinimumDifferenceHelper(root.right);
+        Integer[] leftResult = getMinimumDifferenceHelper(root.left);
+        Integer[] rightResult = getMinimumDifferenceHelper(root.right);
+        this.result = Math.min(result, rightResult[0] - root.val);
+        this.result = Math.min(result, root.val - leftResult[1]);
+
+        return new Integer[]{leftResult[0], rightResult[1]};
     }
 }

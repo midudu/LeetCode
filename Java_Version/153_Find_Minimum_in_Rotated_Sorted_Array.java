@@ -1,75 +1,65 @@
 /*
-Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
+  Suppose an array sorted in ascending order is rotated at some pivot unknown
+to you beforehand.
 
-        (i.e.,  [0,1,2,4,5,6,7] might become  [4,5,6,7,0,1,2]).
+  (i.e.,  [0,1,2,4,5,6,7] might become  [4,5,6,7,0,1,2]).
 
-        Find the minimum element.
+  Find the minimum element.
 
-        You may assume no duplicate exists in the array.
+  You may assume no duplicate exists in the array.
 
-        Example 1:
+Example 1:
 
         Input: [3,4,5,1,2]
         Output: 1
 
-        Example 2:
+Example 2:
 
         Input: [4,5,6,7,0,1,2]
-        Output: 0*/
+        Output: 0
+*/
 
 class Solution {
 
-    public int findMin(int[] nums) {
+    public static void main(String[] args) {
 
-        // Step 0: Check input parameters
-        if (nums == null || nums.length == 0) {
-            return -1;
-        }
-        if (nums.length == 1) {
-            return nums[0];
-        }
+        int[] nums = {4, 5, 6, 7, 0, 1, 2};
 
-        // Step 1: Find the index whose corresponding element is smaller than
-        // the last element
-        int pivotIndex = findPivotIndex(nums);
-
-        // Step 2: Generate output result
-        if (pivotIndex == -1) {
-            return nums[0];
-        } else {
-            return Math.min(nums[pivotIndex], nums[0]);
-        }
+        System.out.println(new Solution().findMin(nums));
     }
 
-    private int findPivotIndex(int[] nums) {
+    public int findMin(int[] nums) {
 
-        int startIndex = 0, endIndex = nums.length - 1;
-        if (nums[endIndex] > nums[startIndex]) {
-            return -1;
+        if (nums == null || nums.length == 0) {
+            throw new RuntimeException("illegal input");
         }
 
-        while (startIndex < endIndex) {
-
-            int middleIndex = startIndex + (endIndex - startIndex) / 2;
-
-            if (middleIndex != 0 && nums[middleIndex] < nums[middleIndex - 1]) {
-                return middleIndex;
-            } else {
-
-                // Here must compare nums[middleIndex] and nums[endIndex] because nums[middleIndex] > nums[startIndex]
-				// cannot determine which branch the middleIndex is on
-                if (nums[middleIndex] > nums[endIndex]) {
-                    startIndex = middleIndex + 1;
-                } else {
-                    endIndex = middleIndex;
-                }
-            }
+        if (nums.length == 1 || nums[0] < nums[nums.length - 1]) {
+            return nums[0];
         }
 
-        if (startIndex != 0 && nums[startIndex] < nums[startIndex - 1]) {
-            return startIndex;
+        return findMinHelper(nums, 0, nums.length - 1);
+    }
+
+    private int findMinHelper(int[] nums, int startIndex, int endIndex) {
+
+        if (startIndex == endIndex) {
+            return nums[startIndex];
+        }
+
+        if (startIndex == endIndex - 1) {
+            return Math.min(nums[startIndex], nums[endIndex]);
+        }
+
+        int middleIndex = startIndex + (endIndex - startIndex) / 2;
+        if (nums[middleIndex] < nums[middleIndex - 1]) {
+            return nums[middleIndex];
+        }
+
+        if (nums[middleIndex] < nums[endIndex]) {
+            return findMinHelper(nums, startIndex, middleIndex);
         } else {
-            return -1;
+            return findMinHelper(nums, middleIndex + 1, endIndex);
         }
     }
 }
