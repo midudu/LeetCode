@@ -1,7 +1,7 @@
 /*
-Implement a trie with insert, search, and startsWith methods.
+  Implement a trie with insert, search, and startsWith methods.
 
-        Example:
+Example:
 
         Trie trie = new Trie();
 
@@ -12,12 +12,11 @@ Implement a trie with insert, search, and startsWith methods.
         trie.insert("app");
         trie.search("app");     // returns true
 
-        Note:
+Note:
+  You may assume that all inputs are consist of lowercase letters a-z.
+All inputs are guaranteed to be non-empty strings.
+*/
 
-You may assume that all inputs are consist of lowercase letters a-z.
-All inputs are guaranteed to be non-empty strings.*/
-
-import java.util.HashSet;
 
 /**
  * Your Trie object will be instantiated and called as such:
@@ -30,7 +29,6 @@ import java.util.HashSet;
 class Node {
 
     Node[] nextNodes;
-
     Boolean isWords;
 
     Node() {
@@ -41,12 +39,22 @@ class Node {
 
 class Trie {
 
-    private Node root = new Node();
+    public static void main(String[] args) {
 
-    /**
-     * Initialize your data structure here.
-     */
+        Trie trie = new Trie();
+
+        trie.insert("apple");
+        System.out.println(trie.search("apple"));   // returns true
+        System.out.println(trie.search("app"));     // returns false
+        System.out.println(trie.startsWith("app")); // returns true
+        trie.insert("app");
+        System.out.println(trie.search("app"));     // returns true
+    }
+
+    private Node root;
+
     public Trie() {
+        this.root = new Node();
     }
 
     /**
@@ -76,14 +84,10 @@ class Trie {
         Node currentNode = root;
 
         for (int i = 0; i < word.length(); i++) {
-
-            Node nextNode = currentNode.nextNodes[word.charAt(i) - 'a'];
-
-            if (nextNode == null) {
+            if (currentNode.nextNodes[word.charAt(i) - 'a'] == null) {
                 return false;
             }
-
-            currentNode = nextNode;
+            currentNode = currentNode.nextNodes[word.charAt(i) - 'a'];
         }
 
         return currentNode.isWords;
@@ -97,17 +101,12 @@ class Trie {
         Node currentNode = root;
 
         for (int i = 0; i < prefix.length(); i++) {
-
-            Node nextNode = currentNode.nextNodes[prefix.charAt(i) - 'a'];
-
-            if (nextNode == null) {
+            if (currentNode.nextNodes[prefix.charAt(i) - 'a'] == null) {
                 return false;
             }
-
-            currentNode = nextNode;
+            currentNode = currentNode.nextNodes[prefix.charAt(i) - 'a'];
         }
 
         return true;
     }
 }
-

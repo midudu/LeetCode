@@ -1,31 +1,27 @@
 /*
-Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree.
+  Given a binary tree, find the lowest common ancestor (LCA) of two given nodes
+in the tree.
+  According to the definition of LCA on Wikipedia: “The lowest common ancestor
+is defined between two nodes p and q as the lowest node in T that has both p
+and q as descendants (where we allow a node to be a descendant of itself).”
 
-        According to the definition of LCA on Wikipedia: “The lowest common ancestor is defined between two nodes p and q as the lowest node in T that has both p and q as descendants (where we allow a node to be a descendant of itself).”
-
-        Given the following binary tree:  root = [3,5,1,6,2,0,8,null,null,7,4]
-
-
-
-
-        Example 1:
+Example 1:
 
         Input: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 1
         Output: 3
         Explanation: The LCA of nodes 5 and 1 is 3.
-        Example 2:
+
+Example 2:
 
         Input: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 4
         Output: 5
-        Explanation: The LCA of nodes 5 and 4 is 5, since a node can be a descendant of itself according to the LCA definition.
+        Explanation: The LCA of nodes 5 and 4 is 5, since a node can be a
+        descendant of itself according to the LCA definition.
 
-
-        Note:
-
-        All of the nodes' values will be unique.
-        p and q are different and both values will exist in the binary tree.*/
-
-import java.util.Stack;
+Note:
+  1. All of the nodes' values will be unique.
+  2. p and q are different and both values will exist in the binary tree.
+*/
 
 class TreeNode {
 
@@ -38,92 +34,34 @@ class TreeNode {
     }
 }
 
-/*class Solution {
-
-    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-
-        boolean[] pHasFound = new boolean[1];
-        Stack<TreeNode> pStack = new Stack<>();
-        findNode(root, p, pHasFound, pStack);
-
-        boolean[] qHasFound = new boolean[1];
-        Stack<TreeNode> qStack = new Stack<>();
-        findNode(root, q, qHasFound, qStack);
-
-        if (pStack.size() <= qStack.size()) {
-            return findAnswerInTwoStacks(pStack, qStack);
-        } else {
-            return findAnswerInTwoStacks(qStack, pStack);
-        }
-    }
-
-    private void findNode(TreeNode root, TreeNode node,
-                          boolean[] hasFound,
-                          Stack<TreeNode> stack) {
-
-        if (hasFound[0] || root == null) {
-            return;
-        }
-
-        stack.push(root);
-
-        if (root.val == node.val) {
-
-            hasFound[0] = true;
-            return;
-        }
-
-        findNode(root.left, node, hasFound, stack);
-        findNode(root.right, node, hasFound, stack);
-
-        if (!hasFound[0]) {
-            stack.pop();
-        }
-
-    }
-
-    private TreeNode findAnswerInTwoStacks(
-            Stack<TreeNode> smallStack, Stack<TreeNode> largeStack) {
-
-        while (largeStack.size() != smallStack.size()) {
-
-            largeStack.pop();
-        }
-
-        while (!smallStack.isEmpty()) {
-
-            TreeNode smallNode = smallStack.pop();
-            TreeNode largeNode = largeStack.pop();
-
-            if (smallNode.val == largeNode.val) {
-                return smallNode;
-            }
-        }
-
-        return null;
-    }
-}*/
-
 class Solution {
 
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
 
+        if (root == null || p == null || q == null) {
+            return null;
+        }
+
+        return lowestCommonAncestorHelper(root, p, q);
+    }
+
+    private TreeNode lowestCommonAncestorHelper(TreeNode root, TreeNode p, TreeNode q) {
+
         if (root == null) {
             return null;
         }
+
         if (root == p || root == q) {
             return root;
         }
 
-        TreeNode left = lowestCommonAncestor(root.left, p, q);
-        TreeNode right = lowestCommonAncestor(root.right, p, q);
+        TreeNode leftResult = lowestCommonAncestorHelper(root.left, p, q);
+        TreeNode rightResult = lowestCommonAncestorHelper(root.right, p, q);
 
-        if (left != null && right != null) {
+        if (leftResult != null && rightResult != null) {
             return root;
-        } else if (left == null) {
-            return right;
-        } else {
-            return left;
         }
+
+        return (leftResult != null ? leftResult : rightResult);
     }
 }

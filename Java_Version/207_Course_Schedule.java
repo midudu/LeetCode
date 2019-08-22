@@ -1,38 +1,44 @@
 /*
-There are a total of n courses you have to take, labeled from 0 to n-1.
+  There are a total of n courses you have to take, labeled from 0 to n-1.
 
-Some courses may have prerequisites,
-for example to take course 0 you have to first take course 1,
-which is expressed as a pair: [0,1]
+  Some courses may have prerequisites, for example to take course 0 you have to
+first take course 1, which is expressed as a pair: [0,1]
 
-Given the total number of courses and a list of prerequisite pairs,
-is it possible for you to finish all courses?
+  Given the total number of courses and a list of prerequisite pairs, is it
+possible for you to finish all courses?
 
-        Example 1:
+Example 1:
 
         Input: 2, [[1,0]]
         Output: true
+
         Explanation: There are a total of 2 courses to take.
         To take course 1 you should have finished course 0. So it is possible.
-        Example 2:
+
+Example 2:
 
         Input: 2, [[1,0],[0,1]]
         Output: false
+
         Explanation: There are a total of 2 courses to take.
-        To take course 1 you should have finished course 0, and to take course 0 you should
-        also have finished course 1. So it is impossible.
-        Note:
+        To take course 1 you should have finished course 0, and to take course
+        0 you should also have finished course 1. So it is impossible.
 
-The input prerequisites is a graph represented by a list of edges,
-not adjacency matrices. Read more about how a graph is represented.
+Note:
+  The input prerequisites is a graph represented by a list of edges, not
+adjacency matrices. Read more about how a graph is represented.
+  You may assume that there are no duplicate edges in the input prerequisites.
+*/
 
-You may assume that there are no duplicate edges in the input prerequisites.*/
-
-
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
 
 class Solution {
+
+    public static void main(String[] args) {
+
+        int[][] pre = {{1, 0}, {0, 1}, {1,2}};
+        System.out.println(new Solution().canFinish(3, pre));
+    }
 
     public boolean canFinish(int n, int[][] prerequisites) {
 
@@ -40,62 +46,51 @@ class Solution {
             return true;
         }
 
-        List<ArrayList<Integer>> edges = new ArrayList<ArrayList<Integer>>();
-
+        HashSet<Integer>[] lastLessons = new HashSet[n];
         for (int i = 0; i < n; i++) {
-            edges.add(new ArrayList<Integer>());
-        }
-        for (int[] pair : prerequisites) {
-            edges.get(pair[0]).add(pair[1]);
+            lastLessons[i] = new HashSet<Integer>();
         }
 
-        return !isCyclic(edges);
+        for (int[] pre: prerequisites) {
+            lastLessons[pre[0]].add(pre[1]);
+        }
+
+        return !hasCycle(lastLessons);
     }
 
-    private boolean isCyclic(List<ArrayList<Integer>> edges) {
+    private boolean hasCycle(HashSet<Integer>[] lastLessons) {
 
-        boolean[] hasChecked = new boolean[edges.size()];
-        boolean[] hasVisitedInCurrentPath = new boolean[edges.size()];
+        boolean[] noCycleFromCurrentNode = new boolean[lastLessons.length];
 
-        for (int i = 0; i < edges.size(); i++) {
-
-            if (!hasChecked[i]) {
-
-                if (isCyclicHelper(i, edges, hasChecked, hasVisitedInCurrentPath)) {
-                    return true;
-                }
+        for (int i = 0; i < lastLessons.length; i++) {
+            if (hasCycle(lastLessons, noCycleFromCurrentNode, i, new HashSet<>())) {
+                return true;
             }
         }
 
         return false;
     }
 
-    private boolean isCyclicHelper(
-            int currentNode,
-            List<ArrayList<Integer>> edges,
-            boolean[] hasChecked,
-            boolean[] hasVisitedInCurrentPath) {
+    private boolean hasCycle(HashSet<Integer>[] lastLessons,
+                             boolean[] noCycleFromCurrentNode, int startIndex,
+                             HashSet<Integer> existingNodes) {
 
-        if (hasVisitedInCurrentPath[currentNode]) {
+        if (noCycleFromCurrentNode[startIndex]) {
+            return false;
+        }
+        if (existingNodes.contains(startIndex)) {
             return true;
         }
 
-        if (hasChecked[currentNode]) {
-            return false;
-        }
-
-
-        hasChecked[currentNode] = true;
-        hasVisitedInCurrentPath[currentNode] = true;
-
-        for (Integer edge : edges.get(currentNode)) {
-
-            if (isCyclicHelper(edge, edges, hasChecked, hasVisitedInCurrentPath)) {
+        existingNodes.add(startIndex);
+        for (int node : lastLessons[startIndex]) {
+            if (hasCycle(lastLessons, noCycleFromCurrentNode, node, existingNodes)) {
                 return true;
             }
         }
 
-        hasVisitedInCurrentPath[currentNode] = false;
+        noCycleFromCurrentNode[startIndex] = true;
+        existingNodes.remove(startIndex);
         return false;
     }
 }

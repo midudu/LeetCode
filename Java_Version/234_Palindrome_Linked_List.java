@@ -2,7 +2,8 @@
   Given a singly linked list, determine if it is a palindrome.
 
   Follow up:
-        Could you do it in O(n) time and O(1) space?*/
+        Could you do it in O(n) time and O(1) space?
+*/
 
 
 class ListNode {
@@ -14,6 +15,16 @@ class ListNode {
     }
 }
 
+class NodeWrapper {
+
+    ListNode node;
+    boolean isOdd;
+
+    NodeWrapper(ListNode node, boolean isOdd) {
+        this.node = node;
+        this.isOdd = isOdd;
+    }
+}
 
 class Solution {
 
@@ -23,9 +34,8 @@ class Solution {
         head.next = new ListNode(2);
         head.next.next = new ListNode(3);
         head.next.next.next = new ListNode(4);
-        //head.next.next.next.next = new ListNode(5);
 
-        boolean result = new Solution().isPalindrome(head);
+        NodeWrapper wrapper = new Solution().getMiddleNode(head);
 
         System.out.println();
     }
@@ -35,52 +45,61 @@ class Solution {
         if (head == null || head.next == null) {
             return true;
         }
-
-        ListNode slow = head, fast = head.next;
-        ListNode lastNode = null, nextNode = slow.next;
-
-        while (fast != null && fast.next != null) {
-
-            fast = fast.next.next;
-
-            nextNode = slow.next;
-            slow.next = lastNode;
-
-            lastNode = slow;
-            slow = nextNode;
+        if (head.next.next == null) {
+            return head.val == head.next.val;
         }
 
-        if (fast == null) {
-            slow = slow.next;
-            while (slow != null) {
+        NodeWrapper middleNodeWrapper = getMiddleNode(head);
+        ListNode newHead = reverseList(head, middleNodeWrapper.node);
 
-                if (slow.val != lastNode.val) {
-                    return false;
-                }
-
-                slow = slow.next;
-                lastNode = lastNode.next;
-            }
-
-            return true;
+        if (middleNodeWrapper.isOdd) {
+            return isTwoListEqual(newHead, middleNodeWrapper.node.next);
         } else {
+            return isTwoListEqual(newHead, middleNodeWrapper.node);
+        }
+    }
 
-            if (slow.val != slow.next.val) {
+    private NodeWrapper getMiddleNode(ListNode head) {
+
+        ListNode slow = head, fast = head;
+
+        while (fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+        }
+
+        return fast == null ? new NodeWrapper(slow, false) :
+                new NodeWrapper(slow, true);
+
+    }
+
+    private ListNode reverseList(ListNode head, ListNode tail) {
+
+        ListNode lastNode = null, currentNode = head;
+
+        while (currentNode.next != tail) {
+            ListNode nextNode = currentNode.next;
+            currentNode.next = lastNode;
+            lastNode = currentNode;
+            currentNode = nextNode;
+        }
+
+        currentNode.next = lastNode;
+        return currentNode;
+    }
+
+    private boolean isTwoListEqual(ListNode head1, ListNode head2) {
+
+        while (head1 != null && head2 != null) {
+
+            if (head1.val != head2.val) {
                 return false;
             }
 
-            slow = slow.next.next;
-            while (slow != null) {
-
-                if (slow.val != lastNode.val) {
-                    return false;
-                }
-
-                slow = slow.next;
-                lastNode = lastNode.next;
-            }
-
-            return true;
+            head1 = head1.next;
+            head2 = head2.next;
         }
+
+        return head1 == head2;
     }
 }
