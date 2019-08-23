@@ -1,75 +1,62 @@
-/*Author: Bochen (mddboc@foxmail.com)
-Last Modified: Tue Apr 10 22:28:44 CST 2018*/
+/*
+  Given two strings s and t, determine if they are isomorphic.
 
-/*Given two strings s and t, determine if they are isomorphic.
+  Two strings are isomorphic if the characters in s can be replaced to get t.
 
-        Two strings are isomorphic if the characters in s can be replaced to get t.
+  All occurrences of a character must be replaced with another character while
+preserving the order of characters. No two characters may map to the same
+character but a character may map to itself.
 
-        All occurrences of a character must be replaced with another character while preserving the order of characters. No two characters may map to the same character but a character may map to itself.
-
-        For example,
+For example,
         Given "egg", "add", return true.
 
         Given "foo", "bar", return false.
 
         Given "paper", "title", return true.
 
-        Note:
-        You may assume both s and t have the same length.*/
+Note:
+  You may assume both s and t have the same length.
+*/
 
 
-import java.util.*;
-
-
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(int x) {
-        val = x;
-    }
-}
-
-public class Test {
-    public static void main(String[] args) {
-
-        String s = "egg", t = "add";
-
-        new Solution().isIsomorphic(s, t);
-    }
-}
-
+import java.util.HashMap;
 
 class Solution {
+
+    public static void main(String[] args) {
+
+        System.out.println(new Solution().isIsomorphic("bar", "foo"));
+    }
+
     public boolean isIsomorphic(String s, String t) {
+
+        if (s == null && t == null) {
+            return true;
+        } else if (s == null || t == null) {
+            return false;
+        }
 
         if (s.length() != t.length()) {
             return false;
         }
 
-        HashMap<Character, Character> hashMap1 = new HashMap<>();
-        HashMap<Character, Character> hashMap2 = new HashMap<>();
+        char[] map1 = new char[256];
+        char[] map2 = new char[256];
 
-        for (int i = 0; i < s.length(); i++) {
+        char[] sChar = s.toCharArray();
+        char[] tChar = t.toCharArray();
+        for (int i = 0; i < tChar.length; i++) {
 
-            char sChar = s.charAt(i);
-            char tChar = t.charAt(i);
-
-            if (hashMap1.containsKey(sChar)) {
-                if (hashMap1.get(sChar) != tChar) {
-                    return false;
-                }
+            if (map1[sChar[i]] != 0 && map1[sChar[i]] != tChar[i]) {
+                return false;
             } else {
-                hashMap1.put(sChar, tChar);
+                map1[sChar[i]] = tChar[i];
             }
 
-            if (hashMap2.containsKey(tChar)) {
-                if (hashMap2.get(tChar) != sChar) {
-                    return false;
-                }
+            if (map2[tChar[i]] != 0 && map2[tChar[i]] != sChar[i]) {
+                return false;
             } else {
-                hashMap2.put(tChar, sChar);
+                map2[tChar[i]] = sChar[i];
             }
         }
 
