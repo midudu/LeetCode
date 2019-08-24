@@ -1,20 +1,31 @@
 /*
-You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed. All houses at this place are arranged in a circle. That means the first house is the neighbor of the last one. Meanwhile, adjacent houses have security system connected and it will automatically contact the police if two adjacent houses were broken into on the same night.
+  You are a professional robber planning to rob houses along a street. Each
+house has a certain amount of money stashed. All houses at this place are
+arranged in a circle. That means the first house is the neighbor of the last
+one. Meanwhile, adjacent houses have security system connected and it will
+automatically contact the police if two adjacent houses were broken into on the
+same night.
 
-        Given a list of non-negative integers representing the amount of money of each house, determine the maximum amount of money you can rob tonight without alerting the police.
+  Given a list of non-negative integers representing the amount of money of
+each house, determine the maximum amount of money you can rob tonight without
+alerting the police.
 
-        Example 1:
+Example 1:
 
         Input: [2,3,2]
         Output: 3
-        Explanation: You cannot rob house 1 (money = 2) and then rob house 3 (money = 2),
-        because they are adjacent houses.
-        Example 2:
+
+        Explanation: You cannot rob house 1 (money = 2) and then rob house 3
+        (money = 2), because they are adjacent houses.
+
+Example 2:
 
         Input: [1,2,3,1]
         Output: 4
+
         Explanation: Rob house 1 (money = 1) and then rob house 3 (money = 3).
-        Total amount you can rob = 1 + 3 = 4.*/
+        Total amount you can rob = 1 + 3 = 4.
+*/
 
 class Solution {
 
@@ -38,18 +49,16 @@ class Solution {
     private int robHelper(int[] nums,
                           int startIndex, int endIndex) {
 
-        int lastStole = 0, lastNotStole = 0;
-        int curStole = 0, curNotStole = 0;
+        int lastTwoResult = nums[startIndex];
+        int lastResult = Math.max(nums[startIndex], nums[startIndex + 1]);
 
-        for (int j = startIndex; j <= endIndex; j++) {
+        for (int i = startIndex + 2; i <= endIndex; i++) {
 
-            curStole = lastNotStole + nums[j];
-            curNotStole = Math.max(lastStole, lastNotStole);
-
-            lastStole = curStole;
-            lastNotStole = curNotStole;
+            int currentResult = Math.max(lastResult, lastTwoResult + nums[i]);
+            lastTwoResult = lastResult;
+            lastResult = currentResult;
         }
 
-        return Math.max(curStole, curNotStole);
+        return lastResult;
     }
 }

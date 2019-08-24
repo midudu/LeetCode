@@ -1,13 +1,11 @@
 /*
-Write an efficient algorithm that searches for a value in an m x n matrix.
+  Write an efficient algorithm that searches for a value in an m x n matrix.
 
-This matrix has the following properties:
+  This matrix has the following properties:
+    1. Integers in each row are sorted in ascending from left to right.
+    2. Integers in each column are sorted in ascending from top to bottom.
 
-Integers in each row are sorted in ascending from left to right.
-Integers in each column are sorted in ascending from top to bottom.
-
-        Example:
-
+Example:
         Consider the following matrix:
 
         [
@@ -20,29 +18,37 @@ Integers in each column are sorted in ascending from top to bottom.
 
         Given target = 5, return true.
 
-        Given target = 20, return false.*/
+        Given target = 20, return false.
+*/
 
 class Solution {
 
     public boolean searchMatrix(int[][] matrix, int target) {
 
-        if (matrix == null
-                || matrix.length == 0 || matrix[0].length == 0) {
-
+        if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {
             return false;
         }
 
-        int row = matrix.length - 1;
-        int col = 0;
+        if (target < matrix[0][0] || target > matrix[matrix.length - 1][matrix[0].length - 1]) {
+            return false;
+        }
 
-        while (row >= 0 && col < matrix[0].length) {
+        if (target == matrix[0][0] || target == matrix[matrix.length - 1][matrix[0].length - 1]) {
+            return true;
+        }
 
-            if (matrix[row][col] == target) {
+        int currentCol = 0, currentRow = matrix.length - 1;
+
+        while (currentCol < matrix[0].length && currentRow >= 0) {
+
+            if (matrix[currentRow][currentCol] == target) {
                 return true;
-            } else if (matrix[row][col] < target) {
-                col++;
+            }
+
+            if (matrix[currentRow][currentCol] < target) {
+                currentCol++;
             } else {
-                row--;
+                currentRow--;
             }
         }
 

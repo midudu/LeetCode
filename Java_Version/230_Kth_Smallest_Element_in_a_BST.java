@@ -1,8 +1,10 @@
 /*
-Given a binary search tree,
-write a function kthSmallest to find the kth smallest element in it.
+  Given a binary search tree, write a function kthSmallest to find the kth
+smallest element in it.
 
-Note: You may assume k is always valid, 1 ≤ k ≤ BST's total elements.
+Note:
+  You may assume k is always valid, 1 ≤ k ≤ BST's total elements.
+
 
 Example 1:
 
@@ -28,12 +30,13 @@ Example 2:
     1
         Output: 3
 
-        Follow up:
+Follow up:
 
         What if the BST is modified (insert/delete operations) often
         and you need to find the kth smallest frequently?
 
-        How would you optimize the kthSmallest routine?*/
+        How would you optimize the kthSmallest routine?
+*/
 
 class TreeNode {
 
@@ -42,35 +45,50 @@ class TreeNode {
     TreeNode right;
 
     TreeNode(int x) {
+
         val = x;
     }
 }
 
 class Solution {
 
-    private int index = 0;
-    private int result = -1;
+    public static void main(String[] args) {
+
+        TreeNode root = new TreeNode(5);
+        root.left = new TreeNode(3);
+        root.right = new TreeNode(6);
+        root.left.left = new TreeNode(2);
+        root.left.right = new TreeNode(4);
+        root.left.left.left = new TreeNode(1);
+
+        System.out.println(new Solution().kthSmallest(root, 3));
+    }
+
+    private Integer result = null;
+    private int count = 0;
 
     public int kthSmallest(TreeNode root, int k) {
 
-        kthSmallestHelper(root, k);
+        preOrder(root, k);
 
         return result;
     }
 
-    private void kthSmallestHelper(TreeNode root, int k) {
+    private void preOrder(TreeNode root, int k) {
 
-        if (index == k || root == null) {
+        if (result != null) {
             return;
         }
 
-        kthSmallestHelper(root.left, k);
-
-        index++;
-        if (index == k) {
-            result = root.val;
+        if (root == null) {
+            return;
         }
 
-        kthSmallestHelper(root.right, k);
+        preOrder(root.left, k);
+        count++;
+        if (count == k) {
+            result = root.val;
+        }
+        preOrder(root.right, k);
     }
 }
