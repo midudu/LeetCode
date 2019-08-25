@@ -1,48 +1,23 @@
-/*Author: Bochen (mddboc@foxmail.com)
-Last Modified: Tue Apr 10 22:28:44 CST 2018*/
+/*
+  Given a binary tree, return all root-to-leaf paths.
 
-/*Given a binary tree, return all root-to-leaf paths.
+  For example, given the following binary tree:
 
-        For example, given the following binary tree:
+            1
+          /   \
+         2     3
+          \
+           5
 
-        1
-        /   \
-        2     3
-        \
-        5
-        All root-to-leaf paths are:
+  All root-to-leaf paths are:
 
-        ["1->2->5", "1->3"]*/
+  ["1->2->5", "1->3"]
+*/
 
 import java.util.*;
 import java.lang.Math;
 import java.lang.System;
 import java.lang.Integer;
-
-
-public class Main {
-
-    public static void main(String[] args) throws ArithmeticException {
-
-        StringBuilder a = new StringBuilder("ha");
-        StringBuilder b = a;
-        a.append("haha");
-
-        System.out.println("haha");
-    }
-
-}
-
-
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
-    }
-}
-
 
 class TreeNode {
     int val;
@@ -57,32 +32,60 @@ class TreeNode {
 
 class Solution {
 
-    List<String> result = new ArrayList<>();
+    public static void main(String[] args) {
+
+        TreeNode root = new TreeNode(1);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(3);
+        root.left.right = new TreeNode(5);
+
+        List<String> result = new Solution().binaryTreePaths(root);
+
+        System.out.println();
+    }
 
     public List<String> binaryTreePaths(TreeNode root) {
 
+        List<String> result = new ArrayList<>();
         if (root == null) {
             return result;
         }
 
-        binaryTreePathsHelper(root, new StringBuilder(""));
-
+        binaryTreePathsHelper(root, new ArrayList<>(), result);
         return result;
     }
 
-    private void binaryTreePathsHelper(TreeNode root, StringBuilder path) {
+    private void binaryTreePathsHelper(
+            TreeNode root, List<Integer> existingNumbers, List<String> result) {
 
-        if (root.left != null) {
-            StringBuilder leftString = new StringBuilder(path);
-            binaryTreePathsHelper(root.left, leftString.append(Integer.toString(root.val)).append("->"));
+        if (root == null) {
+            return;
         }
-        if (root.right != null) {
-            StringBuilder rightString = new StringBuilder(path);
-            binaryTreePathsHelper(root.right, rightString.append(Integer.toString(root.val)).append("->"));
-        }
+
+        existingNumbers.add(root.val);
 
         if (root.left == null && root.right == null) {
-            result.add(path.append(Integer.toString(root.val)).toString());
+            result.add(convertIntegerListToString(existingNumbers));
         }
+
+        binaryTreePathsHelper(root.left, existingNumbers, result);
+        binaryTreePathsHelper(root.right, existingNumbers, result);
+
+        existingNumbers.remove(existingNumbers.size() - 1);
+    }
+
+    private String convertIntegerListToString(List<Integer> numbers) {
+
+        StringBuilder result = new StringBuilder();
+
+        for (int i = 0; i < numbers.size() - 1; i++) {
+
+            result.append(numbers.get(i));
+            result.append("->");
+        }
+
+        result.append(numbers.get(numbers.size() - 1));
+
+        return result.toString();
     }
 }
