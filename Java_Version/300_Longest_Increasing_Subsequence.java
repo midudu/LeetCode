@@ -7,47 +7,25 @@ Example:
     Input: [10,9,2,5,3,7,101,18]
     Output: 4
 
-Explanation:
-
-    The longest increasing subsequence is [2,3,7,101], therefore the length is 4.
+    Explanation:
+      The longest increasing subsequence is [2,3,7,101], therefore the length
+    is 4.
 
 Note:
-
-    There may be more than one LIS combination, it is only necessary for you to
+  There may be more than one LIS combination, it is only necessary for you to
 return the length. Your algorithm should run in O(n2) complexity.
 
 Follow up:
-    Could you improve it to O(n log n) time complexity?
+  Could you improve it to O(n log n) time complexity?
 */
 
 class Solution {
 
     public static void main(String[] args) {
 
-        int[] data = {10,9,2,5,3,7,101,18};
+        int[] data = {10, 9, 2, 5, 3, 7, 101, 18};
 
-        int result = new Solution().lengthOfLIS(data);
-    }
-
-    private int findFirstLessOrEqualIndex(
-            int[] nums, int endIndex, int theInsertedNum) {
-
-        int startIndex = 0;
-
-        while (startIndex < endIndex) {
-
-            int middleIndex = startIndex + (endIndex - startIndex) / 2;
-
-            if (nums[middleIndex] == theInsertedNum) {
-                return middleIndex;
-            } else if (nums[middleIndex] < theInsertedNum) {
-                startIndex = middleIndex + 1;
-            } else {
-                endIndex = middleIndex;
-            }
-        }
-
-        return startIndex;
+        System.out.println(new Solution().lengthOfLIS(data));
     }
 
     public int lengthOfLIS(int[] nums) {
@@ -56,25 +34,40 @@ class Solution {
             return 0;
         }
 
-        int[] minLastNumOfCurrentLength = new int[nums.length + 1];
-        minLastNumOfCurrentLength[1] = nums[0];
-        int currentIndex = 1;
+        int result = 1;
+        int[] minLastNumOfSequence = new int[nums.length + 1];
+        minLastNumOfSequence[1] = nums[0];
 
         for (int i = 1; i < nums.length; i++) {
 
-            if (nums[i] > minLastNumOfCurrentLength[currentIndex]) {
-                currentIndex++;
-                minLastNumOfCurrentLength[currentIndex] = nums[i];
-            } else if (nums[i] == minLastNumOfCurrentLength[currentIndex]) {
-                continue;
-            } else {
-                int index = findFirstLessOrEqualIndex(
-                        minLastNumOfCurrentLength, currentIndex, nums[i]);
-
-                minLastNumOfCurrentLength[index] = nums[i];
+            if (nums[i] > minLastNumOfSequence[result]) {
+                result++;
+                minLastNumOfSequence[result] = nums[i];
+            } else if (nums[i] < minLastNumOfSequence[result]) {
+                if (nums[i] <= minLastNumOfSequence[1]) {
+                    minLastNumOfSequence[1] = nums[i];
+                } else {
+                    int lastLessIndex = getLastLessIndex(minLastNumOfSequence,
+                            1, result, nums[i]);
+                    minLastNumOfSequence[lastLessIndex + 1] = nums[i];
+                }
             }
         }
 
-        return currentIndex;
+        return result;
+    }
+
+    private int getLastLessIndex(int[] nums, int startIndex, int endIndex, int target) {
+
+        if (startIndex == endIndex) {
+            return startIndex;
+        }
+
+        int middleIndex = startIndex + (endIndex - startIndex + 1) / 2;
+        if (nums[middleIndex] < target) {
+            return getLastLessIndex(nums, middleIndex, endIndex, target);
+        } else {
+            return getLastLessIndex(nums, startIndex, middleIndex - 1, target);
+        }
     }
 }

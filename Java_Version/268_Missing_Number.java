@@ -1,9 +1,8 @@
-/*Author: Bochen (mddboc@foxmail.com)
-Last Modified: Tue Apr 10 22:28:44 CST 2018*/
+/*
+  Given an array containing n distinct numbers taken from 0, 1, 2, ..., n, find
+the one that is missing from the array.
 
-/*Given an array containing n distinct numbers taken from 0, 1, 2, ..., n, find the one that is missing from the array.
-
-        Example 1
+Example 1
 
         Input: [3,0,1]
         Output: 2
@@ -12,61 +11,30 @@ Last Modified: Tue Apr 10 22:28:44 CST 2018*/
         Input: [9,6,4,2,3,5,7,0,1]
         Output: 8
 
-        Note:
-        Your algorithm should run in linear runtime complexity. Could you implement it using only constant extra space complexity?*/
-
-import java.util.*;
-import java.lang.Math;
-import java.lang.System;
-import java.lang.Integer;
-
-
-public class Main {
-
-    public static void main(String[] args) throws ArithmeticException {
-
-        StringBuilder a = new StringBuilder("ha");
-        StringBuilder b = a;
-        a.append("haha");
-
-        System.out.println("haha");
-    }
-
-}
-
-
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
-    }
-}
-
-
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(int x) {
-        val = x;
-    }
-}
-
+Note:
+  Your algorithm should run in linear runtime complexity. Could you implement
+it using only constant extra space complexity?
+*/
 
 class Solution {
+
+    public static void main(String[] args) {
+
+        System.out.println(new Solution().missingNumber(new int[]{9,6,4,2,3,5,7,0,1}));
+    }
+
     public int missingNumber(int[] nums) {
 
-        int numsLength = nums.length;
-
-        int result = 0;
-        for (int i = 0; i < numsLength; i++) {
-            result = result ^ i;
-            result = result ^ nums[i];
+        if (nums == null || nums.length == 0) {
+            throw new RuntimeException("illegal input");
         }
 
-        return result ^ numsLength;
+        int result = 0;
+        for (int i = 0; i < nums.length; i++) {
+            result ^= i;
+            result ^= nums[i];
+        }
+
+        return (result ^ nums.length);
     }
 }
