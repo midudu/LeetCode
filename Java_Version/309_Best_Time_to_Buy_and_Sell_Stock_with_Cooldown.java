@@ -9,7 +9,8 @@ times) with the following restrictions:
   You may not engage in multiple transactions at the same time (ie, you must
 sell the stock before you buy again).
 
-  After you sell your stock, you cannot buy stock on next day. (ie, cooldown 1 day)
+  After you sell your stock, you cannot buy stock on next day. (ie, cooldown
+1 day)
 
 Example:
 
@@ -20,31 +21,37 @@ Example:
 
 class Solution {
 
+    public static void main(String[] args) {
+
+        int[] prices = {1, 2, 3, 0, 2};
+
+        System.out.println(new Solution().maxProfit(prices));
+    }
+
     public int maxProfit(int[] prices) {
 
         if (prices == null || prices.length < 2) {
             return 0;
         }
 
-        int[] holdingStockProfitOfEachDay = new int[prices.length];
-        int[] notHoldingStockProfitOfEachDay = new int[prices.length];
+        int[] maxProfitOfHoldingStock = new int[prices.length];
+        int[] maxProfitOfNotHoldingStock = new int[prices.length];
 
-        holdingStockProfitOfEachDay[0] = -prices[0];
+        maxProfitOfHoldingStock[0] = -prices[0];
+        maxProfitOfHoldingStock[1] = Math.max(-prices[0], -prices[1]);
+        maxProfitOfNotHoldingStock[0] = 0;
+        maxProfitOfNotHoldingStock[1] = Math.max(0, prices[1] - prices[0]);
 
-        for (int currentDay = 1; currentDay < prices.length; currentDay++) {
+        for (int i = 2; i < prices.length; i++) {
 
-            holdingStockProfitOfEachDay[currentDay]
-                    = Math.max(holdingStockProfitOfEachDay[currentDay - 1],
-                    (currentDay == 1 ? -prices[currentDay] :
-                            notHoldingStockProfitOfEachDay[currentDay - 2]
-                                    - prices[currentDay]));
+            maxProfitOfHoldingStock[i] = Math.max(
+                    maxProfitOfHoldingStock[i - 1], maxProfitOfNotHoldingStock[i - 2] - prices[i]);
 
-            notHoldingStockProfitOfEachDay[currentDay]
-                    = Math.max(
-                    holdingStockProfitOfEachDay[currentDay - 1] + prices[currentDay],
-                    notHoldingStockProfitOfEachDay[currentDay - 1]);
+            maxProfitOfNotHoldingStock[i] = Math.max(
+                    maxProfitOfNotHoldingStock[i - 1], maxProfitOfHoldingStock[i - 1] + prices[i]);
+
         }
 
-        return notHoldingStockProfitOfEachDay[prices.length - 1];
+        return maxProfitOfNotHoldingStock[prices.length - 1];
     }
 }
