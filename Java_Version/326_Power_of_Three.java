@@ -1,47 +1,37 @@
-/*Author: Bochen (mddboc@foxmail.com)
-Last Modified: Tue Apr 10 22:28:45 CST 2018*/
+/*
+  Given an integer, write a function to determine if it is a power of three.
 
-/*Given an integer, write a function to determine if it is a power of three.
-
-        Follow up:
-        Could you do it without using any loop / recursion?*/
-
-import java.util.*;
-
-
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(int x) {
-        val = x;
-    }
-}
-
-public class Test {
-    public static void main(String[] args) {
-
-        String s = "egg", t = "add";
-
-        new Solution().isPowerOfThree(27);
-    }
-}
+Follow up:
+  Could you do it without using any loop / recursion?
+*/
 
 
 class Solution {
+
+    public static void main(String[] args) {
+
+        System.out.println(new Solution().isPowerOfThree(9));
+    }
+
     public boolean isPowerOfThree(int n) {
 
         if (n <= 0) {
             return false;
         }
 
-        double value = Math.log(Integer.MAX_VALUE)/Math.log(3);
+        return isPowerOfThreeHelper(n);
+    }
 
-        int maxPowerOfThree = (int)Math.round(
-                Math.pow(3, (int)(Math.log(Integer.MAX_VALUE)/Math.log(3)) )
-        );
+    private boolean isPowerOfThreeHelper(int n) {
 
-        return (maxPowerOfThree%n == 0);
+        if (n == 1) {
+            return true;
+        }
+
+        if (n % 3 != 0) {
+            return false;
+        }
+
+        return isPowerOfThreeHelper(n / 3);
     }
 }

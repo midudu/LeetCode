@@ -1,104 +1,65 @@
-/*Author: Bochen (mddboc@foxmail.com)
-Last Modified: Tue Apr 10 22:28:45 CST 2018*/
+/*
+  Write a function that takes a string as input and reverse only the vowels of
+a string.
 
-/*Write a function that takes a string as input and reverse only the vowels of a string.
+Example 1:
 
-        Example 1:
         Given s = "hello", return "holle".
 
-        Example 2:
+Example 2:
+
         Given s = "leetcode", return "leotcede".
 
-        Note:
-        The vowels does not include the letter "y".*/
-
-
-import java.lang.System;
-
-
-public class Main
-{
-    public static void main(String[] args)
-    {
-        String input1 = "OP";
-
-        Solution solution = new Solution();
-
-        String receiveFlag = solution.reverseVowels(input1);
-
-        System.out.println(receiveFlag);
-    }
-
-
-}
-
+Note:
+  The vowels does not include the letter "y".
+*/
 
 class Solution {
+
+    public static void main(String[] args) {
+
+        System.out.println(new Solution().reverseVowels("lEetcode"));
+    }
+
     public String reverseVowels(String s) {
 
-        if (s.isEmpty())
-        {
+        if (s == null || s.length() == 0) {
             return s;
         }
 
-        StringBuilder stringBuilderLower = new StringBuilder(s.toLowerCase());
-        StringBuilder stringBuilder = new StringBuilder(s);
+        char[] chars = s.toCharArray();
+        int startPointer = 0, endPointer = chars.length - 1;
 
-        int startIndex = 0;
-        int endIndex = stringBuilder.length() - 1;
+        while (startPointer < endPointer) {
 
-        while ( startIndex < endIndex )
-        {
-            startIndex = this.FindStartIndex(stringBuilderLower, startIndex, endIndex);
-            endIndex = this.FindEndIndex(stringBuilderLower, startIndex, endIndex);
+            while (startPointer < endPointer && !isVowelChar(chars[startPointer])) {
+                startPointer++;
+            }
+            while (startPointer < endPointer && !isVowelChar(chars[endPointer])) {
+                endPointer--;
+            }
 
-            if ( startIndex < endIndex )
-            {
-                char startChar = stringBuilder.charAt(startIndex);
-                char endChar = stringBuilder.charAt(endIndex);
-
-                stringBuilder.setCharAt(startIndex,endChar);
-                stringBuilder.setCharAt(endIndex,startChar);
-
-                startIndex++;
-                endIndex--;
+            if (startPointer < endPointer) {
+                swap(chars, startPointer, endPointer);
+                startPointer++;
+                endPointer--;
             }
         }
 
-        return stringBuilder.toString();
+        return new String(chars);
     }
 
-    private int FindStartIndex(StringBuilder stringBuilder, int startIndex, int endIndex)
-    {
-        while ( startIndex < endIndex )
-        {
-            if ( "aeiou".indexOf( stringBuilder.charAt(startIndex) ) == -1 )
-            {
-                startIndex++;
-            }
-            else
-            {
-                break;
-            }
-        }
+    private boolean isVowelChar(char c) {
 
-        return startIndex;
+        return c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' ||
+                c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U';
     }
 
-    private int FindEndIndex(StringBuilder stringBuilder, int startIndex, int endIndex)
-    {
-        while (startIndex < endIndex )
-        {
-            if ( "aeiou".indexOf( stringBuilder.charAt(endIndex) ) == -1 )
-            {
-                endIndex--;
-            }
-            else
-            {
-                break;
-            }
-        }
+    private void swap(char[] chars, int index1, int index2) {
 
-        return endIndex;
+        char temp = chars[index1];
+
+        chars[index1] = chars[index2];
+        chars[index2] = temp;
     }
 }
