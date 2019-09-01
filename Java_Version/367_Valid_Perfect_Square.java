@@ -1,65 +1,59 @@
-/*Given a positive integer num, write a function which returns True if num is a perfect square else False.
+/*
+  Given a positive integer num, write a function which returns True if num is
+a perfect square else False.
 
-        Note: Do not use any built-in library function such as sqrt.
+Note:
+  Do not use any built-in library function such as sqrt.
 
-        Example 1:
+Example 1:
 
         Input: 16
         Returns: True
-        Example 2:
+
+Example 2:
 
         Input: 14
-        Returns: False*/
-
-
-import java.util.*;
-
-
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(int x) {
-        val = x;
-    }
-}
-
-public class Test {
-    public static void main(String[] args) {
-
-        String s = "egg", t = "add";
-
-        new Solution().isPowerOfThree(27);
-    }
-}
+        Returns: False
+*/
 
 
 class Solution {
+
+    public static void main(String[] args) {
+
+        System.out.println(new Solution().isPerfectSquare(14));
+    }
+
     public boolean isPerfectSquare(int num) {
 
-        int startPointer = 1, endPointer = num;
+        if (num <= 0) {
+            throw new RuntimeException("illegal input");
+        }
 
-        while (startPointer <= endPointer) {
+        return isPerfectSquareHelper(num, 1, num);
+    }
 
-            int midPointer = startPointer + (endPointer - startPointer) / 2;
+    private boolean isPerfectSquareHelper(int num, int start, int end) {
 
-            if (num / midPointer == midPointer) {
-                int temp = midPointer * midPointer;
-                if (temp == num) {
-                    return true;
-                } else if (temp < num) {
-                    startPointer = midPointer + 1;
-                } else {
-                    endPointer = midPointer - 1;
-                }
-            } else if (num / midPointer > midPointer) {
-                startPointer = midPointer + 1;
-            } else if (num / midPointer < midPointer) {
-                endPointer = midPointer - 1;
+        if (start == end) {
+            return num == start * start;
+        }
+
+        int middle = start + (end - start) / 2;
+        int dividedResult = num / middle;
+
+        if (middle == dividedResult) {
+            if (middle * middle == num) {
+                return true;
+            } else {
+                return isPerfectSquareHelper(num, middle + 1, end);
             }
         }
 
-        return false;
+        if (middle < dividedResult) {
+            return isPerfectSquareHelper(num, middle + 1, end);
+        } else {
+            return isPerfectSquareHelper(num, start, middle);
+        }
     }
 }

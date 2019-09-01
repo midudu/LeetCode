@@ -1,84 +1,59 @@
 /*
-  Given a Binary Search Tree and a target number, return true if there exist
-two elements in the BST such that their sum is equal to the given target.
+  Given a positive integer num, write a function which returns True if num is
+a perfect square else False.
+
+Note:
+  Do not use any built-in library function such as sqrt.
 
 Example 1:
 
-        Input:
-
-             5
-            / \
-           3   6
-          / \   \
-         2   4   7
-
-        Target = 9
-
-        Output: True
+        Input: 16
+        Returns: True
 
 Example 2:
 
-           Input:
-
-             5
-            / \
-           3   6
-          / \   \
-         2   4   7
-
-        Target = 28
-
-        Output: False
+        Input: 14
+        Returns: False
 */
 
-
-class TreeNode {
-
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(int x) {
-        val = x;
-    }
-}
 
 class Solution {
 
     public static void main(String[] args) {
 
-        TreeNode root = new TreeNode(2);
-        root.left = new TreeNode(1);
-        root.right = new TreeNode(3);
-
-        System.out.println(new Solution().findTarget(root, 4));
+        System.out.println(new Solution().isPerfectSquare(14));
     }
 
-    public boolean findTarget(TreeNode root, int k) {
+    public boolean isPerfectSquare(int num) {
 
-        return findTargetHelper(root, root, k);
-    }
-
-    private boolean findTargetHelper(TreeNode root, TreeNode currentNode, int k) {
-
-        if (currentNode == null) {
-            return false;
+        if (num <= 0) {
+            throw new RuntimeException("illegal input");
         }
 
-        return search(root.left, currentNode, k - currentNode.val)
-                || search(root.right, currentNode, k - currentNode.val)
-                || findTargetHelper(root, currentNode.left, k)
-                || findTargetHelper(root, currentNode.right, k);
+        return isPerfectSquareHelper(num, 1, num);
     }
 
-    private boolean search(TreeNode root, TreeNode currentNode, int value) {
+    private boolean isPerfectSquareHelper(int num, int start, int end) {
 
-        if (root == null) {
-            return false;
+        if (start == end) {
+            return num == start * start;
         }
 
-        return (root.val == value) && (root != currentNode)
-                || (root.val < value) && search(root.right, currentNode, value)
-                || (root.val > value) && search(root.left, currentNode, value);
+        int middle = start + (end - start) / 2;
+        int dividedResult = num / middle;
+
+        if (middle == dividedResult) {
+            if (middle * middle == num) {
+                return true;
+            } else {
+                return isPerfectSquareHelper(num, middle + 1, end);
+            }
+        }
+
+        if (middle < dividedResult) {
+            return isPerfectSquareHelper(num, middle + 1, end);
+        } else {
+            return isPerfectSquareHelper(num, start, middle);
+        }
     }
 }
