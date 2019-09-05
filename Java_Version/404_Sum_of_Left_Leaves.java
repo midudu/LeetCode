@@ -1,55 +1,20 @@
-/*Author: Bochen (mddboc@foxmail.com)
-Last Modified: Tue Apr 10 22:28:45 CST 2018*/
+/*
+  Find the sum of all left leaves in a given binary tree.
 
-/*Find the sum of all left leaves in a given binary tree.
+  Example:
 
-        Example:
+             3
+            / \
+           9  20
+             /  \
+            15   7
 
-        3
-        / \
-        9  20
-        /  \
-        15   7
-
-        There are two left leaves in the binary tree, with values 9 and 15 respectively. Return 24.*/
-
-
-import javax.jws.soap.SOAPBinding;
-import java.util.*;
-import java.lang.Math;
-import java.lang.System;
-import java.lang.Integer;
-
-
-public class Main {
-
-    public static void main(String[] args) throws ArithmeticException {
-
-        TreeNode treeNode = new TreeNode(3);
-        treeNode.left = new TreeNode(9);
-        treeNode.right = new TreeNode(20);
-        treeNode.right.left = new TreeNode(15);
-        treeNode.right.right = new TreeNode(7);
-
-        new Solution().sumOfLeftLeaves(treeNode);
-
-        System.out.println("haha");
-    }
-
-}
-
-
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
-    }
-}
-
+  There are two left leaves in the binary tree, with values 9 and 15
+respectively. Return 24.
+*/
 
 class TreeNode {
+
     int val;
     TreeNode left;
     TreeNode right;
@@ -61,7 +26,17 @@ class TreeNode {
 
 
 class Solution {
-    private int result = 0;
+
+    public static void main(String[] args) {
+
+        TreeNode root = new TreeNode(3);
+        root.left = new TreeNode(9);
+        root.right = new TreeNode(20);
+        root.right.left = new TreeNode(15);
+        root.right.right = new TreeNode(7);
+
+        System.out.println(new Solution().sumOfLeftLeaves(root));
+    }
 
     public int sumOfLeftLeaves(TreeNode root) {
 
@@ -69,25 +44,29 @@ class Solution {
             return 0;
         }
 
-        sumOfLeftLeavesHelper(root.left, 1);
-        sumOfLeftLeavesHelper(root.right, -1);
+        int[] result = new int[1];
 
-        return result;
+        sumOfLeftLeavesHelper(root, result);
+
+        return result[0];
     }
 
-    private void sumOfLeftLeavesHelper(TreeNode root, int direction) {
+    private void sumOfLeftLeavesHelper(TreeNode root, int[] result) {
 
         if (root == null) {
             return;
         }
 
-        if (root.left == null && root.right == null) {
-            if (direction == 1) {
-                result += root.val;
-            }
-        } else {
-            sumOfLeftLeavesHelper(root.left, 1);
-            sumOfLeftLeavesHelper(root.right, -1);
+        if (root.left == null) {
+            sumOfLeftLeavesHelper(root.right, result);
+            return;
         }
+
+        if (root.left.left == null && root.left.right == null) {
+            result[0] += root.left.val;
+        }
+
+        sumOfLeftLeavesHelper(root.left, result);
+        sumOfLeftLeavesHelper(root.right, result);
     }
 }
