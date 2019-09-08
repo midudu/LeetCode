@@ -1,68 +1,170 @@
 /*
-  Given a string s and a string t, check if s is sub-sequence of t.
+  Given a binary tree, return the post_order traversal of its nodes' values.
 
-  You may assume that there is only lower case English letters in both s and t.
-t is potentially a very long (length ~= 500,000) string, and s is a short
-string (<=100).
+Example:
 
-  A sub-sequence of a string is a new string which is formed from the original
-string by deleting some (can be none) of the characters without disturbing the
-relative positions of the remaining characters. (ie, "ace" is a subsequence of
-"abcde" while "aec" is not).
+        Input: [1,null,2,3]
 
-Example 1:
+        1
+         \
+          2
+         /
+        3
 
-        s = "abc", t = "ahbgdc"
-
-        Return true.
-
-Example 2:
-
-        s = "axc", t = "ahbgdc"
-
-        Return false.
+        Output: [3,2,1]
 
 Follow up:
-  If there are lots of incoming S, say S1, S2, ... , Sk where k >= 1B,
-and you want to check one by one to see if T has its subsequence. In this
-scenario, how would you change your code?
+  Recursive solution is trivial, could you do it iteratively?
 */
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Stack;
+
+class TreeNode {
+
+    int val;
+    TreeNode left;
+    TreeNode right;
+
+    TreeNode(int x) {
+        val = x;
+    }
+}
+
+/* class Solution {
+
+    private List<Integer> result = new ArrayList<>();
+
+    public List<Integer> postorderTraversal(TreeNode root) {
+
+        postorderTraversalHelper(root);
+
+        return this.result;
+    }
+
+    private void postorderTraversalHelper(TreeNode root) {
+
+        if (root == null) {
+            return;
+        }
+
+        postorderTraversalHelper(root.left);
+        postorderTraversalHelper(root.right);
+
+        this.result.add(root.val);
+    }
+} */
+
+
+/*class Solution {
+
+    public static void main(String[] args) {
+
+        TreeNode root = new TreeNode(5);
+        root.left = new TreeNode(3);
+        root.right = new TreeNode(8);
+        root.left.left = new TreeNode(7);
+        root.right.left = new TreeNode(10);
+        root.right.right = new TreeNode(11);
+        root.left.left.right = new TreeNode(9);
+
+        List<Integer> list = new Solution().postorderTraversal(root);
+
+        System.out.println();
+    }
+
+    public List<Integer> postorderTraversal(TreeNode root) {
+
+        LinkedList<Integer> result = new LinkedList<>();
+
+        if (root == null) {
+            return result;
+        }
+
+        Stack<TreeNode> stack = new Stack<>();
+        stack.push(root);
+
+        while (!stack.isEmpty()) {
+
+            TreeNode currentNode = stack.pop();
+            result.addFirst(currentNode.val);
+
+            if (currentNode.left != null) {
+                stack.push(currentNode.left);
+            }
+
+            if (currentNode.right != null) {
+                stack.push(currentNode.right);
+            }
+        }
+
+        return result;
+    }
+}*/
 
 class Solution {
 
     public static void main(String[] args) {
 
-        String s = "abc", t = "ahbgdc";
+        TreeNode root = new TreeNode(5);
+        root.left = new TreeNode(3);
+        root.right = new TreeNode(8);
+        root.left.left = new TreeNode(7);
+        root.right.left = new TreeNode(10);
+        root.right.right = new TreeNode(11);
+        root.left.left.right = new TreeNode(9);
 
-        boolean result = new Solution().isSubsequence(s, t);
+        List<Integer> list = new Solution().postorderTraversal(root);
 
-        System.out.println(result);
+        System.out.println(list);
     }
 
-    public boolean isSubsequence(String s, String t) {
+    private static class TreeNodeWrapper{
 
-        if (s == null || t == null) {
-            return false;
+        int count = 0;
+        TreeNode node;
+
+        TreeNodeWrapper(TreeNode node) {
+            this.node = node;
+        }
+    }
+
+    public List<Integer> postorderTraversal(TreeNode root) {
+
+        List<Integer> result = new ArrayList<>();
+        if (root == null) {
+            return result;
         }
 
-        if (s.length() == 0 || t.length() == 0) {
-            return s.length() == 0;
-        }
+        Stack<TreeNodeWrapper> stack = new Stack<>();
+        stack.push(new TreeNodeWrapper(root));
 
-        int sPointer = 0, tPointer = 0;
-        while (tPointer < t.length() && sPointer < s.length()) {
+        while (!stack.isEmpty()) {
 
-            while (tPointer < t.length() &&
-                    s.charAt(sPointer) != t.charAt(tPointer)) {
-                tPointer++;
+            TreeNodeWrapper wrapper = stack.pop();
+
+            if (wrapper.node.left == null && wrapper.node.right == null) {
+                result.add(wrapper.node.val);
+            } else {
+                if (wrapper.count != 0) {
+                    result.add(wrapper.node.val);
+                } else {
+                    wrapper.count++;
+                    stack.push(wrapper);
+
+                    if (wrapper.node.right != null) {
+                        stack.push(new TreeNodeWrapper(wrapper.node.right));
+                    }
+                    if (wrapper.node.left != null) {
+                        stack.push(new TreeNodeWrapper(wrapper.node.left));
+                    }
+                }
             }
-
-            if (tPointer != t.length()) {
-                sPointer++;
-                tPointer++;
-            }
         }
 
-        return sPointer == s.length();
+        return result;
     }
 }
+

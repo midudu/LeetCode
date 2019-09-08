@@ -17,6 +17,7 @@ Follow up:
   Recursive solution is trivial, could you do it iteratively?
 */
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Stack;
@@ -56,7 +57,8 @@ class TreeNode {
     }
 } */
 
-class Solution {
+
+/*class Solution {
 
     public static void main(String[] args) {
 
@@ -100,4 +102,69 @@ class Solution {
 
         return result;
     }
+}*/
+
+class Solution {
+
+    public static void main(String[] args) {
+
+        TreeNode root = new TreeNode(5);
+        root.left = new TreeNode(3);
+        root.right = new TreeNode(8);
+        root.left.left = new TreeNode(7);
+        root.right.left = new TreeNode(10);
+        root.right.right = new TreeNode(11);
+        root.left.left.right = new TreeNode(9);
+
+        List<Integer> list = new Solution().postorderTraversal(root);
+
+        System.out.println(list);
+    }
+
+    private static class TreeNodeWrapper{
+
+        int count = 0;
+        TreeNode node;
+
+        TreeNodeWrapper(TreeNode node) {
+            this.node = node;
+        }
+    }
+
+    public List<Integer> postorderTraversal(TreeNode root) {
+
+        List<Integer> result = new ArrayList<>();
+        if (root == null) {
+            return result;
+        }
+
+        Stack<TreeNodeWrapper> stack = new Stack<>();
+        stack.push(new TreeNodeWrapper(root));
+
+        while (!stack.isEmpty()) {
+
+            TreeNodeWrapper wrapper = stack.pop();
+
+            if (wrapper.node.left == null && wrapper.node.right == null) {
+                result.add(wrapper.node.val);
+            } else {
+                if (wrapper.count != 0) {
+                    result.add(wrapper.node.val);
+                } else {
+                    wrapper.count++;
+                    stack.push(wrapper);
+
+                    if (wrapper.node.right != null) {
+                        stack.push(new TreeNodeWrapper(wrapper.node.right));
+                    }
+                    if (wrapper.node.left != null) {
+                        stack.push(new TreeNodeWrapper(wrapper.node.left));
+                    }
+                }
+            }
+        }
+
+        return result;
+    }
 }
+
