@@ -1,6 +1,7 @@
 /*
   A sequence of number is called arithmetic if it consists of at least three
-elements and if the difference between any two consecutive elements is the same.
+elements and if the difference between any two consecutive elements is the
+same.
 
   For example, these are arithmetic sequence:
 
@@ -25,10 +26,18 @@ Example:
 
         A = [1, 2, 3, 4]
 
-        return: 3, for 3 arithmetic slices in A: [1, 2, 3], [2, 3, 4] and [1, 2, 3, 4] itself.
+        return: 3, for 3 arithmetic slices in A: [1, 2, 3], [2, 3, 4] and
+        [1, 2, 3, 4] itself.
 */
 
 class Solution {
+
+    public static void main(String[] args) {
+
+        int[] A = {1, 2, 3, 4};
+
+        System.out.println(new Solution().numberOfArithmeticSlices(A));
+    }
 
     public int numberOfArithmeticSlices(int[] A) {
 
@@ -36,30 +45,22 @@ class Solution {
             return 0;
         }
 
-        int[] diff = new int[A.length - 1];
-
-        for (int i = 0; i < diff.length; i++) {
-            diff[i] = A[i + 1] - A[i];
-        }
-
+        int startIndex = 0;
+        int lastDiff = A[1] - A[0];
         int result = 0;
 
-        int startIndex = 0;
+        for (int i = 2; i < A.length; i++) {
 
-        for (int i = 1; i < diff.length; i++) {
-
-            if (diff[i] != diff[startIndex]) {
-
-                int n = i - startIndex;
-
-                result += (n-1)*n/2;
-
-                startIndex = i;
+            int currentDiff = A[i] - A[i - 1];
+            if (currentDiff != lastDiff) {
+                int numbersCount = i - startIndex;
+                result += (numbersCount - 1) * (numbersCount - 2) / 2;
+                startIndex = i - 1;
+                lastDiff = currentDiff;
             }
         }
 
-        int n = diff.length - startIndex;
-
-        return result + n * (n-1)/2;
+        int lastNumbersCount = A.length - startIndex;
+        return result + (lastNumbersCount - 1) * (lastNumbersCount - 2) / 2;
     }
 }
