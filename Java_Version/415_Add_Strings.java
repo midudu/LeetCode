@@ -1,81 +1,49 @@
-/*Given two non-negative integers num1 and num2 represented as string, return the sum of num1 and num2.
+/*
+  Given two non-negative integers num1 and num2 represented as string, return
+the sum of num1 and num2.
 
-        Note:
-
-        The length of both num1 and num2 is < 5100.
-        Both num1 and num2 contains only digits 0-9.
-        Both num1 and num2 does not contain any leading zero.
-        You must not use any built-in BigInteger library or convert the inputs to integer directly.*/
-
-
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(int x) {
-        val = x;
-    }
-}
-
-public class Test {
-    public static void main(String[] args) {
-
-        System.out.println((int) ('A'));
-        System.out.println((int) ('a'));
-    }
-}
-
+Note:
+  1. The length of both num1 and num2 is < 5100.
+  2. Both num1 and num2 contains only digits 0-9.
+  3. Both num1 and num2 does not contain any leading zero.
+  4. You must not use any built-in BigInteger library or convert the inputs to
+integer directly.
+*/
 
 class Solution {
+
     public String addStrings(String num1, String num2) {
 
-        if (num1.length() < num2.length()) {
-            return addStrings(num2, num1);
+        if (num1 == null || num2 == null
+                || num1.length() == 0 || num2.length() == 0) {
+            throw new RuntimeException("illegal input");
         }
 
-        int num1Pointer = num1.length() - 1;
-        int num2Pointer = num2.length() - 1;
-        int carryBit = 0;
-        StringBuilder stringBuilder = new StringBuilder(num1);
+        char[] result = new char[Math.max(num1.length(), num2.length()) + 1];
+        int carry = 0;
 
-        while (num2Pointer >= 0) {
+        for (int i = num1.length() - 1, j = num2.length() - 1, k = result.length - 1;
+                i >= 0 || j >= 0; i--, j--, k--) {
 
-            int num1CurrentDegit = num1.charAt(num1Pointer) - '0';
-            int num2CurrentDegit = num2.charAt(num2Pointer) - '0';
+            int bit1 = (i >= 0 ? num1.charAt(i) - '0' : 0);
+            int bit2 = (j >= 0 ? num2.charAt(j) - '0' : 0);
 
-            int currentSum = num1CurrentDegit + num2CurrentDegit + carryBit;
-            if (currentSum >= 10) {
-                carryBit = 1;
-                stringBuilder.setCharAt(num1Pointer, (char) (currentSum - 10 + '0'));
+            int sum = bit1 + bit2 + carry;
+            if (sum >= 10) {
+                carry = 1;
+                sum -= 10;
             } else {
-                carryBit = 0;
-                stringBuilder.setCharAt(num1Pointer, (char) (currentSum + '0'));
+                carry = 0;
             }
 
-            num1Pointer--;
-            num2Pointer--;
+            result[k] = (char)(sum + '0');
         }
 
-        while (num1Pointer>=0 && carryBit == 1) {
-            int num1CurrentDegit = num1.charAt(num1Pointer) - '0';
-
-            int currentSum = num1CurrentDegit + carryBit;
-            if (currentSum == 10) {
-                carryBit = 1;
-                stringBuilder.setCharAt(num1Pointer, '0');
-            } else {
-                carryBit = 0;
-                stringBuilder.setCharAt(num1Pointer, (char) (currentSum + '0'));
-            }
-
-            num1Pointer--;
-        }
-
-        if (carryBit == 1) {
-            return "1" + stringBuilder.toString();
+        if (carry == 1) {
+            result[0] = '1';
+            return new String(result);
         } else {
-            return stringBuilder.toString();
+            return new String(result).substring(1);
         }
     }
 }
