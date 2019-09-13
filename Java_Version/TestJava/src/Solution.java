@@ -1,173 +1,87 @@
 /*
-  Given a binary search tree (BST) with duplicates, find all the mode(s) (the
-most frequently occurred element) in the given BST.
-
-  Assume a BST is defined as follows:
-    The left subtree of a node contains only nodes with keys less than or equal
-  to the node's key. The right subtree of a node contains only nodes with keys
-  greater than or equal to the node's key. Both the left and right subtrees
-  must also be binary search trees.
-
-  For example:
-
-        Given BST [1,null,2,2],
-
-            1
-             \
-              2
-             /
-            2
-
-        return [2].
+  Say you have an array for which the ith element is the price of a given stock
+on day i. Design an algorithm to find the maximum profit. You may complete at
+most two transactions.
 
 Note:
-  If a tree has more than one mode, you can return them in any order.
+  You may not engage in multiple transactions at the same time (i.e., you must
+sell the stock before you buy again).
 
-Follow up:
-  Could you do that without using any extra space? (Assume that the implicit
-stack space incurred due to recursion does not count).
+Example 1:
+
+        Input: [3,3,5,0,0,3,1,4]
+        Output: 6
+
+        Explanation: Buy on day 4 (price = 0) and sell on day 6 (price = 3),
+        profit = 3-0 = 3. Then buy on day 7 (price = 1) and sell on day 8
+        (price = 4), profit = 4-1 = 3.
+
+Example 2:
+
+        Input: [1,2,3,4,5]
+        Output: 4
+        Explanation: Buy on day 1 (price = 1) and sell on day 5 (price = 5),
+        profit = 5-1 = 4. Note that you cannot buy on day 1, buy on day 2 and
+        sell them later, as you are engaging multiple transactions at the same
+        time. You must sell before buying again.
+
+Example 3:
+
+        Input: [7,6,4,3,1]
+        Output: 0
+        Explanation: In this case, no transaction is done, i.e. max profit = 0.
 */
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
-
-class TreeNode {
-
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(int x) {
-        val = x;
-    }
-}
-
-
-// Method 1
-/*
 class Solution {
 
     public static void main(String[] args) {
 
-        TreeNode root = new TreeNode(1);
-        root.right = new TreeNode(2);
-        root.right.left = new TreeNode(2);
+        int[] prices = {1, 2, 4, 2, 5, 7, 2, 4, 9, 0};
 
-        int[] result = new Solution().findMode(root);
+        System.out.println(new Solution().maxProfit(prices));
     }
 
-    public int[] findMode(TreeNode root) {
+    public int maxProfit(int[] prices) {
 
-        if (root == null) {
-            return new int[0];
+        if (prices == null || prices.length < 2) {
+            return 0;
         }
 
-        List<Integer> numbers = new ArrayList<>();
-        preOrder(root, numbers);
-
-        int maxMode = 0;
-        List<Integer> result = new ArrayList<>(numbers.size());
+        List<Integer> valley = new ArrayList<>(prices.length);
+        List<Integer> peek = new ArrayList<>(prices.length);
 
         int startIndex = 0;
-        int currentIndex = 0;
-        while (currentIndex < numbers.size()) {
-
-            while (currentIndex < numbers.size() &&
-                    numbers.get(currentIndex).intValue() == numbers.get(startIndex).intValue()) {
+        int currentIndex = 1;
+        while (currentIndex < prices.length) {
+            while (currentIndex < prices.length &&
+                    prices[currentIndex] >= prices[currentIndex - 1]) {
                 currentIndex++;
             }
 
-            int count = currentIndex - startIndex;
-            if (count == maxMode) {
-                result.add(numbers.get(startIndex));
-            } else if (count > maxMode) {
-                result.clear();
-                result.add(numbers.get(startIndex));
-                maxMode = count;
+            if (prices[currentIndex - 1] > prices[startIndex]) {
+                peek.add(prices[currentIndex - 1]);
+                valley.add(prices[startIndex]);
             }
+
             startIndex = currentIndex;
+            currentIndex++;
         }
 
-        int[] resultArray = new int[result.size()];
-        for (int i = 0; i < result.size(); i++) {
-            resultArray[i] = result.get(i);
+        if (peek.size() == 0) {
+            return 0;
+        } else if (peek.size() == 1) {
+            return peek.get(0) - valley.get(0);
+        } else if (peek.size() == 2) {
+            return (peek.get(0) - valley.get(0)) + (peek.get(1) - valley.get(1));
         }
 
-        return resultArray;
-    }
+        int result = 0;
+        for (int i = 0; i < peek.size(); i++) {
 
-    private void preOrder(TreeNode root, List<Integer> result) {
-
-        if (root == null) {
-            return;
+            for (int )
         }
-
-        preOrder(root.left, result);
-        result.add(root.val);
-        preOrder(root.right, result);
-    }
-}*/
-
-// Method 2
-class Solution {
-
-    public static void main(String[] args) {
-
-        TreeNode root = new TreeNode(1);
-        root.right = new TreeNode(2);
-        root.right.left = new TreeNode(2);
-
-        int[] result = new Solution().findMode(root);
-        System.out.println(Arrays.toString(result));
-    }
-
-    private int maxMode = 0;
-    private int currentMode = 0;
-    private TreeNode prevNode = null;
-    private List<Integer> result = new ArrayList<>();
-
-    public int[] findMode(TreeNode root) {
-
-        if (root == null) {
-            return new int[0];
-        }
-
-        findModeHelper(root);
-
-        int[] resultArray = new int[result.size()];
-        for (int i = 0; i < result.size(); i++) {
-            resultArray[i] = result.get(i);
-        }
-
-        return resultArray;
-    }
-
-    private void findModeHelper(TreeNode root) {
-
-        if (root == null) {
-            return;
-        }
-
-        findModeHelper(root.left);
-
-        if (prevNode == null || root.val != prevNode.val) {
-            currentMode = 1;
-        } else {
-            currentMode++;
-        }
-
-        if (currentMode == maxMode) {
-            if (!result.isEmpty() && result.get(result.size() - 1) != root.val) {
-                result.add(root.val);
-            }
-        } else if (currentMode > maxMode) {
-            maxMode = currentMode;
-            result.clear();
-            result.add(root.val);
-        }
-
-        prevNode = root;
-
-        findModeHelper(root.right);
     }
 }
