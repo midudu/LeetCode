@@ -26,4 +26,5 @@ hs_err_pid*
 .idea/
 
 # Special Circumstance
-Java_Version/TestJava/
+Java_Version/TestJava/*
+
