@@ -43,8 +43,8 @@ public:
         int startIndex = 0;
 
         int map[256];
-        for (int i = 0; i < 256; i++) {
-            map[i] = -1;
+        for (int &i : map) {
+            i = -1;
         }
 
         for (int i = 0; i < s.length(); i++) {
@@ -67,7 +67,7 @@ int main(int argc, char **args) {
 
     Solution solution = Solution();
 
-    for (string input : inputs) {
+    for (const string &input : inputs) {
         cout << solution.lengthOfLongestSubstring(input) << "\n";
     }
 
