@@ -1,61 +1,51 @@
-//Given an array of integers, return indices of the two numbers such that they add up to a specific target.
-//
-//You may assume that each input would have exactly one solution, and you may not use the same element twice.
-//
-//Example:
-//Given nums = [2, 7, 11, 15], target = 9,
-//
-//Because nums[0] + nums[1] = 2 + 7 = 9,
-//return[0, 1].
+/*
+  Given an array of integers, return indices of the two numbers such that they
+add up to a specific target.
 
+  You may assume that each input would have exactly one solution, and you may
+not use the same element twice.
+
+Example:
+  Given nums = [2, 7, 11, 15], target = 9,
+
+  Because nums[0] + nums[1] = 2 + 7 = 9, return[0, 1].
+*/
 
 #include <vector>
-#include <iostream>
-#include <algorithm>
-#include <cstdlib>
-#include <functional>
-#include <string>
-#include <stack>
-#include <queue>
 #include <unordered_map>
-using namespace std;
+#include <iostream>
 
+using namespace std;
 
 class Solution {
 public:
-	vector<int> twoSum(vector<int>& nums, int target) {
-		int size = nums.size();
+    vector<int> twoSum(vector<int> &nums, int target) {
 
-		vector<int> output;
-		unordered_map<int, int> hash_table;
+        vector<int> result = vector<int>(2);
+        unordered_map<int, int> numIndexMap = unordered_map<int, int>(nums.size());
 
-		for (int i = 0; i < size; ++i)
-		{
-			int temp = target - nums[i];
+        for (vector<int>::size_type i = 0; i < nums.size(); i++) {
+            int num = nums[i];
+            auto it = numIndexMap.find(target - num);
+            if (it != numIndexMap.end()) {
+                result[0] = it->second;
+                result[1] = i;
+                break;
+            } else {
+                numIndexMap[num] = i;
+            }
+        }
 
-			if (hash_table.find(temp) != hash_table.end())
-			{
-				output.push_back(hash_table[temp]);
-				output.push_back(i);
-				return output;
-			}
-
-			hash_table[nums[i]] = i;
-		}
-
-		return output;
-	}
+        return result;
+    }
 };
 
-int main()
-{
-	vector<int> nums({ 2,7,11,5 });
+int main(int argc, char **args) {
 
-	Solution sol1;
+    vector<int> nums = {3, 2, 4};
+    Solution solution = Solution();
 
-	vector<int> receive = sol1.twoSum(nums, 9);
+    vector<int> result = solution.twoSum(nums, 6);
 
-	system("pause");
-
-	return 0;
+    return 0;
 }

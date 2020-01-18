@@ -32,7 +32,6 @@ class Solution {
         for (int i = 0; i < s.length(); i++) {
 
             if (lastExistingCharIndex.containsKey(s.charAt(i))) {
-
                 // In case of situation like "abba"
                 startIndex = Math.max(lastExistingCharIndex.get(s.charAt(i)) + 1,
                         startIndex);
