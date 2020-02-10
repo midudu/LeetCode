@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ffbcff5e-ced2-4ebe-a713-4c74a7d3e487" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestJava/Solution.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TestJava/Solution.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestJava/Solution.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Solution.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -33,12 +34,10 @@
       <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="11" column="33" lean-forward="true" selection-end-line="78" selection-end-column="1" />
+            <state relative-caret-position="131">
+              <caret line="81" column="53" selection-start-line="81" selection-start-column="53" selection-end-line="81" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#382#383#0" expanded="true" />
-                <element signature="e#405#406#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -57,28 +56,15 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>HashMap</find>
-      <find>Comparable</find>
-      <find>comparableClassFor</find>
-      <find>putMapEntries</find>
-      <find>entrySet</find>
-      <find>AbstractMap</find>
-      <find>getKey</find>
-      <find>EntrySet</find>
       <find>keySet</find>
       <find>hash(</find>
       <find>remove</find>
       <find>threshold</find>
       <find>TreeNode</find>
-      <find>newScheduledThreadPool</find>
-      <find>submit</find>
       <find>ScheduledExecutorService</find>
       <find>startFuel</find>
       <find>clone</find>
-      <find>execute</find>
       <find>lock()</find>
-      <find>put</find>
-      <find>add</find>
       <find>public</find>
       <find>DualPivotQuicksort</find>
       <find>resize</find>
@@ -87,6 +73,19 @@
       <find>TreeMap</find>
       <find>removeEldestEntry</find>
       <find>addBefore</find>
+      <find>put</find>
+      <find>newSingle</find>
+      <find>newFixedThreadPool</find>
+      <find>newSingleThreadExecutor</find>
+      <find>newCachedThreadPool</find>
+      <find>newScheduledThreadPool</find>
+      <find>initialValue</find>
+      <find>tryAcquireShared</find>
+      <find>add</find>
+      <find>submit</find>
+      <find>keepAliveTime</find>
+      <find>execute</find>
+      <find>poll</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -123,6 +122,8 @@
         <option value="$PROJECT_DIR$/src/readersWritersProblem/WritersFirst.java" />
         <option value="$PROJECT_DIR$/src/FileUtil.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/Node.java" />
+        <option value="$PROJECT_DIR$/src/Util.java" />
         <option value="$PROJECT_DIR$/src/Solution.java" />
       </list>
     </option>
@@ -177,27 +178,27 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="unsupportedoexception&#9;PSI&#9;JAVA://java.lang.UnsupportedOperationException&#10;TreeSet&#9;PSI&#9;JAVA://java.util.TreeSet&#10;Map&#9;PSI&#9;JAVA://java.util.Map&#10;NoClassDefFoundError&#9;PSI&#9;JAVA://java.lang.NoClassDefFoundError&#10;Excep&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Exception.java&#10;Throwable&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Throwable.java&#10;Concurrent&#9;PSI&#9;JAVA://java.util.concurrent.ConcurrentHashMap&#10;HashM&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/HashMap.java&#10;HashMap&#9;null&#9;null&#10;QuickSort&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/DualPivotQuicksort.java&#10;ArrayList&#9;PSI&#9;JAVA://java.util.ArrayList&#10;Lock&#9;PSI&#9;JAVA://java.util.concurrent.locks.Lock&#10;Thread&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Thread.java&#10;Executor&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/ExecutorService.java&#10;Seriali&#9;PSI&#9;JAVA://java.io.Serializable&#10;Reader&#9;PSI&#9;JAVA://java.io.Reader&#10;StackOver&#9;PSI&#9;JAVA://java.lang.StackOverflowError&#10;VirtualMach&#9;PSI&#9;JAVA://java.lang.VirtualMachineError&#10;Obje&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Object.java&#10;Object&#9;null&#9;null&#10;ExecutorS&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/ExecutorService.java&#10;newScheduledThreadPool&#9;PSI&#9;JAVA://java.util.concurrent.Executors#newScheduledThreadPool&#10;String&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/String.java&#10;Class&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Class.java&#10;Prox&#9;PSI&#9;JAVA://java.lang.reflect.Proxy&#10;Proxy&#9;PSI&#9;JAVA://java.net.Proxy&#10;Hashtable&#9;PSI&#9;JAVA://java.util.Hashtable&#10;ReadW&#9;PSI&#9;JAVA://java.util.concurrent.locks.ReadWriteLock&#10;Block&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/ArrayBlockingQueue.java&#10;Semaphore&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/Semaphore.java&#10;HashMa&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/HashMap.java&#10;Collections&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Collections.java&#10;Mutex&#9;PSI&#9;JAVA://sun.awt.Mutex&#10;Sema&#9;PSI&#9;JAVA://java.util.concurrent.Semaphore&#10;CountDownLatch&#9;PSI&#9;JAVA://java.util.concurrent.CountDownLatch&#10;BlockingQueue&#9;PSI&#9;JAVA://java.util.concurrent.BlockingQueue&#10;Hash&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/HashMap.java&#10;Coll&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Collections.java&#10;Intege&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Integer.java&#10;Integer&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Integer.java&#10;Callable&#9;PSI&#9;JAVA://java.util.concurrent.Callable&#10;Future&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/FutureTask.java&#10;equals&#9;PSI&#9;JAVA://com.sun.org.apache.xpath.internal.operations.Equals&#10;Inte&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Integer.java&#10;Objec&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Object.java&#10;Runn&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Runnable.java&#10;futuretas&#9;PSI&#9;JAVA://java.util.concurrent.FutureTask&#10;synchronizedlist&#9;PSI&#9;JAVA://java.util.Collections.SynchronizedList&#10;interrupt&#9;PSI&#9;JAVA://java.lang.Thread#interrupt&#10;wait&#9;PSI&#9;JAVA://java.lang.Object#wait" />
+    <property name="SearchEverywhereHistoryKey" value="ArrayBlock&#9;PSI&#9;JAVA://java.util.concurrent.ArrayBlockingQueue&#10;ThreadPoolExecutor&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/ThreadPoolExecutor.java&#10;Execu&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/Executors.java&#10;IllegalStateException&#9;PSI&#9;JAVA://java.lang.IllegalStateException&#10;ArrayList&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/ArrayList.java&#10;Semaphore&#9;PSI&#9;JAVA://java.util.concurrent.Semaphore&#10;ThreadLo&#9;PSI&#9;JAVA://java.lang.ThreadLocal&#10;Hashtable&#9;PSI&#9;JAVA://java.util.Hashtable&#10;Concur&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/ConcurrentHashMap.java&#10;unsupportedoexception&#9;PSI&#9;JAVA://java.lang.UnsupportedOperationException&#10;TreeSet&#9;PSI&#9;JAVA://java.util.TreeSet&#10;Map&#9;PSI&#9;JAVA://java.util.Map&#10;NoClassDefFoundError&#9;PSI&#9;JAVA://java.lang.NoClassDefFoundError&#10;Excep&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Exception.java&#10;Throwable&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Throwable.java&#10;Concurrent&#9;PSI&#9;JAVA://java.util.concurrent.ConcurrentHashMap&#10;HashM&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/HashMap.java&#10;HashMap&#9;null&#9;null&#10;QuickSort&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/DualPivotQuicksort.java&#10;Lock&#9;PSI&#9;JAVA://java.util.concurrent.locks.Lock&#10;Thread&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Thread.java&#10;Executor&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/ExecutorService.java&#10;Seriali&#9;PSI&#9;JAVA://java.io.Serializable&#10;Reader&#9;PSI&#9;JAVA://java.io.Reader&#10;StackOver&#9;PSI&#9;JAVA://java.lang.StackOverflowError&#10;VirtualMach&#9;PSI&#9;JAVA://java.lang.VirtualMachineError&#10;Obje&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Object.java&#10;Object&#9;null&#9;null&#10;ExecutorS&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/ExecutorService.java&#10;newScheduledThreadPool&#9;PSI&#9;JAVA://java.util.concurrent.Executors#newScheduledThreadPool&#10;String&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/String.java&#10;Class&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Class.java&#10;Prox&#9;PSI&#9;JAVA://java.lang.reflect.Proxy&#10;Proxy&#9;PSI&#9;JAVA://java.net.Proxy&#10;ReadW&#9;PSI&#9;JAVA://java.util.concurrent.locks.ReadWriteLock&#10;Block&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/ArrayBlockingQueue.java&#10;HashMa&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/HashMap.java&#10;Collections&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Collections.java&#10;Mutex&#9;PSI&#9;JAVA://sun.awt.Mutex&#10;Sema&#9;PSI&#9;JAVA://java.util.concurrent.Semaphore&#10;CountDownLatch&#9;PSI&#9;JAVA://java.util.concurrent.CountDownLatch&#10;BlockingQueue&#9;PSI&#9;JAVA://java.util.concurrent.BlockingQueue&#10;Hash&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/HashMap.java&#10;Coll&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Collections.java&#10;Intege&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Integer.java&#10;Integer&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Integer.java&#10;Callable&#9;PSI&#9;JAVA://java.util.concurrent.Callable&#10;Future&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/FutureTask.java&#10;equals&#9;PSI&#9;JAVA://com.sun.org.apache.xpath.internal.operations.Equals&#10;Inte&#9;FILE&#9;jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Integer.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="C:/Program Files (x86)/MySQL/Connector J 5.1.26/mysql-connector-java-5.1.26-bin.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -228,28 +229,28 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.Solution">
-    <configuration name="CopyFile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="CopyFile" />
+    <configuration name="NumArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="NumArray" />
       <module name="TestJava" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="LRU" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="LRU" />
-      <module name="TestJava" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-    </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="TestJava" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-    </configuration>
-    <configuration name="MedianFinder" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MedianFinder" />
+    <configuration name="RandomizedSet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="RandomizedSet" />
       <module name="TestJava" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
     <configuration name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Solution" />
+      <module name="TestJava" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test" />
+      <module name="TestJava" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="Twitter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Twitter" />
       <module name="TestJava" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -296,18 +297,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.Solution" />
-      <item itemvalue="Application.Main" />
-      <item itemvalue="Application.MedianFinder" />
-      <item itemvalue="Application.LRU" />
-      <item itemvalue="Application.CopyFile" />
+      <item itemvalue="Application.NumArray" />
+      <item itemvalue="Application.Test" />
+      <item itemvalue="Application.Twitter" />
+      <item itemvalue="Application.RandomizedSet" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Solution" />
-        <item itemvalue="Application.CopyFile" />
-        <item itemvalue="Application.LRU" />
-        <item itemvalue="Application.MedianFinder" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.RandomizedSet" />
+        <item itemvalue="Application.Twitter" />
+        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.NumArray" />
       </list>
     </recent_temporary>
   </component>
@@ -597,11 +598,58 @@
       <workItem from="1560049472023" duration="5651000" />
       <workItem from="1560475936832" duration="4830000" />
       <workItem from="1560758446375" duration="3074000" />
+      <workItem from="1567301345133" duration="1207000" />
+      <workItem from="1567411615728" duration="1400000" />
+      <workItem from="1567478768386" duration="9432000" />
+      <workItem from="1567561254017" duration="73000" />
+      <workItem from="1567561552821" duration="601000" />
+      <workItem from="1567579708234" duration="4359000" />
+      <workItem from="1567670690081" duration="1894000" />
+      <workItem from="1567932960478" duration="1911000" />
+      <workItem from="1567993193824" duration="6778000" />
+      <workItem from="1568077464365" duration="4183000" />
+      <workItem from="1568117732927" duration="1809000" />
+      <workItem from="1568173019945" duration="2240000" />
+      <workItem from="1568251018339" duration="7542000" />
+      <workItem from="1568338606209" duration="4917000" />
+      <workItem from="1568386171913" duration="8000" />
+      <workItem from="1568422436682" duration="11462000" />
+      <workItem from="1568595825516" duration="4809000" />
+      <workItem from="1568682994464" duration="1409000" />
+      <workItem from="1568686375275" duration="1206000" />
+      <workItem from="1568769661124" duration="7243000" />
+      <workItem from="1568878500868" duration="4000" />
+      <workItem from="1568942502697" duration="6426000" />
+      <workItem from="1569117163601" duration="1342000" />
+      <workItem from="1569223057915" duration="593000" />
+      <workItem from="1569293045567" duration="5563000" />
+      <workItem from="1569373475240" duration="1973000" />
+      <workItem from="1569493330782" duration="7089000" />
+      <workItem from="1569571060414" duration="1251000" />
+      <workItem from="1569810860521" duration="3447000" />
+      <workItem from="1569832847637" duration="10000" />
+      <workItem from="1570928230285" duration="3831000" />
+      <workItem from="1571107705953" duration="199000" />
+      <workItem from="1571233817338" duration="1058000" />
+      <workItem from="1571360684232" duration="792000" />
+      <workItem from="1572099493611" duration="3301000" />
+      <workItem from="1572140608263" duration="719000" />
+      <workItem from="1573455029463" duration="188000" />
+      <workItem from="1574858100455" duration="2176000" />
+      <workItem from="1575626037571" duration="2231000" />
+      <workItem from="1576139959285" duration="1642000" />
+      <workItem from="1576718863228" duration="12000" />
+      <workItem from="1577263433863" duration="1207000" />
+      <workItem from="1577443229724" duration="2154000" />
+      <workItem from="1577537929192" duration="3248000" />
+      <workItem from="1577958717074" duration="502000" />
+      <workItem from="1578533290181" duration="1951000" />
+      <workItem from="1578620827476" duration="32000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="673163000" />
+    <option name="totallyTimeSpent" value="800587000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -617,8 +665,7 @@
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49932975" weight="0.329429" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49731904" weight="0.32796487" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49932975" weight="0.32777777" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
@@ -626,54 +673,55 @@
       <window_info anchor="right" id="Maven Projects" order="6" weight="0.32902184" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4953083" weight="0.25036603" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.47587132" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49865952" weight="0.329429" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.47587132" weight="0.21481481" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49865952" weight="0.17592593" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.46774194" visible="true" weight="0.15359741" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4617117" visible="true" weight="0.15844786" />
       <window_info anchor="right" id="Database" order="8" weight="0.3297587" />
-      <window_info id="Structure" order="1" sideWeight="0.531401" side_tool="true" weight="0.1956346" />
+      <window_info id="Structure" order="1" sideWeight="0.5370787" side_tool="true" weight="0.18189168" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.46849865" visible="true" weight="0.17962962" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.46849865" weight="0.34444445" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.2392886" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49731904" weight="0.26296297" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49731904" weight="0.32796487" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49731904" weight="0.2635432" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.23525469" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.47587132" visible="true" weight="0.14074074" />
       <window_info anchor="right" id="Theme Preview" order="7" />
-      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48609078" visible="true" weight="0.19805983" />
       <window_info id="Structure" order="1" sideWeight="0.5131579" side_tool="true" weight="0.30294907" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49932975" weight="0.329429" />
-      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.4953083" weight="0.25036603" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49731904" weight="0.2635432" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="8" weight="0.3297587" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49865952" weight="0.329429" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.46849865" weight="0.31296295" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.4953083" weight="0.25036603" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5241287" side_tool="true" weight="0.44948757" />
       <window_info id="Capture Tool" order="5" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49731904" weight="0.32796487" />
       <window_info anchor="right" id="Maven Projects" order="6" weight="0.3297587" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info id="Favorites" order="6" side_tool="true" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -712,7 +760,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/StringUTF16.java</url>
+          <url />
           <line>417</line>
           <properties />
           <option name="timeStamp" value="40" />
@@ -721,7 +769,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="477" />
+      <option name="time" value="554" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -749,399 +797,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/AbstractStringBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23760">
-          <caret line="1035" column="7" selection-start-line="1035" selection-start-column="7" selection-end-line="1035" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/AbstractCollection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="60" column="22" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/AbstractSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="57" column="57" lean-forward="true" selection-start-line="57" selection-start-column="57" selection-end-line="57" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/AbstractMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5472">
-          <caret line="316" column="27" selection-start-line="316" selection-start-column="21" selection-end-line="316" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Objects.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="55" column="19" selection-start-line="55" selection-start-column="19" selection-end-line="55" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/ThreadPoolExecutor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="1201" column="57" selection-start-line="1201" selection-start-column="57" selection-end-line="1201" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/Executors.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="740" column="8" selection-start-line="740" selection-start-column="8" selection-end-line="740" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/StringUTF16.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="267" column="9" lean-forward="true" selection-start-line="267" selection-start-column="9" selection-end-line="267" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Object.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="221" column="33" selection-start-line="221" selection-start-column="28" selection-end-line="221" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Character.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="10121" column="5" lean-forward="true" selection-start-line="10121" selection-start-column="5" selection-end-line="10121" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/VirtualMachineError.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="35" column="24" lean-forward="true" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/StackOverflowError.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Error.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="48" column="13" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/java.lang.StackOverflowError">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>java.lang.StackOverflowError</OriginalElement>
-          <nodes>
-            <node x="159.0" y="81.0">java.lang.Throwable</node>
-            <node x="183.0" y="243.0">java.awt.AWTError</node>
-            <node x="2.5" y="324.0">java.lang.StackOverflowError</node>
-            <node x="0.0" y="243.0">java.lang.VirtualMachineError</node>
-            <node x="120.0" y="162.0">java.lang.Error</node>
-            <node x="216.0" y="162.0">java.lang.Exception</node>
-            <node x="156.5" y="0.0">java.io.Serializable</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="java.lang.Error" target="java.lang.Throwable">
-              <point x="0.0" y="-15.5" />
-              <point x="158.0" y="137.0" />
-              <point x="186.0" y="137.0" />
-              <point x="-27.0" y="15.5" />
-            </edge>
-            <edge source="java.lang.Exception" target="java.lang.Throwable">
-              <point x="0.0" y="-15.5" />
-              <point x="268.0" y="137.0" />
-              <point x="240.0" y="137.0" />
-              <point x="27.0" y="15.5" />
-            </edge>
-            <edge source="java.lang.Throwable" target="java.io.Serializable">
-              <point x="0.0" y="-15.5" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="java.lang.StackOverflowError" target="java.lang.VirtualMachineError">
-              <point x="0.0" y="-15.5" />
-              <point x="0.0" y="15.5" />
-            </edge>
-            <edge source="java.awt.AWTError" target="java.lang.Error">
-              <point x="0.0" y="-15.5" />
-              <point x="234.5" y="218.0" />
-              <point x="177.0" y="218.0" />
-              <point x="19.0" y="15.5" />
-            </edge>
-            <edge source="java.lang.VirtualMachineError" target="java.lang.Error">
-              <point x="0.0" y="-15.5" />
-              <point x="81.5" y="218.0" />
-              <point x="139.0" y="218.0" />
-              <point x="-19.0" y="15.5" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="-215.0" y="234.0" />
-          <SelectedNodes>
-            <node>java.lang.Exception</node>
-          </SelectedNodes>
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/io/Reader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="696">
-          <caret line="52" column="22" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/ExecutorService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="57" column="16" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/Executor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2328">
-          <caret line="130" column="29" selection-start-line="130" selection-start-column="29" selection-end-line="130" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/locks/Lock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="182" column="36" selection-start-line="182" selection-start-column="36" selection-end-line="182" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Thread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="841" column="23" selection-start-line="841" selection-start-column="4" selection-end-line="841" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Integer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="936">
-          <caret line="69" column="38" selection-start-line="69" selection-start-column="38" selection-end-line="69" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/HashSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4656">
-          <caret line="234" column="19" selection-start-line="234" selection-start-column="19" selection-end-line="234" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/math/BigInteger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51672">
-          <caret line="2203" column="5" selection-start-line="2203" selection-start-column="5" selection-end-line="2203" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/io/PrintStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21408">
-          <caret line="948" column="18" selection-start-line="948" selection-start-column="18" selection-end-line="948" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/ListIterator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="193" column="9" selection-start-line="193" selection-start-column="9" selection-end-line="193" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Arrays.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2424">
-          <caret line="145" column="28" selection-start-line="145" selection-start-column="28" selection-end-line="145" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/DualPivotQuicksort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="197" column="41" selection-start-line="197" selection-start-column="41" selection-end-line="197" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/jdk/internal/misc/Unsafe.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30888">
-          <caret line="1360" column="32" selection-start-line="1360" selection-start-column="32" selection-end-line="1360" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/ConcurrentHashMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="53064">
-          <caret line="2303" column="9" selection-start-line="2303" selection-start-column="9" selection-end-line="2303" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Collections.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112368">
-          <caret line="5124" column="60" selection-start-line="5124" selection-start-column="60" selection-end-line="5124" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/PriorityQueue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7248">
-          <caret line="334" column="19" selection-start-line="334" selection-start-column="19" selection-end-line="334" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/java.lang.Exception">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>java.lang.Exception</OriginalElement>
-          <nodes>
-            <node x="53.0" y="81.0">java.lang.Throwable</node>
-            <node x="124.0" y="162.0">java.lang.Error</node>
-            <node x="0.0" y="162.0">java.lang.Exception</node>
-            <node x="50.5" y="0.0">java.io.Serializable</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="java.lang.Error" target="java.lang.Throwable">
-              <point x="0.0" y="-15.5" />
-              <point x="162.0" y="137.0" />
-              <point x="134.0" y="137.0" />
-              <point x="27.0" y="15.5" />
-            </edge>
-            <edge source="java.lang.Exception" target="java.lang.Throwable">
-              <point x="0.0" y="-15.5" />
-              <point x="52.0" y="137.0" />
-              <point x="80.0" y="137.0" />
-              <point x="-27.0" y="15.5" />
-            </edge>
-            <edge source="java.lang.Throwable" target="java.io.Serializable">
-              <point x="0.0" y="-15.5" />
-              <point x="0.0" y="15.5" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="-222.0" y="55.0" />
-          <SelectedNodes>
-            <node>java.lang.Exception</node>
-          </SelectedNodes>
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/NoClassDefFoundError.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="485">
-          <caret line="55" column="39" lean-forward="true" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/ref/SoftReference.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="67" column="7" lean-forward="true" selection-start-line="67" selection-start-column="7" selection-end-line="67" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/ref/ReferenceQueue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="111" column="34" selection-start-line="111" selection-start-column="34" selection-end-line="111" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Map.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="150" column="15" lean-forward="true" selection-start-line="150" selection-start-column="15" selection-end-line="150" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/TreeSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="304" column="46" selection-start-line="304" selection-start-column="46" selection-end-line="304" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/io/Serializable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3504">
-          <caret line="169" column="1" selection-start-line="169" selection-start-column="1" selection-end-line="169" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Throwable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2160">
-          <caret line="114" column="44" selection-start-line="114" selection-start-column="44" selection-end-line="114" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Exception.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="44" column="38" selection-start-line="44" selection-start-column="38" selection-end-line="44" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/RuntimeException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="42" column="42" selection-start-line="42" selection-start-column="42" selection-end-line="42" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/UnsupportedOperationException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="37" column="56" selection-start-line="37" selection-start-column="56" selection-end-line="37" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3048">
-          <caret line="153" column="11" selection-start-line="153" selection-start-column="11" selection-end-line="153" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/HashMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1532">
-          <caret line="662" column="16" lean-forward="true" selection-start-line="662" selection-start-column="16" selection-end-line="662" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/LinkedHashMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="507" column="39" selection-start-line="507" selection-start-column="22" selection-end-line="507" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/nio/channels/spi/AbstractSelectableChannel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -1184,14 +839,322 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/ConcurrentHashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="1019" column="13" lean-forward="true" selection-start-line="1019" selection-start-column="13" selection-end-line="1019" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Hashtable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="499" column="54" lean-forward="true" selection-start-line="499" selection-start-column="54" selection-end-line="499" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/Future.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="142" column="6" selection-start-line="142" selection-start-column="6" selection-end-line="142" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Exception.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="44" column="13" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/InterruptedException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="49" column="41" lean-forward="true" selection-start-line="49" selection-start-column="41" selection-end-line="49" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/LinkedBlockingQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="243" column="5" lean-forward="true" selection-start-line="243" selection-start-column="5" selection-end-line="243" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/SynchronousQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7036">
+          <caret line="849" column="17" selection-start-line="849" selection-start-column="17" selection-end-line="849" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/ScheduledThreadPoolExecutor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="449" column="54" lean-forward="true" selection-start-line="449" selection-start-column="54" selection-end-line="449" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/ref/WeakReference.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="55" column="11" selection-start-line="55" selection-start-column="11" selection-end-line="55" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="181" column="31" selection-start-line="181" selection-start-column="31" selection-end-line="181" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/ThreadLocal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="307" column="48" selection-start-line="307" selection-start-column="35" selection-end-line="307" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/invoke/VarHandle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16560">
+          <caret line="729" column="12" selection-start-line="729" selection-start-column="12" selection-end-line="729" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/Semaphore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6072">
+          <caret line="317" column="17" selection-start-line="317" selection-start-column="17" selection-end-line="317" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/locks/AbstractQueuedSynchronizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="1002" column="31" selection-start-line="1002" selection-start-column="31" selection-end-line="1002" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/HashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="786" lean-forward="true" selection-start-line="786" selection-end-line="786" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Queue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="192" column="6" selection-start-line="192" selection-start-column="6" selection-end-line="192" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/IllegalStateException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="39" column="38" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/ForkJoinPool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="1948" column="32" selection-start-line="1948" selection-start-column="32" selection-end-line="1948" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Integer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="1552" column="36" selection-start-line="1552" selection-start-column="36" selection-end-line="1552" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/Executor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2448">
+          <caret line="135" column="9" selection-start-line="135" selection-start-column="9" selection-end-line="135" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/ExecutorService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4848">
+          <caret line="236" column="18" selection-start-line="236" selection-start-column="18" selection-end-line="236" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/java.util.concurrent.AbstractExecutorService">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>java.util.concurrent.AbstractExecutorService</OriginalElement>
+          <nodes>
+            <node x="" y="">java.util.concurrent.AbstractExecutorService</node>
+            <node x="" y="">java.util.concurrent.ThreadPoolExecutor</node>
+            <node x="" y="">java.util.concurrent.Executor</node>
+            <node x="" y="">java.util.concurrent.ExecutorService</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="93.0" y="97.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/AbstractExecutorService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2400">
+          <caret line="140" column="21" selection-start-line="140" selection-start-column="21" selection-end-line="140" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/Executors.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1152">
+          <caret line="90" column="28" selection-start-line="90" selection-start-column="28" selection-end-line="90" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/atomic/AtomicInteger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1176">
+          <caret line="86" column="21" selection-start-line="86" selection-start-column="21" selection-end-line="86" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/ThreadFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="67" column="11" selection-start-line="67" selection-start-column="11" selection-end-line="67" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/BlockingQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4368">
+          <caret line="216" column="12" selection-start-line="216" selection-start-column="12" selection-end-line="216" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/RejectedExecutionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="60" column="9" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/ThreadPoolExecutor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="2063" column="29" selection-start-line="2063" selection-start-column="29" selection-end-line="2063" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/PriorityQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="53" column="2" lean-forward="true" selection-start-line="53" selection-start-column="2" selection-end-line="53" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/concurrent/ArrayBlockingQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="412" column="37" selection-start-line="412" selection-start-column="37" selection-end-line="412" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/TimSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="217" column="55" lean-forward="true" selection-start-line="217" selection-start-column="55" selection-end-line="217" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Arrays.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="1439" column="27" selection-start-line="1439" selection-start-column="27" selection-end-line="1439" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Map.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="242" column="6" selection-start-line="242" selection-start-column="6" selection-end-line="242" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="157" column="11" selection-start-line="157" selection-start-column="11" selection-end-line="157" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="627" column="6" selection-start-line="627" selection-start-column="6" selection-end-line="627" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="244" column="18" selection-start-line="244" selection-start-column="18" selection-end-line="244" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.desktop/java/awt/geom/Point2D.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="41" column="22" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.desktop/java/awt/Point.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-702">
+          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Util.java" />
+    <entry file="file://$PROJECT_DIR$/src/Node.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/System.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="984">
+          <caret line="111" column="36" selection-start-line="111" selection-start-column="36" selection-end-line="111" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/util/Random.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="385" column="15" selection-start-line="385" selection-start-column="15" selection-end-line="385" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Math.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="805" column="25" selection-start-line="805" selection-start-column="25" selection-end-line="805" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" column="33" lean-forward="true" selection-end-line="78" selection-end-column="1" />
+        <state relative-caret-position="131">
+          <caret line="81" column="53" selection-start-line="81" selection-start-column="53" selection-end-line="81" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#382#383#0" expanded="true" />
-            <element signature="e#405#406#0" expanded="true" />
           </folding>
         </state>
       </provider>
