@@ -1,87 +1,96 @@
-//Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
-//
-//The brackets must close in the correct order, "()" and "()[]{}" are all valid but "(]" and "([)]" are not.
+/*
+  Given a string containing just the characters '(', ')', '{', '}', '[' and ']',
+determine if the input string is valid.
 
-#include <vector>
-#include <iostream>
-#include <algorithm>
-#include <cstdlib>
-#include <functional>
+An input string is valid if:
+1. Open brackets must be closed by the same type of brackets.
+2. Open brackets must be closed in the correct order.
+3. Note that an empty string is also considered valid.
+
+Example 1:
+
+Input: "()"
+Output: true
+
+Example 2:
+
+Input: "()[]{}"
+Output: true
+
+Example 3:
+
+Input: "(]"
+Output: false
+
+Example 4:
+
+Input: "([)]"
+Output: false
+
+Example 5:
+
+Input: "{[]}"
+Output: true
+*/
+
 #include <string>
-#include <stack>
-#include <queue>
-#include <unordered_map>
-using namespace std;
+#include <cassert>
 
+using namespace std;
 
 class Solution {
 public:
-	bool isValid(string s) {
-		int length = s.length();
-		if (length == 0)
-			return true;
+    Solution() {
+        map['('] = ')';
+        map[')'] = '(';
+        map['['] = ']';
+        map[']'] = '[';
+        map['{'] = '}';
+        map['}'] = '{';
+    }
 
-		stack<char> repository;
+    bool isValid(string s) {
+        if (s.empty()) {
+            return true;
+        }
 
-		for (int i = 0; i < length; ++i)
-		{
-			if (s[i] == '(' || s[i] == '[' || s[i] == '{')
-			{
-				repository.push(s[i]);
-			}
-			else 
-			{
-				if (repository.empty())
-					return false;
+        char stack[s.size()];
+        int pointer = 0;
 
-				switch (s[i])
-				{
-				case ')':
-				{
-					if (repository.top() == '(')
-						repository.pop();
-					else
-						return false;
-					break;
-				}
-				case ']':
-				{
-					if (repository.top() == '[')
-						repository.pop();
-					else
-						return false;
-					break;
-				}
-				case '}':
-				{
-					if (repository.top() == '{')
-						repository.pop();
-					else
-						return false;
-					break;
-				}
-				default:
-					return false;
-				}
-			}
-		}
+        for (string::size_type i = 0; i < s.size(); i++) {
+            char ch = s[i];
+            assert(map[ch] != 0);
 
-		if (repository.empty())
-			return true;
-		else
-			return false;
-	}
+            if (pointer == 0 || !isMatchParentheses(ch, stack[pointer - 1])) {
+                stack[pointer] = ch;
+                pointer++;
+            } else {
+                pointer--;
+            }
+        }
+
+        return pointer == 0;
+    }
+
+private:
+    char map[256] = {0};
+
+    bool isMatchParentheses(char ch1, char ch2) {
+        return map[ch1] == ch2;
+    }
 };
 
-int main()
-{
-	string string1 = "([])";
+int main(int argc, char *args[]) {
+    string inputs[] = {"()", "()[]{}", "(]", "([)]", "{[]}"};
 
-	Solution sol1;
+    bool result[sizeof(inputs) / sizeof(string)];
 
-	cout << sol1.isValid(string1) << endl;
+    Solution solution;
 
-	system("pause");
+    for (int i = 0; i < sizeof(inputs) / sizeof(string); i++) {
+        result[i] = solution.isValid(inputs[i]);
+    }
 
-	return 0;
+    return 0;
 }
+
